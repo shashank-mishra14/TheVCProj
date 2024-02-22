@@ -1,5 +1,5 @@
 import Category from "./Category/Category";
-import Author from "./Author/Author";
+import Author from "./Authors/Author";
 
 import "./Sidebar.css";
 

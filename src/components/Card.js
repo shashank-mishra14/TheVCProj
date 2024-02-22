@@ -9,10 +9,12 @@ const Card = ({ img, title, companyName }) => {
     return (
       <>
         <section className="card">
+          <div className="square">
           <img src={img} alt={title} className="card-img" />
           <div className="card-details">
             <h3 className="card-title">{displayedTitle}</h3>
-            <div className="card-companyName">{companyName}</div>
+            <div className="card-company">{companyName}</div>
+          </div>
           </div>
         </section>
       </>
