@@ -1,0 +1,62 @@
+nav {
+    display: flex;
+    border-bottom: 2px solid #f3f3f3;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    margin-left: 2rem;
+  }
+  
+  input {
+    padding: 12px 20px;
+    border: none;
+    background: #f7f6f6;
+    outline: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 14rem;
+  }
+  
+  .nav-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+  }
+
+ 
+.reports {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.reports:hover {
+  background-color: #fff;
+}
+
+.reports:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .reports {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
