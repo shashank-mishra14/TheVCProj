@@ -12,9 +12,14 @@
     background-color: white;
     box-shadow: 0 3px 10px rgba(66, 66, 66, 0.342);
     overflow: hidden; /* Prevents overflowing content */
-    
-    
+    margin: 1rem;
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
   }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Elevate the card slightly on hover */
+  }
+  
   
   .card-img {
     width: 100%;
@@ -24,7 +29,7 @@
 
   }
   
-  .square:hover {
+  /* .square:hover {
     -webkit-transform: translate(20px, -10px);
     -ms-transform: translate(10px, -10px);
     transform: translate(10px, -10px);
@@ -39,7 +44,7 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; 
   border:none;
-}
+} */
   .card-title {
     
     padding: 0.5rem;
