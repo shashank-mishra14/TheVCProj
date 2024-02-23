@@ -5,12 +5,15 @@ export const data = [
       title: "Future Of Play: Building The Next-Gen of Gaming",
       companyName: "Elevation Capital",
       category: "consumer",
+      authors:"elevationcapital"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389873/2_avfqoc.png",
       title: "Mapping A Billion: Understanding The Indian Fintech User",
       companyName: "Elevation Capital",
       category: "finance",
+      authors:"elevationcapital"
+
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389874/7_quolzd.png",
