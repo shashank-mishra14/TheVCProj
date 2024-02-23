@@ -14,8 +14,10 @@ const Card = ({ img, title, companyName }) => {
           <div className="card-details">
             <h3 className="card-title">{displayedTitle}</h3>
             <div className="card-company">{companyName}</div>
+            <button className="readmore-button" >Read More</button>
           </div>
           </div>
+          
         </section>
       </>
     );
