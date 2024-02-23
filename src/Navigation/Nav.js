@@ -14,6 +14,7 @@ const Nav = ({ handleInputChange, query }) => {
       </div>
       <div className="profile-container"> 
         <button class="reports">REPORTS</button>
+        <button class="reports">CONTACT US</button>
       </div>
     </nav>
   );

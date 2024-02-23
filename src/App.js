@@ -5,6 +5,7 @@ import Products from "./Products/Products";
 import {data} from "./db/data";
 // import Recommended from "./Recommended/Recommended";
 import subCategory from "./Sidebar/Category/subcategory";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
@@ -76,11 +77,12 @@ function App() {
   return (
     <>
       <Sidebar handleChange={handleChange} />
+      
       <Navigation query={query} handleInputChange={handleInputChange} />
       {/* <Recommended handleClick={handleClick} /> */}
-
-      <subCategory handleChange={handleChange} />
-      <Products result={result} />
+     
+      <Products result={result} />\
+     
     </>
   );
 }
