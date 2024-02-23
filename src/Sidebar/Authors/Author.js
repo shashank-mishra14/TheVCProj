@@ -1,5 +1,9 @@
 import Input from "../../components/Input";
 import "./Author.css";
+import React,{useState} from "react";
+
+
+
 
 const Author = ({ handleChange }) => {
   return (
@@ -7,10 +11,12 @@ const Author = ({ handleChange }) => {
       <div className="ml">
         <h2 className="sidebar-title author-title">Authors</h2>
 
-        <label className="sidebar-label-container">
-          <input onChange={handleChange} type="radio" value="" name="test2" />
-          <span className="checkmark"></span>All
-        </label>
+      
+
+        <button className="filterbutton"onClick={handleChange} value="" name="test"
+        >
+            All
+            </button>
 
         <Input
           handleChange={handleChange}

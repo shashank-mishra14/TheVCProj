@@ -4,6 +4,7 @@ import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import {data} from "./db/data";
 // import Recommended from "./Recommended/Recommended";
+import subCategory from "./Sidebar/Category/subcategory";
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
@@ -43,25 +44,28 @@ function App() {
     // Applying selected filter
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, companyName, title,authors }) =>
+        ({ category, companyName, title,authors,subcategory }) =>
           category === selected ||
           
           companyName === selected ||
           
           authors=== selected ||
 
-          title === selected
+          title === selected || 
+
+          subcategory === selected
       );
     }
 
     return filteredProducts.map(
-      ({ img, title, companyName,authors }) => (
+      ({ img, title, companyName,authors,subcategory }) => (
         <Card
           key={Math.random()}
           img={img}
           title={title}
           companyName={companyName}
           author={authors}
+          subcategory={subcategory}
         />
       )
     );
@@ -74,6 +78,8 @@ function App() {
       <Sidebar handleChange={handleChange} />
       <Navigation query={query} handleInputChange={handleInputChange} />
       {/* <Recommended handleClick={handleClick} /> */}
+
+      <subCategory handleChange={handleChange} />
       <Products result={result} />
     </>
   );

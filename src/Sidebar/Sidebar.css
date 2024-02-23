@@ -16,3 +16,8 @@
   .logo-container h1 {
     margin-top: 1.3rem;
   }
+
+  .sidebar-content {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 120px); /* Adjust max height as needed */
+  }
