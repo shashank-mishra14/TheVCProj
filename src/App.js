@@ -43,25 +43,25 @@ function App() {
     // Applying selected filter
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, companyName, title,author }) =>
+        ({ category, companyName, title,authors }) =>
           category === selected ||
           
           companyName === selected ||
           
-          author=== selected ||
+          authors=== selected ||
 
           title === selected
       );
     }
 
     return filteredProducts.map(
-      ({ img, title, companyName,author }) => (
+      ({ img, title, companyName,authors }) => (
         <Card
           key={Math.random()}
           img={img}
           title={title}
           companyName={companyName}
-          author={author}
+          author={authors}
         />
       )
     );

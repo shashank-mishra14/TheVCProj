@@ -20,47 +20,55 @@ export const data = [
       title: "Battery Bluprint Innovation & Investment Outlook",
       companyName: "Blume Ventures",
       category: "renewable",
+      authors:"blumeventures"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389874/9_cronpk.png",
       title: "Indian Edtech In 2022: Building In The Shadow of Giantsg",
       companyName: "Blume Ventures",
       category: "consumer",
+      authors:"blumeventures"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389918/19_z9qqx7.png",
       title: "Agritech: India’s Sunrise Sector",
       companyName: "Kaalari Capital",
       category: "agritech",
+      authors:"kaalari"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389878/22_hxni5z.png",
       title: "Beyond E-Commerce 3.0 : D2C, Ecom Enablement & ONDC",
       companyName: "Kaalari Capital",
       category: "consumer",
+      authors:"kaalari"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1708266967/81_ihw0nk.png",
       title: "Agritech: Leading next decade‘s tech-first value creation",
       companyName: "Avendus Capital",
       category: "agritech",
+      authors:"avendus"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389904/56_ewfitm.png",
       title: "Entertainment & Advertising : Riding The Digital Wave",
       companyName: "RedSeer",
       category: "social",
+      authors:"redseer"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389928/52_inba1h.png",
       title: "Logistics Needs of Indian D2C",
       companyName: "RedSeer",
       category: "consumer",
+      authors:"redseer"
     },
     {
       img: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1706389913/55_xuarij.png",
       title: "Edtech In India 2019-20",
       companyName: "RedSeer",
       category: "consumer",
+      authors:"redseer"
     },
   ];
