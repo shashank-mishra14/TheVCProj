@@ -1,5 +1,5 @@
 import "./Nav.css";
-
+import { Link } from 'react-router-dom';
 const Nav = ({ handleInputChange, query }) => {
   return (
     <nav>
@@ -14,7 +14,12 @@ const Nav = ({ handleInputChange, query }) => {
       </div>
       <div className="profile-container"> 
         <button class="reports">REPORTS</button>
-        <button class="reports">CONTACT US</button>
+        
+        <button class="reports">
+        <Link to="/contact">
+        CONTACT US
+        </Link>
+        </button>
       </div>
     </nav>
   );

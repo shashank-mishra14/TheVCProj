@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+import Contact from "./components/contactpage/Contact";
 import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import {data} from "./db/data";
 // import Recommended from "./Recommended/Recommended";
 import subCategory from "./Sidebar/Category/subcategory";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
@@ -72,19 +72,27 @@ function App() {
     );
   }
 
+ 
   const result = filteredData(data, selectedCategory, query);
 
   return (
-    <>
-      <Sidebar handleChange={handleChange} />
-      
-      <Navigation query={query} handleInputChange={handleInputChange} />
-      {/* <Recommended handleClick={handleClick} /> */}
-     
-      <Products result={result} />\
-     
-    </>
+
+    <Router>
+    <Routes>
+      <Route exact path="/" element={
+        <>
+          <Sidebar handleChange={handleChange} />
+          <Navigation query={query} handleInputChange={handleInputChange} />
+          <Products result={result} />
+        </>
+      } />
+      <Route exact path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>
   );
+
 }
+
+
 
 export default App;
