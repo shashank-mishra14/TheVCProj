@@ -17,9 +17,40 @@ const Contact = () => {
           researches based on relevant tags enhanced the overall user
           experience, ensuring that users could easily find content tailored to
           their interests."
+          <br />
+          <br />
+          Shashank Mishra
+          <br />
+          <h4 className="h4">CTO</h4>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            asperiores, incidunt recusandae, ducimus possimus obcaecati sequi
+            veniam laborum repudiandae quam odio commodi minus sint! Fugiat fuga
+            magni deserunt iure quod. Lorem ipsum dolor sit amet consectetur
+          </p>
         </p>
       </div>
-      <div className="container-right"></div>
+      <div className="container-right">
+        
+      </div>
     </div>
   );
 };
