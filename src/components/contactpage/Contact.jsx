@@ -76,9 +76,10 @@ const Contact = () => {
       </div>
       <div className="container-right">
         <form className="form" onSubmit={handleSubmit}>
-          <div className="name">
+          <div className="nameinput">
+            <div className="name">
             <label className="namechange" htmlFor="name">
-              Name
+              First Name
             </label>
             <input
               className="inputname"
@@ -86,9 +87,25 @@ const Contact = () => {
               id="name"
               name="name"
               value={formData.name}
+              placeholder="First Name"
               onChange={handleChange}
               required
             />
+            </div>
+            
+            <div className="name"><label className="namechange" htmlFor="name">
+              Last Name
+            </label>
+            <input
+              className="inputname"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Last Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            /></div>
           </div>
 
           <div className="email">
@@ -106,12 +123,28 @@ const Contact = () => {
             />
           </div>
           <div className="checklist">
-          <div >
+          <div className="check">
             <input type="checkbox" id="checklist" name="checklist" />
             <label htmlFor="checklist">Checklist Item 1</label>
           </div>
 
-          <div>
+          <div className="check">
+            <input type="checkbox" id="checklist2" name="checklist2" />
+            <label htmlFor="checklist2">Checklist Item 2</label>
+          </div>
+          <div className="check">
+            <input type="checkbox" id="checklist2" name="checklist2" />
+            <label htmlFor="checklist2">Checklist Item 2</label>
+          </div>
+          <div className="check">
+            <input type="checkbox" id="checklist2" name="checklist2" />
+            <label htmlFor="checklist2">Checklist Item 2</label>
+          </div>
+          <div className="check">
+            <input type="checkbox" id="checklist2" name="checklist2" />
+            <label htmlFor="checklist2">Checklist Item 2</label>
+          </div>
+          <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
             <label htmlFor="checklist2">Checklist Item 2</label>
           </div>
@@ -119,11 +152,11 @@ const Contact = () => {
           
 
           <label className="messg" htmlFor="message">
-            Message
+           Tell us about your experience here
           </label>
           <div className="textarea">
             {" "}
-            <textarea
+            <textarea className="textarea"
               id="message"
               name="message"
               placeholder="Write your message here."

@@ -73,3 +73,58 @@
     margin-left: -100px;
     padding-bottom: 20px;
 }
+
+.messg{
+    padding-top: 10px;
+    font-size: 15px;
+    color: black;
+}
+
+.textarea{
+    padding-top: 5px;
+    font-size: 15px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    border-radius: none;
+    border-color: white;
+    padding-bottom: 20px;
+    
+
+}
+
+.check{
+    padding-bottom: 10px;
+}
+
+
+.email{
+    padding-top: 10px;
+    font-size: 15px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.name{
+    padding-top: 10px;
+    font-size: 15px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.nameinput{
+    padding-top: 10px;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.namechange{
+    padding-left: 19px;
+}
