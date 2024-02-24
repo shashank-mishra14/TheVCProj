@@ -75,6 +75,8 @@ const Contact = () => {
         </p>
       </div>
       <div className="container-right">
+        <div className="container-right-small">
+
         <form className="form" onSubmit={handleSubmit}>
           <div className="nameinput">
             <div className="name">
@@ -90,7 +92,7 @@ const Contact = () => {
               placeholder="First Name"
               onChange={handleChange}
               required
-            />
+              />
             </div>
             
             <div className="name"><label className="namechange" htmlFor="name">
@@ -105,7 +107,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-            /></div>
+              /></div>
           </div>
 
           <div className="email">
@@ -117,36 +119,37 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
+              placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
               required
-            />
+              />
           </div>
           <div className="checklist">
           <div className="check">
             <input type="checkbox" id="checklist" name="checklist" />
-            <label htmlFor="checklist">Checklist Item 1</label>
+            <label className="listcheck" htmlFor="checklist">Checklist Item 1</label>
           </div>
 
           <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
-            <label htmlFor="checklist2">Checklist Item 2</label>
+            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
           </div>
           <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
-            <label htmlFor="checklist2">Checklist Item 2</label>
+            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
           </div>
           <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
-            <label htmlFor="checklist2">Checklist Item 2</label>
+            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
           </div>
           <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
-            <label htmlFor="checklist2">Checklist Item 2</label>
+            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
           </div>
           <div className="check">
             <input type="checkbox" id="checklist2" name="checklist2" />
-            <label htmlFor="checklist2">Checklist Item 2</label>
+            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
           </div>
           </div>
           
@@ -164,11 +167,12 @@ const Contact = () => {
               onChange={handleChange}
               rows="4"
               required
-            ></textarea>
+              ></textarea>
           </div>
 
-          <button type="submit">Submit</button>
+          <button className="submitbutton"type="submit">Submit</button>
         </form>
+              </div>
       </div>
     </div>
   );
