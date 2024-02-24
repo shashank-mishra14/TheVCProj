@@ -29,10 +29,17 @@ const Contact = () => {
 
   return (
     <div className="container">
-      <h3 className="h3">Connect with us</h3>
+      <div className="headcontainer">
+        <h3 className="h3">Contact us</h3>
 
-      <h1 className="h1">Submit your report</h1>
-      <div className="container-left">
+        <h1 className="h1">Submit your report</h1>
+        <h3 className="heading3">The VC Project is your one stop destination to read about researches around the globe 
+                        share <br /> your experience with us and help us improve our platform, we would love to hear from you ...
+        </h3>
+      </div>
+
+     <div className="bothcontainers">
+     <div className="container-left">
         <p className="paragraph">
           "One of the standout features of the VC Project Repository is its
           user-friendly interface. Navigating through the platform was
@@ -76,104 +83,120 @@ const Contact = () => {
       </div>
       <div className="container-right">
         <div className="container-right-small">
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="nameinput">
+              <div className="name">
+                <label className="namechange" htmlFor="name">
+                  First Name
+                </label>
+                <input
+                  className="inputname"
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  placeholder="First Name"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="nameinput">
-            <div className="name">
-            <label className="namechange" htmlFor="name">
-              First Name
-            </label>
-            <input
-              className="inputname"
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              placeholder="First Name"
-              onChange={handleChange}
-              required
+              <div className="name">
+                <label className="namechange" htmlFor="name">
+                  Last Name
+                </label>
+                <input
+                  className="inputname"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Last Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="email">
+              <label className="mail" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="inputmail"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
               />
             </div>
-            
-            <div className="name"><label className="namechange" htmlFor="name">
-              Last Name
-            </label>
-            <input
-              className="inputname"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Last Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              /></div>
-          </div>
-
-          <div className="email">
-            <label className="mail" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="inputmail"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              />
-          </div>
-          <div className="checklist">
-          <div className="check">
-            <input type="checkbox" id="checklist" name="checklist" />
-            <label className="listcheck" htmlFor="checklist">Checklist Item 1</label>
-          </div>
-
-          <div className="check">
-            <input type="checkbox" id="checklist2" name="checklist2" />
-            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
-          </div>
-          <div className="check">
-            <input type="checkbox" id="checklist2" name="checklist2" />
-            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
-          </div>
-          <div className="check">
-            <input type="checkbox" id="checklist2" name="checklist2" />
-            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
-          </div>
-          <div className="check">
-            <input type="checkbox" id="checklist2" name="checklist2" />
-            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
-          </div>
-          <div className="check">
-            <input type="checkbox" id="checklist2" name="checklist2" />
-            <label className="listcheck"htmlFor="checklist2">Checklist Item 2</label>
-          </div>
-          </div>
-          
-
-          <label className="messg" htmlFor="message">
-           Tell us about your experience here
-          </label>
-          <div className="textarea">
-            {" "}
-            <textarea className="textarea"
-              id="message"
-              name="message"
-              placeholder="Write your message here."
-              value={formData.message}
-              onChange={handleChange}
-              rows="4"
-              required
-              ></textarea>
-          </div>
-
-          <button className="submitbutton"type="submit">Submit</button>
-        </form>
+            <div className="checklist">
+              <div className="check">
+                <input type="checkbox" id="checklist" name="checklist" />
+                <label className="listcheck" htmlFor="checklist">
+                  Problem in uploading research?
+                </label>
               </div>
+
+              <div className="check">
+                <input type="checkbox" id="checklist2" name="checklist2" />
+                <label className="listcheck" htmlFor="checklist2">
+                  Unable to find the research you are looking for?
+                </label>
+              </div>
+              <div className="check">
+                <input type="checkbox" id="checklist2" name="checklist2" />
+                <label className="listcheck" htmlFor="checklist2">
+                  Looking for a specific research?
+                </label>
+              </div>
+              <div className="check">
+                <input type="checkbox" id="checklist2" name="checklist2" />
+                <label className="listcheck" htmlFor="checklist2">
+                  Request a feature?
+                </label>
+              </div>
+              <div className="check">
+                <input type="checkbox" id="checklist2" name="checklist2" />
+                <label className="listcheck" htmlFor="checklist2">
+                  Want to share your experience?
+                </label>
+              </div>
+              <div className="check">
+                <input type="checkbox" id="checklist2" name="checklist2" />
+                <label className="listcheck" htmlFor="checklist2">
+                  Want to report a bug?
+                </label>
+              </div>
+            </div>
+
+            <label className="messg" htmlFor="message">
+              Tell us about your experience here
+            </label>
+            <div className="textarea">
+              {" "}
+              <textarea
+                className="textarea"
+                id="message"
+                name="message"
+                placeholder="Write your message here."
+                value={formData.message}
+                onChange={handleChange}
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button className="submitbutton" type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
+     </div>
     </div>
   );
 };
