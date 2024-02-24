@@ -12,11 +12,11 @@ const Author = ({ handleChange }) => {
         <h2 className="sidebar-title author-title">Authors</h2>
 
       
-
-        <button className="filterbutton"onClick={handleChange} value="" name="test"
-        >
-            All
-            </button>
+        <label className="sidebar-label-container">
+          <input onChange={handleChange} type="checkbox" value="" name="test" />
+          <span className="checkmark"></span>All
+          
+        </label> 
 
         <Input
           handleChange={handleChange}

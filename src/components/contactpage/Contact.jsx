@@ -1,5 +1,6 @@
 import "./Contact.css";
 import React, { useState } from "react";
+import Accordion from "../Accordion/Accordion";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,6 +56,10 @@ const Contact = () => {
           Shashank Mishra
           <br />
           <h4 className="h4">CTO</h4>
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -132,7 +137,9 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+             
             </div>
+            <button className="uploadbutton" type="upload">Upload Files</button>
             <div className="checklist">
               <div className="check">
                 <input type="checkbox" id="checklist" name="checklist" />
@@ -197,7 +204,9 @@ const Contact = () => {
         </div>
       </div>
      </div>
+     <Accordion/>
     </div>
+    
   );
 };
 export default Contact;
