@@ -1,0 +1,52 @@
+.h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    font-size: 30px;
+}
+.h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    font-size: 16px
+    
+}
+
+.container-left {
+    flex: 1; /* Take up half the space */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+    border-radius: 8px; /* Adding border radius for a rounded corner effect */
+    background-color: white; /* Adding a white background to make the shadow stand out */
+    
+}
+
+.container-right {
+    flex: 1; /* Take up half the space */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    border-radius: 2px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+    border-radius: 8px; /* Adding border radius for a rounded corner effect */
+    background-color: white; /* Adding a white background to make the shadow stand out */
+   
+}
+
+
+.paragraph{
+    padding: 20px;
+}
