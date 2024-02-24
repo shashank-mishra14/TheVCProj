@@ -31,11 +31,13 @@ const Contact = () => {
   return (
     <div className="container">
       <div className="headcontainer">
-        <h3 className="h3">Contact us</h3>
+        <h3 className="h3">Connect with Us</h3>
 
-        <h1 className="h1">Submit your report</h1>
+        <h1 className="h1">Contact Us</h1>
         <h3 className="heading3">The VC Project is your one stop destination to read about researches around the globe 
-                        share <br /> your experience with us and help us improve our platform, we would love to hear from you ...
+                        share <br />
+                        <br /> 
+                        your experience with us and help us improve our platform, we would love to hear from you ...
         </h3>
       </div>
 

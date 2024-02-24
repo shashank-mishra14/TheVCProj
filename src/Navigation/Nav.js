@@ -17,7 +17,7 @@ const Nav = ({ handleInputChange, query }) => {
         
         <button class="reports">
         <Link to="/contact">
-        CONTACT US
+        <span>Contact Us</span>
         </Link>
         </button>
       </div>
