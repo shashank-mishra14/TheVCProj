@@ -1,4 +1,4 @@
-import "./Category.css";
+import  "./Category.css";
 import Input from "../../components/Input";
 import React, { useEffect, useState } from "react";
 
@@ -112,46 +112,54 @@ function Category({ handleChange }) {
   };
   
   return (
-    <div>
-      <h2 className="sidebar-title">Category</h2>
+    
+      <div className="categories">
+      <span className="filterlabel">Categories</span>
+      {categoriesData
+        .slice(0, showAllCategories ? categoriesData.length : 5)
+        .map(({ category, subcategories }) => (
+          <div key={category}>
+            <label className="checkboxLabel">
+              <input
+                type="checkbox"
+                name="category"
+                value={category}
+                checked={selectedCategories.includes(category)}
+                onChange={() => handleCategoryClick(category)}
+              />
+              <span> {category}</span>
+            </label>
+          </div>
+        ))}
 
-      {/* <div>
-        <label className="sidebar-label-container">
-          <input onChange={handleChange} type="checkbox" value="" name="test" />
-          <span className="checkmark"></span>All
-          
-        </label> 
-        <Input
-          handleChange={handleChange}
-          value="agritech"
-          title="Agritech"
-          name="test"
-        />
-        <Input
-          handleChange={handleChange}
-          value="climate"
-          title="Climate & Sustainability"
-          name="test"
-        />
-        <Input
-          handleChange={handleChange}
-          value="consumer"
-          title="Consumer Tech"
-          name="test"
-        />
-        <Input
-          handleChange={handleChange}
-          value="content"
-          title="Content & Media"
-          name="test"
-        />
-        <Input
-          handleChange={handleChange}
-          value="employement"
-          title="Employement"
-          name="test"
-        />
-      </div> */}
+      {!showAllCategories && categoriesData.length > 5 && (
+        <button
+          className="viewMoreButton"
+          onClick={handleViewMoreClick}
+        >
+          View More
+        </button>
+      )}
+
+      {selectedCategories.length > 0 && (
+        <div className="subcategories">
+          <span className="filterLabel">Subcategories</span>
+          {categoriesData
+            .filter((cat) => selectedCategories.includes(cat.category))
+            .map((cat) =>
+              cat.subcategories.map((subcategory) => (
+                <label key={subcategory} className="checkboxLabel">
+                  <input
+                    type="checkbox"
+                    value={subcategory}
+                    onChange={() => handleSubcategoryClick(subcategory)}
+                  />
+                  <span> {subcategory}</span>
+                </label>
+              ))
+            )}
+        </div>
+      )}
     </div>
   );
 }
