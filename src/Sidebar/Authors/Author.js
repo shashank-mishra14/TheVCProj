@@ -3,13 +3,38 @@ import "./Author.css";
 import React,{useState} from "react";
 
 
-
+const authorData=[
+  {
+    value:"elevationcapital",
+          title:"Elevation Capital"
+  },
+  {
+    value:"tracxn",
+          title:"Tracxn"
+  },
+  {
+    value:"blumeventures",
+          title:"Blume Ventures"
+  },
+  {
+    value:"redseer",
+          title:"Red Seer"
+  },
+  {
+    value:"peakxv",
+          title:"Peak XV"
+  },
+  {
+    value:"kaalari",
+          title:"Kaalari Capital"
+  }
+]
 
 const Author = ({ handleChange }) => {
   return (
     <>
       <div className="ml">
-        <h2 className="sidebar-title author-title">Authors</h2>
+        <h2 className="sidebar-title-author-title">Authors</h2>
 
       
         <label className="sidebar-label-container">
@@ -17,46 +42,22 @@ const Author = ({ handleChange }) => {
           <span className="checkmark"></span>All
           
         </label> 
-
-        <Input
-          handleChange={handleChange}
-          value="elevationcapital"
-          title="Elevation Capital"
-          name="test2"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="tracxn"
-          title="Tracxn"
-          name="test2"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="blumeventures"
-          title="Blume Ventures"
-          name="test2"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="redseer"
-          title="Red Seer"
-          name="test2"
-        />
-         <Input
-          handleChange={handleChange}
-          value="peakxv"
-          title="Peak XV"
-          name="test2"
-        />
-         <Input
-          handleChange={handleChange}
-          value="kaalari"
-          title="Kaalari Capital"
-          name="test2"
-        />
+        <div className="checklistauthorbox">
+        {authorData.map(({ value, title }) => (
+          <label className="checklistauthor" htmlFor="checklist">
+          <input
+            type="checkbox"
+            id="checklist"
+            name="checklist"
+            value={value}
+            className="checklistauthorInput"
+            onChange={handleChange}
+          />
+          {value}
+        </label>
+        
+        ))}
+        </div>
       </div>
     </>
   );
