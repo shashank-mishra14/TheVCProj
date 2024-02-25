@@ -45,6 +45,8 @@ const Author = ({ handleChange }) => {
         <div className="checklistauthorbox">
         {authorData.map(({ value, title }) => (
           <label className="checklistauthor" htmlFor="checklist">
+            <div className="checklistinputauthor">
+
           <input
             type="checkbox"
             id="checklist"
@@ -53,6 +55,7 @@ const Author = ({ handleChange }) => {
             className="checklistauthorInput"
             onChange={handleChange}
           />
+          </div>
           {value}
         </label>
         

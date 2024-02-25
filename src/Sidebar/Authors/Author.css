@@ -1,9 +1,23 @@
-
 .author-title {
-    margin-top: 20px;
-  }
-  
-  .ml {
-    margin-right: 2vmax;
-  }
+  margin-top: 20px;
+}
 
+.ml {
+  margin-right: 2vmax;
+}
+
+.checklistauthor {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Adjust font size for better readability */
+  margin-left: -100px;
+}
+
+.sidebar-label-container{
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Adjust font size for better readability */
+  margin-left: -100px;
+}
+
+.checklistauthorInput{}

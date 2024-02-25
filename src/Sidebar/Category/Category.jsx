@@ -32,7 +32,7 @@ const categoriesData = [
     subcategories: ["Creator Economy"],
   },
   {
-    category: "Emprow;ent",
+    category: "Empowerment",
     subcategories: ["Blue Collar Workforce"],
   },
   {
