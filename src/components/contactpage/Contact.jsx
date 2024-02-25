@@ -163,11 +163,9 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button className="uploadbutton" type="upload">
-                Upload Files
-              </button>
+             
               <div className="checklistBox">
-                {checklistData.map(({checklistQuery})=>(
+                {checklistData.map(({ checklistQuery }) => (
                   <label className="checklistItems" htmlFor="checklist">
                     <input
                       type="checkbox"
@@ -180,7 +178,15 @@ const Contact = () => {
                   </label>
                 ))}
               </div>
-
+                <div className="uploadform">
+                  <form action="" method="post" encType="multipart/form-data" accept="document">
+                    <label htmlFor="files"></label>
+                    <input type="file" className="choosefile" name="document"/>
+                    <button method="get" className="uploadbutton" type="file">
+                Upload Files
+              </button>
+                  </form>
+                </div>
               <label className="messg" htmlFor="message">
                 Tell us about your experience here
               </label>
