@@ -77,11 +77,30 @@ const categoriesData = [
   },
 ];
 function Category({ handleChange }) {
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedSubcategories, setSelectedSubcategories] = useState([]);
+  const [showAllCategories, setShowAllCategories] = useState(false);
+
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategories((prevCategories) => {
+      if (prevCategories.includes(category)) {
+        return prevCategories.filter(
+          (prevCategory) => prevCategory !== category
+        );
+      } else {
+        return [...prevCategories, category];
+      }
+    });
+  };
+
+    
   return (
     <div>
       <h2 className="sidebar-title">Category</h2>
 
-      <div>
+      {/* <div>
         <label className="sidebar-label-container">
           <input onChange={handleChange} type="checkbox" value="" name="test" />
           <span className="checkmark"></span>All
@@ -117,7 +136,7 @@ function Category({ handleChange }) {
           title="Employement"
           name="test"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
