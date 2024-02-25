@@ -179,7 +179,7 @@ const Contact = () => {
                 ))}
               </div>
                 <div className="uploadform">
-                  <form action="" method="post" encType="multipart/form-data" accept="document">
+                  <form action="http://localhost:5000/upload" method="post" encType="multipart/form-data" accept="document">
                     <label htmlFor="files"></label>
                     <input type="file" className="choosefile" name="document"/>
                     <button method="get" className="uploadbutton" type="file">
