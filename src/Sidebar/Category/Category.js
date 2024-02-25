@@ -107,6 +107,10 @@ function Category({ handleChange }) {
     });
   };
     
+  const handleViewMoreClick = () => {
+    setShowAllCategories(true);
+  };
+  
   return (
     <div>
       <h2 className="sidebar-title">Category</h2>
