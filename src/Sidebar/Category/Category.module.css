@@ -1,0 +1,76 @@
+.filters {
+  flex: 0 0 100%; /* Adjust width to fit the sidebar */
+}
+
+
+
+.categories,
+.subcategories {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.categories button {
+  margin-top: 10px;
+  background-color: #FAF9F6;
+  border: none;
+  cursor: pointer;
+  color: blue;
+  font-size: 15px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Adjust font size for better readability */
+margin-left: -100px;
+  
+}
+.checklistinput{
+  padding-bottom:5px;
+  margin-right: -90px;
+}
+.inputchecklist{
+  display: flex;
+  flex-direction:row;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.filterLabel {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    margin-bottom: 50px;
+  }
+
+  .reports {
+    padding: 0;
+  }
+
+  .lowerSection {
+    padding: 50px 28px;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .filters input.search {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .yearFilter select {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .categories button {
+    margin-left: 0; /* Remove negative margin */
+  }
+}
