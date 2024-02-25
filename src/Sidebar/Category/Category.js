@@ -95,6 +95,17 @@ function Category({ handleChange }) {
     });
   };
 
+  const handleSubcategoryClick = (subcategory) => {
+    setSelectedSubcategories((prevSubcategories) => {
+      if (prevSubcategories.includes(subcategory)) {
+        return prevSubcategories.filter(
+          (prevSubcategory) => prevSubcategory !== subcategory
+        );
+      } else {
+        return [...prevSubcategories, subcategory];
+      }
+    });
+  };
     
   return (
     <div>
