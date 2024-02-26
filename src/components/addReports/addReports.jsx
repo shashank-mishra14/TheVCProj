@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import "./addReports.css";
 
 const UseAddReports = () => {
-  const [reportData, setreportData] = useState({
+  const [reportData, setReportData] = useState({
     category: "",
     subcategory: "",
     author: "",
@@ -10,10 +11,10 @@ const UseAddReports = () => {
   });
 
   const handleChange = (e) => {
-    const { category, value } = e.target;
-    setreportData((prevState) => ({
+    const { name, value } = e.target; // Change 'category' to 'name'
+    setReportData((prevState) => ({
       ...prevState,
-      [category]: value,
+      [name]: value, // Change 'category' to 'name'
     }));
   };
 
@@ -21,8 +22,8 @@ const UseAddReports = () => {
     e.preventDefault();
     // You can handle form submission logic here, like sending data to a server
     console.log(reportData);
-    // Clear form fields after submission
-    setreportData({
+    // Clear form fields after submission (optional)
+    setReportData({
       category: "",
       subcategory: "",
       author: "",
@@ -33,10 +34,10 @@ const UseAddReports = () => {
 
   return (
     <div className="reportContainer">
-      <form action="" className="submitreport" onSubmit={handleSubmit}>
+      <form action="http://localhost:5000/addreports" method="post" encType="multipart/form-data" className="submitreport" onSubmit={handleSubmit}>
         <div className="Categoryinput">
           <div className="category">
-            <label className="categorychange" htmlFor="name">
+            <label className="categorychange" htmlFor="category">
               Category
             </label>
             <input
@@ -52,14 +53,14 @@ const UseAddReports = () => {
           </div>
 
           <div className="subcategory">
-            <label className="subcategorychange" htmlFor="name">
+            <label className="subcategorychange" htmlFor="subcategory">
               Subcategory
             </label>
             <input
               className="inputSubcategory"
               type="text"
               id="subcategory"
-              name="Subcategory"
+              name="subcategory" // Corrected to 'subcategory'
               placeholder="Subcategory"
               value={reportData.subcategory}
               onChange={handleChange}
@@ -69,7 +70,7 @@ const UseAddReports = () => {
         </div>
 
         <div className="author">
-          <label className="authorinput" htmlFor="email">
+          <label className="authorinput" htmlFor="author">
             Author
           </label>
           <input
@@ -99,13 +100,13 @@ const UseAddReports = () => {
           />
         </div>
         <div className="imgsrc">
-          <label className="imgsrcChange" htmlFor="email"></label>
+          <label className="imgsrcChange" htmlFor="imgsrc"></label>
           <input
             className="inputimgsrc"
             type="text"
             id="imgsrc"
             name="imgsrc"
-            placeholder="Add your thubmnail image link here"
+            placeholder="Add your thumbnail image link here"
             value={reportData.imgsrc}
             onChange={handleChange}
             required
