@@ -33,33 +33,33 @@ const useAddReports = () => {
 
   return <div className="reportContainer">
     <form action="" className="submitreport" onSubmit={handleSubmit}>
-    <div className="nameinput">
-                <div className="name">
-                  <label className="namechange" htmlFor="name">
+    <div className="Categoryinput">
+                <div className="category">
+                  <label className="categorychange" htmlFor="name">
                     Category
                   </label>
                   <input
-                    className="inputname"
+                    className="inputCategory"
                     type="text"
-                    id="name"
-                    name="name"
+                    id="category"
+                    name="category"
                     value={reportData.category}
-                    placeholder="First Name"
+                    placeholder="Category"
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                <div className="name">
-                  <label className="namechange" htmlFor="name">
+                <div className="subcategory">
+                  <label className="subcategorychange" htmlFor="name">
                   Subcategory
                   </label>
                   <input
-                    className="inputname"
+                    className="inputSubcategory"
                     type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Last Name"
+                    id="subcategory"
+                    name="Subcategory"
+                    placeholder="Subcategory"
                     value={reportData.subcategory}
                     onChange={handleChange}
                     required
@@ -67,46 +67,46 @@ const useAddReports = () => {
                 </div>
               </div>
 
-              <div className="email">
-                <label className="mail" htmlFor="email">
-                  Email
+              <div className="author">
+                <label className="authorinput" htmlFor="email">
+                  Author
                 </label>
                 <input
-                  className="inputmail"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
+                  className="inputauthor"
+                  type="text"
+                  id="author"
+                  name="author"
+                  placeholder="Author"
                   value={reportData.author}
                   onChange={handleChange}
                   required
                 />
               </div>
-              <div className="email">
-                <label className="mail" htmlFor="email">
-                  Email
+              <div className="year">
+                <label className="yearchange" htmlFor="year">
+                  Year
                 </label>
                 <input
-                  className="inputmail"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
+                  className="inputyear"
+                  type="year"
+                  id="year"
+                  name="year"
+                  placeholder="Year"
                   value={reportData.year}
                   onChange={handleChange}
                   required
                 />
               </div>
-              <div className="email">
-                <label className="mail" htmlFor="email">
-                  Email
+              <div className="imgsrc">
+                <label className="imgsrcChange" htmlFor="email">
+                  
                 </label>
                 <input
-                  className="inputmail"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
+                  className="inputimgsrc"
+                  type="text"
+                  id="imgsrc"
+                  name="imgsrc"
+                  placeholder="Add your thubmnail image link here"
                   value={reportData.imgsrc}
                   onChange={handleChange}
                   required
