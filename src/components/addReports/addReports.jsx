@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const useAddReports = () => {
+const UseAddReports = () => {
   const [reportData, setreportData] = useState({
     category: "",
     subcategory: "",
@@ -119,4 +119,4 @@ const useAddReports = () => {
   );
 };
 
-export default useAddReports;
+export default UseAddReports;

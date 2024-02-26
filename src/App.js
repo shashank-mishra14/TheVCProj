@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Contact from "./components/contactpage/Contact";
 import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
+import UseAddReports from "./components/addReports/addReports";
 import {data} from "./db/data";
 // import Recommended from "./Recommended/Recommended";
 import subCategory from "./Sidebar/Category/subcategory";
-import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
@@ -87,6 +88,7 @@ function App() {
         </>
       } />
       <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/addreports" element={<UseAddReports />} />
     </Routes>
   </Router>
   );
