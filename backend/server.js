@@ -3,10 +3,12 @@
 const express = require('express');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+// var router = express.Router();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = 5000;
-
+const Reports= require('../src/components/addReports/reports.js');
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/TheVCProject', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
@@ -14,7 +16,15 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
     console.log('Connected to MongoDB');
 });
+app.use(express.json());
 
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 const fileSchema = new mongoose.Schema({
     filename: String,
@@ -44,7 +54,18 @@ app.post('/upload', upload.single('document'), async (req, res) => {
     }
 });
 
-
+app.post('/addreports', async(req, res) => {
+    const { category, subcategory,author, year,imgsrc } = req.body;
+    Reports.create({
+        category,
+        subcategory,
+        author,
+        year,
+        imgsrc
+    });
+    
+    res.send('Report added successfully.');
+});
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -88,7 +88,7 @@ function App() {
         </>
       } />
       <Route exact path="/contact" element={<Contact />} />
-      <Route exact path="/addreports" element={<UseAddReports />} />
+      <Route exact path="/reports" element={<UseAddReports />} />
     </Routes>
   </Router>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./addReports.css";
-
+import axios from "axios";
 const UseAddReports = () => {
   const [reportData, setReportData] = useState({
     category: "",
@@ -18,23 +18,27 @@ const UseAddReports = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, like sending data to a server
-    console.log(reportData);
-    // Clear form fields after submission (optional)
-    setReportData({
-      category: "",
-      subcategory: "",
-      author: "",
-      year: "",
-      imgsrc: "",
-    });
+    try {
+      axios.post("http://localhost:5000/addreports", reportData);
+      // Clear form fields after successful submission (optional)
+      setReportData({
+        category: "",
+        subcategory: "",
+        author: "",
+        year: "",
+        imgsrc: "",
+      });
+    } catch (error) {
+      console.error('Error submitting report:', error.message);
+    }
   };
+  
 
   return (
     <div className="reportContainer">
-      <form action="http://localhost:5000/addreports" method="post" encType="multipart/form-data" className="submitreport" onSubmit={handleSubmit}>
+      <form action="http://localhost:5000/addreports" method="POST"  className="submitreport" onSubmit={handleSubmit}>
         <div className="Categoryinput">
           <div className="category">
             <label className="categorychange" htmlFor="category">
