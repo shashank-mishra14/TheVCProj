@@ -3,11 +3,13 @@ import "./addReports.css";
 import axios from "axios";
 const UseAddReports = () => {
   const [reportData, setReportData] = useState({
+    title: "",
     category: "",
     subcategory: "",
     author: "",
     year: "",
     imgsrc: "",
+    link: "",
   });
 
   const handleChange = (e) => {
@@ -24,11 +26,13 @@ const UseAddReports = () => {
       axios.post("http://localhost:5000/addreports", reportData);
       // Clear form fields after successful submission (optional)
       setReportData({
+        title: "",
         category: "",
         subcategory: "",
         author: "",
         year: "",
         imgsrc: "",
+        link: "",
       });
     } catch (error) {
       console.error('Error submitting report:', error.message);
@@ -39,6 +43,21 @@ const UseAddReports = () => {
   return (
     <div className="reportContainer">
       <form action="http://localhost:5000/addreports" method="POST"  className="submitreport" onSubmit={handleSubmit}>
+        <div className="title">
+          <label className="titlechange" htmlFor="title">
+            Title
+          </label>
+          <input
+            className="inputTitle"
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Title"
+            value={reportData.title}
+            onChange={handleChange}
+            required
+          />
+        </div>
         <div className="Categoryinput">
           <div className="category">
             <label className="categorychange" htmlFor="category">
@@ -112,6 +131,19 @@ const UseAddReports = () => {
             name="imgsrc"
             placeholder="Add your thumbnail image link here"
             value={reportData.imgsrc}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="link">
+          <label className="linkChange" htmlFor="link"></label>
+          <input
+            className="inputlink"
+            type="text"
+            id="link"
+            name="link"
+            placeholder="Add your report link here"
+            value={reportData.link}
             onChange={handleChange}
             required
           />

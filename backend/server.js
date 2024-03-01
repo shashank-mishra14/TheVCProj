@@ -55,13 +55,15 @@ app.post('/upload', upload.single('document'), async (req, res) => {
 });
 
 app.post('/addreports', async(req, res) => {
-    const { category, subcategory,author, year,imgsrc } = req.body;
+    const { title, category, subcategory,author, year,imgsrc,link } = req.body;
     Reports.create({
+        title,
         category,
         subcategory,
         author,
         year,
-        imgsrc
+        imgsrc,
+        link,
     });
     
     res.send('Report added successfully.');
