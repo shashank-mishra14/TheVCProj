@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 36%;
-    margin-left: 20%;
+    margin-left: 23%;
     padding: 17px;
     padding-left: 20px;
     padding-right: 20px;
@@ -22,5 +22,5 @@
 }
 
 .main{
-    background-color: rgb(246, 244, 241);
+    background-color: rgb(235, 234, 233);
 }

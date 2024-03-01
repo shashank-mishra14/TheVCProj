@@ -1,9 +1,11 @@
 import React from "react";
 import "./Homepage.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./Footer/Footer";
 
 const Homepage = () => {
   return (
+    <>
    <div className="main">
      <div className="homepage-main">
       <div className="homepage-navbar-container">
@@ -19,6 +21,10 @@ const Homepage = () => {
       </div>
     </div>
    </div>
+   <div>    
+    <Footer />
+   </div>
+   </>
   );
 };
 
