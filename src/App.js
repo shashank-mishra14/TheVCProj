@@ -5,6 +5,7 @@ import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import UseAddReports from "./components/addReports/addReports";
 import {data} from "./db/data";
+import Homepage from "./components/Homepage/Homepage";
 // import Recommended from "./Recommended/Recommended";
 import subCategory from "./Sidebar/Category/subcategory";
 import Sidebar from "./Sidebar/Sidebar";
@@ -80,7 +81,8 @@ function App() {
 
     <Router>
     <Routes>
-      <Route exact path="/" element={
+    <Route exact path="/home" element={<Homepage />} />
+      <Route exact path="/reportspage" element={
         <>
           <Sidebar handleChange={handleChange} />
           <Navigation query={query} handleInputChange={handleInputChange} />
