@@ -8,6 +8,19 @@ body{
 	padding:0;
 	box-sizing: border-box;
 }
+
+.main-tag{
+	background-color: #24262b;
+	color: #ffffff;
+	font-size: 33px;
+
+}
+.tag{
+	background-color: #24262b;
+	color: #ffffff;
+	font-size: 13px;
+
+}
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -24,11 +37,21 @@ ul{
 .footer{
 	background-color: #24262b;
     padding: 70px 0;
-    
+    position: relative;
 }
+.footer::before {
+	content: "";
+	position: absolute;
+	bottom: 45px; /* Adjust this value to control the distance from the bottom */
+	left:260px;
+	width: 70%;
+	height: 1px; /* Adjust this value to control the thickness of the line */
+	background-color: white; /* Change this to the color you want for the line */
+  }
 .footer-col{
    width: 25%;
    padding: 0 15px;
+   padding-right: 150px;
 }
 .footer-col h4{
 	font-size: 18px;
