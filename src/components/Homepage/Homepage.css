@@ -24,3 +24,19 @@
 .main{
     background-color: rgb(235, 234, 233);
 }
+
+.svg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1) 33%);
+}
+
+.heading-container{
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: -15px;
+
+}
