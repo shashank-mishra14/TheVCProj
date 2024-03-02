@@ -2,7 +2,6 @@ import React from "react";
 import "./Homepage.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Footer/Footer";
-
 const Homepage = () => {
   return (
     <>
@@ -20,8 +19,10 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="svg-container" >
-          <h2 className="heading-container">Trusted by top startups and unicorns</h2>
+        <div className="svg-container">
+          <h2 className="heading-container">
+            Trusted by top startups and unicorns
+          </h2>
           <div className="svg-logos">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +111,79 @@ const Homepage = () => {
             </svg>
           </div>
         </div>
+      </div>
+      <div className="card1-container">
+        <h2 className="heading2">THE VC PROJECT</h2>
+        <p className="paragraph">
+          India's largest researches respository
+          <br />
+          for students
+        </p>
+        <div className="card2-container">
+          <div className="card2">
+            <div className="card2-text">
+              <h3>Read</h3>
+              <p>
+                Gain access to library of 1000+
+                <br />
+                reports across  100+
+                <br />
+                industries, providing comprehensive
+                <br />
+                analyses.
+              </p>
+            </div>
+            <div className="card2-image">
+              <img
+                src="https://svgshare.com/i/13nn.svg"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div className="card2">
+            <div className="card2-text">
+              <h3>Publish</h3>
+              <p>
+              Gain access to library of 1000+
+                <br />
+                reports across  100+
+                <br />
+                industries, providing comprehensive
+                <br />
+                analyses.
+              </p>
+            </div>
+            <div className="card2-image">
+              <img
+                src="https://svgshare.com/i/13pM.svg"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div className="card2">
+            <div className="card2-text">
+              <h3>Connect</h3>
+              <p>
+              Gain access to library of 1000+
+                <br />
+                reports across  100+
+                <br />
+                industries, providing comprehensive
+                <br />
+                analyses.
+              </p>
+            </div>
+            <div className="card2-image">
+              <img
+                src="https://svgshare.com/i/13oU.svg"
+                alt="icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="network-container">
+        
       </div>
       <div>
         <Footer />
