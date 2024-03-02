@@ -183,7 +183,8 @@ const Homepage = () => {
         </div>
       </div>
       <div className="network-container">
-        
+        <h3>Our network</h3>
+        <p>Tap into our highly vetted network</p>
       </div>
       <div>
         <Footer />
