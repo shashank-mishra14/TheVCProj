@@ -24,8 +24,9 @@
 .checkboxLabel {
   display: flex;
   align-items: center;
-  font-size: 16px; /* Adjust font size for better readability */
+  font-size: 19px; /* Adjust font size for better readability */
 margin-left: -100px;
+
   
 }
 .checklistinput{
