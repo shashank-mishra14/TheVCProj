@@ -45,7 +45,7 @@
     padding-bottom:1px;
     padding-left: 0.8rem;
     font-size: 1.0rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: Noto Sans JP, sans-serif;
   }
   
  .card-company{
@@ -54,7 +54,7 @@
     padding-bottom: 0.2rem;
     font-size: 0.8rem;
     color: grey;
-    font-family: 'Poppins', sans-serif;
+    font-family: Noto Sans JP, sans-serif;
   }
   
 
@@ -70,5 +70,5 @@
     font-size: 0.8rem;
     border: none;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-family: Noto Sans JP, sans-serif;
   }
