@@ -68,6 +68,20 @@ app.post('/addreports', async(req, res) => {
     
     res.send('Report added successfully.');
 });
+
+app.get('/reports', async (req, res) => {
+    try {
+        // Fetch reports from the database
+        const reports = await Reports.find({}, {});
+        
+        // Send the reports data as a response
+        res.json(reports);
+    } catch (error) {
+        console.error('Error fetching reports:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
