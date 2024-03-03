@@ -45,30 +45,52 @@
     padding-bottom:1px;
     padding-left: 0.8rem;
     font-size: 1.0rem;
-    font-family: Noto Sans JP, sans-serif;
+    font-family: Nunito Sans;
   }
   
  .card-company{
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
     padding-left: 0.8rem;
     padding-bottom: 0.2rem;
     font-size: 0.8rem;
     color: grey;
-    font-family: Noto Sans JP, sans-serif;
+    font-family: Nunito Sans;
   }
   
 
   .readmore-button{
     margin-left: 8rem;
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    margin-top: 10px;
+    padding: 0.7rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-radius: 14px;
+    border-radius: 18px;
     background-color: rgb(24, 24, 143);
     color: white;
     font-size: 0.8rem;
     border: none;
     cursor: pointer;
-    font-family: Noto Sans JP, sans-serif;
+    font-family: Nunito Sans;
+  }
+
+
+  .tag-button{
+    margin-left: 0.8rem;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    padding-left: 0.8rem;
+    padding-right: 1rem;
+    border-radius: 16px;
+    background-color: rgb(183, 180, 180);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    font-family: Nunito Sans;
+  }
+
+  .horizontal-line {
+    width: 86%; /* Adjust the width as needed */
+    border-top: 1.2px solid #ccc; /* Style the line */
+    margin: 10px auto; /* Add some spacing above and below the line */
   }

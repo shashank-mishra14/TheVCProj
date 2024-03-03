@@ -16,6 +16,9 @@ const Card = ({ img, title, companyName }) => {
           <div className="card-details">
             <h3 className="card-title">{displayedTitle}</h3>
             <div className="card-company">by {companyName}</div>
+            <button className="tag-button">subcategory</button>
+            <button className="tag-button">Year</button>
+            <hr className="horizontal-line" />
             <button className="readmore-button" >Read More</button>
           </div>
           </div>
