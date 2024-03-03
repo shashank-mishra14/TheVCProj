@@ -1,3 +1,5 @@
+import "./Card.css";
+
 const Card = ({ img, title, companyName }) => {
     const MAX_TITLE_LENGTH = 20;
   
