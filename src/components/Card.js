@@ -15,7 +15,7 @@ const Card = ({ img, title, companyName }) => {
           <img src={img} alt={title} className="card-img" />
           <div className="card-details">
             <h3 className="card-title">{displayedTitle}</h3>
-            <div className="card-company">{companyName}</div>
+            <div className="card-company">by {companyName}</div>
             <button className="readmore-button" >Read More</button>
           </div>
           </div>

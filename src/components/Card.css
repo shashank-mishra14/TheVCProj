@@ -5,7 +5,7 @@
     box-shadow: 0 3px 10px rgba(66, 66, 66, 0.342);
     overflow: hidden; /* Prevents overflowing content */
     margin: 1rem;
-    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+    transition: transform 0.2s ease; /* Add transition for smooth hover effect */
   }
   
   .card:hover {
@@ -41,17 +41,20 @@
 } */
   .card-title {
     
-    padding: 0.5rem;
-    padding-left: 0.3rem;
+    margin-top:-10px;
+    padding-bottom:1px;
+    padding-left: 0.8rem;
+    font-size: 1.0rem;
+    font-family: 'Poppins', sans-serif;
   }
   
  .card-company{
     margin-bottom: 1rem;
-    padding-left: 0.5rem;
+    padding-left: 0.8rem;
     padding-bottom: 0.2rem;
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 0.8rem;
     color: grey;
+    font-family: 'Poppins', sans-serif;
   }
   
 
@@ -62,9 +65,10 @@
     padding-left: 2rem;
     padding-right: 2rem;
     border-radius: 14px;
-    background-color: #3471e4;
+    background-color: rgb(24, 24, 143);
     color: white;
     font-size: 0.8rem;
     border: none;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
   }
