@@ -1,6 +1,6 @@
 import "./Card.css";
 
-const Card = ({ img, title, companyName, subcategory, year,category }) => {
+const Card = ({ img, title, companyName, subcategory, year,category,month }) => {
     const MAX_TITLE_LENGTH = 20;
   
     let displayedTitle = title;
@@ -19,6 +19,7 @@ const Card = ({ img, title, companyName, subcategory, year,category }) => {
             <button className="tag-button">{category}</button>
             <button className="tag-button">{subcategory}</button>
             <button className="tag-button">{year}</button>
+            <button className="tag-button">{month}</button>
             <hr className="horizontal-line" />
             <button className="readmore-button" >Read More</button>
           </div>

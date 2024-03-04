@@ -84,7 +84,7 @@ const ReportCard = () => {
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products
         result={result.map(
-          ({ imgsrc, title, author, authors, subcategory, year, category }) => (
+          ({ imgsrc, title, author, authors, subcategory, year, category,month }) => (
             <Card
               key={Math.random()}
               img={imgsrc}
@@ -94,6 +94,7 @@ const ReportCard = () => {
               subcategory={subcategory}
               category={category}
               year={year}
+              month={month}
             />
           )
         )}
