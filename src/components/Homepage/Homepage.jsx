@@ -1,6 +1,6 @@
 import React from "react";
 import "./Homepage.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Footer from "./Footer/Footer";
 const Homepage = () => {
   return (
@@ -12,9 +12,13 @@ const Homepage = () => {
               <h3>The VC Project</h3>
             </div>
             <div className="homepage-navbar">
-              <div>Reports</div>
+              <div>
+              <Link to="/reportspage">Reports</Link>
+              </div>
               <div>About Us</div>
-              <div>Contact Us</div>
+              <div>
+                <Link to="/contact">Contact Us</Link>
+              </div>
               <div>Pricing</div>
             </div>
           </div>
@@ -126,7 +130,7 @@ const Homepage = () => {
               <p>
                 Gain access to library of 1000+
                 <br />
-                reports across  100+
+                reports across 100+
                 <br />
                 industries, providing comprehensive
                 <br />
@@ -134,19 +138,16 @@ const Homepage = () => {
               </p>
             </div>
             <div className="card2-image">
-              <img
-                src="https://svgshare.com/i/13nn.svg"
-                alt="icon"
-              />
+              <img src="https://svgshare.com/i/13nn.svg" alt="icon" />
             </div>
           </div>
           <div className="card2">
             <div className="card2-text">
               <h3>Publish</h3>
               <p>
-              Gain access to library of 1000+
+                Gain access to library of 1000+
                 <br />
-                reports across  100+
+                reports across 100+
                 <br />
                 industries, providing comprehensive
                 <br />
@@ -154,19 +155,16 @@ const Homepage = () => {
               </p>
             </div>
             <div className="card2-image">
-              <img
-                src="https://svgshare.com/i/13pM.svg"
-                alt="icon"
-              />
+              <img src="https://svgshare.com/i/13pM.svg" alt="icon" />
             </div>
           </div>
           <div className="card2">
             <div className="card2-text">
               <h3>Connect</h3>
               <p>
-              Gain access to library of 1000+
+                Gain access to library of 1000+
                 <br />
-                reports across  100+
+                reports across 100+
                 <br />
                 industries, providing comprehensive
                 <br />
@@ -174,10 +172,7 @@ const Homepage = () => {
               </p>
             </div>
             <div className="card2-image">
-              <img
-                src="https://svgshare.com/i/13oU.svg"
-                alt="icon"
-              />
+              <img src="https://svgshare.com/i/13oU.svg" alt="icon" />
             </div>
           </div>
         </div>

@@ -12,15 +12,13 @@ const Nav = ({ handleInputChange, query }) => {
           placeholder="Enter your search."
         />
       </div>
-      <div className="profile-container"> 
+      {/* <div className="profile-container"> 
         <button class="reports">REPORTS</button>
         
         <button class="reports">
-        <Link to="/contact">
-        <span>Contact Us</span>
-        </Link>
+        
         </button>
-      </div>
+      </div> */}
     </nav>
   );
 };

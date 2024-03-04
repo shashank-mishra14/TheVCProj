@@ -1,7 +1,7 @@
 import "./Card.css";
 
 const Card = ({ img, title, companyName, subcategory, year,category,month }) => {
-    const MAX_TITLE_LENGTH = 20;
+    const MAX_TITLE_LENGTH = 60;
   
     let displayedTitle = title;
     if (title.length > MAX_TITLE_LENGTH) {

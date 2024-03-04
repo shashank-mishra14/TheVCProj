@@ -19,6 +19,7 @@
     border-radius: 10px; /* Adjust the value as needed */
     border: 1px solid #ffffff; /* Add a border for better visibility */
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .main{

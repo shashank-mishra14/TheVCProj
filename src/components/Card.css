@@ -1,5 +1,5 @@
 .card {
-    width: 270px;
+    width: 310px;
     border-radius: 14px;
     background-color: white;
     box-shadow: 0 3px 10px rgba(66, 66, 66, 0.342);
@@ -59,7 +59,7 @@
   
 
   .readmore-button{
-    margin-left: 8rem;
+    margin-left: 9.5rem;
     margin-bottom: 1rem;
     margin-top: 10px;
     padding: 0.7rem;
