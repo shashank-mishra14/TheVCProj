@@ -65,7 +65,7 @@ const Contact = () => {
 
       <div className="bothcontainers">
         <div className="container-left">
-          <p className="paragraph">
+          <p className="paragraph1">
             "One of the standout features of the VC Project Repository is its
             user-friendly interface. Navigating through the platform was
             intuitive, allowing our team to effortlessly browse through a
@@ -79,7 +79,7 @@ const Contact = () => {
             <br />
             Shashank Mishra
             <br />
-            <h4 className="h4">CTO</h4>
+            <h4 className="h4-1">CTO</h4>
             <br />
             <br />
             <br />
@@ -178,15 +178,7 @@ const Contact = () => {
                   </label>
                 ))}
               </div>
-                <div className="uploadform">
-                  <form action="http://localhost:5000/upload" method="post" encType="multipart/form-data" accept="document">
-                    <label htmlFor="files"></label>
-                    <input type="file" className="choosefile" name="document"/>
-                    <button method="get" className="uploadbutton" type="file">
-                Upload Files
-              </button>
-                  </form>
-                </div>
+               
               <label className="messg" htmlFor="message">
                 Tell us about your experience here
               </label>
@@ -203,7 +195,15 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-
+              <div className="uploadform">
+                  <form action="http://localhost:5000/upload" method="post" encType="multipart/form-data" accept="document">
+                    <label htmlFor="files"></label>
+                    <input type="file" className="choosefile" name="document"/>
+                    <button method="get" className="uploadbutton" type="file">
+                Upload Files
+              </button>
+                  </form>
+                </div>
               <button className="submitbutton" type="submit">
                 Submit
               </button>

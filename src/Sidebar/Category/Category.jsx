@@ -5,15 +5,15 @@ import React, { useEffect, useState } from "react";
 const categoriesData = [
   {
     category: "Agritech",
-    subcategories: ["Agritech"],
+    subCategory: ["Agritech"],
   },
   {
     category: "Climate & Sustainability",
-    subcategories: ["Circular Economy"],
+    subCategory: ["Circular Economy"],
   },
   {
     category: "Consumer Tech",
-    subcategories: [
+    subCategory: [
       "Gaming",
       "Marketplaces",
       "Edtech",
@@ -27,56 +27,56 @@ const categoriesData = [
   },
   {
     category: "Content & Media",
-    subcategories: ["Creator Economy"],
+    subCategory: ["Creator Economy"],
   },
   {
     category: "Empowerment",
-    subcategories: ["Blue Collar Workforce"],
+    subCategory: ["Blue Collar Workforce"],
   },
   {
     category: "EV & Renewables",
-    subcategories: ["BatteryTech", "EV"],
+    subCategory: ["BatteryTech", "EV"],
   },
   {
     category: "Financial Services",
-    subcategories: ["Fintech", "SME Credit"],
+    subCategory: ["Fintech", "SME Credit"],
   },
   {
     category: "Healthcare",
-    subcategories: ["Mental Health", "Chronic Care"],
+    subCategory: ["Mental Health", "Chronic Care"],
   },
   {
     category: "Human Resources",
-    subcategories: ["Talent Trends"],
+    subCategory: ["Talent Trends"],
   },
   {
     category: "India Stack",
-    subcategories: ["DPI"],
+    subCategory: ["DPI"],
   },
   {
     category: "Infrastructure & Security",
-    subcategories: ["Dev tools"],
+    subCategory: ["Dev tools"],
   },
   {
     category: "Insurance",
-    subcategories: ["Insurtech"],
+    subCategory: ["Insurtech"],
   },
   {
     category: "Social & Advertising",
-    subcategories: ["Adtech", "Social Media", "Short form video (SFV)"],
+    subCategory: ["Adtech", "Social Media", "Short form video (SFV)"],
   },
   {
     category: "Software",
-    subcategories: ["Cybersecurity", "HRTech", "Indian SaaS"],
+    subCategory: ["Cybersecurity", "HRTech", "Indian SaaS"],
   },
   {
     category: "Venture Capital & Private Equity",
-    subcategories: ["Funding Trends", "VC Returns", "Termsheets"],
+    subCategory: ["Funding Trends", "VC Returns", "Termsheets"],
   },
 ];
-function Category({ handleChange, selectedCategory, setSelectedCategory }) {
+function Category({ handleChange, selectedCategory, setSelectedCategory,setSelectedSubCategory,selectedSubCategory }) {
   // const [selectedCategory, setSelectedCategory] = useState([]);
-  const [selectedSubcategories, setSelectedSubcategories] = useState([]);
+  // const [selectedSubCategory, setSelectedSubCategory] = useState([]);
   const [showAllCategories, setShowAllCategories] = useState(false);
 
   const handleCategoryClick = (category) => {
@@ -95,13 +95,13 @@ function Category({ handleChange, selectedCategory, setSelectedCategory }) {
   };
 
   const handleSubcategoryClick = (subcategory) => {
-    setSelectedSubcategories((prevSubcategories) => {
-      if (prevSubcategories.includes(subcategory)) {
-        return prevSubcategories.filter(
+    setSelectedSubCategory((prevSubCategory) => {
+      if (prevSubCategory.includes(subcategory)) {
+        return prevSubCategory.filter(
           (prevSubcategory) => prevSubcategory !== subcategory
         );
       } else {
-        return [...prevSubcategories, subcategory];
+        return [...prevSubCategory, subcategory];
       }
     });
   };
@@ -115,7 +115,7 @@ function Category({ handleChange, selectedCategory, setSelectedCategory }) {
       <span className={styles.filterLabel}>Categories</span>
       {categoriesData
         .slice(0, showAllCategories ? categoriesData.length : 5)
-        .map(({ category, subcategories }) => (
+        .map(({ category, subCategory }) => (
           <div key={category} className={styles.checklistMain}>
             <label className={styles.checkboxLabel}>
               <div className={styles.checklistinput}>
@@ -141,12 +141,12 @@ function Category({ handleChange, selectedCategory, setSelectedCategory }) {
       )}
 
       {selectedCategory.length > 0 && (
-        <div className={styles.subcategories}>
-          <span className={styles.filterLabel}>Subcategories</span>
+        <div className={styles.subCategory}>
+          <span className={styles.filterLabel}>SubCategory</span>
           {categoriesData
             .filter((cat) => selectedCategory.includes(cat.category))
             .map((cat) =>
-              cat.subcategories.map((subcategory) => (
+              cat.subCategory.map((subcategory) => (
                 <label key={subcategory} className={styles.checkboxLabel}>
                   <div className={styles.checklistinput}>
                     <input

@@ -56,7 +56,7 @@ const Author = ({ handleChange }) => {
             onChange={handleChange}
           />
           </div>
-          {value}
+          {title}
         </label>
         
         ))}

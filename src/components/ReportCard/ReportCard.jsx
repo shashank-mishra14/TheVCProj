@@ -4,8 +4,10 @@ import Navigation from "../../Navigation/Nav";
 import Products from "../../Products/Products";
 import Sidebar from "../../Sidebar/Sidebar";
 import Card from "../Card";
+
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
+  const [selectedSubCategory, setSelectedSubCategory] = useState([]);
   const [cardData, setCardData] = useState([]);
   const [query, setQuery] = useState("");
   const [result, setResult] = useState([]);
@@ -23,12 +25,12 @@ const ReportCard = () => {
   // Filter data based on selected category and query
   const filterData = () => {
     let filteredProducts = [...cardData];
-    console.log(filteredProducts);
-    console.log(selectedCategory);
-    // Filtering by category
+    
+    // Filtering by category and subcategory
     if (selectedCategory.length > 0) {
-      filteredProducts = filteredProducts.filter(({ category }) =>
-        selectedCategory.includes(category)
+      filteredProducts = filteredProducts.filter(({ category, subcategory }) =>
+        selectedCategory.includes(category) && 
+        (selectedSubCategory.length === 0 || selectedSubCategory.includes(subcategory))
       );
     }
 
@@ -50,9 +52,16 @@ const ReportCard = () => {
     setQuery(event.target.value);
   };
 
-  // Handle category change
+  // Handle category and subcategory change
   const handleChange = (event) => {
-    setSelectedCategory(event.target.value);
+    const { name, value } = event.target;
+    if (name === "category") {
+      setSelectedCategory(value);
+      // Clear selected subcategories when category changes
+      setSelectedSubCategory([]);
+    } else if (name === "subcategory") {
+      setSelectedSubCategory(value);
+    }
   };
 
   useEffect(() => {
@@ -61,7 +70,7 @@ const ReportCard = () => {
 
   useEffect(() => {
     setResult(filterData());
-  }, [cardData, selectedCategory, query]);
+  }, [cardData, selectedCategory, selectedSubCategory, query]);
 
   return (
     <div>
@@ -69,6 +78,8 @@ const ReportCard = () => {
         handleChange={handleChange}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
+        selectedSubCategory={selectedSubCategory}
+        setSelectedSubCategory={setSelectedSubCategory}
       />
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products

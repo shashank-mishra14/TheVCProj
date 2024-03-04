@@ -4,8 +4,14 @@ import Author from "./Authors/Author";
 import SubCategory from "./Category/subcategory";
 import "./Sidebar.css";
 
-const Sidebar = ({ handleChange, selectedCategory, setSelectedCategory }) => {
-  const [selectedSubCategory, setSelectedSubCategory] = useState(null);
+const Sidebar = ({
+  handleChange,
+  selectedCategory,
+  setSelectedCategory,
+  selectedSubCategory,
+  setSelectedSubCategory,
+}) => {
+  // const [selectedSubCategory, setSelectedSubCategory] = useState(null);
 
   const handleCategoryChange = (category) => {
     if (selectedSubCategory === category) {
@@ -28,13 +34,10 @@ const Sidebar = ({ handleChange, selectedCategory, setSelectedCategory }) => {
           }}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
+          setSelectedSubCategory={setSelectedSubCategory}
+          selectedSubCategory={selectedSubCategory}
         />
-        {selectedSubCategory && (
-          <SubCategory
-            handleChange={handleChange}
-            selectedSubCategory={selectedSubCategory}
-          />
-        )}
+
         <Author handleChange={handleChange} />
       </div>
     </section>
