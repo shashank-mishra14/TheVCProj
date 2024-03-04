@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Category from "./Category/Category";
 import Author from "./Authors/Author";
 import SubCategory from "./Category/subcategory";
 import "./Sidebar.css";
 
-const Sidebar = ({ handleChange }) => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+const Sidebar = ({ handleChange, selectedCategory, setSelectedCategory }) => {
+  const [selectedSubCategory, setSelectedSubCategory] = useState(null);
 
   const handleCategoryChange = (category) => {
-    if (selectedCategory === category) {
-      setSelectedCategory(null); // If the same category is clicked again, hide the subcategory
+    if (selectedSubCategory === category) {
+      setSelectedSubCategory(null); // If the same category is clicked again, hide the subcategory
     } else {
-      setSelectedCategory(category); // Otherwise, set the selected category
+      setSelectedSubCategory(category); // Otherwise, set the selected category
     }
   };
 
@@ -21,8 +21,20 @@ const Sidebar = ({ handleChange }) => {
         <h1>The VC Project</h1>
       </div>
       <div className="sidebar-content">
-        <Category handleChange={(category) => { handleChange(category); handleCategoryChange(category); }} />
-        {selectedCategory && <SubCategory handleChange={handleChange} selectedCategory={selectedCategory} />}
+        <Category
+          handleChange={(category) => {
+            handleChange(category);
+            handleCategoryChange(category);
+          }}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
+        {selectedSubCategory && (
+          <SubCategory
+            handleChange={handleChange}
+            selectedSubCategory={selectedSubCategory}
+          />
+        )}
         <Author handleChange={handleChange} />
       </div>
     </section>
