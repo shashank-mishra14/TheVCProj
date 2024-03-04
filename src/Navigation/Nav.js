@@ -1,5 +1,4 @@
 import "./Nav.css";
-import { Link } from 'react-router-dom';
 const Nav = ({ handleInputChange, query }) => {
   return (
     <nav>
