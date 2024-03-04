@@ -8,6 +8,7 @@ const reportsSchema = mongoose.Schema({
   year: String,
   imgsrc: String,
   link: String,
+  month: String,
 });
 
 module.exports = mongoose.model("reports", reportsSchema);
