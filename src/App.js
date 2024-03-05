@@ -8,24 +8,27 @@ import Homepage from "./components/Homepage/Homepage";
 // import Card from "./components/Card";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route exact path="/home" element={<Homepage />} />
-        <Route
-          exact
-          path="/reportspage"
-          element={
-            <>
-              <ReportCard />
-            </>
-          }
-        />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/reports" element={<UseAddReports />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route exact path="/home" element={<Homepage />} />
+          <Route
+            exact
+            path="/reportspage"
+            element={
+              <>
+                <ReportCard />
+              </>
+            }
+          />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/reports" element={<UseAddReports />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

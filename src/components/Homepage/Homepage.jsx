@@ -1,28 +1,10 @@
 import React from "react";
 import "./Homepage.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Footer from "./Footer/Footer";
+import Footer from "../Footer/Footer";
 const Homepage = () => {
   return (
     <>
       <div className="main">
-        <div className="homepage-main">
-          <div className="homepage-navbar-container">
-            <div className="homepage-logo">
-              <h3>The VC Project</h3>
-            </div>
-            <div className="homepage-navbar">
-              <div>
-              <Link to="/reportspage">Reports</Link>
-              </div>
-              <div>About Us</div>
-              <div>
-                <Link to="/contact">Contact Us</Link>
-              </div>
-              <div>Pricing</div>
-            </div>
-          </div>
-        </div>
         <div className="svg-container">
           <h2 className="heading-container">
             Trusted by top startups and unicorns
@@ -181,9 +163,7 @@ const Homepage = () => {
         <h3>Our network</h3>
         <p>Tap into our highly vetted network</p>
       </div>
-      <div>
-        <Footer />
-      </div>
+     
     </>
   );
 };
