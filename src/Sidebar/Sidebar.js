@@ -10,6 +10,7 @@ const Sidebar = ({
   setSelectedCategory,
   selectedSubCategory,
   setSelectedSubCategory,
+  setAuthor,author
 }) => {
   // const [selectedSubCategory, setSelectedSubCategory] = useState(null);
 
@@ -24,7 +25,7 @@ const Sidebar = ({
   return (
     <section className="sidebar">
       <div className="logo-container">
-        <h1>The VC Project</h1>
+
       </div>
       <div className="sidebar-content">
         <Category
@@ -38,7 +39,7 @@ const Sidebar = ({
           selectedSubCategory={selectedSubCategory}
         />
 
-        <Author handleChange={handleChange} />
+        <Author handleChange={handleChange} setAuthor={setAuthor} author={author} />
       </div>
     </section>
   );

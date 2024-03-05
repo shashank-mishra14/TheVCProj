@@ -11,6 +11,7 @@ const ReportCard = () => {
   const [cardData, setCardData] = useState([]);
   const [query, setQuery] = useState("");
   const [result, setResult] = useState([]);
+  const [authors, setAuthors] = useState([]);
 
   // Fetch data from the server
   const fetchData = async () => {
@@ -25,12 +26,14 @@ const ReportCard = () => {
   // Filter data based on selected category and query
   const filterData = () => {
     let filteredProducts = [...cardData];
-    
+
     // Filtering by category and subcategory
     if (selectedCategory.length > 0) {
-      filteredProducts = filteredProducts.filter(({ category, subcategory }) =>
-        selectedCategory.includes(category) && 
-        (selectedSubCategory.length === 0 || selectedSubCategory.includes(subcategory))
+      filteredProducts = filteredProducts.filter(
+        ({ category, subcategory }) =>
+          selectedCategory.includes(category) &&
+          (selectedSubCategory.length === 0 ||
+            selectedSubCategory.includes(subcategory))
       );
     }
 
@@ -38,11 +41,15 @@ const ReportCard = () => {
     if (query) {
       filteredProducts = filteredProducts.filter(
         ({ title, authors }) =>
-          title.toLowerCase().includes(query.toLowerCase()) ||
-          authors.toLowerCase().includes(query.toLowerCase())
+          title.toLowerCase().includes(query.toLowerCase())
+        // authors.toLowerCase().includes(query.toLowerCase())
       );
     }
-
+    if (authors.length > 0) {
+      filteredProducts = filteredProducts.filter(({ author }) => {
+        authors.includes(author);
+      });
+    }
     // Limit to first 10 results
     return filteredProducts;
   };
@@ -70,7 +77,9 @@ const ReportCard = () => {
 
   useEffect(() => {
     setResult(filterData());
-  }, [cardData, selectedCategory, selectedSubCategory, query]);
+    console.log(authors);
+    console.log(cardData);
+  }, [cardData, selectedCategory, selectedSubCategory, query, authors]);
 
   return (
     <div>
@@ -80,11 +89,22 @@ const ReportCard = () => {
         setSelectedCategory={setSelectedCategory}
         selectedSubCategory={selectedSubCategory}
         setSelectedSubCategory={setSelectedSubCategory}
+        setAuthor={setAuthors}
+        author={authors}
       />
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products
         result={result.map(
-          ({ imgsrc, title, author, authors, subcategory, year, category,month }) => (
+          ({
+            imgsrc,
+            title,
+            author,
+            authors,
+            subcategory,
+            year,
+            category,
+            month,
+          }) => (
             <Card
               key={Math.random()}
               img={imgsrc}
