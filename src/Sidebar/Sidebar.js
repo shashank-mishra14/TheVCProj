@@ -5,34 +5,29 @@ import SubCategory from "./Category/subcategory";
 import "./Sidebar.css";
 
 const Sidebar = ({
-  handleCategoryChange,
-  handleSubCategoryChange,
-  handleYearChange,
-  handleAuthorChange,
+  handleChange,
+  selectedCategory,
+  setSelectedCategory,
+  selectedSubCategory,
+  setSelectedSubCategory,
+  setAuthor,
+  author, setSelectedYear,
+  selectedYear
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState([]);
-  const [selectedSubCategory, setSelectedSubCategory] = useState([]);
-  const [selectedYear, setSelectedYear] = useState("");
-  const [selectedAuthor, setSelectedAuthor] = useState("");
+   // State for selected year
 
-  const handleYearSelection = (event) => {
-    const selectedYear = event.target.value;
-    setSelectedYear(selectedYear);
-    handleYearChange(selectedYear);
-    setSelectedAuthor(""); // Reset selected author when year changes
+  const handleYearChange = (event) => {
+    setSelectedYear(event.target.value); // Update selected year state
   };
 
   return (
     <section className="sidebar">
       <div className="logo-container"></div>
       <div className="sidebar-content">
+        {/* Dropdown menu for selecting year */}
         <div className="year-dropdown">
-          <label htmlFor="year">Select Year:</label>
-          <select
-            id="year"
-            value={selectedYear}
-            onChange={handleYearSelection}
-          >
+          <label htmlFor="year" className="yearSelect">Select Year:</label>
+          <select id="year" value={selectedYear} onChange={handleYearChange}>
             <option value="">Select</option>
             {[...Array(2024 - 2019 + 1).keys()].map((index) => (
               <option key={index} value={2019 + index}>
@@ -44,11 +39,10 @@ const Sidebar = ({
 
         <Category
           handleChange={(category) => {
+            handleChange(category);
+            setSelectedYear(""); // Reset selected year when category changes
             setSelectedCategory(category);
-            handleCategoryChange(category);
-            setSelectedYear("");
-            setSelectedSubCategory(null);
-            setSelectedAuthor("");
+            setSelectedSubCategory(null); // Reset selected subcategory when category changes
           }}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
@@ -56,16 +50,7 @@ const Sidebar = ({
           selectedSubCategory={selectedSubCategory}
         />
 
-        <Author
-          handleChange={(author) => {
-            setSelectedAuthor(author);
-            handleAuthorChange(author);
-            setSelectedYear("");
-            setSelectedSubCategory(null);
-            setSelectedCategory([]);
-          }}
-          selectedAuthor={selectedAuthor}
-        />
+        <Author handleChange={handleChange} setAuthor={setAuthor} author={author} />
       </div>
     </section>
   );

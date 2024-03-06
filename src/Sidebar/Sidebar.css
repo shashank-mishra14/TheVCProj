@@ -28,13 +28,16 @@
   width: 80%; /* Set width to fill its container */
   padding: 10px; /* Add padding for better appearance */
   font-size: 16px; /* Adjust font size */
+  margin-top: 80px; /* Add some space on top */
   border: 2px solid blue; /* Add border with blue color */
   border-radius: 8px; /* Add border radius for rounded corners */
   background-color: white; /* Set background color */
   color: blue; /* Set text color */
   appearance: none; /* Remove default appearance */
 }
+.yearSelect{
 
+}
 /* Style options inside the dropdown */
 .year-dropdown option {
   background-color: white; /* Set background color */
