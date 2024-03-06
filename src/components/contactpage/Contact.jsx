@@ -117,7 +117,7 @@ const Contact = () => {
               <div className="nameinput">
                 <div className="name">
                   <label className="namechange" htmlFor="name">
-                    First Name
+                    Your Name
                   </label>
                   <input
                     className="inputname"
@@ -125,13 +125,13 @@ const Contact = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    placeholder="First Name"
+                    placeholder="Name"
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                <div className="name">
+                {/* <div className="name">
                   <label className="namechange" htmlFor="name">
                     Last Name
                   </label>
@@ -145,7 +145,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
-                </div>
+                </div> */}
               </div>
 
               <div className="email">
