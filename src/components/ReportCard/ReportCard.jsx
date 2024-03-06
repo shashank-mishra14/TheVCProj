@@ -5,14 +5,14 @@ import Products from "../../Products/Products";
 import Sidebar from "../../Sidebar/Sidebar";
 import Card from "../Card";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import './ReportCard.css';
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedSubCategory, setSelectedSubCategory] = useState([]);
   const [cardData, setCardData] = useState([]);
   const [query, setQuery] = useState("");
-  const [result, setResult] = useState([]);
-  const [authors, setAuthors] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1); // Current page number
+  const [itemsPerPage] = useState(10); // Number of items per page
 
   // Fetch data from the server
   const fetchData = async () => {
@@ -27,37 +27,29 @@ const ReportCard = () => {
   // Filter data based on selected category and query
   const filterData = () => {
     let filteredProducts = [...cardData];
-
-    // Filtering by category and subcategory
-    if (selectedCategory.length > 0) {
-      filteredProducts = filteredProducts.filter(
-        ({ category, subcategory }) =>
-          selectedCategory.includes(category) &&
-          (selectedSubCategory.length === 0 ||
-            selectedSubCategory.includes(subcategory))
+  
+    // Apply filtering logic based on selected category, subcategory, and query
+    if (selectedCategory.length > 0 || selectedSubCategory.length > 0 || query) {
+      filteredProducts = filteredProducts.filter(({ category, subcategory, title }) =>
+        (selectedCategory.length === 0 || selectedCategory.includes(category)) &&
+        (selectedSubCategory.length === 0 || selectedSubCategory.includes(subcategory)) &&
+        (!query || title.toLowerCase().includes(query.toLowerCase()))
       );
     }
+  
 
-    // Filtering by query
-    if (query) {
-      filteredProducts = filteredProducts.filter(
-        ({ title, authors }) =>
-          title.toLowerCase().includes(query.toLowerCase())
-        // authors.toLowerCase().includes(query.toLowerCase())
-      );
-    }
-    if (authors.length > 0) {
-      filteredProducts = filteredProducts.filter(({ author }) => {
-        authors.includes(author);
-      });
-    }
-    // Limit to first 10 results
-    return filteredProducts;
+    // Apply filtering logic based on selected category, subcategory, and query
+
+    // Pagination logic
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    return filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
   };
 
   // Handle input change for search query
   const handleInputChange = (event) => {
     setQuery(event.target.value);
+    setCurrentPage(1); // Reset pagination when search query changes
   };
 
   // Handle category and subcategory change
@@ -70,17 +62,14 @@ const ReportCard = () => {
     } else if (name === "subcategory") {
       setSelectedSubCategory(value);
     }
+    setCurrentPage(1); // Reset pagination when category or subcategory changes
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    setResult(filterData());
-    console.log(authors);
-    console.log(cardData);
-  }, [cardData, selectedCategory, selectedSubCategory, query, authors]);
+  const filteredProducts = filterData();
 
   return (
     <div>
@@ -90,12 +79,10 @@ const ReportCard = () => {
         setSelectedCategory={setSelectedCategory}
         selectedSubCategory={selectedSubCategory}
         setSelectedSubCategory={setSelectedSubCategory}
-        setAuthor={setAuthors}
-        author={authors}
       />
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products
-        result={result.map(
+        result={filteredProducts.map(
           ({
             imgsrc,
             title,
@@ -122,6 +109,12 @@ const ReportCard = () => {
           )
         )}
       />
+      {/* Pagination controls */}
+      <div className="pagination-button">
+        <button className="button-pagination" onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}>Previous</button>
+        <span className="currentPage">{currentPage}</span>
+        <button className="button-pagination" onClick={() => setCurrentPage(prev => Math.min(prev + 1, Math.ceil(cardData.length / itemsPerPage)))}>Next</button>
+      </div>
     </div>
   );
 };
