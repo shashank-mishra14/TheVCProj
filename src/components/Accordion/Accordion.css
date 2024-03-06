@@ -1,63 +1,79 @@
+.container-accordion{
+  width: 100%; /* Adjust width to fit the screen */
+}
 
-  
-  .container-accordion{
-    width: 1140px;
-   
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  
-  /* accordion styles */
-  
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* accordion styles */
+
+h1 {
+  font-size: 42px;
+  color: var(--text-primary);
+  margin: 0px;
+  margin-bottom: 30px;
+}
+
+.accordion-simple > .active {
+  display: block;
+}
+
+.accordion__faq .inactive{
+  display: none;
+}
+
+.accordion__faq > div{
+  background-color: var(--white);
+  margin-bottom: 50px; /* Adjust spacing for mobile */
+  padding: 0px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accordion__title{
+  color: var(--text-secondary);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.accordion__faq-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__faq-heading .active{
+  color: var(--text-primary);
+}
+
+.accordion__faq-heading h3{
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.accordion__faq p {
+  margin: 0px;
+  padding-bottom: 20px; /* Adjust spacing for mobile */
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
   h1 {
-    font-size: 42px;
-    color: var(--text-primary);
-    margin: 0px;
-    margin-bottom: 30px;
+    font-size: 32px; /* Adjust font size for smaller screens */
   }
   
-  .accordion-simple > .active {
-    display: block;
+  .accordion__faq > div {
+    margin-bottom: 30px; /* Adjust spacing for smaller screens */
   }
   
-  .accordion__faq .inactive{
-    display: none;
-  }
-  
-  .accordion__faq > div{
-    background-color: var(--white);
-    margin-bottom: 100px;
-    padding: 0px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .accordion__title{
-    color: var(--text-secondary);
-    padding-bottom: 20px;
-    font-weight: 500;
-  }
-  
-  .accordion__faq-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .accordion__faq-heading .active{
-    color: var(--text-primary);
-  }
-  
-  .accordion__faq-heading h3{
-    color: var(--text-secondary);
-    font-weight: 600;
+  .accordion__title {
+    padding-bottom: 15px; /* Adjust padding for smaller screens */
   }
   
   .accordion__faq p {
-    margin: 0px;
-    padding-bottom: 30px;
-    color: var(--text-secondary);
-    line-height: 1.4;
+    padding-bottom: 15px; /* Adjust padding for smaller screens */
   }
+}

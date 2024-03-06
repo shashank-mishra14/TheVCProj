@@ -2,6 +2,7 @@
     padding-top: 30px;
     padding-left: 70px;
     display: flex;
+    padding-bottom:2 0px;
 }
 
 .homepage-logo{
@@ -16,6 +17,7 @@
     padding: 17px;
     padding-left: 20px;
     padding-right: 20px;
+    
     border-radius: 10px; /* Adjust the value as needed */
     border: 1px solid #ffffff; /* Add a border for better visibility */
     background-color: #ffffff;
@@ -137,4 +139,17 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     padding-left: 18px;
   }
 
-  
+  /* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .homepage-navbar {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .paragraph {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .card2 img {
+        width: 120px; /* Adjust image size for smaller screens */
+    }
+}
