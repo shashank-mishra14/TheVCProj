@@ -10,23 +10,23 @@ const Contact = () => {
 
   const checklistData = [
     {
-      checklistQuery: "Problem in uploading research?",
+      checklistQuery: "Want to report an issue",
     },
     {
-      checklistQuery: "Unable to find the research you are looking for?",
+      checklistQuery: "Want to suggest a feature",
     },
     {
-      checklistQuery: "Looking for a specific research?",
+      checklistQuery: "Want to suggest specific reports",
     },
     {
-      checklistQuery: "Request a feature?",
+      checklistQuery: "Others",
     },
-    {
-      checklistQuery: "Want to share your experience?",
-    },
-    {
-      checklistQuery: "Want to report a bug?",
-    },
+    // {
+    //   checklistQuery: "Want to share your experience?",
+    // },
+    // {
+    //   checklistQuery: "Want to report a bug?",
+    // },
   ];
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,20 +51,16 @@ const Contact = () => {
   return (
     <div className="container">
       <div className="headcontainer">
-        <h3 className="h3">Connect with Us</h3>
+        {/* <h3 className="h3">Connect with Us</h3> */}
 
-        <h1 className="h1">Contact Us</h1>
+        <h1 className="h1">Contact us</h1>
         <h3 className="heading3">
-          The VC Project is your one stop destination to read about researches
-          around the globe share <br />
-          <br />
-          your experience with us and help us improve our platform, we would
-          love to hear from you ...
+        Please feel free to suggest reports, any features, and issues here!
         </h3>
       </div>
 
       <div className="bothcontainers">
-        <div className="container-left">
+        {/* <div className="container-left">
           <p className="paragraph1">
             "One of the standout features of the VC Project Repository is its
             user-friendly interface. Navigating through the platform was
@@ -110,7 +106,7 @@ const Contact = () => {
               consectetur
             </p>
           </p>
-        </div>
+        </div> */}
         <div className="container-right">
           <div className="container-right-small">
             <form className="form" onSubmit={handleSubmit}>

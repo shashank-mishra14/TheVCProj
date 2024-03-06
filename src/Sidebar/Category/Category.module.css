@@ -11,7 +11,9 @@
   flex-direction: column;
   justify-content: center;
 }
-
+.viewMoreButton{
+  width:70%;
+}
 .categories button {
   margin-top: 10px;
   background-color: #FAF9F6;

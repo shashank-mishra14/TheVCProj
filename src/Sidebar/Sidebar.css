@@ -25,7 +25,7 @@
 
 /* Dropdown menu styles */
 .year-dropdown select {
-  width: 100%; /* Set width to fill its container */
+  width: 80%; /* Set width to fill its container */
   padding: 10px; /* Add padding for better appearance */
   font-size: 16px; /* Adjust font size */
   border: 2px solid blue; /* Add border with blue color */

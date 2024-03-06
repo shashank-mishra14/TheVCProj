@@ -9,11 +9,12 @@ import "./ReportCard.css";
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedSubCategory, setSelectedSubCategory] = useState([]);
-  const [selectedYear, setSelectedYear] = useState(""); // State for selected year
+  const [selectedYear, setSelectedYear] = useState("");
+  const [selectedAuthor, setSelectedAuthor] = useState(""); // State for selected author
   const [cardData, setCardData] = useState([]);
   const [query, setQuery] = useState("");
-  const [currentPage, setCurrentPage] = useState(1); // Current page number
-  const [itemsPerPage] = useState(10); // Number of items per page
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(10);
 
   // Fetch data from the server
   const fetchData = async () => {
@@ -25,25 +26,33 @@ const ReportCard = () => {
     }
   };
 
-  // Filter data based on selected category, subcategory, year, and query
+  // Filter data based on selected category, subcategory, year, author, and query
   const filterData = () => {
     let filteredProducts = [...cardData];
 
-    // Apply filtering logic based on selected category, subcategory, year, and query
+    // Apply filtering logic based on selected category, subcategory, year, author, and query
     if (
       selectedCategory.length > 0 ||
       selectedSubCategory.length > 0 ||
       query ||
-      selectedYear
+      selectedYear ||
+      selectedAuthor
     ) {
       filteredProducts = filteredProducts.filter(
-        ({ category, subcategory, title, year }) =>
+        ({
+          category,
+          subcategory,
+          title,
+          year,
+          authors, // Assuming the author information is stored as an array
+        }) =>
           (selectedCategory.length === 0 ||
             selectedCategory.includes(category)) &&
           (selectedSubCategory.length === 0 ||
             selectedSubCategory.includes(subcategory)) &&
           (!query || title.toLowerCase().includes(query.toLowerCase())) &&
-          (!selectedYear || year.toString() === selectedYear)
+          (!selectedYear || year.toString() === selectedYear) &&
+          (!selectedAuthor || authors.includes(selectedAuthor))
       );
     }
 
@@ -56,13 +65,13 @@ const ReportCard = () => {
   // Handle input change for search query
   const handleInputChange = (event) => {
     setQuery(event.target.value);
-    setCurrentPage(1); // Reset pagination when search query changes
+    setCurrentPage(1);
   };
 
-  // Handle year change
-  const handleYearChange = (selectedYear) => {
-    setSelectedYear(selectedYear); // Update selected year state
-    setCurrentPage(1); // Reset pagination when year changes
+  // Handle author change
+  const handleAuthorChange = (author) => {
+    setSelectedAuthor(author);
+    setCurrentPage(1);
   };
 
   useEffect(() => {
@@ -76,7 +85,8 @@ const ReportCard = () => {
       <Sidebar
         handleCategoryChange={setSelectedCategory}
         handleSubCategoryChange={setSelectedSubCategory}
-        handleYearChange={handleYearChange}
+        handleYearChange={setSelectedYear}
+        handleAuthorChange={handleAuthorChange}
       />
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products
@@ -107,7 +117,6 @@ const ReportCard = () => {
           )
         )}
       />
-      {/* Pagination controls */}
       <div className="pagination-button">
         <button
           className="button-pagination"
@@ -117,7 +126,6 @@ const ReportCard = () => {
         >
           Previous
         </button>
-        {/* <span className="currentPage">{currentPage}</span> */}
         <button
           className="button-pagination"
           onClick={() =>
