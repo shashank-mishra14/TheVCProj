@@ -4,11 +4,12 @@ import Navigation from "../../Navigation/Nav";
 import Products from "../../Products/Products";
 import Sidebar from "../../Sidebar/Sidebar";
 import Card from "../Card";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './ReportCard.css';
+import "./ReportCard.css";
+
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedSubCategory, setSelectedSubCategory] = useState([]);
+  const [selectedYear, setSelectedYear] = useState(""); // State for selected year
   const [cardData, setCardData] = useState([]);
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1); // Current page number
@@ -24,21 +25,27 @@ const ReportCard = () => {
     }
   };
 
-  // Filter data based on selected category and query
+  // Filter data based on selected category, subcategory, year, and query
   const filterData = () => {
     let filteredProducts = [...cardData];
-  
-    // Apply filtering logic based on selected category, subcategory, and query
-    if (selectedCategory.length > 0 || selectedSubCategory.length > 0 || query) {
-      filteredProducts = filteredProducts.filter(({ category, subcategory, title }) =>
-        (selectedCategory.length === 0 || selectedCategory.includes(category)) &&
-        (selectedSubCategory.length === 0 || selectedSubCategory.includes(subcategory)) &&
-        (!query || title.toLowerCase().includes(query.toLowerCase()))
+
+    // Apply filtering logic based on selected category, subcategory, year, and query
+    if (
+      selectedCategory.length > 0 ||
+      selectedSubCategory.length > 0 ||
+      query ||
+      selectedYear
+    ) {
+      filteredProducts = filteredProducts.filter(
+        ({ category, subcategory, title, year }) =>
+          (selectedCategory.length === 0 ||
+            selectedCategory.includes(category)) &&
+          (selectedSubCategory.length === 0 ||
+            selectedSubCategory.includes(subcategory)) &&
+          (!query || title.toLowerCase().includes(query.toLowerCase())) &&
+          (!selectedYear || year.toString() === selectedYear)
       );
     }
-  
-
-    // Apply filtering logic based on selected category, subcategory, and query
 
     // Pagination logic
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -52,17 +59,10 @@ const ReportCard = () => {
     setCurrentPage(1); // Reset pagination when search query changes
   };
 
-  // Handle category and subcategory change
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    if (name === "category") {
-      setSelectedCategory(value);
-      // Clear selected subcategories when category changes
-      setSelectedSubCategory([]);
-    } else if (name === "subcategory") {
-      setSelectedSubCategory(value);
-    }
-    setCurrentPage(1); // Reset pagination when category or subcategory changes
+  // Handle year change
+  const handleYearChange = (selectedYear) => {
+    setSelectedYear(selectedYear); // Update selected year state
+    setCurrentPage(1); // Reset pagination when year changes
   };
 
   useEffect(() => {
@@ -74,11 +74,9 @@ const ReportCard = () => {
   return (
     <div>
       <Sidebar
-        handleChange={handleChange}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        selectedSubCategory={selectedSubCategory}
-        setSelectedSubCategory={setSelectedSubCategory}
+        handleCategoryChange={setSelectedCategory}
+        handleSubCategoryChange={setSelectedSubCategory}
+        handleYearChange={handleYearChange}
       />
       <Navigation query={query} handleInputChange={handleInputChange} />
       <Products
@@ -92,7 +90,7 @@ const ReportCard = () => {
             year,
             category,
             month,
-            link
+            link,
           }) => (
             <Card
               key={Math.random()}
@@ -111,9 +109,25 @@ const ReportCard = () => {
       />
       {/* Pagination controls */}
       <div className="pagination-button">
-        <button className="button-pagination" onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}>Previous</button>
-        <span className="currentPage">{currentPage}</span>
-        <button className="button-pagination" onClick={() => setCurrentPage(prev => Math.min(prev + 1, Math.ceil(cardData.length / itemsPerPage)))}>Next</button>
+        <button
+          className="button-pagination"
+          onClick={() =>
+            setCurrentPage((prev) => Math.max(prev - 1, 1))
+          }
+        >
+          Previous
+        </button>
+        {/* <span className="currentPage">{currentPage}</span> */}
+        <button
+          className="button-pagination"
+          onClick={() =>
+            setCurrentPage((prev) =>
+              Math.min(prev + 1, Math.ceil(cardData.length / itemsPerPage))
+            )
+          }
+        >
+          Next
+        </button>
       </div>
     </div>
   );

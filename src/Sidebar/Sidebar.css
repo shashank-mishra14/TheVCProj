@@ -21,3 +21,50 @@
     overflow-y: auto; /* Enable vertical scrolling */
     max-height: calc(100vh - 120px); /* Adjust max height as needed */
   }
+/* Add these styles to your Sidebar.css file */
+
+/* Dropdown menu styles */
+.year-dropdown select {
+  width: 100%; /* Set width to fill its container */
+  padding: 10px; /* Add padding for better appearance */
+  font-size: 16px; /* Adjust font size */
+  border: 2px solid blue; /* Add border with blue color */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  background-color: white; /* Set background color */
+  color: blue; /* Set text color */
+  appearance: none; /* Remove default appearance */
+}
+
+/* Style options inside the dropdown */
+.year-dropdown option {
+  background-color: white; /* Set background color */
+  color: blue; /* Set text color */
+}
+
+/* Hover effect on options */
+.year-dropdown option:hover {
+  background-color: lightblue; /* Change background color on hover */
+}
+
+
+  @media screen and (max-width: 768px) {
+    .filters {
+      margin-bottom: 50px;
+    }
+  
+    .categories button {
+      margin-left: 0; /* Remove negative margin */
+    }
+  
+    .categories {
+      align-items: flex-start; /* Align items to start for smaller screens */
+    }
+  
+    .checkboxLabel {
+      margin-left: 0; /* Remove negative margin */
+    }
+  
+    .checklistinput {
+      margin-right: 0; /* Remove negative margin */
+    }
+  }
