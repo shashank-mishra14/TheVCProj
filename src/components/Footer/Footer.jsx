@@ -16,13 +16,13 @@ const Footer = () => {
               <h4>Company</h4>
               <ul>
                 <li>
-                  <a href="#">about us</a>
+                  <a href="/contact">contact us</a>
                 </li>
                 <li>
-                  <a href="#">our services</a>
+                  {/* <a href="#">our services</a>
                 </li>
                 <li>
-                  <a href="#">privacy policy</a>
+                  <a href="#">privacy policy</a> */}
                 </li>
               </ul>
             </div>
@@ -30,16 +30,16 @@ const Footer = () => {
               <h4>get help</h4>
               <ul>
                 <li>
-                  <a href="#">FAQ</a>
+                  <a href="/contact">FAQ</a>
                 </li>
                 <li>
-                  <a href="#">Cookies Policies</a>
+                  {/* <a href="#">Cookies Policies</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policies</a>
                 </li>
                 <li>
-                  <a href="#">Data Processing</a>
+                  <a href="#">Data Processing</a> */}
                 </li>
                 <li>
                   <a href="#"></a>

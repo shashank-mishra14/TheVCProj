@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route exact path="/home" element={<Homepage />} />
+          <Route exact path="/" element={<Homepage />} />
           <Route
             exact
             path="/reportspage"
