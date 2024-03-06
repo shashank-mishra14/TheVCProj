@@ -4,6 +4,7 @@ import Navigation from "../../Navigation/Nav";
 import Products from "../../Products/Products";
 import Sidebar from "../../Sidebar/Sidebar";
 import Card from "../Card";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
@@ -104,6 +105,7 @@ const ReportCard = () => {
             year,
             category,
             month,
+            link
           }) => (
             <Card
               key={Math.random()}
@@ -115,6 +117,7 @@ const ReportCard = () => {
               category={category}
               year={year}
               month={month}
+              link={link}
             />
           )
         )}

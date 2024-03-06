@@ -1,13 +1,18 @@
 import "./Card.css";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const Card = ({ img, title, companyName, subcategory, year,category,month }) => {
+const Card = ({ img, title, companyName, subcategory, year,category,month,link }) => {
     const MAX_TITLE_LENGTH = 60;
   
     let displayedTitle = title;
     if (title.length > MAX_TITLE_LENGTH) {
       displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
     }
-  
+    
+    const handleReadMoreClick = () => {
+      window.location.href = link; // Redirect to the link stored in your database
+  };
+
     return (
       <>
         <section className="card">
@@ -21,7 +26,10 @@ const Card = ({ img, title, companyName, subcategory, year,category,month }) => 
             <button className="tag-button">{year}</button>
             <button className="tag-button">{month}</button>
             <hr className="horizontal-line" />
-            <button className="readmore-button" >Read More</button>
+            <button className="readmore-button" onClick={
+              handleReadMoreClick
+            }>Read More</button>
+
           </div>
           </div>
           
