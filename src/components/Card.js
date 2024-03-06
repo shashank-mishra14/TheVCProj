@@ -10,12 +10,14 @@ const Card = ({ img, title, companyName, subcategory, year,category,month,link }
     }
     
     const handleReadMoreClick = () => {
-      window.location.href = link; // Redirect to the link stored in your database
+      window.open(link, '_blank');; // Redirect to the link stored in your database
   };
 
     return (
       <>
-        <section className="card">
+        <section className="card" onClick={
+              handleReadMoreClick
+            }>
           <div className="square">
           <img src={img} alt={title} className="card-img" />
           <div className="card-details">
@@ -26,9 +28,7 @@ const Card = ({ img, title, companyName, subcategory, year,category,month,link }
             <button className="tag-button">{year}</button>
             <button className="tag-button">{month}</button>
             <hr className="horizontal-line" />
-            <button className="readmore-button" onClick={
-              handleReadMoreClick
-            }>Read More</button>
+            <button className="readmore-button" >Read More</button>
 
           </div>
           </div>
