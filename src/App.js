@@ -3,6 +3,7 @@ import Contact from "./components/contactpage/Contact";
 import UseAddReports from "./components/addReports/addReports";
 // import { data } from "./db/data";
 import Homepage from "./components/Homepage/Homepage";
+import Accordion from "./components/Accordion/Accordion";
 // import Recommended from "./Recommended/Recommended";
 // import subCategory from "./Sidebar/Category/subcategory";
 // import Card from "./components/Card";
@@ -26,6 +27,7 @@ function App() {
             }
           />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/faqs" element={<Accordion />} />
           <Route exact path="/reports" element={<UseAddReports />} />
         </Routes>
       </Layout>
