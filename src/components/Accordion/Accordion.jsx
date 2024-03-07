@@ -24,13 +24,9 @@ const dataCollection = [
   },
   {
     question: "How can I contribute to this project?",
-    answer: `Three ways you can be a part of this:
-    1. Telling us what reports we are missing or suggesting any interesting reports (Contact Us page)
-    2. Sharing any feedback on how it can be made better for everybody to use (Contact Us page)
-    3. Spreading the word- make it reach into more hands. (Your WhatsApp, Twitter, Linkedin:)
-    
-    Along with that, please feel free to reach out to Ayush Mittal from RedSeer Strategy Consultants (at mittalayush740@gmail.com) or Linkedin to schedule a call and discuss more`,
-  },
+    answer:`Three ways you can be a part of this:\n\n1. Telling us what reports we are missing or suggesting any interesting reports (Contact Us page)\n2. Sharing any feedback on how it can be made better for everybody to use (Contact Us page)\n3. Spreading the word - make it reach into more hands. (Your WhatsApp, Twitter, Linkedin:)\n\nAlong with that, please feel free to reach out to Ayush Mittal from RedSeer Strategy Consultants (at mittalayush740@gmail.com) or Linkedin to schedule a call and discuss more`,
+}
+,
   {
     question: "How do you choose which reports to upload?",
     answer:

@@ -2,11 +2,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  padding-top: 50px;
+  padding-bottom:130px;
+  padding-top: 150px;
+  font-family: Nunito Sans;
+  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Nunito Sans;
 }
 
 /* accordion styles */
@@ -16,8 +19,12 @@ h1 {
   color: var(--text-primary);
   margin: 0px;
   margin-bottom: 30px;
+  font-family: Nunito Sans;
 }
-
+.accordion__faq-heading{
+  font-size: 20px;
+  font-family: Nunito Sans;
+}
 .accordion-simple > .active {
   display: block;
 }
@@ -32,12 +39,14 @@ h1 {
   padding: 0px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Nunito Sans;
 }
 
 .accordion__title{
   color: var(--text-secondary);
   padding-bottom: 20px;
   font-weight: 500;
+  font-family: Nunito Sans;
 }
 
 .accordion__faq-heading{
@@ -60,6 +69,8 @@ h1 {
   padding-bottom: 20px; /* Adjust spacing for mobile */
   color: var(--text-secondary);
   line-height: 1.4;
+  font-family: Nunito Sans;
+  font-size:20px;
 }
 
 /* Media Query for Mobile Devices */
@@ -73,7 +84,8 @@ h1 {
   }
   
   .accordion__title {
-    padding-bottom: 15px; /* Adjust padding for smaller screens */
+    padding-bottom: 15px;
+    font-family: Nunito Sans; /* Adjust padding for smaller screens */
   }
   
   .accordion__faq p {
