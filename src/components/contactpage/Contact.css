@@ -134,7 +134,9 @@
 .check{
     padding-bottom: 10px;
 }
-
+.mail{
+    padding-left: -20px;
+}
 
 .email{
     padding-top: 10px;
@@ -304,7 +306,9 @@
 .checklistInput{
     margin-right: -90px;
     margin-left: -150px;
-    
-    
+    height: 16.5px;
+    color: #673FD7;
 }
+
+
 
