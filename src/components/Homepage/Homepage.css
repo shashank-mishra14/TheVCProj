@@ -137,4 +137,25 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     padding-left: 18px;
   }
 
-  
+  .card1-image{
+    width:580px;
+    height:580px;
+    }
+
+    .card3-container{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-paragraph-network{
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
