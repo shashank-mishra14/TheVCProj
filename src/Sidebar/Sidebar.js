@@ -10,12 +10,14 @@ const Sidebar = ({
   setSelectedCategory,
   selectedSubCategory,
   setSelectedSubCategory,
+  selectedAuthors, // Add selectedAuthors and setSelectedAuthors props
+  setSelectedAuthors,
   setAuthor,
-  author, setSelectedYear,
+  author, 
+  setSelectedYear,
   selectedYear
 }) => {
-   // State for selected year
-
+  // State for selected year
   const handleYearChange = (event) => {
     setSelectedYear(event.target.value); // Update selected year state
   };
@@ -50,7 +52,13 @@ const Sidebar = ({
           selectedSubCategory={selectedSubCategory}
         />
 
-        <Author handleChange={handleChange} setAuthor={setAuthor} author={author} />
+        <Author 
+          handleChange={handleChange} 
+          setAuthor={setAuthor} 
+          author={author} 
+          selectedAuthors={selectedAuthors} // Pass selectedAuthors and setSelectedAuthors
+          setSelectedAuthors={setSelectedAuthors}
+        />
       </div>
     </section>
   );

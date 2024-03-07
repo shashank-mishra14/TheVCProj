@@ -26,3 +26,9 @@
     font-size: 15px;
     font-weight: bold;
 }
+
+.view-more-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

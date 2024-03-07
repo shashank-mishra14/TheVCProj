@@ -29,36 +29,46 @@ const authorData = [
   },
 ];
 
-const Author = ({ handleChange, setAuthor, author }) => {
-  const handleAuthorChange = (author) => {
-    setAuthor((prevAuthors) => {
-      if (prevAuthors.includes(author)) {
-        return prevAuthors.filter((prevAuthor) => prevAuthor !== author);
+const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
+  const handleAuthorChange = (authorValue) => {
+    setSelectedAuthors((prevAuthors) => {
+      console.log(prevAuthors)
+      // Check if the authorValue is already included in selectedAuthors
+      const isSelected = prevAuthors.includes(authorValue);
+  
+      if (isSelected) {
+        // If author is already selected, remove it
+        return prevAuthors.filter((author) => author !== authorValue);
       } else {
-        return [...prevAuthors, author];
+        // If author is not selected, add it
+        return [...prevAuthors, authorValue];
       }
     });
   };
+  
+
   return (
     <>
       <div className="ml">
         <h2 className="sidebar-title-author-title">Authors</h2>
-
         <label className="sidebar-label-container">
-          <input onChange={handleChange} type="checkbox" value="" name="test" />
+          <input
+            type="checkbox"
+            checked={selectedAuthors.length === 0}
+            onChange={() => setSelectedAuthors([])}
+          />
           <span className="checkmark"></span>All
         </label>
         <div className="checklistauthorbox">
           {authorData.map(({ value, title }) => (
-            <label className="checklistauthor" htmlFor="checklist">
+            <label className="checklistauthor" key={value}>
               <div className="checklistinputauthor">
                 <input
                   type="checkbox"
-                  id="checklist"
-                  name="checklist"
                   value={value}
+                  checked={selectedAuthors.includes(value)}
                   className="checklistauthorInput"
-                  onChange={() => handleAuthorChange(title)}
+                  onChange={() => handleAuthorChange(value)}
                 />
               </div>
               {title}
