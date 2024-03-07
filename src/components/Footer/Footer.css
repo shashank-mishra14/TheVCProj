@@ -19,8 +19,10 @@ body{
 .tag{
 	background-color: #24262b;
 	color: #ffffff;
-	font-size: 13px;
-	margin-right:150px;
+	font-size: 22px;
+	padding-right:150px;
+
+	
 
 }
 .container{
@@ -29,8 +31,7 @@ body{
 }
 .row{
 	display: flex;
-	
-    justify-content: space-between;
+    
     
 }
 ul{
