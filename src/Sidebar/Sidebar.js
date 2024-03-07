@@ -10,39 +10,51 @@ const Sidebar = ({
   setSelectedCategory,
   selectedSubCategory,
   setSelectedSubCategory,
-  selectedAuthors, // Add selectedAuthors and setSelectedAuthors props
+  selectedAuthors,
   setSelectedAuthors,
   setAuthor,
-  author, 
+  author,
   setSelectedYear,
   selectedYear
 }) => {
-  // State for selected year
-  const handleYearChange = (event) => {
-    setSelectedYear(event.target.value); // Update selected year state
+  // State for selected years
+  const [selectedYears, setSelectedYears] = useState([]);
+
+  // Function to handle checkbox change
+  const handleCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setSelectedYears([...selectedYears, value]);
+    } else {
+      setSelectedYears(selectedYears.filter(year => year !== value));
+    }
   };
 
   return (
     <section className="sidebar">
       <div className="logo-container"></div>
       <div className="sidebar-content">
-        {/* Dropdown menu for selecting year */}
-        <div className="year-dropdown">
-          <label htmlFor="year" className="yearSelect">Select Year:</label>
-          <select id="year" value={selectedYear} onChange={handleYearChange}>
-            <option value="">Select</option>
-            {[...Array(2024 - 2019 + 1).keys()].map((index) => (
-              <option key={index} value={2019 + index}>
-                {2019 + index}
-              </option>
-            ))}
-          </select>
+        {/* Checklist for selecting years */}
+        <div className="year-checklist">
+          <label className="yearSelect">Select Year:</label>
+          {[...Array(2024 - 2019 + 1).keys()].map((index) => (
+            <div key={index}>
+              <input
+                type="checkbox"
+                id={`year-${2019 + index}`}
+                value={2019 + index}
+                checked={selectedYears.includes(`${2019 + index}`)}
+                onChange={handleCheckboxChange}
+              />
+              <label htmlFor={`year-${2019 + index}`}>{2019 + index}</label>
+            </div>
+          ))}
         </div>
 
         <Category
           handleChange={(category) => {
             handleChange(category);
-            setSelectedYear(""); // Reset selected year when category changes
+            setSelectedYears([]); // Reset selected years when category changes
             setSelectedCategory(category);
             setSelectedSubCategory(null); // Reset selected subcategory when category changes
           }}
@@ -52,11 +64,11 @@ const Sidebar = ({
           selectedSubCategory={selectedSubCategory}
         />
 
-        <Author 
-          handleChange={handleChange} 
-          setAuthor={setAuthor} 
-          author={author} 
-          selectedAuthors={selectedAuthors} // Pass selectedAuthors and setSelectedAuthors
+        <Author
+          handleChange={handleChange}
+          setAuthor={setAuthor}
+          author={author}
+          selectedAuthors={selectedAuthors}
           setSelectedAuthors={setSelectedAuthors}
         />
       </div>
