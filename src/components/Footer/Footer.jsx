@@ -8,7 +8,7 @@ const Footer = () => {
           <div class="row">
             <div className="tag">
             <div className="main-tag">The VC Project</div>
-            <p>
+            <p className="main-para">
               India's largest research repository <br /> for students
             </p>
             </div>

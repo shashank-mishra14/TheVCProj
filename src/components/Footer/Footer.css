@@ -13,7 +13,14 @@ body{
 	background-color: #24262b;
 	color: #ffffff;
 	font-size: 33px;
-	
+	margin-left:-600px;
+
+}
+.main-para{
+	background-color: #24262b;
+	color: #ffffff;
+
+	margin-left:-600px;
 
 }
 .tag{
@@ -26,7 +33,7 @@ body{
 
 }
 .container{
-	max-width: 1170px;
+	/* max-width: 1170px; */
 	margin:auto;
 }
 .row{
@@ -54,6 +61,11 @@ ul{
 	height: 1px; /* Adjust this value to control the thickness of the line */
 	background-color: white; /* Change this to the color you want for the line */
   }
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+   padding-right: 150px;
+}
 .footer-col{
    width: 25%;
    padding: 0 15px;
@@ -94,23 +106,6 @@ ul{
 	color: #ffffff;
 	padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
