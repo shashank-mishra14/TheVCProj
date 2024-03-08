@@ -52,7 +52,7 @@ ul{
 	z-index: 3; /* Increased z-index */
 
 }
-.footer::before {
+.footer hr{
 	content: "";
 	position: absolute;
 	bottom: 45px; /* Adjust this value to control the distance from the bottom */
@@ -70,6 +70,15 @@ ul{
    width: 25%;
    padding: 0 15px;
    padding-right: 150px;
+}
+.footer-heading{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-top: 15px;
+	font-weight: 500;
+
+
 }
 .footer-col h4{
 	font-size: 18px;
@@ -94,7 +103,7 @@ ul{
 }
 .footer-col ul li a{
 	font-size: 16px;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
@@ -104,7 +113,7 @@ ul{
 }
 .footer-col ul li a:hover{
 	color: #ffffff;
-	padding-left: 8px;
+	padding-left: 10px;
 }
 /*responsive*/
 @media(max-width: 767px){

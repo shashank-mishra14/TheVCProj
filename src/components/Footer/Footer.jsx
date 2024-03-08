@@ -19,10 +19,6 @@ const Footer = () => {
                   <a href="/reportspage">Reports</a>
                 </li>
                 <li>
-                  {/* <a href="#">our services</a>
-                </li>
-                <li>
-                  <a href="#">privacy policy</a> */}
                 </li>
               </ul>
             </div>
@@ -30,44 +26,21 @@ const Footer = () => {
               <h4>get help</h4>
               <ul>
                 <li>
-                <a href="/contact">Contact Us</a>
+                <a href="/contact">Contact us</a>
                   <a href="/contact">FAQ</a>
                 </li>
                 <li>
-                  {/* <a href="#">Cookies Policies</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policies</a>
-                </li>
-                <li>
-                  <a href="#">Data Processing</a> */}
                 </li>
                 <li>
                   <a href="#"></a>
                 </li>
               </ul>
             </div>
-
-            {/* <div class="footer-col">
-              <h4>follow us</h4>
-              <div class="social-links">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div> */}
+            <hr />
           </div>
         </div>
       </footer>
+      
     </div>
   );
 };
