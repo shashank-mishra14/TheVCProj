@@ -3,21 +3,43 @@
 }
 
 .ml {
-  margin-right: 2vmax;
+  
 }
+.sidebar-title-author-title{
+  margin-top: 20px;
+  margin-bottom:10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
 
-.checklistauthor {
-  display: flex;
-  align-items: center;
-  font-size: 16px; /* Adjust font size for better readability */
-  margin-left: -100px;
 }
 
 .sidebar-label-container{
+  margin-left: -92px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  height: 16px;
+  color: #000000;
+}
+.checkmark{
+  margin-left: -90px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  font-size: 18px;
+  color: #000000;
+
+}
+.checklistauthor {
   display: flex;
   align-items: center;
-  font-size: 16px; /* Adjust font size for better readability */
-  margin-left: -100px;
+  font-size: 18px; /* Adjust font size for better readability */
+  padding-bottom: 10px;
+  margin-left: -90px; /* Reduce margin-left for closer alignment */
 }
 
-.checklistauthorInput{}
+.checklistauthorInput {
+  height: 14px;
+  margin-right: -80px; /* Adjust margin-right for spacing between checkbox and text */
+
+}
