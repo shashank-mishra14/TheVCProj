@@ -49,8 +49,8 @@ function Accordion() {
     <>
       <div className="container-accordion">
         <div>
-          <span className="accordion__title">Frequently asked questions</span>
-          <h1>Let's answer some of your questions</h1>
+          
+          <h1 className="accordion-title">Frequently asked questions</h1>
         </div>
         <div className="accordion__faq">
           {dataCollection.map((item, index) => (

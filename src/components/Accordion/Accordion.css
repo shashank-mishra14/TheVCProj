@@ -12,6 +12,12 @@ code {
   font-family: Nunito Sans;
 }
 
+.accordion-title{
+  font-size: 42px;
+  color: var(--text-primary);
+  font-family: Nunito Sans;
+  margin-left:14px;
+}
 /* accordion styles */
 
 h1 {
