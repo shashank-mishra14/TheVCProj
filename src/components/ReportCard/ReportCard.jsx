@@ -34,7 +34,7 @@ const ReportCard = () => {
       selectedSubCategory.length > 0 ||
       query ||
       selectedAuthors.length > 0 ||
-      selectedYear.length > 0
+      selectedYear.length > 0 // Check if a year is selected
     ) {
       filteredProducts = filteredProducts.filter(
         ({ category, subcategory, title, year, author }) =>
@@ -43,7 +43,7 @@ const ReportCard = () => {
           (selectedSubCategory.length === 0 ||
             selectedSubCategory.includes(subcategory)) &&
           (!query || title.toLowerCase().includes(query.toLowerCase())) &&
-          (!selectedYear || year === parseInt(selectedYear)) &&
+          (!selectedYear || year === parseInt(selectedYear)) && // Filter by selected year
           (selectedAuthors.length === 0 ||
             selectedAuthors.some(selectedAuthor =>
               author.includes(selectedAuthor)
@@ -63,20 +63,25 @@ const ReportCard = () => {
     } else if (name === "subcategory") {
       setSelectedSubCategory(value);
     } else if (name === "year") {
-      setSelectedYear(value);
+      if (checked) {
+        setSelectedYear((prevYears) => [...prevYears, value]);
+      } else {
+        setSelectedYear((prevYears) => prevYears.filter((year) => year !== value));
+      }
     } else if (name === "author") {
       const authorValue = value;
       setSelectedAuthors((prevAuthors) => {
         if (checked) {
           return [...prevAuthors, authorValue];
         } else {
-          return prevAuthors.filter(author => author !== authorValue);
+          return prevAuthors.filter((author) => author !== authorValue);
         }
       });
     } else if (name === "search") {
       setQuery(value);
     }
   };
+  
 
   useEffect(() => {
     fetchData();

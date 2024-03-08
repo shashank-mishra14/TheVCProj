@@ -26,6 +26,7 @@
 }
 .year-checklist {
   margin-top: 120px;
+  margin-left: 70px;
 }
 
 .container-yearlist {
@@ -43,6 +44,7 @@
 .checkbpox-yearinput {
   height: 18px;
   margin-top: 10px;
+  
 }
 .checklist-year {
   margin-left: -98px;

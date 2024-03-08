@@ -128,7 +128,7 @@ function Category({
                     value={subcategory}
                     onChange={() => handleSubcategoryClick(subcategory)}
                     checked={selectedSubCategory.includes(subcategory)}
-                    className={styles.checkboxcategory}
+                  className={styles.checkboxcategory}
                   />
                 </div>
                 <span> {subcategory}</span>
