@@ -25,11 +25,19 @@
 .year-checklist{
   margin-top:120px;
 }
+.container-yearlist{
+  margin-left:-97px;
+  padding-bottom:10px;
+}
 .yearSelect{
   font-size:21px;
   font-style: bold;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+.checklist-year{
+  margin-left:-98px;
+  padding-bottom:10px;
 }
 /* Drodown menu styles */
 

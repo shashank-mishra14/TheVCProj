@@ -38,7 +38,7 @@ const Sidebar = ({
         <div className="year-checklist">
           <label className="yearSelect">Select Year:</label>
           {[...Array(2024 - 2019 + 1).keys()].map((index) => (
-            <div key={index}>
+            <div className=" container-yearlist"key={index}>
               <input
                 type="checkbox"
                 id={`year-${2019 + index}`}
@@ -46,7 +46,7 @@ const Sidebar = ({
                 checked={selectedYears.includes(`${2019 + index}`)}
                 onChange={handleCheckboxChange}
               />
-              <label htmlFor={`year-${2019 + index}`}>{2019 + index}</label>
+              <label className="checklist-year"htmlFor={`year-${2019 + index}`}>{2019 + index}</label>
             </div>
           ))}
         </div>
