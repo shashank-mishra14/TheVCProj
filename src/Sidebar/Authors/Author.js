@@ -17,7 +17,7 @@ const authorData = [
   },
   {
     value: "redseer",
-    title: "Red Seer",
+    title: "RedSeer",
   },
   {
     value: "peakxv",
@@ -55,9 +55,10 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
           <input
             type="checkbox"
             checked={selectedAuthors.length === 0}
+            className="checkboxauthorInput"
             onChange={() => setSelectedAuthors([])}
           />
-          <span className="checkmark"></span>All
+          <span className="checkmark">All</span>
         </label>
         <div className="checklistauthorbox">
           {authorData.map(({ value, title }) => (
@@ -69,6 +70,7 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
                   checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"
                   onChange={() => handleAuthorChange(title)}
+                  
                 />
               </div>
               {title}

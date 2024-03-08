@@ -23,11 +23,13 @@ const Sidebar = ({
   // Function to handle checkbox change
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
-    if (checked) {
-      setSelectedYears([...selectedYears, value]);
-    } else {
-      setSelectedYears(selectedYears.filter(year => year !== value));
-    }
+    setSelectedYears(prevSelectedYears => {
+      if (checked) {
+        return [...prevSelectedYears, value];
+      } else {
+        return prevSelectedYears.filter(year => year !== value);
+      }
+    });
   };
 
   return (
@@ -45,6 +47,7 @@ const Sidebar = ({
                 value={2019 + index}
                 checked={selectedYears.includes(`${2019 + index}`)}
                 onChange={handleCheckboxChange}
+                className="checkbpox-yearinput"
               />
               <label className="checklist-year"htmlFor={`year-${2019 + index}`}>{2019 + index}</label>
             </div>

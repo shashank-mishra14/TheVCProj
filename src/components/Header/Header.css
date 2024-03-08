@@ -1,3 +1,4 @@
+
 .homepage-navbar-container{
     padding-top: 30px;
     padding-left: 70px;
@@ -8,11 +9,12 @@
 .vcproject{
     font-size:35px;
     font-style:bold;
-    font-family: "Bower-Bold";
+    
     
 }
 .homepage-logo{
     margin-top: 12px;
+    
 }
 .homepage-navbar {
     display: flex;

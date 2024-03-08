@@ -75,14 +75,11 @@ const categoriesData = [
   },
 ];
 function Category({
-  handleChange,
   selectedCategory,
   setSelectedCategory,
   setSelectedSubCategory,
   selectedSubCategory
 }) {
-  const [showAllCategories, setShowAllCategories] = useState(false);
-
   const handleCategoryClick = (category) => {
     setSelectedCategory((prevCategories) => {
       if (prevCategories.includes(category)) {
@@ -103,10 +100,6 @@ function Category({
     });
   };
 
-  const handleViewMoreClick = () => {
-    setShowAllCategories(true);
-  };
-
   return (
     <div className={styles.categories}>
       <span className={styles.filterLabel}>Categories</span>
@@ -120,6 +113,7 @@ function Category({
                 value={category}
                 checked={selectedCategory.includes(category)}
                 onChange={() => handleCategoryClick(category)}
+                className={styles.checkboxcategory}
               />
             </div>
             <span> {category}</span>
@@ -134,6 +128,7 @@ function Category({
                     value={subcategory}
                     onChange={() => handleSubcategoryClick(subcategory)}
                     checked={selectedSubCategory.includes(subcategory)}
+                    className={styles.checkboxcategory}
                   />
                 </div>
                 <span> {subcategory}</span>
@@ -142,11 +137,6 @@ function Category({
           </div>
         </div>
       ))}
-      {!showAllCategories && categoriesData.length > 5 && (
-        <button className={styles.viewMoreButton} onClick={handleViewMoreClick}>
-          View More
-        </button>
-      )}
     </div>
   );
 }

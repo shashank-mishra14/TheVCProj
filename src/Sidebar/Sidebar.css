@@ -31,18 +31,24 @@
 .container-yearlist {
   margin-left: -97px;
   padding-bottom: 10px;
+  
 }
 
 .yearSelect {
   font-size: 21px;
   font-style: bold;
   font-weight: bold;
-  padding-bottom: 20px;
+  
 }
-
+.checkbpox-yearinput {
+  height: 18px;
+  margin-top: 10px;
+}
 .checklist-year {
   margin-left: -98px;
   padding-bottom: 10px;
+  font-size: 22px;
+  
 }
 
 /* Dropdown menu styles */

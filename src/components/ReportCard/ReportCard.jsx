@@ -28,13 +28,13 @@ const ReportCard = () => {
 
   const filterData = () => {
     let filteredProducts = [...cardData];
-
+  
     if (
       selectedCategory.length > 0 ||
       selectedSubCategory.length > 0 ||
       query ||
-      selectedYear ||
-      selectedAuthors.length > 0
+      selectedAuthors.length > 0 ||
+      selectedYear.length > 0
     ) {
       filteredProducts = filteredProducts.filter(
         ({ category, subcategory, title, year, author }) =>
@@ -45,12 +45,15 @@ const ReportCard = () => {
           (!query || title.toLowerCase().includes(query.toLowerCase())) &&
           (!selectedYear || year === parseInt(selectedYear)) &&
           (selectedAuthors.length === 0 ||
-            selectedAuthors.includes(author))
+            selectedAuthors.some(selectedAuthor =>
+              author.includes(selectedAuthor)
+            ))
       );
     }
-
+  
     return filteredProducts;
   };
+  
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;

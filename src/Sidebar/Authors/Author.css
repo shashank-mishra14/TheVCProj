@@ -23,23 +23,26 @@
   color: #000000;
 }
 .checkmark{
-  margin-left: -90px;
+  margin-left: -96px;
   margin-top: 10px;
   margin-bottom: 14px;
-  font-size: 18px;
+  font-size: 22px;
   color: #000000;
 
+}
+.checkboxauthorInput{
+  height: 18px;
 }
 .checklistauthor {
   display: flex;
   align-items: center;
-  font-size: 18px; /* Adjust font size for better readability */
+  font-size: 22px; /* Adjust font size for better readability */
   padding-bottom: 10px;
   margin-left: -90px; /* Reduce margin-left for closer alignment */
 }
 
 .checklistauthorInput {
-  height: 14px;
+  height: 18px;
   margin-right: -80px; /* Adjust margin-right for spacing between checkbox and text */
 
 }
