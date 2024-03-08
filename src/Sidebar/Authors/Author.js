@@ -66,9 +66,9 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
                 <input
                   type="checkbox"
                   value={value}
-                  checked={selectedAuthors.includes(value)}
+                  checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"
-                  onChange={() => handleAuthorChange(value)}
+                  onChange={() => handleAuthorChange(title)}
                 />
               </div>
               {title}

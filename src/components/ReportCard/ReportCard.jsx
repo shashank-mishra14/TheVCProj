@@ -24,7 +24,7 @@ const ReportCard = () => {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  };
+  }
 
   const filterData = () => {
     let filteredProducts = [...cardData];
@@ -52,17 +52,26 @@ const ReportCard = () => {
     return filteredProducts;
   };
 
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
     if (name === "category") {
       setSelectedCategory(value);
       setSelectedSubCategory([]);
     } else if (name === "subcategory") {
       setSelectedSubCategory(value);
+    } else if (name === "year") {
+      setSelectedYear(value);
+    } else if (name === "author") {
+      const authorValue = value;
+      setSelectedAuthors((prevAuthors) => {
+        if (checked) {
+          return [...prevAuthors, authorValue];
+        } else {
+          return prevAuthors.filter(author => author !== authorValue);
+        }
+      });
+    } else if (name === "search") {
+      setQuery(value);
     }
   };
 
@@ -73,7 +82,7 @@ const ReportCard = () => {
   useEffect(() => {
     const filteredProducts = filterData();
     setDisplayedReports(filteredProducts.slice(0, startIndex + itemsPerPage));
-  }, [cardData, startIndex, itemsPerPage]);
+  }, [cardData, startIndex, itemsPerPage, selectedCategory, selectedSubCategory, query, selectedYear, selectedAuthors]);
 
   const handleViewMore = () => {
     setStartIndex((prevStartIndex) => prevStartIndex + itemsPerPage);
@@ -92,7 +101,7 @@ const ReportCard = () => {
         selectedAuthors={selectedAuthors}
         setSelectedAuthors={setSelectedAuthors}
       />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Navigation query={query} handleInputChange={handleChange} />
       <Products
         result={displayedReports.map(
           ({
