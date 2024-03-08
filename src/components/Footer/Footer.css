@@ -41,6 +41,9 @@ ul{
 	background-color: #24262b;
     padding: 70px 0;
     position: relative;
+	width: 100%;
+	z-index: 3; /* Increased z-index */
+
 }
 .footer::before {
 	content: "";
