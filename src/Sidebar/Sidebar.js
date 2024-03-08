@@ -50,7 +50,13 @@ const Sidebar = ({
             </div>
           ))}
         </div>
-
+        <Author
+          handleChange={handleChange}
+          setAuthor={setAuthor}
+          author={author}
+          selectedAuthors={selectedAuthors}
+          setSelectedAuthors={setSelectedAuthors}
+        />
         <Category
           handleChange={(category) => {
             handleChange(category);
@@ -64,13 +70,7 @@ const Sidebar = ({
           selectedSubCategory={selectedSubCategory}
         />
 
-        <Author
-          handleChange={handleChange}
-          setAuthor={setAuthor}
-          author={author}
-          selectedAuthors={selectedAuthors}
-          setSelectedAuthors={setSelectedAuthors}
-        />
+        
       </div>
     </section>
   );

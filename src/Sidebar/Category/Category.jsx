@@ -74,32 +74,29 @@ const categoriesData = [
     subCategory: ["Funding Trends", "VC Returns", "Termsheets"],
   },
 ];
-function Category({ handleChange, selectedCategory, setSelectedCategory,setSelectedSubCategory,selectedSubCategory }) {
-  // const [selectedCategory, setSelectedCategory] = useState([]);
-  // const [selectedSubCategory, setSelectedSubCategory] = useState([]);
+function Category({
+  handleChange,
+  selectedCategory,
+  setSelectedCategory,
+  setSelectedSubCategory,
+  selectedSubCategory
+}) {
   const [showAllCategories, setShowAllCategories] = useState(false);
 
   const handleCategoryClick = (category) => {
-    console.log(selectedCategory);
     setSelectedCategory((prevCategories) => {
       if (prevCategories.includes(category)) {
-        return prevCategories.filter(
-          (prevCategory) => prevCategory !== category
-        );
+        return prevCategories.filter((prevCategory) => prevCategory !== category);
       } else {
         return [...prevCategories, category];
       }
     });
-    console.log(selectedCategory);
-
   };
 
   const handleSubcategoryClick = (subcategory) => {
     setSelectedSubCategory((prevSubCategory) => {
       if (prevSubCategory.includes(subcategory)) {
-        return prevSubCategory.filter(
-          (prevSubcategory) => prevSubcategory !== subcategory
-        );
+        return prevSubCategory.filter((prevSubcategory) => prevSubcategory !== subcategory);
       } else {
         return [...prevSubCategory, subcategory];
       }
@@ -113,53 +110,42 @@ function Category({ handleChange, selectedCategory, setSelectedCategory,setSelec
   return (
     <div className={styles.categories}>
       <span className={styles.filterLabel}>Categories</span>
-      {categoriesData
-        .slice(0, showAllCategories ? categoriesData.length : 5)
-        .map(({ category, subCategory }) => (
-          <div key={category} className={styles.checklistMain}>
-            <label className={styles.checkboxLabel}>
-              <div className={styles.checklistinput}>
-                <input
-                  type="checkbox"
-                  name="category"
-                  value={category}
-                  checked={
-                    selectedCategory.includes(category)
-                  }
-                  onChange={() => handleCategoryClick(category)}
-                />
-              </div>
-              <span> {category}</span>
-            </label>
+      {categoriesData.map(({ category, subCategory }) => (
+        <div key={category} className={styles.checklistMain}>
+          <label className={styles.checkboxLabel}>
+            <div className={styles.checklistinput}>
+              <input
+                type="checkbox"
+                name="category"
+                value={category}
+                checked={selectedCategory.includes(category)}
+                onChange={() => handleCategoryClick(category)}
+              />
+            </div>
+            <span> {category}</span>
+          </label>
+          <div className={styles.subCategory}>
+            <span className={styles.subCategoryHeading}>Subcategories</span>
+            {subCategory.map((subcategory) => (
+              <label key={subcategory} className={styles.checkboxLabel}>
+                <div className={styles.checklistinput}>
+                  <input
+                    type="checkbox"
+                    value={subcategory}
+                    onChange={() => handleSubcategoryClick(subcategory)}
+                    checked={selectedSubCategory.includes(subcategory)}
+                  />
+                </div>
+                <span> {subcategory}</span>
+              </label>
+            ))}
           </div>
-        ))}
-
+        </div>
+      ))}
       {!showAllCategories && categoriesData.length > 5 && (
         <button className={styles.viewMoreButton} onClick={handleViewMoreClick}>
           View More
         </button>
-      )}
-
-      {selectedCategory.length > 0 && (
-        <div className={styles.subCategory}>
-          <span className={styles.filterLabel}>SubCategory</span>
-          {categoriesData
-            .filter((cat) => selectedCategory.includes(cat.category))
-            .map((cat) =>
-              cat.subCategory.map((subcategory) => (
-                <label key={subcategory} className={styles.checkboxLabel}>
-                  <div className={styles.checklistinput}>
-                    <input
-                      type="checkbox"
-                      value={subcategory}
-                      onChange={() => handleSubcategoryClick(subcategory)}
-                    />
-                  </div>
-                  <span> {subcategory}</span>
-                </label>
-              ))
-            )}
-        </div>
       )}
     </div>
   );
