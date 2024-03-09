@@ -34,7 +34,11 @@ const Sidebar = ({
 
   return (
     <section className="sidebar">
-      <div className="logo-container"></div>
+      <div className="logo-container">
+        Filter Your Reports
+        <br />
+         Here
+      </div>
       <div className="sidebar-content">
         {/* Checklist for selecting years */}
         <div className="year-checklist">

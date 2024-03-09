@@ -4,20 +4,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
   const MAX_TITLE_LENGTH = 60;
-    const MIN_TITLE_LENGTH = 20;
+    
 
     let displayedTitle = title;
 
     // Check if the length of the title is less than 20 characters
-    if (title.length < MIN_TITLE_LENGTH) {
-        const spacesToAdd = MIN_TITLE_LENGTH - title.length + 10;
-        displayedTitle = (
-            <React.Fragment>
-                {title}
-                {' '.repeat(spacesToAdd)}
-            </React.Fragment>
-        );
-    } else if (title.length > MAX_TITLE_LENGTH) {
+    if (title.length > MAX_TITLE_LENGTH) {
         displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
     }
 
