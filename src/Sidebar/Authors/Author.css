@@ -27,7 +27,7 @@
   margin-left: -96px;
   margin-top: 10px;
   margin-bottom: 14px;
-  font-size: 22px;
+  font-size: 18px;
   color: #000000;
   font-family: Nunito sans;
 
@@ -38,7 +38,7 @@
 .checklistauthor {
   display: flex;
   align-items: center;
-  font-size: 22px; /* Adjust font size for better readability */
+  font-size: 18px; /* Adjust font size for better readability */
   padding-bottom: 5px;
   margin-left: -90px; /* Reduce margin-left for closer alignment */
   font-family: Nunito sans;

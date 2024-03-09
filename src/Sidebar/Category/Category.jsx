@@ -106,11 +106,11 @@ function Category({
 
   return (
     <div className={styles.categories}>
-      <span className={styles.filterLabel}>Categories</span>
-      {categoriesData.map(({ category, subCategory }) => (
-        <div key={category} className={styles.checklistMain}>
-          <h2 className={styles.catFont}>Category</h2>
-          <label className={styles.checkboxLabel}>
+      {/* <span className={styles.filterLabel}>Categories</span> */}
+      <div className={styles.checklistMain}>
+        <h2 className={styles.heading}>Categories</h2>
+        {categoriesData.map(({ category }) => (
+          <label key={category} className={styles.checkboxLabel}>
             <div className={styles.checklistinput}>
               <input
                 type="checkbox"
@@ -123,28 +123,26 @@ function Category({
             </div>
             <span className={styles.catFont}> {category}</span>
           </label>
-          <div className={styles.subCategoryList}>
-            <h3 className={styles.catFont}>Subcategory</h3>
-            {subCategory.map((subcategory) => (
-              <div key={subcategory}>
-                
-                <label className={styles.checkboxLabel}>
-                  <div className={styles.checklistinput}>
-                    <input
-                      type="checkbox"
-                      value={subcategory}
-                      onChange={() => handleSubcategoryClick(subcategory)}
-                      checked={selectedSubCategory.includes(subcategory)}
-                      className={styles.checkboxcategory}
-                    />
-                  </div>
-                  <span className={styles.catFont}> {subcategory}</span>
-                </label>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <div className={styles.subCategoryList}>
+        <h2 className={styles.heading}>Subcategories</h2>
+        {categoriesData.flatMap(({ subCategory }) => subCategory).map((subcategory) => (
+          <label key={subcategory} className={styles.checkboxLabel}>
+            <div className={styles.checklistinput}>
+              <input
+                type="checkbox"
+                value={subcategory}
+                onChange={() => handleSubcategoryClick(subcategory)}
+                checked={selectedSubCategory.includes(subcategory)}
+                className={styles.checkboxcategory}
+              />
+            </div>
+            <span className={styles.catFont}> {subcategory}</span>
+          </label>
+        ))}
+      </div>
     </div>
   );
 }
