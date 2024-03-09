@@ -29,7 +29,7 @@ h1 {
   font-family: Nunito Sans;
 }
 .accordion__faq-heading{
-  font-size: 20px;
+  font-size: 34px;
   font-family: Nunito Sans;
 }
 .accordion-simple > .active {
@@ -69,6 +69,7 @@ h1 {
 .accordion__faq-heading h3{
   color: var(--text-secondary);
   font-weight: 600;
+  font-size:34px;
 }
 
 .accordion__faq p {
@@ -77,7 +78,7 @@ h1 {
   color: var(--text-secondary);
   line-height: 1.4;
   font-family: Nunito Sans;
-  font-size:20px;
+  font-size:34px;
 }
 
 /* Media Query for Mobile Devices */

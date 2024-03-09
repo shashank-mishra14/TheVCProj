@@ -36,14 +36,14 @@ const Sidebar = ({
   return (
     <section className="sidebar">
       <div className="logo-container">
-        Filter Your Reports
+        Filter your reports
         <br />
-        Here
+        
       </div>
       <div className="sidebar-content">
         {/* Checklist for selecting years */}
         <div className="year-checklist">
-          <label className="yearSelect">Select Year:</label>
+          <label className="yearSelect">Select Year</label>
           {[...Array(2024 - 2019 + 1).keys()].map((index) => (
             <div className=" container-yearlist" key={index}>
               <input

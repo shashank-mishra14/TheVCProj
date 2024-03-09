@@ -1,5 +1,6 @@
 import React from "react";
 import "./Homepage.css";
+import Accordion from "../Accordion/Accordion";
 import Footer from "../Footer/Footer";
 const Homepage = () => {
   return (
@@ -175,6 +176,9 @@ const Homepage = () => {
           </p>
           
           <img className="card1-image" src="https://svgshare.com/i/13oU.svg" alt="icon" />
+        </div>
+        <div>
+          <Accordion/>
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@
 .sidebar-title-author-title{
   margin-top: 20px;
   margin-bottom:10px;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: bold;
   color: #000000;
   font-family: Nunito sans;
@@ -16,15 +16,15 @@
 }
 
 .sidebar-label-container{
-  margin-left: -92px;
+  margin-left: -100px;
   margin-top: 10px;
   margin-bottom: 14px;
   font-size: 16px;
-  height: 16px;
+  height: 18px;
   color: #000000;
 }
 .checkmark{
-  margin-left: -96px;
+  margin-left: -110px;
   margin-top: 10px;
   margin-bottom: 14px;
   font-size: 18px;
@@ -39,13 +39,13 @@
   display: flex;
   align-items: center;
   font-size: 18px; /* Adjust font size for better readability */
-  padding-bottom: 5px;
-  margin-left: -90px; /* Reduce margin-left for closer alignment */
+  padding-bottom: 3px;
+  margin-left: -100px; /* Reduce margin-left for closer alignment */
   font-family: Nunito sans;
 }
 
 .checklistauthorInput {
   height: 18px;
-  margin-right: -80px; /* Adjust margin-right for spacing between checkbox and text */
+  margin-right: -90px; /* Adjust margin-right for spacing between checkbox and text */
 
 }

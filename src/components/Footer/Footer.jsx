@@ -39,14 +39,15 @@ const Footer = () => {
 
         <div class="footer-bottom">
           <hr />
-          <p>© 2024 The VC Project | All rights reserved</p>
-          <p>
+          <p className="para-footer">
             *This Project in no way intends to benefit by re-distribution or
-            copying of author's report. <br />
-            This is purely for information & ease purposes. 
-            If you'd rather not have your report listed here, <br /> please contact us
+            copying of author's report. 
+            This is purely for information & ease purposes.<br/> 
+            If you'd rather not have your report listed here, please contact us
             to get it removed within 48 Hours.
           </p>
+          <p>© 2024 The VC Project | All rights reserved</p>
+         
         </div>
       </footer>
     </div>
