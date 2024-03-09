@@ -36,8 +36,14 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <hr />
+            
+
           </div>
+        </div>
+
+        <div class="footer-bottom">
+        <hr />
+          <p>© 2024 The VC Project | All rights reserved</p>
         </div>
       </footer>
       

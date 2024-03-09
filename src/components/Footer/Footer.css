@@ -54,23 +54,33 @@ ul{
 }
 .footer hr{
 	content: "";
-	position: absolute;
+	position: relative;
+	margin-top:70px;
 	bottom: 45px; /* Adjust this value to control the distance from the bottom */
-	left:260px;
+	left:330px;
+	align-items: center;
+	justify-content: center;
 	width: 70%;
 	height: 1px; /* Adjust this value to control the thickness of the line */
 	background-color: white; /* Change this to the color you want for the line */
   }
 .footer-col{
-   width: 25%;
+   width: 58%;
    padding: 0 15px;
    padding-right: 150px;
 }
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-   padding-right: 150px;
+.footer-bottom{
+	
+	text-align: center;
+	background-color: #24262b;
+	color: #ffffff;
+	margin-bottom: -45px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
 }
+
 .footer-heading{
 	font-size: 18px;
 	color: #ffffff;
