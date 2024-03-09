@@ -4,21 +4,23 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
   const MAX_TITLE_LENGTH = 60;
-  let displayedTitle = title;
+    const MIN_TITLE_LENGTH = 20;
 
-  // Check if the length of the title is less than 5 characters
-  if (title.length < 5) {
-      displayedTitle = (
-          <React.Fragment>
-              {title}
-              <br />
-          </React.Fragment>
-      );
-  }
+    let displayedTitle = title;
 
-  if (title.length > MAX_TITLE_LENGTH) {
-      displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
-  }
+    // Check if the length of the title is less than 20 characters
+    if (title.length < MIN_TITLE_LENGTH) {
+        const spacesToAdd = MIN_TITLE_LENGTH - title.length + 10;
+        displayedTitle = (
+            <React.Fragment>
+                {title}
+                {' '.repeat(spacesToAdd)}
+            </React.Fragment>
+        );
+    } else if (title.length > MAX_TITLE_LENGTH) {
+        displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
+    }
+
 
   const MAX_CATEGORY_LENGTH = 15;
   let displayedCategory = subcategory;
@@ -52,8 +54,10 @@ const Card = ({ img, title, companyName, subcategory, year, category, month, lin
                       <button className="tag-button">{displayedCategory}</button>
                       <button className="tag-button">{year}</button>
                       <button className="tag-button">{month}</button>
+                      <div className="card-adjustment">
                       <hr className="horizontal-line" />
                       <button className="readmore-button">Read More</button>
+                      </div>
                   </div>
               </div>
           </section>

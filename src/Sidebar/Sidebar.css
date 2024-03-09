@@ -39,6 +39,7 @@
   font-size: 21px;
   font-style: bold;
   font-weight: bold;
+  font-family: Nunito Sans;
   
 }
 .checkbpox-yearinput {
@@ -50,7 +51,7 @@
   margin-left: -98px;
   padding-bottom: 5px;
   font-size: 22px;
-  
+  font-family: Nunito Sans;
 }
 
 /* Dropdown menu styles */
