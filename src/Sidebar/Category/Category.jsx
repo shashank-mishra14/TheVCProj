@@ -116,7 +116,7 @@ function Category({
                 className={styles.checkboxcategory}
               />
             </div>
-            <span> {category}</span>
+            <span className={styles.catFont}> {category}</span>
           </label>
           <div className={styles.subCategory}>
             <span className={styles.subCategoryHeading}>Subcategories</span>
