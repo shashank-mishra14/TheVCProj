@@ -43,9 +43,9 @@ const ReportCard = () => {
           (selectedSubCategory.length === 0 ||
             selectedSubCategory.includes(subcategory)) &&
           (!query || title.toLowerCase().includes(query.toLowerCase())) &&
-          (!selectedYear || year === parseInt(selectedYear)) && // Filter by selected year
+          (selectedYear.length === 0 || selectedYear.includes(`${year}`)) && // Filter by selected year(s)
           (selectedAuthors.length === 0 ||
-            selectedAuthors.some(selectedAuthor =>
+            selectedAuthors.some((selectedAuthor) =>
               author.includes(selectedAuthor)
             ))
       );
