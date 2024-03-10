@@ -56,7 +56,7 @@ function Accordion() {
           {dataCollection.map((item, index) => (
             <div key={index} onClick={() => toggleAccordion(index)}>
               <div className="accordion__faq-heading">
-                <h3 className={accordion === index ? "active" : ""}>
+              <h3 className={`${accordion === index ? "active" : ""} custom-h3`}>
                   {item.question}
                 </h3>
                 <div>

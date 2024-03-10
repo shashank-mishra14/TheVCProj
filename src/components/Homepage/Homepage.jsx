@@ -162,23 +162,46 @@ const Homepage = () => {
       </div>
       <div className="network-container">
         <h3>Our network</h3>
-        <p className="network-container-p">Tap into our highly vetted network</p>
+        <p className="network-container-p">
+          Tap into our highly vetted network
+        </p>
         <div className="card3-container">
           <p className="card-paragraph-network">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit <br />
-             Sit
-            obcaecati ut deserunt! Sit illo asperiores <br />iusto facilis eaque aut
+            Sit obcaecati ut deserunt! Sit illo asperiores <br />
+            iusto facilis eaque aut
             <br />
-            hic inventore aspernatur provident?<br /> Omnis ducimus perspiciatis id
-            nihil earum ut!
-            
-            <h1 >Reports...</h1>
+            hic inventore aspernatur provident?
+            <br /> Omnis ducimus perspiciatis id nihil earum ut!
+            <h1>Reports...</h1>
           </p>
+
+          <img
+            className="card1-image"
+            src="https://svgshare.com/i/13oU.svg"
+            alt="icon"
+          />
+        </div>
+        <div className="card3-container">
           
-          <img className="card1-image" src="https://svgshare.com/i/13oU.svg" alt="icon" />
+
+          <img
+            className="card1-image"
+            src="https://svgshare.com/i/13oU.svg"
+            alt="icon"
+          />
+          <p className="card-paragraph-network">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit <br />
+            Sit obcaecati ut deserunt! Sit illo asperiores <br />
+            iusto facilis eaque aut
+            <br />
+            hic inventore aspernatur provident?
+            <br /> Omnis ducimus perspiciatis id nihil earum ut!
+            <h1>Reports...</h1>
+          </p>
         </div>
         <div>
-          <Accordion/>
+          <Accordion />
         </div>
       </div>
     </>
