@@ -80,6 +80,8 @@ function Category({
   setSelectedSubCategory,
   selectedSubCategory,
 }) {
+  const [showAll, setShowAll] = useState(false);
+  const [showAllSubcategories, setShowAllSubcategories] = useState(false);
   const handleCategoryClick = (category) => {
     setSelectedCategory((prevCategories) => {
       if (prevCategories.includes(category)) {
@@ -106,10 +108,9 @@ function Category({
 
   return (
     <div className={styles.categories}>
-      {/* <span className={styles.filterLabel}>Categories</span> */}
       <div className={styles.checklistMain}>
         <h2 className={styles.heading}>Categories</h2>
-        {categoriesData.map(({ category }) => (
+        {categoriesData.slice(0, showAll ? categoriesData.length : 10).map(({ category }) => (
           <label key={category} className={styles.checkboxLabel}>
             <div className={styles.checklistinput}>
               <input
@@ -125,10 +126,14 @@ function Category({
           </label>
         ))}
       </div>
-
-      <div className={styles.subCategoryList}>
+      {!showAll && categoriesData.length > 10 && (
+        <button className={styles.viewMoreButton} onClick={() => setShowAll(true)}>
+          View More
+        </button>
+      )}
+       <div className={styles.subCategoryList}>
         <h2 className={styles.heading}>Subcategories</h2>
-        {categoriesData.flatMap(({ subCategory }) => subCategory).map((subcategory) => (
+        {categoriesData.flatMap(({ subCategory }) => subCategory).slice(0, showAllSubcategories ? categoriesData.flatMap(({ subCategory }) => subCategory).length : 10).map((subcategory) => (
           <label key={subcategory} className={styles.checkboxLabel}>
             <div className={styles.checklistinput}>
               <input
@@ -142,6 +147,11 @@ function Category({
             <span className={styles.catFont}> {subcategory}</span>
           </label>
         ))}
+        {!showAllSubcategories && categoriesData.flatMap(({ subCategory }) => subCategory).length > 10 && (
+          <button className={styles.viewMoreButton} onClick={() => setShowAllSubcategories(true)}>
+            View More
+          </button>
+        )}
       </div>
     </div>
   );
