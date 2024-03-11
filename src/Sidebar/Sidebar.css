@@ -34,6 +34,8 @@
 }
 
 .container-yearlist {
+  display: flex;
+  flex-direction: row;
   margin-left: -97px;
   padding-bottom: 2px;
   
@@ -48,7 +50,8 @@
 }
 .checkbpox-yearinput {
   height: 18px;
-  margin-top: 1px;
+  margin-top: 2px;
+  
   
 }
 .checklist-year {

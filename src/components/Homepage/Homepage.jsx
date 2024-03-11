@@ -12,7 +12,7 @@ const Homepage = () => {
             Trusted by top startups and unicorns
           </h2>
           
-            <Marquee style={{ width: "66%" }} className="marquee-container" speed={100}>
+            <Marquee style={{ width: "75%" }} className="marquee-container" speed={100}>
           <div className="svg-logos">
             <img
               src="https://svgshare.com/i/147P.svg"
