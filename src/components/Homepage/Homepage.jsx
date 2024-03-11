@@ -11,12 +11,13 @@ const Homepage = () => {
           <h2 className="heading-container">
             Trusted by top startups and unicorns
           </h2>
-          <Marquee  speed={100} >
+          
+            <Marquee style={{ width: "66%" }} className="marquee-container" speed={100}>
           <div className="svg-logos">
             <img
               src="https://svgshare.com/i/147P.svg"
               alt="icon"
-              className="svg"
+              className="svg" 
             />
             <img
               src="https://svgshare.com/i/1487.svg"
