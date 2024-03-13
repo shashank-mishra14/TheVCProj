@@ -82,7 +82,7 @@ app.get('/reports', async (req, res) => {
     }
 });
 app.get('/',  (req, res) => {
-    console.log("Hello");
+    res.json("Hello");
     }
 );
 app.listen(PORT, () => {
