@@ -65,7 +65,7 @@ app.post('/addreports', async(req, res) => {
         imgsrc,
         link,
     });
-    
+    res.json("Hello world");
     res.send('Report added successfully.');
 });
 
