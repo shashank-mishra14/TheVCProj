@@ -23,21 +23,22 @@ const UseAddReports = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      axios.post("http://localhost:5000/addreports", reportData);
-      // Clear form fields after successful submission (optional)
-      setReportData({
-        title: "",
-        category: "",
-        subcategory: "",
-        author: "",
-        year: "",
-        imgsrc: "",
-        link: "",
-      });
+        await axios.post("http://localhost:5000/addreports", reportData);
+        // Clear form fields after successful submission (optional)
+        setReportData({
+            title: "",
+            category: "",
+            subcategory: "",
+            author: "",
+            year: "",
+            imgsrc: "",
+            link: "",
+        });
     } catch (error) {
-      console.error('Error submitting report:', error.message);
+        console.error('Error submitting report:', error.message);
     }
-  };
+} 
+
   
 
   return (

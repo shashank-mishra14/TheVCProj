@@ -10,7 +10,7 @@ const app = express();
 const PORT = 5000;
 const Reports= require('../src/components/addReports/reports.js');
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/?retryWrites=true&w=majority&appName=vcproject', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
@@ -19,7 +19,7 @@ db.once('open', () => {
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://the-vc-proj.vercel.app/',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     optionsSuccessStatus: 200
@@ -46,7 +46,7 @@ app.post('/upload', upload.single('document'), async (req, res) => {
             path: file.path
         });
         await newFile.save();
-
+       
         res.send('File uploaded successfully.');
     } catch (error) {
         console.error(error);
@@ -81,7 +81,10 @@ app.get('/reports', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
-
+app.get('/',  (req, res) => {
+    console.log("Hello");
+    }
+);
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
