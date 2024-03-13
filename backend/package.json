@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "build": "nodemon build"
+    "build": "run build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
