@@ -1,7 +1,7 @@
 .sidebar {
   width: 15%;
   position: fixed;
-  height: 90%;
+  height: 60%;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -62,23 +62,31 @@
 
 /* Dropdown menu styles */
 @media screen and (max-width: 768px) {
-  .filters {
-    margin-bottom: 50px;
+  .sidebar {
+    width: 100%; /* Take full width on smaller screens */
+    height: auto; /* Adjust height automatically */
+    position: static; /* Remove fixed positioning */
   }
 
-  .categories button {
+  .logo-container {
     margin-left: 0; /* Remove negative margin */
   }
 
-  .categories {
-    align-items: flex-start; /* Align items to start for smaller screens */
+  .year-checklist {
+    margin-left: 0; /* Remove specific margin */
+    margin-top: 20px; /* Adjust margin */
   }
 
-  .checkboxLabel {
-    margin-left: 0; /* Remove negative margin */
+  .container-yearlist {
+    margin-left: 0; /* Remove specific margin */
   }
 
-  .checklistinput {
-    margin-right: 0; /* Remove negative margin */
+  .yearSelect {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .checklist-year {
+    margin-left: 0; /* Remove specific margin */
   }
 }
+

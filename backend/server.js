@@ -10,7 +10,7 @@ const app = express();
 const PORT = 5000;
 const Reports= require('../src/components/addReports/reports.js');
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/TheVCProject', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
