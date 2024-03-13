@@ -19,7 +19,7 @@ db.once('open', () => {
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'https://the-vc-proj.vercel.app/',
+    origin: 'http://localhost:3000',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     optionsSuccessStatus: 200
@@ -82,7 +82,7 @@ app.get('/reports', async (req, res) => {
     }
 });
 app.get('/',  (req, res) => {
-    res.json("Hello");
+    console.log("Hello");
     }
 );
 app.listen(PORT, () => {
