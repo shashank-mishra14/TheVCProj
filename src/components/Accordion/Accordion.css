@@ -64,7 +64,7 @@ h1 {
 
 .accordion__faq-heading{
   display: flex;
-  
+  color: rgb(24, 24, 143);
   justify-content: space-between;
   align-items: center;
 }
