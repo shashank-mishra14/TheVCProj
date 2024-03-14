@@ -20,8 +20,17 @@
     border: 1px solid #ffffff; /* Add a border for better visibility */
     background-color: #ffffff;
     cursor: pointer;
-}
+}.imgs-marquee{
+    width: 500px;
+    height: 500px;
+    padding: 15px;
 
+}
+.herosection-main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .main{
     background-color: rgb(235, 234, 233);
 }
@@ -46,6 +55,7 @@
     font-size: 42px;
     display: flex;
     padding-top: 20px;
+    margin-right: 50px;
     padding-bottom: 20px;
     color: rgb(24, 24, 143);
     font-family: Nunito Sans;
@@ -63,8 +73,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 500px;
     align-items: center;
 
+}
+.card-paragraph-network button{
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    padding: 0.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 14px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito Sans;
+}
+.button-class{
+    padding-left: 273px;
+    padding-top: 10px;
 }
 .herosection-title button{
 
@@ -172,7 +202,13 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     flex: 1;
     position: relative;
   }
-  
+  .network-container h3{
+    background-color:  #B6DCFE;
+  }
+
+  .network-container p{
+    background-color:  #B6DCFE;
+  }
   .card2:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -296,6 +332,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
         justify-content: center;
         align-items: center;
         padding:50px;
+      background-color:   #B6DCFE;
     }
 
     .card-paragraph-network p{
