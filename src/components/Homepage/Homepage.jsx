@@ -77,9 +77,9 @@ const Homepage = () => {
       <div className="card1-container">
         <h2 className="heading2">THE VC PROJECT</h2>
         <p className="paragraph">
-          India's largest researches respository
+        India’s largest reports repository for making sense  
           <br />
-          for students
+          of opportunities in India.
         </p>
         <div className="card2-container">
           <div className="card2">
