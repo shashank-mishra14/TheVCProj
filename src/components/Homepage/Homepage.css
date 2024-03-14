@@ -21,8 +21,8 @@
     background-color: #ffffff;
     cursor: pointer;
 }.imgs-marquee{
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     padding: 15px;
 
 }
@@ -137,17 +137,24 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     padding-bottom: 150px;
     justify-content: center;
     align-items: center; */
-    background-color: #B6DCFE;
+    background-color: #011638;
 }
 .heading2{
     font-size: 18px;
     color: rgb(24, 24, 143);
 }
+.network-border{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
 .h1-madeforinvestors{
     font-size: 60px;
-    padding-top: 20px;
+    padding-top: 134px;
     padding-bottom: 20px;
-    color: rgb(24, 24, 143);
+    color: black;
     font-family: Nunito Sans;
     text-align: center;
 
@@ -156,6 +163,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     font-size: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: white;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -202,12 +210,13 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     flex: 1;
     position: relative;
   }
-  .network-container h3{
-    background-color:  #B6DCFE;
-  }
+ .list-card{
+    padding-bottom:10px;
+ }
 
   .network-container p{
-    background-color:  #B6DCFE;
+    background-color:  #011638;
+    color: white;
   }
   .card2:not(:last-child)::after {
     content: "";
@@ -332,7 +341,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
         justify-content: center;
         align-items: center;
         padding:50px;
-      background-color:   #B6DCFE;
+      background-color:   #011638;
     }
 
     .card-paragraph-network p{

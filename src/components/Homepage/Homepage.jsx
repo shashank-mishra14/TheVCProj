@@ -24,9 +24,9 @@ const Homepage = () => {
         </div>
         <div className="herosection">
         <Marquee
-            style={{ width: "55%" }}
+            style={{ width: "85%" }}
             className="marquee-container"
-            speed={100}
+            speed={50}
           >
             <div className="imgs">
              <img className="imgs-marquee" src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png" alt="" />
@@ -151,59 +151,6 @@ const Homepage = () => {
           <br />
           of opportunities in India.
         </h1>
-        {/* <div className="card2-container">
-          <div className="card2">
-            <div className="card2-text">
-              <h3>Read</h3>
-              <p>
-                Gain access to library of 1000+
-                <br />
-                reports across 100+
-                <br />
-                industries, providing comprehensive
-                <br />
-                analyses.
-              </p>
-            </div>
-            <div className="card2-image">
-              <img src="https://svgshare.com/i/13nn.svg" alt="icon" />
-            </div>
-          </div>
-          <div className="card2">
-            <div className="card2-text">
-              <h3>Publish</h3>
-              <p>
-                Gain access to library of 1000+
-                <br />
-                reports across 100+
-                <br />
-                industries, providing comprehensive
-                <br />
-                analyses.
-              </p>
-            </div>
-            <div className="card2-image">
-              <img src="https://svgshare.com/i/13pM.svg" alt="icon" />
-            </div>
-          </div>
-          <div className="card2">
-            <div className="card2-text">
-              <h3>Connect</h3>
-              <p>
-                Gain access to library of 1000+
-                <br />
-                reports across 100+
-                <br />
-                industries, providing comprehensive
-                <br />
-                analyses.
-              </p>
-            </div>
-            <div className="card2-image">
-              <img src="https://svgshare.com/i/13oU.svg" alt="icon" />
-            </div>
-          </div>
-        </div> */}
       </div>
       <div className="network-container">
         {/* <h3>Our network</h3>
@@ -212,12 +159,14 @@ const Homepage = () => {
         </p> */}
         <div className="card3-container">
           <p className="card-paragraph-network">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit <br />
-            Sit obcaecati ut deserunt! Sit illo asperiores <br />
-            iusto facilis eaque aut
-            <br />
-            hic inventore aspernatur provident?
-            <br /> Omnis ducimus perspiciatis id nihil earum ut!
+            <ul>
+              <li className="list-card">Used for:</li>
+              <li className="list-card">1. Understanding the market size of sectors </li>
+              <li className="list-card">2. Growth potential in the coming years</li>
+              <li className="list-card">3. India vs China vs USA for different sectors</li>
+              <li className="list-card">4. Deep Diving into sub-sectors within sectors</li>
+              <li className="list-card">5. Developing an understanding of the Indian <br />market and its sectors</li>
+            </ul>
             <div className="button-class">
 
             <Link to="/reportspage">
@@ -233,10 +182,11 @@ const Homepage = () => {
           />
         </div>
         <h1 className="h1-madeforinvestors">
-          Made for investors, founders, analysts, students
+          Made for investors, founders and analysts.
           <br />
           Find your use case. Now.
         </h1>
+        <hr className="network-border"/>
         <div>
           <Accordion />
         </div>
