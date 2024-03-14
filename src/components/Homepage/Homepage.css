@@ -25,7 +25,44 @@
 .main{
     background-color: rgb(235, 234, 233);
 }
+.herosection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+}
+.herosection-title h1{
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(24, 24, 143);
+    font-family: Nunito Sans;
 
+}
+.herosection-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.herosection-title button{
+
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    padding: 0.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 14px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito Sans;
+}
 .svg-container{
     display: flex;
     flex-direction: column;

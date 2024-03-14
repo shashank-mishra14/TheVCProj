@@ -1,12 +1,26 @@
 import React from "react";
 import "./Homepage.css";
 import Accordion from "../Accordion/Accordion";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 const Homepage = () => {
   return (
     <>
       <div className="main">
+        <div className="herosection">
+          <div className="herosection-title">
+            <h1>Cut your research time in half. Let us find you relevant reports about India. </h1>
+            <div className="button-reports" >
+            </div>
+            <Link to="/reportspage">
+            <button >
+
+            </button>
+            </Link>
+              
+          </div>
+        </div>
         <div className="svg-container">
           <h2 className="heading-container">
             Trusted by top startups and unicorns
