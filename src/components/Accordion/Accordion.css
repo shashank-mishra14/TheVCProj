@@ -81,6 +81,7 @@ h1 {
 
 .accordion__faq p {
   margin: 0px;
+  margin-top:20px;
   padding-bottom: 20px; /* Adjust spacing for mobile */
   color: var(--text-secondary);
   line-height: 1.4;
