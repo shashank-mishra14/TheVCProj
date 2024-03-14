@@ -203,8 +203,9 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
 }
 
 .svg{
-    height: 250px;
+    height: 80px;
     width: 180px;
+    padding: 20px;
 }
 .svg15{
     height: 250px;

@@ -29,47 +29,47 @@ const Homepage = () => {
             <Marquee style={{ width: "75%" }} className="marquee-container" speed={100}>
           <div className="svg-logos">
             <img
-              src="https://svgshare.com/i/14LZ.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14Ku.svg"
+              alt="chiratae"
               className="svg" 
             />
             <img
-              src="https://svgshare.com/i/1487.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14Lk.svg"
+              alt="avendus"
               className="svg"
             />
             <img
-              src="https://svgshare.com/i/1499.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14L2.svg"
+              alt="matrix"
               className="svg"
             />
             <img
-              src="https://svgshare.com/i/148g.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14L_.svg"
+              alt="mckinsey"
               className="svg"
             />
             <img
-              src="https://svgshare.com/i/147a.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14MU.svg"
+              alt="peak"
               className="svg"
             />
             <img
-              src="https://svgshare.com/i/149A.svg"
-              alt="icon"
+              src="https://svgshare.com/i/14Kg.svg"
+              alt="pwc"
               className="svg"
             />
-            <img src="https://svgshare.com/i/148h.svg" alt="" className="svg" />
-            <img src="https://svgshare.com/i/147Q.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/146g.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/148K.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/147F.svg" alt=""className="svg" />
-            <img src="https://svgshare.com/i/147n.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/147s.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/147o.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/1488.svg" alt="" className="svg15"/>
-            <img src="https://svgshare.com/i/149B.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/148q.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/1489.svg" alt="" className="svg"/>
+            <img src="https://svgshare.com/i/14MV.svg" alt="redseer" className="svg" />
+            <img src="https://svgshare.com/i/14ME.svg" alt="temasek" className="svg"/>
+            <img src="https://svgshare.com/i/14MF.svg" alt="yourstory" className="svg"/>
+            <img src="https://svgshare.com/i/14MG.svg" alt="EY" className="svg"/>
+            <img src="https://svgshare.com/i/14MH.svg" alt="google"className="svg" />
+            <img src="https://svgshare.com/i/14LP.svg" alt="delloute" className="svg"/>
+            <img src="https://svgshare.com/i/14KM.svg" alt="kaalari" className="svg"/>
+            <img src="https://svgshare.com/i/14LQ.svg" alt="kpmg" className="svg"/>
+            <img src="https://svgshare.com/i/14M_.svg" alt="blume" className="svg"/>
+            <img src="https://svgshare.com/i/14M5.svg" alt="bnc" className="svg"/>
+            <img src="https://svgshare.com/i/14Kh.svg" alt="elevation" className="svg"/>
+            <img src="https://svgshare.com/i/14M6.svg" alt="bcg" className="svg"/>
           </div>
           </Marquee>
         </div>
