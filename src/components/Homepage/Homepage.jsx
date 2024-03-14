@@ -52,7 +52,7 @@ const Homepage = () => {
             <img src="https://svgshare.com/i/147n.svg" alt="" className="svg"/>
             <img src="https://svgshare.com/i/147s.svg" alt="" className="svg"/>
             <img src="https://svgshare.com/i/147o.svg" alt="" className="svg"/>
-            <img src="https://svgshare.com/i/1488.svg" alt="" className="svg"/>
+            <img src="https://svgshare.com/i/1488.svg" alt="" className="svg15"/>
             <img src="https://svgshare.com/i/149B.svg" alt="" className="svg"/>
             <img src="https://svgshare.com/i/148q.svg" alt="" className="svg"/>
             <img src="https://svgshare.com/i/1489.svg" alt="" className="svg"/>
