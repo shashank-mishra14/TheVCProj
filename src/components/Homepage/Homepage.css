@@ -32,13 +32,25 @@
     align-items: center;
     background: rgb(255,255,255);
 }
+.marquee-container{
+    padding-top:-20px;
+    padding-bottom: -20px;
+
+}
+.h1-title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 .herosection-title h1{
-    font-size: 40px;
+    font-size: 42px;
+    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     color: rgb(24, 24, 143);
     font-family: Nunito Sans;
-
+    align-items: center;
+    justify-content: center;
 }
 .herosection-title h2{
     font-size: 20px;
@@ -72,6 +84,7 @@
 }
 .svg-container{
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -82,31 +95,41 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
 .heading-container{
     font-size: 26px;
     padding-top: 20px;
-    padding-bottom: -15px;
+    
 
 }
 
 
 .card1-container{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     padding-top: 150px;
     padding-bottom: 150px;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    background-color: #B6DCFE;
 }
 .heading2{
     font-size: 18px;
     color: rgb(24, 24, 143);
 }
+.h1-madeforinvestors{
+    font-size: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(24, 24, 143);
+    font-family: Nunito Sans;
+    text-align: center;
 
+}
 .paragraph{
-    font-size: 35px;
+    font-size: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+    font-family: Nunito Sans;
 }
 
 .card2-container{

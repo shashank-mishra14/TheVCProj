@@ -10,7 +10,7 @@ const Homepage = () => {
       <div className="main">
         <div className="herosection">
           <div className="herosection-title">
-            <h1>Cut your research time in half. Let us find you relevant reports about India. </h1>
+            <h1 className="paragraph">Cut your research time in half. Let us find you relevant <br />reports about India. </h1>
             <div className="button-reports" >
             </div>
             <Link to="/reportspage">
@@ -29,7 +29,7 @@ const Homepage = () => {
             <Marquee style={{ width: "75%" }} className="marquee-container" speed={100}>
           <div className="svg-logos">
             <img
-              src="https://svgshare.com/i/147P.svg"
+              src="https://svgshare.com/i/14LZ.svg"
               alt="icon"
               className="svg" 
             />
@@ -75,13 +75,13 @@ const Homepage = () => {
         </div>
       </div>
       <div className="card1-container">
-        <h2 className="heading2">THE VC PROJECT</h2>
-        <p className="paragraph">
+        {/* <h2 className="heading2">THE VC PROJECT</h2> */}
+        <h1 className="paragraph">
         India’s largest reports repository for making sense  
           <br />
           of opportunities in India.
-        </p>
-        <div className="card2-container">
+        </h1>
+        {/* <div className="card2-container">
           <div className="card2">
             <div className="card2-text">
               <h3>Read</h3>
@@ -133,7 +133,7 @@ const Homepage = () => {
               <img src="https://svgshare.com/i/13oU.svg" alt="icon" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="network-container">
         <h3>Our network</h3>
@@ -166,15 +166,23 @@ const Homepage = () => {
             alt="icon"
           />
           <p className="card-paragraph-network">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit <br />
-            Sit obcaecati ut deserunt! Sit illo asperiores <br />
-            iusto facilis eaque aut
-            <br />
-            hic inventore aspernatur provident?
-            <br /> Omnis ducimus perspiciatis id nihil earum ut!
+          <ul>
+  <li>Understanding the market size of sectors</li>
+  <li>Growth potential in the coming years</li>
+  <li>India vs China vs USA for different sectors</li>
+  <li>Deep Diving into sub-sectors within sectors</li>
+  <li>Developing an understanding of the Indian market and its sectors.</li>
+</ul>
+
             <h1>Reports...</h1>
           </p>
         </div>
+        <h1 className="h1-madeforinvestors"> 
+        Made for investors, founders, analysts, students  
+      <br />
+      Find your use case. Now.
+
+        </h1>
         <div>
           <Accordion />
         </div>
