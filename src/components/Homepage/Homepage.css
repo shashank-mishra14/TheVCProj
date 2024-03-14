@@ -137,7 +137,11 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
 
 .svg{
     height: 250px;
-    width: 180px;
+    width: 141px;
+}
+.svg15{
+    height: 250px;
+    width: 150px;
 }
   .network-container-p{
     font-size: 35px;
