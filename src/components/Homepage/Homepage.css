@@ -40,6 +40,13 @@
     font-family: Nunito Sans;
 
 }
+.herosection-title h2{
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: rgb(24, 24, 143);
+    font-family: Nunito Sans;
+
+}
 .herosection-title {
     display: flex;
     flex-direction: column;

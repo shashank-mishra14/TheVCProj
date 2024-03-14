@@ -15,10 +15,10 @@ const Homepage = () => {
             </div>
             <Link to="/reportspage">
             <button >
-
+            Browse reports
             </button>
             </Link>
-              
+              <h2>Free forever, no sign-up needed</h2>
           </div>
         </div>
         <div className="svg-container">
