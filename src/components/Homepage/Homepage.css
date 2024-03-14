@@ -197,11 +197,77 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     padding-left: 18px;
     color: rgb(24, 24, 143);
   }
+  .svg-temasek{
+    height: 85px;
+    width: 240px;
+    padding: 20px;
+  }
 .svg-logos{
     display: flex;
     flex-direction: row;
 }
+.svg-redseer{
+    height: 110px;
+    width: 240px;
+    padding: 20px;
 
+}
+.svg-bnc{
+    height: 80px;
+    width: 240px;
+    padding: 20px;
+
+}
+.svg-peak{
+    height: 110px;
+    width: 240px;
+    padding: 20px;
+
+
+}
+.svg-pwc{
+    height: 120px;
+    width: 240px;
+    padding: 20px;
+
+
+}
+.svg-avendus{
+    height: 120px;
+    width: 240px;
+    padding: 20px;
+
+
+}
+.svg-matrix{
+    height: 140px;
+    width: 240px;
+    padding: 20px;
+}
+.svg-mckinsey{
+    height: 140px;
+    width: 240px;
+    padding: 20px;
+
+}
+.svg-chiratae{
+    height: 100px;
+    width: 240px;
+    padding: 20px;
+}
+.svg-blume{
+    height: 120px;
+    width: 180px;
+    padding: 20px;
+
+
+}
+.svg-bcg{
+    height: 120px;
+    width: 180px;
+    padding: 20px;
+
+}
 .svg{
     height: 80px;
     width: 180px;

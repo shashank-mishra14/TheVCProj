@@ -31,45 +31,45 @@ const Homepage = () => {
             <img
               src="https://svgshare.com/i/14Ku.svg"
               alt="chiratae"
-              className="svg" 
+              className="svg-chiratae" 
             />
             <img
               src="https://svgshare.com/i/14Lk.svg"
               alt="avendus"
-              className="svg"
+              className="svg-avendus"
             />
             <img
               src="https://svgshare.com/i/14L2.svg"
               alt="matrix"
-              className="svg"
+              className="svg-matrix"
             />
             <img
               src="https://svgshare.com/i/14L_.svg"
               alt="mckinsey"
-              className="svg"
+              className="svg-mckinsey"
             />
             <img
               src="https://svgshare.com/i/14MU.svg"
               alt="peak"
-              className="svg"
+              className="svg-peak"
             />
             <img
               src="https://svgshare.com/i/14Kg.svg"
               alt="pwc"
-              className="svg"
+              className="svg-pwc"
             />
-            <img src="https://svgshare.com/i/14MV.svg" alt="redseer" className="svg" />
-            <img src="https://svgshare.com/i/14ME.svg" alt="temasek" className="svg"/>
+            <img src="https://svgshare.com/i/14MV.svg" alt="redseer" className="svg-redseer" />
+            <img src="https://svgshare.com/i/14ME.svg" alt="temasek" className="svg-temasek"/>
             <img src="https://svgshare.com/i/14MF.svg" alt="yourstory" className="svg"/>
-            <img src="https://svgshare.com/i/14MG.svg" alt="EY" className="svg"/>
+            {/* <img src="https://svgshare.com/i/14MG.svg" alt="EY" className="svg"/> */}
             <img src="https://svgshare.com/i/14MH.svg" alt="google"className="svg" />
             <img src="https://svgshare.com/i/14LP.svg" alt="delloute" className="svg"/>
             <img src="https://svgshare.com/i/14KM.svg" alt="kaalari" className="svg"/>
             <img src="https://svgshare.com/i/14LQ.svg" alt="kpmg" className="svg"/>
-            <img src="https://svgshare.com/i/14M_.svg" alt="blume" className="svg"/>
-            <img src="https://svgshare.com/i/14M5.svg" alt="bnc" className="svg"/>
+            <img src="https://svgshare.com/i/14M_.svg" alt="blume" className="svg-blume"/>
+            <img src="https://svgshare.com/i/14M5.svg" alt="bnc" className="svg-bnc"/>
             <img src="https://svgshare.com/i/14Kh.svg" alt="elevation" className="svg"/>
-            <img src="https://svgshare.com/i/14M6.svg" alt="bcg" className="svg"/>
+            <img src="https://svgshare.com/i/14M6.svg" alt="bcg" className="svg-bcg"/>
           </div>
           </Marquee>
         </div>
