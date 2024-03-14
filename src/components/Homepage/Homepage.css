@@ -139,6 +139,9 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     align-items: center; */
     background-color: #011638;
 }
+.unlisted{
+    margin-left: 100px;
+}
 .heading2{
     font-size: 18px;
     color: rgb(24, 24, 143);
@@ -331,6 +334,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
   .card1-image{
     width:580px;
     height:580px;
+    
     }
 
     .card3-container{

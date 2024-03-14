@@ -159,7 +159,7 @@ const Homepage = () => {
         </p> */}
         <div className="card3-container">
           <p className="card-paragraph-network">
-            <ul>
+            <ul className="unlisted">
               <li className="list-card">Used for:</li>
               <li className="list-card">1. Understanding the market size of sectors </li>
               <li className="list-card">2. Growth potential in the coming years</li>
