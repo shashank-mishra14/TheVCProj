@@ -1,6 +1,4 @@
-
-
-const express = require("express");
+import express from "express";
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 // var router = express.Router();
