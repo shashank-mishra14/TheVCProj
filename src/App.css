@@ -19,7 +19,7 @@
   /* Defining styles for your components */
   /* You can adjust the width as per your requirement */
   .component {
-    width: 100%; /* or you can set it to a fixed width like 800px */
+    width: auto; /* or you can set it to a fixed width like 800px */
     margin: 0 auto; /* This centers the component horizontally */
   }
   
