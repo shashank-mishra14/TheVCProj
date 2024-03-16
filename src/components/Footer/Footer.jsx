@@ -16,7 +16,7 @@ const Footer = () => {
               <h4>Company</h4>
               <ul>
                 <li>
-                  <a href="/reportspage">Reports</a>
+                  <a className="footer-links" href="/reportspage">Reports</a>
                 </li>
                 <li></li>
               </ul>
@@ -25,8 +25,8 @@ const Footer = () => {
               <h4>get help</h4>
               <ul>
                 <li>
-                  <a href="/contact">Contact us</a>
-                  <a href="/faqs">FAQ</a>
+                  <a className="footer-links"href="/contact">Contact us</a>
+                  <a className="footer-links" href="/faqs">FAQ</a>
                 </li>
                 <li></li>
                 <li>
