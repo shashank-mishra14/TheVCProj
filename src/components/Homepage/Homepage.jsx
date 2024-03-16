@@ -11,10 +11,13 @@ const Homepage = () => {
         <div className="herosection-main">
         <div className="herosection">
           <div className="herosection-title">
-            <h1 className="paragraph">
+            <div>
+
+            <h1 >
               Cut your research time in half. Let us find you relevant <br />
               reports about India.{" "}
             </h1>
+            </div>
             
             <Link to="/reportspage">
               <button>Browse reports</button>
@@ -22,7 +25,7 @@ const Homepage = () => {
             <h2>Free forever, no sign-up needed</h2>
           </div>
         </div>
-        <div className="herosection">
+        <div className="herosection-marquee">
         <Marquee
             style={{ width: "85%" }}
             className="marquee-container"
