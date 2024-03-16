@@ -152,7 +152,7 @@ const Homepage = () => {
         <h1 className="paragraph">
           India’s largest reports repository for making sense
           <br />
-          of opportunities in India.
+          of opportunities in .
         </h1>
       </div>
       <div className="network-container">

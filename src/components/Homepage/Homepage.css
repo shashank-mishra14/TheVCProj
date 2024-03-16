@@ -43,8 +43,7 @@
     background: rgb(255,255,255);
 }
 .marquee-container{
-    padding-top:-20px;
-    padding-bottom: -20px;
+    
 
 }
 .h1-title{
@@ -150,7 +149,8 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     background-color: #011638;
 }
 .unlisted{
-    margin-left: 100px;
+    margin-right: 10px;
+
 }
 .heading2{
     font-size: 18px;
@@ -224,7 +224,8 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     position: relative;
   }
  .list-card{
-    padding-bottom:10px;
+    padding-bottom:14px;
+    font-size: 29px;
  }
 
   .network-container p{
@@ -354,7 +355,8 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
         padding-bottom: 20px;
         justify-content: center;
         align-items: center;
-        padding:50px;
+        
+        padding-right: 10px;
       background-color:   #011638;
     }
 
