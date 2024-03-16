@@ -187,10 +187,8 @@ const Homepage = () => {
           Find your use case. Now.
         </h1>
         <hr className="network-border"/>
-        <div>
-          <Accordion />
-        </div>
       </div>
+      <Accordion />
     </>
   );
 };

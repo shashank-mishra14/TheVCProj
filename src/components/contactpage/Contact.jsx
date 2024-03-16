@@ -207,7 +207,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Accordion />
+      <div className="container-accordion"><Accordion /></div>
+      
     </div>
   );
 };
