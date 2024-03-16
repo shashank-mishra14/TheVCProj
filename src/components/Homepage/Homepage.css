@@ -55,7 +55,7 @@
 .herosection-title h1{
     font-size: 70px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 20px;
     margin-right: 50px;
     width: 50%;
