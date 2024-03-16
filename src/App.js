@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./components/contactpage/Contact";
 import UseAddReports from "./components/addReports/addReports";
 // import { data } from "./db/data";
+import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
 import Accordion from "./components/Accordion/Accordion";
 // import Recommended from "./Recommended/Recommended";
