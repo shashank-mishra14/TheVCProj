@@ -228,10 +228,11 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     font-size: 29px;
  }
 .svg-indian-flag{
-    width:76px;
+    width:80px;
     height: 70px;
     padding:10px;
-    margin:10px;
+    
+    margin:-20px;
 }
 .svg-flag{
     width:72px;

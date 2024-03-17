@@ -24,9 +24,14 @@ const authorData = [
     title: "Peak XV",
   },
   {
-    value: "kaalari",
-    title: "Kaalari Capital",
+    value: "bcg",
+    title: "BCG",
   },
+  {
+    value: "kpmg",
+    title: "KPMG",
+  },
+  
 ];
 
 const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
