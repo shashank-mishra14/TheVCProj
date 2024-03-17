@@ -152,7 +152,7 @@ const Homepage = () => {
         <h1 className="paragraph">
           India’s largest reports repository for making sense
           <br />
-          of opportunities in .
+          of opportunities in <img className="svg-indian-flag"src="https://svgshare.com/i/14ST.svg" alt="" />
         </h1>
       </div>
       <div className="network-container">
