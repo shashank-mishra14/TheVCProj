@@ -32,9 +32,9 @@ const Homepage = () => {
             <div className="herosection-title">
               <div className="cutyour">
                 <h1>
-                  Cut your research time in half. Let us find you relevant{" "}
-                  <br />
-                  reports about India.{" "}
+                  Cut your research time in half. Let us find you relevant
+                  
+                  reports <br /> about India.
                 </h1>
               </div>
 

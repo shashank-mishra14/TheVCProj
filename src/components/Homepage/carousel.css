@@ -1,0 +1,15 @@
+.slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure slides are clipped */
+  }
+  
+  .slide-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+  }
+  
+  .slide {
+    flex: 0 0 100%; /* Ensure each slide takes up full width */
+  }
