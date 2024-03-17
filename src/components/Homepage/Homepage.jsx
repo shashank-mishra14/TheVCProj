@@ -18,9 +18,10 @@ const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
 ];
 const containerStyles = {
-  width: "500px",
-  height: "280px",
+  width: "680px",
+  height: "680px",
   margin: "0 auto",
+  marginRight: "20px",
 };
 const Homepage = () => {
   return (
@@ -29,7 +30,7 @@ const Homepage = () => {
         <div className="herosection-main">
           <div className="herosection">
             <div className="herosection-title">
-              <div>
+              <div className="cutyour">
                 <h1>
                   Cut your research time in half. Let us find you relevant{" "}
                   <br />
