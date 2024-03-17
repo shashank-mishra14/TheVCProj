@@ -166,7 +166,7 @@ const Homepage = () => {
               <li className="list-card">Used for:</li>
               <li className="list-card">1. Understanding the market size of sectors </li>
               <li className="list-card">2. Growth potential in the coming years</li>
-              <li className="list-card">3. India vs China vs USA for different sectors</li>
+              <li className="list-card">3. India <img className="svg-flag"src="https://svgshare.com/i/14ST.svg" alt="" />vs China<img className="svg-flag"src="https://svgshare.com/i/14Qp.svg" alt="" /> vs USA<img className="svg-flag"src="https://svgshare.com/i/14SH.svg" alt="" /> for different sectors</li>
               <li className="list-card">4. Deep Diving into sub-sectors within sectors</li>
               <li className="list-card">5. Developing an understanding of the Indian <br />market and its sectors</li>
             </ul>

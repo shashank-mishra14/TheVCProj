@@ -149,7 +149,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     background-color: #011638;
 }
 .unlisted{
-    margin-right: 10px;
+    margin-right: 132px;
 
 }
 .heading2{
@@ -232,6 +232,12 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     height: 70px;
     padding:10px;
     margin:10px;
+}
+.svg-flag{
+    width:72px;
+    height: 52px;
+    padding:11px;
+    margin:-16px;
 }
   .network-container p{
     background-color:  #011638;
