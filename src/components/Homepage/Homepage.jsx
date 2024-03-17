@@ -4,48 +4,54 @@ import Accordion from "../Accordion/Accordion";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
+import Slider from "./Carousel";
+
+const slides = [
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445338/H7_ygygmt.png", title: "boat" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445347/H6_hezpi9.png", title: "forest" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445345/H2_icbr9z.png", title: "city" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H3_sqixdt.png", title: "italy" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H8_pm0pzr.png", title: "italy" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H5_wqdidu.png", title: "italy" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H4_xkrgig.png", title: "italy" },
+  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
+];
+const containerStyles = {
+  width: "500px",
+  height: "280px",
+  margin: "0 auto",
+};
 const Homepage = () => {
   return (
     <>
       <div className="main">
         <div className="herosection-main">
-        <div className="herosection">
-          <div className="herosection-title">
-            <div>
+          <div className="herosection">
+            <div className="herosection-title">
+              <div>
+                <h1>
+                  Cut your research time in half. Let us find you relevant{" "}
+                  <br />
+                  reports about India.{" "}
+                </h1>
+              </div>
 
-            <h1 >
-              Cut your research time in half. Let us find you relevant <br />
-              reports about India.{" "}
-            </h1>
+              <Link to="/reportspage">
+                <button>Browse reports</button>
+              </Link>
+              <h2>Free forever, no sign-up needed</h2>
             </div>
-            
-            <Link to="/reportspage">
-              <button>Browse reports</button>
-            </Link>
-            <h2>Free forever, no sign-up needed</h2>
           </div>
-        </div>
-        <div className="herosection-marquee">
-        <Marquee
-            style={{ width: "85%" }}
-            className="marquee-container"
-            speed={50}
-          >
+          <div className="herosection-marquee">
             <div className="imgs">
-             <img className="imgs-marquee" src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445338/H7_ygygmt.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445347/H6_hezpi9.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445345/H2_icbr9z.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H3_sqixdt.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H8_pm0pzr.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H5_wqdidu.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H4_xkrgig.png" alt="" />
-             <img className="imgs-marquee"src="https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png" alt="" />
+
+          <div style={containerStyles}>
+          <Slider slides={slides} />
+          </div>
             </div>
-          </Marquee>
         </div>
-        </div>
-        
+      </div>
         <div className="svg-container">
           <h2 className="heading-container">
             Trusted by top startups and unicorns
@@ -152,7 +158,12 @@ const Homepage = () => {
         <h1 className="paragraph">
           India’s largest reports repository for making sense
           <br />
-          of opportunities in <img className="svg-indian-flag"src="https://svgshare.com/i/14ST.svg" alt="" />
+          of opportunities in{" "}
+          <img
+            className="svg-indian-flag"
+            src="https://svgshare.com/i/14ST.svg"
+            alt=""
+          />
         </h1>
       </div>
       <div className="network-container">
@@ -164,17 +175,45 @@ const Homepage = () => {
           <p className="card-paragraph-network">
             <ul className="unlisted">
               <li className="list-card">Used for:</li>
-              <li className="list-card">1. Understanding the market size of sectors </li>
-              <li className="list-card">2. Growth potential in the coming years</li>
-              <li className="list-card">3. India <img className="svg-flag"src="https://svgshare.com/i/14ST.svg" alt="" />vs China<img className="svg-flag"src="https://svgshare.com/i/14Qp.svg" alt="" /> vs USA<img className="svg-flag"src="https://svgshare.com/i/14SH.svg" alt="" /> for different sectors</li>
-              <li className="list-card">4. Deep Diving into sub-sectors within sectors</li>
-              <li className="list-card">5. Developing an understanding of the Indian <br />market and its sectors</li>
+              <li className="list-card">
+                1. Understanding the market size of sectors{" "}
+              </li>
+              <li className="list-card">
+                2. Growth potential in the coming years
+              </li>
+              <li className="list-card">
+                3. India{" "}
+                <img
+                  className="svg-flag"
+                  src="https://svgshare.com/i/14ST.svg"
+                  alt=""
+                />
+                vs China
+                <img
+                  className="svg-flag"
+                  src="https://svgshare.com/i/14Qp.svg"
+                  alt=""
+                />{" "}
+                vs USA
+                <img
+                  className="svg-flag"
+                  src="https://svgshare.com/i/14SH.svg"
+                  alt=""
+                />{" "}
+                for different sectors
+              </li>
+              <li className="list-card">
+                4. Deep Diving into sub-sectors within sectors
+              </li>
+              <li className="list-card">
+                5. Developing an understanding of the Indian <br />
+                market and its sectors
+              </li>
             </ul>
             <div className="button-class">
-
-            <Link to="/reportspage">
-              <button>Browse reports</button>
-            </Link>
+              <Link to="/reportspage">
+                <button>Browse reports</button>
+              </Link>
             </div>
           </p>
 
@@ -189,11 +228,11 @@ const Homepage = () => {
           <br />
           Find your use case. Now.
         </h1>
-        <hr className="network-border"/>
-        
+        <hr className="network-border" />
       </div>
-      <Accordion />
+      <div><Accordion /></div>
     </>
+  
   );
 };
 
