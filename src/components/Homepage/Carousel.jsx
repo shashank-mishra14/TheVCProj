@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const slideStyles = {
   width: "100%",
@@ -6,6 +6,7 @@ const slideStyles = {
   borderRadius: "10px",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  transition: "opacity 0.5s ease-in-out 7s", // Added transition for smoothness
 };
 
 const rightArrowStyles = {
@@ -48,19 +49,29 @@ const dotStyle = {
 
 const Slider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const transitionTimer = setTimeout(goToNext, 3000); // Set timeout for transitioning to next slide after 3s
+
+    return () => clearTimeout(transitionTimer);
+  }, [currentIndex]); // Trigger useEffect whenever currentIndex changes
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
   const slideStylesWidthBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
