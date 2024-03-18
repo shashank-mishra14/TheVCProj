@@ -457,6 +457,27 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
         font-size: 5px;
         margin-left: 66px;
     }
+    .svg-indian-flag {
+        width: 85px;
+        height: 52px;
+        padding: 10px;
+        margin: -20px;
+    }
+    .h1-madeforinvestors {
+        font-size: 24px;
+        padding-top: 134px;
+        padding-bottom: 20px;
+        color: black;
+        font-family: Nunito Sans;
+        text-align: center;
+    }
+    .network-border {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+    }
     .herosection-title {
         width: 50%; /* Adjust width for smaller screens */
         display: flex;

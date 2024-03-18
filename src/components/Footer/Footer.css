@@ -57,7 +57,7 @@ ul{
 	position: relative;
 	margin-top:70px;
 	bottom: 45px; /* Adjust this value to control the distance from the bottom */
-	left:330px;
+	left:204px;
 	align-items: center;
 	justify-content: center;
 	width: 70%;
@@ -133,6 +133,35 @@ ul{
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.footer hr {
+    content: "";
+    position: relative;
+    margin-top: 70px;
+    bottom: 45px;
+    left: 76px;
+    align-items: center;
+    justify-content: center;
+    width: 64%;
+    height: 1px;
+    background-color: white;
+}
+.main-tag{
+	background-color: #24262b;
+	color: #ffffff;
+	font-size: 33px;
+	margin-left:100px;
+
+}
+.tag {
+    background-color: #24262b;
+    color: #ffffff;
+    font-size: 22px;
+    padding: auto;
+    margin: auto;
+    margin-left: -26px;
 }
 }
 @media(max-width: 574px){

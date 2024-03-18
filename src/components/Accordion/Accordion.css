@@ -94,7 +94,13 @@ h1 {
   h1 {
     font-size: 32px; /* Adjust font size for smaller screens */
   }
-  
+  .accordion-title {
+    font-size: 28px;
+    color: var(--text-primary);
+    font-family: Nunito Sans;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
   .accordion__faq > div {
     margin-bottom: 30px; /* Adjust spacing for smaller screens */
   }
@@ -103,7 +109,20 @@ h1 {
     padding-bottom: 15px;
     font-family: Nunito Sans; /* Adjust padding for smaller screens */
   }
-  
+  .accordion__faq p {
+    margin: 0px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    font-family: Nunito Sans;
+    font-size: 16px;
+}
+  .accordion__faq-heading h3 {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 18px;
+}
   .accordion__faq p {
     padding-bottom: 15px; /* Adjust padding for smaller screens */
   }
