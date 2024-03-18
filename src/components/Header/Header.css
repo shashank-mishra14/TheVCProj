@@ -122,11 +122,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     font-weight: 600;
  }
 
-  .network-container p{
-    font-size: 35px;
-    padding-bottom: 10px;
-    padding-left: 18px;
-  }
+  
   .lol{
     font-style: bold;
     color: black;

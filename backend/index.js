@@ -81,10 +81,10 @@ app.get('/reports', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
-app.get('/',  (req, res) => {
-    res.json("Hello");
-    }
-);
+app.get('*',  () => {
+    //sends index.html from the built foldercd 
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
