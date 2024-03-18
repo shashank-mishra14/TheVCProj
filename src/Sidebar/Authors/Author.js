@@ -31,26 +31,81 @@ const authorData = [
     value: "kpmg",
     title: "KPMG",
   },
-  
+  {
+    value:"bain",
+    title:"Bain & Company"
+  },
+  {
+    value:"yourstory",
+    title:"Yourstory"
+  },
+  {
+    value:"matrix",
+    title:" Matrix Partners India"
+  },
+  {
+    value:"lattice",
+    title:" 1Lattice"
+  },
+  {
+    value:"ey",
+    title:"EY"
+  },
+  {
+    value:"temasek",
+    title:" Temasek"
+  }
+  ,
+  {
+    value:"google",
+    title:"Google "
+  }
+  ,
+  {
+    value:"bigbasket",
+    title:" BigBasket"
+  }
+  ,
+  {
+    value:"omidyar",
+    title:" Omidyar Network"
+  }
+  ,
+  {
+    value:"lumikaifund",
+    title:"Lumikai Fund"
+  }
+  ,
+  {
+    value:"getvantage",
+    title:" GetVantage"
+  }
+  ,
+  {
+    value:"ficci",
+    title:"FICCI"
+  }
+  ,
+  {
+    value:"chirataeventures",
+    title:" Chiratae Ventures"
+  }
 ];
 
 const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
+  const [showAllAuthors, setShowAllAuthors] = useState(false);
+
   const handleAuthorChange = (authorValue) => {
     setSelectedAuthors((prevAuthors) => {
-      console.log(prevAuthors)
-      // Check if the authorValue is already included in selectedAuthors
       const isSelected = prevAuthors.includes(authorValue);
   
       if (isSelected) {
-        // If author is already selected, remove it
         return prevAuthors.filter((author) => author !== authorValue);
       } else {
-        // If author is not selected, add it
         return [...prevAuthors, authorValue];
       }
     });
   };
-  
 
   return (
     <>
@@ -66,7 +121,7 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
           <span className="checkmark">All</span>
         </label>
         <div className="checklistauthorbox">
-          {authorData.map(({ value, title }) => (
+          {authorData.slice(0, showAllAuthors ? authorData.length : 10).map(({ value, title }) => (
             <label className="checklistauthor" key={value}>
               <div className="checklistinputauthor">
                 <input
@@ -75,13 +130,17 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
                   checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"
                   onChange={() => handleAuthorChange(title)}
-                  
                 />
               </div>
               {title}
             </label>
           ))}
         </div>
+        {!showAllAuthors && authorData.length > 10 && (
+          <button className="viewMoreButton" onClick={() => setShowAllAuthors(true)}>
+            View More
+          </button>
+        )}
       </div>
     </>
   );
