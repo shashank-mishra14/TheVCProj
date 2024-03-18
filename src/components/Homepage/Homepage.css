@@ -385,3 +385,66 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     font-size:30px;
     color: rgb(24, 24, 143);
 }
+@media only screen and (max-width: 768px) {
+    .homepage-navbar-container {
+        
+       margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .homepage-logo {
+        margin-top: 6px; /* Adjust margin for smaller screens */
+        margin-right:36px;
+    }
+    .homepage-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 34%;
+        padding: 17px;
+        padding-left: 21px;
+        padding-right: 39px;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+        cursor: pointer;
+        justify-content: space-between;
+        
+    }
+    .homepage-navbar a{
+        width: auto; /* Adjust width for smaller screens */
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .herosection-title {
+        width: 50%; /* Adjust width for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .homepage-main{
+        width: 50%;
+        display: flex;
+        
+    }
+    
+    .herosection-title h1{
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        padding:auto;
+    }
+    .herosection-marquee{
+        display: none;
+    }
+    .imgs-marquee {
+        width: 100%; /* Adjust width for smaller screens */
+        max-width: none;
+    }
+}

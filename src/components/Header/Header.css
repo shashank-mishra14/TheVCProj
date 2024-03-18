@@ -16,24 +16,7 @@
     margin-top: 12px;
     
 }
-.homepage-navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 36%;
-    margin-left: 20%;
-    padding: 17px;
-    font-size: 20px;
-    color:black;
-    font-weight: 600;
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    border-radius: 10px; /* Adjust the value as needed */
-    border: 1px solid #ffffff; /* Add a border for better visibility */
-    background-color: #ffffff;
-    cursor: pointer;
-}
+
 
 .main{
     background-color: rgb(235, 234, 233);
