@@ -19,7 +19,8 @@
 
 
 .main{
-    background-color: rgb(235, 234, 233);
+    background-color: white;
+    /* border-bottom: 2px solid #e0e0e0; */
 }
 
 .svg-container{
