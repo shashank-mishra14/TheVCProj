@@ -133,13 +133,13 @@ ul{
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
-	padding-left: 10px;
+	padding-left: 33px;
 	padding-right: 10px;
 }
 .footer hr {
     content: "";
     position: relative;
-    margin-top: 70px;
+    margin-top: 24px;
     bottom: 45px;
     left: 76px;
     align-items: center;
@@ -148,11 +148,16 @@ ul{
     height: 1px;
     background-color: white;
 }
+.para-footer {
+    padding-bottom: 10px;
+	padding-right:25px;
+	padding-left:25px;
+}
 .main-tag{
 	background-color: #24262b;
 	color: #ffffff;
 	font-size: 33px;
-	margin-left:100px;
+	margin-left:42px;
 
 }
 .tag {
