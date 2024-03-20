@@ -123,8 +123,11 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
 
   
   .lol{
+    display: flex;
+    flex-direction: row;
     font-style: bold;
     color: black;
+    padding-right: 10px;
   }
   /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {

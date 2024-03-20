@@ -365,9 +365,12 @@
     margin: -17px;
   }
   .homepage-navbar a {
-    width: auto; /* Adjust width for smaller screens */
-    font-size: 18px;
-    padding: 5px;
+    
+    display: flex;
+    flex-direction: row;
+    font-style: bold;
+    color: black;
+    padding-right: 10px;
   }
   .list-card {
     padding-bottom: 10px;
