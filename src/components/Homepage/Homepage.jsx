@@ -18,8 +18,8 @@ const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
 ];
 const containerStyles = {
-  width: "480px",
-  height: "480px",
+  width: "520px",
+  height: "430px",
   margin: "0 auto",
   marginRight: "20px",
 };
@@ -67,42 +67,42 @@ const Homepage = () => {
               <img
                 src="https://svgshare.com/i/14Ku.svg"
                 alt="chiratae"
-                className="svg-chiratae"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14Lk.svg"
                 alt="avendus"
-                className="svg-avendus"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14L2.svg"
                 alt="matrix"
-                className="svg-matrix"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14L_.svg"
                 alt="mckinsey"
-                className="svg-mckinsey"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14MU.svg"
                 alt="peak"
-                className="svg-peak"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14Kg.svg"
                 alt="pwc"
-                className="svg-pwc"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14MV.svg"
                 alt="redseer"
-                className="svg-redseer"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14ME.svg"
                 alt="temasek"
-                className="svg-temasek"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14MF.svg"
@@ -133,12 +133,12 @@ const Homepage = () => {
               <img
                 src="https://svgshare.com/i/14M_.svg"
                 alt="blume"
-                className="svg-blume"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14M5.svg"
                 alt="bnc"
-                className="svg-bnc"
+                className="svg"
               />
               <img
                 src="https://svgshare.com/i/14Kh.svg"
@@ -148,7 +148,7 @@ const Homepage = () => {
               <img
                 src="https://svgshare.com/i/14M6.svg"
                 alt="bcg"
-                className="svg-bcg"
+                className="svg"
               />
             </div>
           </Marquee>
