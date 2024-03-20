@@ -69,7 +69,7 @@
   }
 
   .logo-container {
-    margin-left: 0; /* Remove negative margin */
+    margin-left: 107px; /* Remove negative margin */
   }
 
   .year-checklist {
@@ -78,15 +78,18 @@
   }
 
   .container-yearlist {
-    margin-left: 0; /* Remove specific margin */
+    margin-left: -59px; /* Remove specific margin */
+    margin-top: 2px;
   }
 
   .yearSelect {
     font-size: 14px; /* Adjust font size */
+    margin-left: 39px;
+    padding-bottom: 10px;
   }
 
   .checklist-year {
-    margin-left: 0; /* Remove specific margin */
+    margin-left: -110px; /* Remove specific margin */
   }
 }
 

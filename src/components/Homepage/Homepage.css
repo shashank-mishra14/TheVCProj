@@ -1,109 +1,418 @@
-.homepage-navbar-container{
-    padding-top: 30px;
-    padding-left: 70px;
-    display: flex;
+.homepage-navbar-container {
+  padding-top: 30px;
+  padding-left: 70px;
+  display: flex;
 }
 
-.homepage-logo{
-    margin-top: 12px;
+.homepage-logo {
+  margin-top: 12px;
 }
 .homepage-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 36%;
+  margin-left: 17%;
+  padding: 19px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.imgs-marquee {
+  width: 800px;
+  height: 800px;
+  padding: 15px;
+  border-radius: 85px;
+}
+.herosection-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+}
+.main {
+  background-color: white;
+}
+.herosection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+}
+
+.h1-title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.herosection-title h1 {
+  font-size: 49px;
+  margin-right: 50px;
+  width: 100%;
+  padding-bottom: 20px;
+  color: rgb(24, 24, 143);
+  font-family: Nunito Sans;
+}
+.herosection-title h2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: rgb(24, 24, 143);
+  font-family: Nunito Sans;
+}
+.herosection-marquee {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 54px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.herosection-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.card-paragraph-network button {
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 14px;
+  background-color: rgb(67, 67, 255);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: Nunito Sans;
+}
+.button-class {
+  padding-left: 273px;
+  padding-top: 10px;
+}
+.herosection-title button {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 14px;
+  background-color: rgb(67, 67, 255);
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-family: Nunito Sans;
+}
+.svg-container {
+  display: flex;
+  margin-top: -10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    356deg,
+    rgba(255, 255, 255, 1) 12%,
+    rgba(237, 229, 229, 1) 33%
+  );
+}
+
+.heading-container {
+  font-size: 26px;
+  padding-top: 20px;
+}
+
+.cutyour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150%;
+}
+.card1-container {
+  /* display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    justify-content: center;
+    align-items: center; */
+  background-color: #011638;
+}
+.unlisted {
+  margin-left: 40px;
+}
+.heading2 {
+  font-size: 18px;
+  color: rgb(24, 24, 143);
+}
+.network-border {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 160px;
+}
+.h1-madeforinvestors {
+  font-size: 45px;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  color: black;
+  font-family: Nunito Sans;
+  text-align: center;
+}
+.paragraph {
+  font-size: 48px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-family: Nunito Sans;
+}
+
+.card2-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card2-text {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.card2-text p {
+  color: rgb(106, 105, 105);
+}
+
+.card2-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card2 {
+  flex: 1;
+  position: relative;
+}
+.list-card {
+  padding-bottom: 14px;
+  font-size: 22px;
+}
+.svg-indian-flag {
+  width: 80px;
+  height: 70px;
+  padding: 10px;
+
+  margin: -20px;
+}
+.svg-flag {
+  width: 72px;
+  height: 52px;
+  padding: 11px;
+  margin: -16px;
+}
+.network-container p {
+  background-color: #011638;
+  color: white;
+}
+.card2:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px; /* Adjust the width of the dotted line */
+  height: 80%; /* Adjust the height of the dotted line */
+  background-color: transparent;
+  border-left: 1px dotted rgb(106, 105, 105); /* Adjust the color of the dotted line */
+}
+
+.card2 img {
+  width: 200px;
+  height: 100px;
+}
+
+.network-container h3 {
+  font-size: 34px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  color: rgb(24, 24, 143);
+}
+
+.svg-logos {
+  display: flex;
+  flex-direction: row;
+}
+.svg {
+  height: 80px;
+  width: 100px;
+  padding: 20px;
+}
+
+.network-container-p {
+  font-size: 35px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+}
+
+.card1-image {
+  width: 580px;
+  height: 580px;
+}
+
+.card3-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 10px;
+  background-color: #011638;
+}
+
+.card-paragraph-network p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 100px;
+  font-size: 8px;
+}
+.card-paragraph-network h1 {
+  font-size: 30px;
+  color: rgb(24, 24, 143);
+}
+@media only screen and (max-width: 768px) {
+  .homepage-navbar-container {
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .homepage-logo {
+    margin-top: 6px; /* Adjust margin for smaller screens */
+    margin-right: 36px;
+  }
+  .homepage-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 36%;
-    margin-left: 17%;
-    padding: 19px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
+    margin-right: 43%;
+    padding: 17px;
+    padding-left: 21px;
+    padding-right: 39px;
     border-radius: 10px;
     border: 1px solid #ffffff;
     background-color: #ffffff;
     cursor: pointer;
-}
-
-
-.imgs-marquee{
-    width: 800px;
-    height: 800px;
-    padding: 15px;
-    border-radius: 85px;
-}
-.herosection-main{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 80%;
-}
-.main{
-    background-color:white;
-    
-}
-.herosection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgb(255,255,255);
-}
-
-.h1-title{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.herosection-title h1{
-    font-size: 49px;
-    margin-right: 50px;
-    width:100%;
-    padding-bottom: 20px;
-    color: rgb(24, 24, 143);
-    font-family: Nunito Sans;
-}
-.herosection-title h2{
-    font-size: 20px;
-    padding-bottom: 20px;
-    color: rgb(24, 24, 143);
-    font-family: Nunito Sans;
-
-}
-.herosection-marquee{
-    width:50%;
-    display: flex;
-    flex-direction: column;
-    padding: 54px;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-}
-.herosection-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-.card-paragraph-network button{
+    justify-content: space-between;
+  }
+  .unlisted {
+    font-size: 10px;
+  }
+  .card1-image {
+    width: 110px;
+    height: 90px;
+    margin-bottom: 56px;
+    margin-right: 115px;
+  }
+  .card-paragraph-network button {
+    margin-left: 0rem;
     margin-bottom: 1rem;
-    margin-top: 10px;
-    padding: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0.3rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
     border-radius: 14px;
     background-color: rgb(67, 67, 255);
     color: white;
-    font-size: 1rem;
+    font-size: 0.25rem;
     border: none;
     cursor: pointer;
     font-family: Nunito Sans;
-}
-.button-class{
-    padding-left: 273px;
-    padding-top: 10px;
-}
-.herosection-title button{
-
-    margin-left: 1.5rem;
+  }
+  .svg-flag {
+    width: 56px;
+    height: 37px;
+    padding: 10px;
+    margin: -17px;
+  }
+  .homepage-navbar a {
+    width: auto; /* Adjust width for smaller screens */
+    font-size: 18px;
+    padding: 5px;
+  }
+  .list-card {
+    padding-bottom: 14px;
+    font-size: 5px;
+    margin-left: 94px;
+  }
+  .svg-indian-flag {
+    width: 85px;
+    height: 52px;
+    padding: 10px;
+    margin: -20px;
+  }
+  .h1-madeforinvestors {
+    font-size: 24px;
+    padding-top: 134px;
+    padding-bottom: 20px;
+    color: black;
+    font-family: Nunito Sans;
+    text-align: center;
+  }
+  .network-border {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+  }
+  .herosection-title {
+    width: 50%; /* Adjust width for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .homepage-main {
+    width: 50%;
+    display: flex;
+  }
+  .herosection-title h2 {
+    font-size: 13px;
+    padding-bottom: 20px;
+    color: rgb(24, 24, 143);
+    font-family: Nunito Sans;
+  }
+  .herosection-title button {
+    margin-left: 0rem;
     margin-bottom: 1rem;
     margin-top: 10px;
     padding: 0.7rem;
@@ -116,326 +425,21 @@
     border: none;
     cursor: pointer;
     font-family: Nunito Sans;
-}
-.svg-container{
-    display: flex;
-    margin-top: -10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgb(255,255,255);
-background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1) 33%);
-}
+  }
 
-.heading-container{
-    font-size: 26px;
-    padding-top: 20px;
-    
-
-}
-
-.cutyour{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150%;
-}
-.card1-container{
-    /* display: flex;
-    flex-direction: column;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    justify-content: center;
-    align-items: center; */
-    background-color: #011638;
-}
-.unlisted{
-    margin-left: 40px;
-
-}
-.heading2{
-    font-size: 18px;
-    color: rgb(24, 24, 143);
-}
-.network-border{
-    width: 80%;
+  .herosection-title h1 {
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 160px;
-}
-.h1-madeforinvestors{
-    font-size: 45px;
-    padding-top: 110px;
-    padding-bottom: 20px;
-    color: black;
-    font-family: Nunito Sans;
-    text-align: center;
-
-}
-.paragraph{
-    font-size: 48px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    font-family: Nunito Sans;
-}
-
-.card2-container{
-    display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.card2{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.card2-text{
-    
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-
-.card2-text p{
-    color: rgb(106, 105, 105);
-}
-
-.card2-container {
-    display: flex;
-    justify-content: space-between;
+    margin: auto;
+    padding: auto;
   }
-  
-  .card2 {
-    flex: 1;
-    position: relative;
+  .herosection-marquee {
+    display: none;
   }
- .list-card{
-    padding-bottom:14px;
-    font-size: 22px;
- }
-.svg-indian-flag{
-    width:80px;
-    height: 70px;
-    padding:10px;
-    
-    margin:-20px;
-}
-.svg-flag{
-    width:72px;
-    height: 52px;
-    padding:11px;
-    margin:-16px;
-}
-  .network-container p{
-    background-color:  #011638;
-    color: white;
+  .imgs-marquee {
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: none;
   }
-  .card2:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 2px; /* Adjust the width of the dotted line */
-    height: 80%; /* Adjust the height of the dotted line */
-    background-color: transparent;
-    border-left: 1px dotted rgb(106, 105, 105); /* Adjust the color of the dotted line */
-  }
-
-  .card2 img{
-    width: 200px;
-    height: 100px;
-  }
-  
-
-  .network-container h3{
-    font-size: 34px;
-    padding-bottom: 10px;
-    padding-left: 18px;
-    color: rgb(24, 24, 143);
-  }
-
-.svg-logos{
-    display: flex;
-    flex-direction: row;
-   
-}
-.svg{
-    height: 80px;
-    width: 100px;
-    padding: 20px;
-}
-
-  .network-container-p{
-    font-size: 35px;
-    padding-bottom: 10px;
-    padding-left: 18px;
-  }
-
-  .card1-image{
-    width:580px;
-    height:580px;
-    
-    }
-
-    .card3-container{
-        display: flex;
-        flex-direction: row;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: center;
-        align-items: center;
-        
-        padding-right: 10px;
-      background-color:   #011638;
-    }
-
-    .card-paragraph-network p{
-        
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 100px;
-        font-size: 8px;
-        
-    }
-.card-paragraph-network h1{
-    font-size:30px;
-    color: rgb(24, 24, 143);
-}
-@media only screen and (max-width: 768px) {
-    .homepage-navbar-container {
-        
-       margin-right: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .homepage-logo {
-        margin-top: 6px; /* Adjust margin for smaller screens */
-        margin-right:36px;
-    }
-    .homepage-navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin-right: 34%;
-        padding: 17px;
-        padding-left: 21px;
-        padding-right: 39px;
-        border-radius: 10px;
-        border: 1px solid #ffffff;
-        background-color: #ffffff;
-        cursor: pointer;
-        justify-content: space-between;
-        
-    }
-    .unlisted{
-    font-size: 10px;
-
-}
-    .card1-image{
-        width: 110px;
-        height: 90px;
-        margin-bottom: 56px;
-        margin-right: 115px;
-        }
-        .card-paragraph-network button {
-            margin-left: 0.5rem;
-            margin-bottom: 1rem;
-            margin-top: 25px
-        ;
-            padding: 0.3rem;
-            padding-left: 1.3rem;
-            padding-right: 1.3rem;
-            border-radius: 14px;
-            background-color: rgb(67, 67, 255);
-            color: white;
-            font-size: .25rem;
-            border: none;
-            cursor: pointer;
-            font-family: Nunito Sans;
-        
-        }
-        .svg-flag {
-            width: 56px;
-            height: 37px;
-            padding: 10px;
-            margin: -17px;
-        }
-    .homepage-navbar a{
-        width: auto; /* Adjust width for smaller screens */
-        font-size: 18px;
-        padding: 5px;
-    }
-    .list-card {
-        padding-bottom: 14px;
-        font-size: 5px;
-        margin-left: 66px;
-    }
-    .svg-indian-flag {
-        width: 85px;
-        height: 52px;
-        padding: 10px;
-        margin: -20px;
-    }
-    .h1-madeforinvestors {
-        font-size: 24px;
-        padding-top: 134px;
-        padding-bottom: 20px;
-        color: black;
-        font-family: Nunito Sans;
-        text-align: center;
-    }
-    .network-border {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 100px;
-    }
-    .herosection-title {
-        width: 50%; /* Adjust width for smaller screens */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .homepage-main{
-        width: 50%;
-        display: flex;
-        
-    }
-    
-    .herosection-title h1{
-        font-size: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        padding:auto;
-    }
-    .herosection-marquee{
-        display: none;
-    }
-    .imgs-marquee {
-        width: 100%; /* Adjust width for smaller screens */
-        max-width: none;
-    }
 }

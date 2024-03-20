@@ -139,4 +139,14 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     .card2 img {
         width: 120px; /* Adjust image size for smaller screens */
     }
+    .vcproject{
+        font-size:27px;
+        font-style:bold;
+        padding-right: 37px;
+        
+    }
+    .heading-container {
+        font-size: 18px;
+        padding-top: 20px;
+    }
 }
