@@ -5,6 +5,7 @@
     display: flex;
     padding-bottom: 20px;
     color: black;
+    
 }
 .vcproject{
     font-size:35px;
@@ -18,10 +19,7 @@
 }
 
 
-.main{
-    background-color: white;
-    /* border-bottom: 2px solid #e0e0e0; */
-}
+
 
 .svg-container{
     display: flex;
