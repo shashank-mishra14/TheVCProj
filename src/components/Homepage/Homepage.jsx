@@ -32,16 +32,16 @@ const Homepage = () => {
             <div className="herosection-title">
               <div className="cutyour">
                 <h1>
-                  Cut your research time in half. Let us find you relevant
+                  cut your research time in half. let us find you relevant
                   
                   reports <br /> about India.
                 </h1>
               </div>
 
               <Link to="/reportspage">
-                <button>Browse reports</button>
+                <button>browse reports</button>
               </Link>
-              <h2>Free forever, no sign-up needed</h2>
+              <h2>free forever, no sign-up needed</h2>
             </div>
           </div>
           <div className="herosection-marquee">
@@ -55,13 +55,13 @@ const Homepage = () => {
       </div>
         <div className="svg-container">
           <h2 className="heading-container">
-            Trusted by top startups and unicorns
+            explore reports by
           </h2>
 
           <Marquee
             style={{ width: "75%" }}
             className="marquee-container"
-            speed={100}
+            speed={35}
             gradient={true}
             gradientWidth={70}
           >
@@ -159,42 +159,42 @@ const Homepage = () => {
         <div className="card3-container">
           <p className="card-paragraph-network">
             <ul className="unlisted">
-              <li className="list-card">Used for:</li>
+              <li className="list-card">used for:</li>
               <li className="list-card">
-                1. Understanding the market size of sectors{" "}
+                ~ understanding the market size of sectors{" "}
               </li>
               <li className="list-card">
-                2. Growth potential in the coming years
+                ~ growth potential in the coming years
               </li>
               <li className="list-card">
-                3. India{" "}
+                ~ {" "}
                 <img
                   className="svg-flag"
                   src="https://svgshare.com/i/14ST.svg"
                   alt=""
                 />
-                vs China
+                vs 
                 <img
                   className="svg-flag"
                   src="https://svgshare.com/i/14Qp.svg"
                   alt=""
                 />{" "}
-                vs USA
+                vs 
                 <img
                   className="svg-flag"
                   src="https://svgshare.com/i/14SH.svg"
                   alt=""
-                />{" "}
-                for different sectors
+                />{" "}for different sectors
               </li>
               <li className="list-card">
-                4. Deep Diving into sub-sectors within sectors
+                ~ deep diving into sub-sectors within sectors
               </li>
               <li className="list-card">
-                5. Developing an understanding of the Indian <br />
-                market and its sectors
+                ~ developing an understanding of the Indian{" "} <br />
+                {" "} market and its sectors
               </li>
             </ul>
+            
             <div className="button-class">
               <Link to="/reportspage">
                 <button>Browse reports</button>
@@ -212,8 +212,11 @@ const Homepage = () => {
           Made for investors, founders and analysts.
           <br />
           Find your use case. Now.
+          
         </h1>
+        
         <hr className="network-border" />
+       
       </div>
       <div><Accordion /></div>
     </>
