@@ -9,11 +9,11 @@
 }
 
 .logo-container {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   padding-top:50px;
   margin: auto;
-  padding-right: 64px;
+ 
   font-family: Nunito Sans;
 }
 
@@ -43,21 +43,20 @@
 }
 
 .yearSelect {
-  font-size: 17px;
+  font-size: 14px;
   font-style: bold;
   font-weight: bold;
-  font-family: Nunito Sans;
-  
+  font-family: Nunito Sans
 }
 .checkbpox-yearinput {
-  height: 18px;
+  height: 14px;
   margin-top: 2px;
   
   
 }
 .checklist-year {
   margin-left: -115px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: Nunito Sans;
 }
 
