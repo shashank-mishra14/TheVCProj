@@ -18,8 +18,8 @@ const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
 ];
 const containerStyles = {
-  width: "680px",
-  height: "680px",
+  width: "480px",
+  height: "480px",
   margin: "0 auto",
   marginRight: "20px",
 };
