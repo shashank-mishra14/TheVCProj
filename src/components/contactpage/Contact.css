@@ -1,187 +1,181 @@
-
-.headcontainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
-    font-size: 16px;
-    
+.headcontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  font-size: 16px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column; /* Stack the containers vertically */
-    align-items: center; /* Center align the child containers horizontally */
-    
-  }
-
-
-  .heading3{
-    margin-bottom:50px;
-    font-size: 26px;
-    margin-top:-20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    color:#3358de;
-    font-weight: 600;
-    font-family: "Inter UI",sans-serif;
-  }
-.h1{
-    font-family: "Inter UI",sans-serif;
-    font-size: 45px;
-    margin-top:-90px;
-    
-}
-.h3{
-    color:#3358de;
-    font-size: 14px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack the containers vertically */
+  align-items: center; /* Center align the child containers horizontally */
 }
 
-.left{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-left: 20px;
-    border-radius: 8px;
-    width: 605px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    padding-right: 20px;
-    border-color: black;
+.heading3 {
+  margin-bottom: 50px;
+  font-size: 20px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  color: #3358de;
+  font-weight: 600;
+  font-family: "Inter UI", sans-serif;
+}
+.h1 {
+  font-family: "Inter UI", sans-serif;
+  font-size: 36px;
+  margin-top: -90px;
+}
+.h3 {
+  color: #3358de;
+  font-size: 14px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
-
-.container-right-small{
-    width: auto;
-    height:auto !important;
-    border-color: black;
-    padding-left: 30px;
-    border-radius: 5px;
-    
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  border-radius: 8px;
+  width: 605px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding-right: 20px;
+  border-color: black;
 }
 
-
-.paragraph1{
-    padding: 20px;
-    
+.container-right-small {
+  width: auto;
+  height: auto !important;
+  border-color: black;
+  padding-left: 30px;
+  border-radius: 5px;
 }
 
-.h4-1{
-  
-    font-size: 15px;
-    color: grey;
+.paragraph1 {
+  padding: 20px;
 }
 
-.checklist{
-    padding-top: 10px;
-    font-size: 15px;
-    color: grey;
-    display: flex;
-    flex-direction: column;
-    margin-left: -100px;
-    padding-bottom: 20px;
+.h4-1 {
+  font-size: 15px;
+  color: grey;
 }
 
-.messg{
-    padding-top: 10px;
-    font-size: 22px;
-    color: black;
-    font-weight: 600;
+.checklist {
+  padding-top: 10px;
+  font-size: 15px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  margin-left: -100px;
+  padding-bottom: 20px;
 }
 
-.textarea{
-    padding-top: 10px;
-    font-size: 18px;
-    color: grey;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    border-color: white;
-    padding-bottom: 20px;
-    border-width: 2px;
-    margin-bottom: 35px;
+.messg {
+  padding-top: 10px;
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
 }
 
-.check{
-    padding-bottom: 10px;
-}
-.mail{
-    padding-left: -20px;
-}
-
-.email{
-    padding-top: 10px;
-    font-size: 22px;
-    width:180%;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    font-weight: 600;
-   
+.textarea {
+  padding-top: 10px;
+  font-size: 18px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border-color: white;
+  padding-bottom: 20px;
+  border-width: 2px;
+  margin-bottom: 35px;
 }
 
-.inputmail{
-    padding-top: 20px;
-    width: 24%;
-    font-size:17px;
+.check {
+  padding-bottom: 10px;
+}
+.mail {
+  padding-left: -20px;
 }
 
-.container-right-small{
-    width: auto;
-    height:auto !important
-}
-.name{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 22px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    font-weight: 600;
-}
-.inputname{
-    width: 150%;
-    padding-top: 20px;
-    font-size: 17px;
-}
-.nameinput{
-    padding-top: 10px;
-    margin-top:30px;
-    font-size: 18px;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    /* padding-bottom: 2px; */
+.email {
+  padding-top: 10px;
+  font-size: 22px;
+  width: 180%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  font-weight: 600;
 }
 
-.namechange{
-    padding-left: 19px;
+.inputmail {
+  padding-top: 20px;
+  width: 24%;
+  font-size: 17px;
 }
 
+.container-right-small {
+  width: auto;
+  height: auto !important;
+}
+.name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+.inputname {
+  width: 150%;
+  padding-top: 20px;
+  font-size: 17px;
+}
+.nameinput {
+  padding-top: 10px;
+  margin-top: 30px;
+  font-size: 18px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  /* padding-bottom: 2px; */
+}
 
-.submitbutton{
-    
-  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+.namechange {
+  padding-left: 19px;
+}
+
+.submitbutton {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  padding-top:20px;
+  padding-top: 20px;
   padding-bottom: 1px;
-  margin-bottom:25px;
-  margin-left:320px;
-  color: #FFFFFF;
+  margin-bottom: 25px;
+  margin-left: 320px;
+  color: #ffffff;
   cursor: pointer;
   flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 16px;
   font-weight: 500;
   height: 2.4rem;
@@ -190,7 +184,7 @@
   align-items: center;
   justify-content: center;
   text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
+  transition: all 0.5s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -198,161 +192,193 @@
 
 .submitbutton:hover {
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
 }
-
-@media (min-width: 768px) {
-  .submitbutton36 {
-    padding: 0 2.6rem;
-  }
-
-}
-
-.listcheck{
-    margin-left: -110px;
-    font-weight: 600;
-}
-
-.mail{
-    margin-left:20px;
-}
-
-.bothcontainers{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    font-size: 17px;
-}
-
-.uploadbutton{
-    
-    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    padding-top:20px;
-    padding-bottom: 15px;
-    margin-bottom:25px;
-    margin-left:20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    height: 2.0rem;
-    padding: 0 4rem;
-    text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-    transition: all .5s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .uploadbutton:hover {
-    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-    transition-duration: .1s;
-  }
-  
-  @media (min-width: 768px) {
-    .uploadbutton {
-      padding: 0 2.6rem;
-    }
-
-.container-right {
-    flex: 1 1;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    /* margin-right: 120px; */
-    margin-left: 642px;
-    /* border-radius: 8px; */
-    /* width: 100%; */
-    /* height: 101%; */
-    /* float: left; */
-    /* box-sizing: border-box; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    background-color: white;
-    /* padding-right: 20px; */
-    /* border-color: black; */
-}
-.submitbutton{
-    margin-left: 120px;
-}
-.heading3 {
-    margin-bottom: 50px;
-    font-size: 26px;
-    margin-left: 10px;
-    margin-top: -20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    color: #3358de;
-    font-weight: 600;
-    font-family: "Inter UI", sans-serif;
-}
-.uploadbutton {
-    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    margin-left: 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    height: 2rem;
-    padding: 1rem;
-    padding-bottom: 30px;
-    text-align: center;
-    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-    transition: all .5s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-.container-accordion {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 15px;
-    padding-bottom: 298px;
-    padding-top: 150px;
-    font-family: Nunito Sans;
-}
-.checklistBox{
+.checklistBox {
     padding-top: 10px;
     font-size: 20px;
     color: grey;
     display: flex;
     flex-direction: column;
-    
-    margin-left:50px;
-    
-    padding-bottom: 20px;
-}
 
-.checklistItems{
-    margin-right:30px;
+    margin-left: 50px;
+
+    padding-bottom: 20px;
+  }
+
+  .checklistItems {
+    margin-right: 30px;
     padding-bottom: 10px;
-}
-.checklistInput{
+  }
+  .checklistInput {
     margin-right: -90px;
     margin-left: -150px;
     height: 16.5px;
-    color: #673FD7;
+    color: #673fd7;
+  }
+
+
+
+
+.listcheck {
+  margin-left: -110px;
+  font-weight: 600;
 }
 
+.mail {
+  margin-left: 20px;
+}
 
+.bothcontainers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  font-size: 17px;
+}
 
+.uploadbutton {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  padding: 0 4rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.uploadbutton:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+@media screen and (max-width: 768px){
+  .uploadbutton {
+    padding: 0 2.6rem;
   }
+    .left {
+      flex: 1 1;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 100px;
+      /* margin-right: 120px; */
+      /* border-radius: 8px; */
+      padding-right:90px ;
+      /* height: 101%; */
+      /* float: left; */
+      /* box-sizing: border-box; */
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      background-color: white;
+      /* padding-right: 20px; */
+      /* border-color: black; */
+    }
+    .submitbutton {
+      margin-left: 120px;
+    }
+    .heading3 {
+      margin-bottom: 50px;
+      font-size: 26px;
+      margin-left: 10px;
+      margin-top: -20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      color: #3358de;
+      font-weight: 600;
+      font-family: "Inter UI", sans-serif;
+    }
+    .uploadbutton {
+      background-image: linear-gradient(
+        92.88deg,
+        #455eb5 9.16%,
+        #5643cc 43.89%,
+        #673fd7 64.72%
+      );
+      border-radius: 8px;
+      border-style: none;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      margin-left: 20px;
+      color: #ffffff;
+      cursor: pointer;
+      flex-shrink: 0;
+      font-family: "Inter UI", "SF Pro Display", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      height: 2rem;
+      padding: 1rem;
+      padding-bottom: 30px;
+      text-align: center;
+      text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+      transition: all 0.5s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    .container-accordion {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 15px;
+      padding-bottom: 298px;
+      padding-top: 150px;
+      font-family: Nunito Sans;
+    }
+    .checklistBox {
+      padding-top: 10px;
+      font-size: 20px;
+      color: grey;
+      display: flex;
+      flex-direction: column;
+
+      margin-left: 50px;
+
+      padding-bottom: 20px;
+    }
+
+    .checklistItems {
+      margin-right: 30px;
+      padding-bottom: 10px;
+    }
+    .checklistInput {
+      margin-right: -90px;
+      margin-left: -150px;
+      height: 16.5px;
+      color: #673fd7;
+    }
+    .inputmail {
+        padding-top: 20px;
+        width: 59%;
+        font-size: 14px;
+    }
+  }
+
