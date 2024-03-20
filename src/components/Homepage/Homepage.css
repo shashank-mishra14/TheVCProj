@@ -84,16 +84,15 @@
     width: 50%;
 }
 .card-paragraph-network button{
-    margin-left: 1.5rem;
     margin-bottom: 1rem;
     margin-top: 10px;
-    padding: 0.7rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-radius: 14px;
     background-color: rgb(67, 67, 255);
     color: white;
-    font-size: 1.8rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     font-family: Nunito Sans;
@@ -163,11 +162,11 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 220px;
+    margin-left: 160px;
 }
 .h1-madeforinvestors{
-    font-size: 50px;
-    padding-top: 134px;
+    font-size: 45px;
+    padding-top: 110px;
     padding-bottom: 20px;
     color: black;
     font-family: Nunito Sans;
@@ -175,7 +174,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
 
 }
 .paragraph{
-    font-size: 60px;
+    font-size: 48px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
@@ -227,7 +226,7 @@ background: linear-gradient(356deg, rgba(255,255,255,1) 12%, rgba(237,229,229,1)
   }
  .list-card{
     padding-bottom:14px;
-    font-size: 29px;
+    font-size: 22px;
  }
 .svg-indian-flag{
     width:80px;
