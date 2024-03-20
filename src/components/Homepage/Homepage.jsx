@@ -67,88 +67,70 @@ const Homepage = () => {
           >
             <div className="svg-logos">
               <img
-                src="https://svgshare.com/i/14Ku.svg"
+                src="https://svgshare.com/i/14Wu.svg"
                 alt="chiratae"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14Lk.svg"
+                src="https://svgshare.com/i/14YY.svg"
                 alt="avendus"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14L2.svg"
+                src="https://svgshare.com/i/14ZE.svg"
                 alt="matrix"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14L_.svg"
+                src="https://svgshare.com/i/14ZF.svg"
                 alt="mckinsey"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14MU.svg"
+                src="https://svgshare.com/i/14ZB.svg"
                 alt="peak"
                 className="svg"
               />
+              
               <img
-                src="https://svgshare.com/i/14Kg.svg"
-                alt="pwc"
-                className="svg"
-              />
-              <img
-                src="https://svgshare.com/i/14MV.svg"
+                src="https://svgshare.com/i/14_H.svg"
                 alt="redseer"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14ME.svg"
+                src="https://svgshare.com/i/14_J.svg"
                 alt="temasek"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14MF.svg"
+                src="https://svgshare.com/i/14ZD.svg"
                 alt="yourstory"
                 className="svg"
               />
               {/* <img src="https://svgshare.com/i/14MG.svg" alt="EY" className="svg"/> */}
               <img
-                src="https://svgshare.com/i/14MH.svg"
+                src="https://svgshare.com/i/14Z2.svg"
                 alt="google"
                 className="svg"
               />
+              
               <img
-                src="https://svgshare.com/i/14LP.svg"
-                alt="delloute"
-                className="svg"
-              />
-              <img
-                src="https://svgshare.com/i/14KM.svg"
-                alt="kaalari"
-                className="svg"
-              />
-              <img
-                src="https://svgshare.com/i/14LQ.svg"
-                alt="kpmg"
-                className="svg"
-              />
-              <img
-                src="https://svgshare.com/i/14M_.svg"
+                src="https://svgshare.com/i/14_R.svg"
                 alt="blume"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14M5.svg"
+                src="https://svgshare.com/i/14_G.svg"
                 alt="bnc"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14Kh.svg"
+                src="https://svgshare.com/i/14_a.svg"
                 alt="elevation"
                 className="svg"
               />
               <img
-                src="https://svgshare.com/i/14M6.svg"
+                src="https://svgshare.com/i/14ZC.svg"
                 alt="bcg"
                 className="svg"
               />
