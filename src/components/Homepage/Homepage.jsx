@@ -59,11 +59,11 @@ const Homepage = () => {
           </h2>
 
           <Marquee
-            style={{ width: "85%" }}
+            style={{ width: "75%" }}
             className="marquee-container"
             speed={100}
             gradient={true}
-            gradientWidth={30}
+            gradientWidth={70}
           >
             <div className="svg-logos">
               <img
