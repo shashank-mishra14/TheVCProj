@@ -59,55 +59,9 @@ const Contact = () => {
         </h3>
       </div>
 
-      <div className="bothcontainers">
-        {/* <div className="container-left">
-          <p className="paragraph1">
-            "One of the standout features of the VC Project Repository is its
-            user-friendly interface. Navigating through the platform was
-            intuitive, allowing our team to effortlessly browse through a
-            diverse range of research topics. The search functionality was
-            robust, enabling us to quickly locate specific studies or explore
-            broader themes within the VC domain. Additionally, the
-            categorization of researches based on relevant tags enhanced the
-            overall user experience, ensuring that users could easily find
-            content tailored to their interests."
-            <br />
-            <br />
-            Shashank Mishra
-            <br />
-            <h4 className="h4-1">CTO</h4>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-              asperiores, incidunt recusandae, ducimus possimus obcaecati sequi
-              veniam laborum repudiandae quam odio commodi minus sint! Fugiat
-              fuga magni deserunt iure quod. Lorem ipsum dolor sit amet
-              consectetur
-            </p>
-          </p>
-        </div> */}
-        <div className="container-right">
+     
+        <div className="left">
+        
           <div className="container-right-small">
             <form className="form" onSubmit={handleSubmit}>
               <div className="nameinput">
@@ -126,22 +80,6 @@ const Contact = () => {
                     required
                   />
                 </div>
-
-                {/* <div className="name">
-                  <label className="namechange" htmlFor="name">
-                    Last Name
-                  </label>
-                  <input
-                    className="inputname"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Last Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div> */}
               </div>
 
               <div className="email">
@@ -205,8 +143,8 @@ const Contact = () => {
               </button>
             </form>
           </div>
+        
         </div>
-      </div>
       <div className="container-accordion"><Accordion /></div>
       
     </div>

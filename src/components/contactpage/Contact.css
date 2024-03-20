@@ -41,50 +41,28 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.container-left {
-    flex: 1; /* Take up half the space */
-    justify-content: center;
-    align-items: center;
+.left{
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     margin-bottom: 100px;
-    margin-left: 120px;
-    margin-right: 20px;
-    width: 755px;
-    height: 150%;
-    float: left;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-    border-radius: 8px; /* Adding border radius for a rounded corner effect */
-    background-color: rgba(237, 237, 240, 0.818); /* Adding a white background to make the shadow stand out */
-    padding-right: 10px;
-  
-    
-}
-
-.container-right {
-    flex: 1; /* Take up half the space */
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-right: 720px;
-    
+    margin-left: 20px;
     border-radius: 8px;
-    width: 805px;
-    height: 170%;
-    float: left;
+    width: 605px;
     box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-     /* Adding border radius for a rounded corner effect */
-    background-color: white; /* Adding a white background to make the shadow stand out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
     padding-right: 20px;
     border-color: black;
-   
 }
 
+
+
 .container-right-small{
-    padding-left: 20px;
+    width: auto;
+    height:auto !important;
     border-color: black;
+    padding-left: 30px;
     border-radius: 5px;
     
 }
@@ -284,7 +262,7 @@
     .uploadbutton {
       padding: 0 2.6rem;
     }
-}
+
 .container-right {
     flex: 1 1;
     justify-content: center;
@@ -377,3 +355,4 @@
 
 
 
+  }
