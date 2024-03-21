@@ -273,7 +273,26 @@
   width: 200px;
   height: 100px;
 }
+.button-madefor{
+  display: flex;
+  justify-content: center;
+}
+.button-madefor button{
+  margin-left: 1.5rem;
+  
+  margin-top: 36px;
+  padding: 0.7rem;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  border-radius: 14px;
+  background-color: rgb(67, 67, 255);
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  font-family: Nunito Sans;
 
+}
 .network-container h3 {
   font-size: 34px;
   padding-bottom: 10px;
@@ -325,9 +344,10 @@
   font-size: 30px;
   color: rgb(24, 24, 143);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 746px) {
   .homepage-navbar-container {
     margin-right: 0px;
+    padding-left: -25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,7 +362,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-right: 38%;
+    margin-right: 13%;
     padding: 17px;
     padding-left: 10px;
     padding-right: 22px;
@@ -392,8 +412,8 @@
   }
   .list-card {
     padding-bottom: 10px;
-    font-size: 9px;
-    margin-left: 94px;
+    font-size: 8px;
+    margin-left: 70px;
   }
   .svg-indian-flag {
     width: 85px;
@@ -415,6 +435,22 @@
     align-items: center;
     justify-content: center;
     margin-left: 100px;
+  }
+  .button-madefor button{
+    margin-left: .7rem;
+    margin-bottom: 1rem;
+    margin-top: 48px;
+    padding: 0.7rem;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    border-radius: 14px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito Sans;
+  
   }
   .herosection-title {
     width: 50%; /* Adjust width for smaller screens */

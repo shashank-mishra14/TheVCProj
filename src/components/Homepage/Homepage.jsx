@@ -214,9 +214,12 @@ const Homepage = () => {
           Find your use case. Now.
           
         </h1>
-        
         <hr className="network-border" />
-       
+        <div className="button-madefor">
+          <Link to="/reportspage">
+            <button>Browse reports</button>
+          </Link>
+        </div>
       </div>
       <div><Accordion /></div>
     </>

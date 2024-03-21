@@ -135,6 +135,14 @@
     .homepage-navbar {
         width: 90%; /* Adjust width for smaller screens */
     }
+    .homepage-navbar-container {
+        padding-top: 30px;
+        margin-left: auto;
+        padding-left: 1px;
+        display: flex;
+        /* padding-bottom: 20px; */
+        color: black;
+    }
 
     .paragraph {
         font-size: 18px; /* Adjust font size for smaller screens */
@@ -161,8 +169,7 @@
     .vcproject{
         font-size:27px;
         font-style:bold;
-        padding-right: 37px;
-        
+        padding-left:26px;
     }
     .heading-container {
         font-size: 12px;
