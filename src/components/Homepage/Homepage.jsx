@@ -47,7 +47,7 @@ const Homepage = () => {
           <div className="herosection-marquee">
             <div className="imgs">
 
-          <div style={containerStyles}>
+          <div className="containerStyles">
           <Slider slides={slides} />
           </div>
             </div>
@@ -161,13 +161,13 @@ const Homepage = () => {
             <ul className="unlisted">
               <li className="list-card">used for:</li>
               <li className="list-card">
-                ~ understanding the market size of sectors{" "}
+              ● understanding the market size of sectors{" "}
               </li>
               <li className="list-card">
-                ~ growth potential in the coming years
+              ● growth potential in the coming years
               </li>
               <li className="list-card">
-                ~ {" "}
+              ●{" "}
                 <img
                   className="svg-flag"
                   src="https://svgshare.com/i/14ST.svg"
@@ -187,10 +187,10 @@ const Homepage = () => {
                 />{" "}for different sectors
               </li>
               <li className="list-card">
-                ~ deep diving into sub-sectors within sectors
+              ● deep diving into sub-sectors within sectors
               </li>
               <li className="list-card">
-                ~ developing an understanding of the Indian{" "} <br />
+              ● developing an understanding of the Indian{" "} <br />
                 {" "} market and its sectors
               </li>
             </ul>
