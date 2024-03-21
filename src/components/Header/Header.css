@@ -134,6 +134,8 @@
 @media only screen and (max-width: 768px) {
     .homepage-navbar {
         width: 90%; /* Adjust width for smaller screens */
+        justify-content: space-between;
+        
     }
     .homepage-navbar-container {
         padding-top: 30px;

@@ -277,8 +277,28 @@
 }
 
 @media screen and (max-width: 768px){
+  .h1 {
+    font-family: "Inter UI", sans-serif;
+    font-size: 20px;
+    margin-top: -90px;
+}
   .uploadbutton {
     padding: 0 2.6rem;
+  }
+  .email {
+    padding-top: 10px;
+    font-size: 22px;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    font-weight: 600;
+  }
+  .inputname {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 12px;
   }
     .left {
       
@@ -299,8 +319,8 @@
     }
     .heading3 {
       margin-bottom: 50px;
-      font-size: 26px;
-      margin-left: 10px;
+      font-size: 17px;
+      margin-left: 40px;
       margin-top: -20px;
       display: flex;
       flex-direction: column;
@@ -309,7 +329,7 @@
       color: #3358de;
       font-weight: 600;
       font-family: "Inter UI", sans-serif;
-    }
+  }
     .uploadbutton {
       background-image: linear-gradient(
         92.88deg,
@@ -360,22 +380,33 @@
       margin-left: 50px;
 
       padding-bottom: 20px;
+    }.textarea{
+      font-size: 14px;
     }
-
+    .messg{
+      font-size: 14px;
+    }
     .checklistItems {
       margin-right: 30px;
+      font-size: 14px;
       padding-bottom: 10px;
+    }
+    .namechange{
+      font-size: 16px;
+    }
+    .mail{
+      font-size: 16px;
     }
     .checklistInput {
       margin-right: -90px;
       margin-left: -150px;
-      height: 16.5px;
+      height: 12.5px;
       color: #673fd7;
     }
     .inputmail {
         padding-top: 20px;
         width: 59%;
-        font-size: 14px;
+        font-size: 12px;
     }
     .container-right-small {
       width: auto;

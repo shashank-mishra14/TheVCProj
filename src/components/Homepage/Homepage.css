@@ -163,7 +163,7 @@
   background-color: #011638;
 }
 .unlisted {
-  margin-left: 40px;
+  margin-left: -95px;
 }
 .heading2 {
   font-size: 18px;
@@ -413,7 +413,7 @@
   .list-card {
     padding-bottom: 10px;
     font-size: 8px;
-    margin-left: 70px;
+    margin-left: 204px;
   }
   .svg-indian-flag {
     width: 85px;
@@ -496,7 +496,7 @@
     display: none;
   }
   .imgs-marquee {
-    width: 100%; /* Adjust width for smaller screens */
+    width: 100%;
     max-width: none;
   }
 }
