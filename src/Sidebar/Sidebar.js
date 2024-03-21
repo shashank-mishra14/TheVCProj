@@ -17,10 +17,14 @@ const Sidebar = ({
   setSelectedYear,
   selectedYear
 }) => {
-  
+  const [selectedYears, setSelectedYears] = useState([]); // State to store selected years
+  // State to control sidebar visibility
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
-  // State for selected years
-  const [selectedYears, setSelectedYears] = useState([]);
+  // Function to toggle sidebar visibility
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
 
   // Function to handle checkbox change
   const handleCheckboxChange = (event) => {
@@ -37,14 +41,14 @@ const Sidebar = ({
 
   return (
     <section className="sidebar">
-      
-
-      <div className="logo-container">
-        Filter your reports
-        <br />
-        
-      </div>
-      <div className="sidebar-content">
+      {/* Toggle button only visible on mobile devices */}
+      <button className="toggle-button" onClick={toggleSidebar}>Filter Reports</button>
+      {/* Sidebar content */}
+      <div className={`sidebar-content ${sidebarVisible ? 'visible' : ''}`}>
+        <div className="logo-container">
+          Filter your reports
+          <br />
+        </div>
         {/* Checklist for selecting years */}
         <div className="year-checklist">
           <label className="yearSelect">Select Year</label>

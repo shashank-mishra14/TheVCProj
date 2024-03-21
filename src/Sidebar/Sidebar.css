@@ -7,7 +7,12 @@
   flex-direction: column;
   align-items: center;
 }
-
+.sidebar-content {
+  display: block; /* Ensure the sidebar content is always visible on larger screens */
+}
+.toggle-button{
+  display: none;
+}
 .logo-container {
   font-size: 16px;
   font-weight: bold;
@@ -61,6 +66,7 @@
 }
 
 
+
 /* Dropdown menu styles */
 @media screen and (max-width: 768px) {
   .sidebar {
@@ -92,5 +98,36 @@
   .checklist-year {
     margin-left: -110px; /* Remove specific margin */
   }
+
+
+.toggle-button {
+  display: block;
+}
+.toggle-button{
+
+  
+  margin-left: 0rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    padding: 0.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 14px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito Sans;
 }
 
+/* Hide the sidebar content by default on mobile devices */
+.sidebar-content {
+  display: none;
+}
+
+/* Ensure sidebar content is visible when sidebarVisible state is true */
+.sidebar-content.visible {
+  display: block;
+}
+}
