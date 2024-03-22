@@ -6,9 +6,11 @@ const Header = () => {
     <div className="main">
       <div className="homepage-main">
         <div className="homepage-navbar-container">
+        
           <div className="homepage-logo">
+          <img className="logo-vc"src="https://svgshare.com/i/14d2.svg"></img>
             <h3 className="vcproject" >
-            <Link to="/">The VC Project</Link>
+            <Link to="/"> The VC Project</Link>
             </h3>
           </div>
           <div className="homepage-navbar">
