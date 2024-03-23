@@ -3,11 +3,13 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 // var router = express.Router();
  const dotenv= require('dotenv');
+ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT|| 5000;
 const Reports= require('../src/components/addReports/reports.js');
+app.use(express.static(path.join(__dirname, '../build')));
 dotenv.config();
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/?retryWrites=true&w=majority&appName=vcproject', { useNewUrlParser: true, useUnifiedTopology: true });
