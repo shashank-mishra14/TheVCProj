@@ -16,6 +16,6 @@ jobs:
                 node-version: 16
             - run: |
                 npm i
-                cd ../
+                cd .
                 npm i
                 npm run build
