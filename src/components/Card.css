@@ -96,3 +96,30 @@
     margin: 10px auto; /* Add some spacing above and below the line */
     
   }
+  @media only screen and (max-width: 768px) {
+  .card {
+    width: 285px;
+    height: 350px;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(66, 66, 66, 0.342);
+    overflow: hidden;
+    margin: 1rem;
+    transition: transform 0.2s ease;
+}
+.card-title {
+  margin-top: -10px;
+  padding-bottom: 1px;
+  padding-left: 0.8rem;
+  font-size: 0.8rem;
+  font-family: Nunito Sans;
+}
+.tag-button{
+  font-size:13px;
+}
+.readmore-button{
+  padding-left:1.5rem;
+  padding-right:1.5rem;
+  font-size:10px
+}
+}
