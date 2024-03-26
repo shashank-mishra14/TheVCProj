@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./components/contactpage/Contact";
 import UseAddReports from "./components/addReports/addReports";
 // import { data } from "./db/data";
+import { useEffect } from "react";
 import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
 import Accordion from "./components/Accordion/Accordion";
@@ -11,8 +12,16 @@ import Accordion from "./components/Accordion/Accordion";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
-
+import ReactGa from "react-ga";
+const dotenv= require('dotenv');
 function App() {
+  
+  useEffect(() => {
+    ReactGa.initialize("process.env.REACT_APP_GA_TRACKING_ID");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
+  dotenv.config();
+
   return (
     <Router>
       <Layout>
