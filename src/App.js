@@ -13,16 +13,16 @@ import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
 import ReactGa from "react-ga";
-const dotenv= require('dotenv');
+
 function App() {
   
   useEffect(() => {
-    ReactGa.initialize("process.env.REACT_APP_GA_TRACKING_ID");
+    ReactGa.initialize("G-H0QS3NZ8RX");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
-  dotenv.config();
 
   return (
+    
     <Router>
       <Layout>
         <Routes>

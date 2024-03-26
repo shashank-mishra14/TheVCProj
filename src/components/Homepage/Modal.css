@@ -1,0 +1,70 @@
+.modal-main{
+    position: fixed;
+    inset: 0px;
+    background: black;
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-x{
+    place-self: end;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.modal-card button{
+    background-color: rgba(251, 201, 0, 0.956);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+
+
+}
+.modal-container{
+    background-color:rgb(0, 0, 251);
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.modal-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.modal-card p{
+    color:white;
+    font-size:25px
+}
+.modal-card h1{
+    margin-top: -32px;
+    color:white;
+    font-size:72px
+}
+
+.modal-form input{
+    padding: 16px 20px;
+    border: none;
+    background: #f7f6f6;
+    outline: none;
+    margin-right: 0px;
+    border-radius: 5px;
+    position: relative;
+    width: 29rem;
+}

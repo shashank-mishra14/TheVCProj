@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Homepage.css";
 import Accordion from "../Accordion/Accordion";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
-
+import Modal from "./Modal";
 const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445338/H7_ygygmt.png", title: "boat" },
@@ -17,15 +17,35 @@ const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H4_xkrgig.png", title: "italy" },
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
 ];
-const containerStyles = {
-  width: "520px",
-  height: "430px",
-  margin: "0 auto",
-  marginRight: "20px",
-};
+
 const Homepage = () => {
+  const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("visitedBefore");
+
+   
+    if (!hasVisitedBefore) {
+      setShowModal(true);
+      localStorage.setItem("visitedBefore", true);
+    }
+
+    // Listen for page reload
+    const handleReload = () => {
+      setShowModal(true);
+      localStorage.setItem("visitedBefore", true);
+    };
+
+    window.addEventListener("beforeunload", handleReload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleReload);
+    };
+  }, []);
+
+
   return (
     <>
+     {showModal && <Modal onClose={() =>setShowModal(false)} />}
       <div className="main">
         <div className="herosection-main">
           <div className="herosection">
