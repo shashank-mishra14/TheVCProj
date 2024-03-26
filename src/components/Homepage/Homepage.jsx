@@ -20,32 +20,33 @@ const slides = [
 
 const Homepage = () => {
   const [showModal, setShowModal] = useState(false);
-  useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem("visitedBefore");
 
-   
+  useEffect(() => {
+    const hasVisitedBefore = sessionStorage.getItem("visitedBefore");
+
     if (!hasVisitedBefore) {
       setShowModal(true);
-      localStorage.setItem("visitedBefore", true);
+      sessionStorage.setItem("visitedBefore", true);
     }
+  }, []);
 
-    // Listen for page reload
-    const handleReload = () => {
-      setShowModal(true);
-      localStorage.setItem("visitedBefore", true);
-    };
+  const handleBeforeUnload = () => {
+    sessionStorage.removeItem("visitedBefore");
+  };
 
-    window.addEventListener("beforeunload", handleReload);
+  useEffect(() => {
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     return () => {
-      window.removeEventListener("beforeunload", handleReload);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, []);
 
 
+
   return (
     <>
-     {showModal && <Modal onClose={() =>setShowModal(false)} />}
+     {showModal && <Modal />}
       <div className="main">
         <div className="herosection-main">
           <div className="herosection">
