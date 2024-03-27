@@ -1,7 +1,7 @@
 import "./Card.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import ReaectGa from 'react-ga';
 const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
   const MAX_TITLE_LENGTH = 60;
     
@@ -31,6 +31,11 @@ const Card = ({ img, title, companyName, subcategory, year, category, month, lin
   }
 
   const handleReadMoreClick = () => {
+        ReaectGa.event({
+            category: 'Read report button',
+            action: 'Clicked on the report card',
+        });
+
       window.open(link, '_blank'); // Redirect to the link stored in your database
   };
 
