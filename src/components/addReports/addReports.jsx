@@ -23,7 +23,7 @@ const UseAddReports = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        await axios.post("http://localhost:5000/addreports", reportData);
+        await axios.post("http://localhost:5000/uploadreports", reportData);
         // Clear form fields after successful submission (optional)
         setReportData({
             title: "",
@@ -43,7 +43,7 @@ const UseAddReports = () => {
 
   return (
     <div className="reportContainer">
-      <form action="http://localhost:5000/addreports" method="POST"  className="submitreport" onSubmit={handleSubmit}>
+      <form action="http://localhost:5000/uploadreports" method="POST"  className="submitreport" onSubmit={handleSubmit}>
         <div className="title">
           <label className="titlechange" htmlFor="title">
             Title

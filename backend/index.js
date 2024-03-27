@@ -71,7 +71,7 @@ app.post('/addreports', async(req, res) => {
     res.send('Report added successfully.');
 });
 
-app.get('/reports', async (req, res) => {
+app.get('/reportspage', async (req, res) => {
     try {
         // Fetch reports from the database
         const reports = await Reports.find({}, {});

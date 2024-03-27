@@ -19,7 +19,7 @@ const ReportCard = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/reports");
+      const response = await axios.get("http://localhost:5000/reportspage");
       setCardData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
