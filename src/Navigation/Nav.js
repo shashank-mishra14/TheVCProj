@@ -1,8 +1,13 @@
 import ReactGA from 'react-ga';
 import "./Nav.css";
-
+import mixpanel from 'mixpanel';
 const Nav = ({ handleInputChange, query }) => {
   const trackInputChange = () => {
+    mixpanel.track('Search Input Change', {
+      category: 'User Interaction in Search Input',
+      action: 'Input Change',
+      label: 'Search Input Change'
+    });
     ReactGA.event({
       category: 'User Interaction in Search Input',
       action: 'Input Change',

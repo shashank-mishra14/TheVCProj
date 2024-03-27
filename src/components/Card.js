@@ -2,6 +2,7 @@ import "./Card.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ReaectGa from 'react-ga';
+import mixpanel from 'mixpanel-browser';
 const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
   const MAX_TITLE_LENGTH = 60;
     
@@ -31,6 +32,12 @@ const Card = ({ img, title, companyName, subcategory, year, category, month, lin
   }
 
   const handleReadMoreClick = () => {
+    mixpanel.track('Read report button clicked', {
+        
+        title: title,
+        companyName: companyName,
+        subcategory: subcategory
+    });
         ReaectGa.event({
             category: 'Read report button',
             action: 'Clicked on the report card',

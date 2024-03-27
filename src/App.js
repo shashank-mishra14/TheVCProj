@@ -13,16 +13,17 @@ import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
 import ReactGa from "react-ga";
+import mixpanel from "mixpanel";
 
 function App() {
-  
   useEffect(() => {
     ReactGa.initialize("G-H0QS3NZ8RX");
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
-
+  mixpanel.init("f4b4b1b3", {
+    debug: true,
+  });
   return (
-    
     <Router>
       <Layout>
         <Routes>
