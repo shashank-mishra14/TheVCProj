@@ -1,13 +1,13 @@
 import ReactGA from 'react-ga';
 import "./Nav.css";
-import mixpanel from 'mixpanel';
+// import mixpanel from 'mixpanel';
 const Nav = ({ handleInputChange, query }) => {
   const trackInputChange = () => {
-    mixpanel.track('Search Input Change', {
-      category: 'User Interaction in Search Input',
-      action: 'Input Change',
-      label: 'Search Input Change'
-    });
+    // mixpanel.track('Search Input Change', {
+    //   category: 'User Interaction in Search Input',
+    //   action: 'Input Change',
+    //   label: 'Search Input Change'
+    // });
     ReactGA.event({
       category: 'User Interaction in Search Input',
       action: 'Input Change',
@@ -29,13 +29,6 @@ const Nav = ({ handleInputChange, query }) => {
           placeholder="Enter your search"
         />
       </div>
-      {/* <div className="profile-container"> 
-        <button class="reports">REPORTS</button>
-        
-        <button class="reports">
-        
-        </button>
-      </div> */}
     </nav>
   );
 };

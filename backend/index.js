@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const UserDetails = require('../src/components/Homepage/userDetails.js');
 // var router = express.Router();
  const dotenv= require('dotenv');
  const path = require('path');
@@ -69,6 +70,23 @@ app.post('/addreports', async(req, res) => {
     });
     res.json("Hello world");
     res.send('Report added successfully.');
+});
+app.post('/addDetails', async (req, res) => {
+    try {
+        const { email, name, profession } = req.body;
+        
+        // Save the details to the database using UserDetails model
+        await UserDetails.create({
+            email,
+            name,
+            profession
+        });
+
+        res.status(200).send('Details added successfully.');
+    } catch (error) {
+        console.error('Error adding details:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.get('/reportspage', async (req, res) => {
