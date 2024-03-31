@@ -8,7 +8,8 @@ const Header = () => {
         <div className="homepage-navbar-container">
         
           <div className="homepage-logo">
-          <img className="logo-vc"src="https://svgshare.com/i/14d2.svg"></img>
+          <Link to="/"> <img className="logo-vc"src="https://svgshare.com/i/14d2.svg"></img></Link>
+          
             <h3 className="vcproject" >
             <Link to="/"> The VC Project</Link>
             </h3>
@@ -21,7 +22,7 @@ const Header = () => {
             <Link to="/reportspage">Reports</Link>
               </div>
             <div className="lol">
-              <Link to="/contact">Contact.Us</Link>
+              <Link to="/contact">Contact</Link>
             </div>
             <div className="lol">
             <Link to="/faqs">FAQs</Link></div>

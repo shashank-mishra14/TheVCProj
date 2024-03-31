@@ -8,8 +8,8 @@ const UserDetails = require('../src/components/Homepage/userDetails.js');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT|| 5000;
-const Reports= require('../src/components/addReports/reports.js');
+const PORT = 5000;
+// const Reports= require('../src/components/addReports/reports.js');
 app.use(express.static(path.join(__dirname, '../build')));
 dotenv.config();
 // Connect to MongoDB
@@ -56,8 +56,18 @@ app.post('/upload', upload.single('document'), async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
-
-app.post('/addreports', async(req, res) => {
+const reportsSchema = mongoose.Schema({
+    title: String,
+    category: String,
+    subcategory: String,
+    author: String,
+    year: String,
+    imgsrc: String,
+    link: String,
+    month: String,
+  });
+const Reports = mongoose.model('reports', reportsSchema);  
+app.post('/uploadreports', async(req, res) => {
     const { title, category, subcategory,author, year,imgsrc,link } = req.body;
     Reports.create({
         title,
@@ -68,7 +78,6 @@ app.post('/addreports', async(req, res) => {
         imgsrc,
         link,
     });
-    res.json("Hello world");
     res.send('Report added successfully.');
 });
 app.post('/addDetails', async (req, res) => {

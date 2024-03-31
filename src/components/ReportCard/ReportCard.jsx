@@ -50,10 +50,19 @@ const ReportCard = () => {
             ))
       );
     }
+    if (query) {
+      filteredProducts = filteredProducts.filter(
+        ({ title }) =>
+          title.toLowerCase().includes(query.toLowerCase())
+      );
+    }
   
     return filteredProducts;
   };
   
+  const handleInputChange = (value) => {
+    setQuery(value); // Set the search query
+  };
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -109,7 +118,7 @@ const ReportCard = () => {
         selectedAuthors={selectedAuthors}
         setSelectedAuthors={setSelectedAuthors}
       />
-      <Navigation query={query} handleInputChange={handleChange} />
+      <Navigation  handleInputChange={handleInputChange}  />
       <Products
         result={displayedReports.map(
           ({

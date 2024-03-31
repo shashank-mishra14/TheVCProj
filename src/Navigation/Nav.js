@@ -1,18 +1,24 @@
+import React, { useState } from 'react';
 import ReactGA from 'react-ga';
 import "./Nav.css";
-// import mixpanel from 'mixpanel';
-const Nav = ({ handleInputChange, query }) => {
-  const trackInputChange = () => {
-    // mixpanel.track('Search Input Change', {
-    //   category: 'User Interaction in Search Input',
-    //   action: 'Input Change',
-    //   label: 'Search Input Change'
-    // });
+
+const Nav = ({ handleInputChange }) => {
+  const [query, setQuery] = useState('');
+
+  const trackInputChange = (value) => {
     ReactGA.event({
-      category: 'User Interaction in Search Input',
+      category: 'User Interaction',
       action: 'Input Change',
-      label: 'Search Input Change'
+      label: 'Search Input Change',
+      value: value
     });
+  };
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setQuery(value);
+    handleInputChange(value); // Pass the query to the parent component
+    trackInputChange(value);
   };
 
   return (
@@ -21,10 +27,7 @@ const Nav = ({ handleInputChange, query }) => {
         <input
           className="search-input"
           type="text"
-          onChange={(e) => {
-            handleInputChange(e);
-            trackInputChange();
-          }}
+          onChange={handleChange}
           value={query}
           placeholder="Enter your search"
         />

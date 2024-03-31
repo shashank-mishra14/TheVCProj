@@ -9,7 +9,8 @@ const Footer = () => {
             <div className="tag">
               <div className="main-tag">The VC Project</div>
               <p className="main-para">
-                India's largest research repository <br /> for students
+                India's largest reports repository <br /> for investors, founders <br/>
+                and analyst
               </p>
             </div>
             <div class="footer-col">

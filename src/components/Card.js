@@ -1,7 +1,7 @@
 import "./Card.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ReaectGa from 'react-ga';
+import ReactGa from 'react-ga';
 // import mixpanel from 'mixpanel-browser';
 const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
   const MAX_TITLE_LENGTH = 60;
@@ -38,11 +38,19 @@ const Card = ({ img, title, companyName, subcategory, year, category, month, lin
     //     companyName: companyName,
     //     subcategory: subcategory
     // });
-        ReaectGa.event({
+       
+        ReactGa.event({
             category: 'Read report button',
             action: 'Clicked on the report card',
+            label: `${title} - ${companyName} - ${subcategory}`, // Optional: Include additional information in the label
         });
-
+    
+        // Increment a custom metric to track the number of times the report has been clicked
+        // gtag('event', 'report_click', {
+        //     event_category: 'Report',
+        //     event_label: `${title} - ${companyName} - ${subcategory}`, // Optional: Include additional information in the event label
+        //     metric1: 1 // Custom metric to track the number of times report clicked
+        // });
       window.open(link, '_blank'); // Redirect to the link stored in your database
   };
 
