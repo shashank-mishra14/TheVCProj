@@ -1,12 +1,15 @@
-import "./Contact.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Accordion from "../Accordion/Accordion";
+import "./Contact.css";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const checklistData = [
     {
@@ -21,13 +24,8 @@ const Contact = () => {
     {
       checklistQuery: "Others",
     },
-    // {
-    //   checklistQuery: "Want to share your experience?",
-    // },
-    // {
-    //   checklistQuery: "Want to report a bug?",
-    // },
   ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -38,31 +36,33 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, like sending data to a server
     console.log(formData);
-    // Clear form fields after submission
     setFormData({
       name: "",
       email: "",
       message: "",
     });
+    setSubmitted(true);
   };
 
   return (
     <div className="container">
       <div className="headcontainer">
-        {/* <h3 className="h3">Connect with Us</h3> */}
-
         <h1 className="h1">Contact us</h1>
         <h3 className="heading3">
-        Please feel free to suggest reports, any features, and issues here!
+          Please feel free to suggest reports, any features, and issues here!
         </h3>
       </div>
 
-     
-        <div className="left">
-        
-          <div className="container-right-small">
+      <div className="left">
+        <div className="container-right-small">
+          {submitted ? (
+            <div className="submitted-message">
+              <p>Thank you for contacting us!</p>
+              <Link to="/">  <button className="go-back-to-home-button" onClick={() => setSubmitted(false)}>Go back to home</button></Link>
+            
+            </div>
+          ) : (
             <form className="form" onSubmit={handleSubmit}>
               <div className="nameinput">
                 <div className="name">
@@ -97,7 +97,7 @@ const Contact = () => {
                   required
                 />
               </div>
-             
+
               <div className="checklistBox">
                 {checklistData.map(({ checklistQuery }) => (
                   <label className="checklistItems" htmlFor="checklist">
@@ -112,12 +112,11 @@ const Contact = () => {
                   </label>
                 ))}
               </div>
-               
+
               <label className="messg" htmlFor="message">
                 Tell us about your experience here
               </label>
               <div className="textarea">
-                {" "}
                 <textarea
                   className="textarea"
                   id="message"
@@ -129,25 +128,29 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
+
               <div className="uploadform">
-                  <form action="http://localhost:5000/upload" method="post" encType="multipart/form-data" accept="document">
-                    <label htmlFor="files"></label>
-                    <input type="file" className="choosefile" name="document"/>
-                    <button method="get" className="uploadbutton" type="file">
-                Upload Files
-              </button>
-                  </form>
-                </div>
+                <form action="http://localhost:5000/upload" method="post" encType="multipart/form-data" accept="document">
+                  <label htmlFor="files"></label>
+                  <input type="file" className="choosefile" name="document"/>
+                  <button method="get" className="uploadbutton" type="file">
+                    Upload Files
+                  </button>
+                </form>
+              </div>
+
               <button className="submitbutton" type="submit">
                 Submit
               </button>
             </form>
-          </div>
-        
+          )}
         </div>
-      <div className="container-accordion"><Accordion /></div>
-      
+      </div>
+      <div className="container-accordion">
+        <Accordion />
+      </div>
     </div>
   );
 };
+
 export default Contact;

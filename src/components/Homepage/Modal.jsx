@@ -10,6 +10,7 @@ function Modal() {
     name: "",
     profession: ""
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -30,7 +31,7 @@ function Modal() {
         name: "",
         profession: ""
       });
-      handleCloseModal(); // Close the modal after submission
+      setSubmitted(true); // Update state to show the "Thank you" message
     } catch (error) {
       console.error('Error submitting details:', error.message);
     }
@@ -45,35 +46,59 @@ function Modal() {
               <X />
             </button>
             <div className="modal-card">
-              <h1>lets connect fast</h1>
-              <p>Put in your contact for us to reach out to you!</p>
-              <form className="modal-form" onSubmit={handleSubmit}>
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Enter Your Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Enter Your Profession"
-                  name="profession"
-                  value={formData.profession}
-                  onChange={handleChange}
-                  required
-                />
-                <button type="submit">Click Here</button>
-              </form>
+              {submitted ? ( // Display the "Thank you" message if form is submitted
+                <div className="thank-you-message">
+                  <h2>Thank you for your submission!</h2>
+                  <p>We'll reach out to you shortly.</p>
+                </div>
+              ) : (
+                <>
+                  <h1>Let's connect fast</h1>
+                  <p>Put in your contact for us to reach out to you!</p>
+                  <form className="modal-form" onSubmit={handleSubmit}>
+                    {/* Form fields go here */}
+                    <div className="modalemail">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="modalname">
+                      <label>Name</label>
+                      <input
+                        type="text"
+                        placeholder="Enter Your Name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="modalprof">
+                      <label>Profession</label>
+                      <select
+                        name="profession"
+                        value={formData.profession}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="">Select Your Profession</option>
+                        <option value="founder">Founder</option>
+                        <option value="investor">Investor</option>
+                        <option value="analyst">Analyst</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    
+                    <button type="submit">Click Here</button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>
