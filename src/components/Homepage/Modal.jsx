@@ -48,7 +48,7 @@ function Modal() {
             <div className="modal-card">
               {submitted ? ( // Display the "Thank you" message if form is submitted
                 <div className="thank-you-message">
-                  <h2>Thank you for your submission!</h2>
+                  <h2>Thank you for sharing!</h2>
                   <p>We'll reach out to you shortly.</p>
                 </div>
               ) : (

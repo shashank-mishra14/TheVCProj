@@ -1,7 +1,7 @@
 import Input from "../../components/Input";
 import "./Author.css";
 import React, { useState } from "react";
-
+import Checkbox from '@mui/joy/Checkbox';
 const authorData = [
   {
     value: "elevationcapital",
@@ -112,27 +112,31 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
       <div className="ml">
         <h2 className="sidebar-title-author-title">Authors</h2>
         <label className="sidebar-label-container">
-          <input
+          <Checkbox
+            label={`All`}
+            size="sm"
             type="checkbox"
             checked={selectedAuthors.length === 0}
             className="checkboxauthorInput"
             onChange={() => setSelectedAuthors([])}
           />
-          <span className="checkmark">All</span>
+          
         </label>
         <div className="checklistauthorbox">
           {authorData.slice(0, showAllAuthors ? authorData.length : 10).map(({ value, title }) => (
             <label className="checklistauthor" key={value}>
               <div className="checklistinputauthor">
-                <input
+                <Checkbox 
+                label={title}
                   type="checkbox"
+                  size="sm"
                   value={value}
                   checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"
                   onChange={() => handleAuthorChange(title)}
                 />
               </div>
-              {title}
+              
             </label>
           ))}
         </div>

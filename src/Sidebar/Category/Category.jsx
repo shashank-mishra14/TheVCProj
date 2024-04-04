@@ -1,7 +1,7 @@
 import styles from "./Category.module.css";
 import Input from "../../components/Input";
 import React, { useEffect, useState } from "react";
-
+import Checkbox from '@mui/joy/Checkbox';
 const categoriesData = [
   {
     category: "Agritech",
@@ -113,16 +113,18 @@ function Category({
         {categoriesData.slice(0, showAll ? categoriesData.length : 10).map(({ category }) => (
           <label key={category} className={styles.checkboxLabel}>
             <div className={styles.checklistinput}>
-              <input
+              <Checkbox 
                 type="checkbox"
+                label={category}
                 name="category"
+                size="sm"
                 value={category}
                 checked={selectedCategory.includes(category)}
                 onChange={() => handleCategoryClick(category)}
                 className={styles.checkboxcategory}
               />
             </div>
-            <span className={styles.catFont}> {category}</span>
+            <span className={styles.catFont}> </span>
           </label>
         ))}
       </div>
@@ -136,15 +138,17 @@ function Category({
         {categoriesData.flatMap(({ subCategory }) => subCategory).slice(0, showAllSubcategories ? categoriesData.flatMap(({ subCategory }) => subCategory).length : 10).map((subcategory) => (
           <label key={subcategory} className={styles.checkboxLabel}>
             <div className={styles.checklistinput}>
-              <input
+              <Checkbox
                 type="checkbox"
                 value={subcategory}
+                size="sm"
+                label={subcategory}
                 onChange={() => handleSubcategoryClick(subcategory)}
                 checked={selectedSubCategory.includes(subcategory)}
                 className={styles.checkboxcategory}
               />
             </div>
-            <span className={styles.catFont}> {subcategory}</span>
+            
           </label>
         ))}
         {!showAllSubcategories && categoriesData.flatMap(({ subCategory }) => subCategory).length > 10 && (

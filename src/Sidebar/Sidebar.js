@@ -3,6 +3,7 @@ import Category from "./Category/Category";
 import Author from "./Authors/Author";
 import SubCategory from "./Category/subcategory";
 import "./Sidebar.css";
+import Checkbox from '@mui/joy/Checkbox';
 
 const Sidebar = ({
   handleChange,
@@ -53,8 +54,10 @@ const Sidebar = ({
         <div className="year-checklist">
           <label className="yearSelect">Select Year</label>
           {[...Array(2024 - 2019 + 1).keys()].map((index) => (
-            <div className=" container-yearlist" key={index}>
-              <input
+            <div role="group" className=" container-yearlist" key={index}>
+              <Checkbox
+              size="sm"
+              label={2019 + index}
                 type="checkbox"
                 id={`year-${2019 + index}`}
                 name="year"
@@ -63,12 +66,7 @@ const Sidebar = ({
                 onChange={handleCheckboxChange}
                 className="checkbpox-yearinput"
               />
-              <label
-                className="checklist-year"
-                htmlFor={`year-${2019 + index}`}
-              >
-                {2019 + index}
-              </label>
+
             </div>
           ))}
         </div>

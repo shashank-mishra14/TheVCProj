@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="main-tag">The VC Project</div>
               <p className="main-para">
                 India's largest reports repository <br /> for investors, founders <br/>
-                and analyst
+                and analysts
               </p>
             </div>
             <div class="footer-col">

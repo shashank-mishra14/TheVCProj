@@ -37,13 +37,13 @@
 }
 .year-checklist {
   margin-top: 40px;
-  margin-left: 40px;
+  
 }
 
 .container-yearlist {
   display: flex;
   flex-direction: row;
-  margin-left: -97px;
+  margin-bottom: 10px;
   padding-bottom: 2px;
   
 }
@@ -76,17 +76,15 @@
     position: static; /* Remove fixed positioning */
   }
 
-  .logo-container {
-    margin-left: 107px; /* Remove negative margin */
-  }
+ 
 
   .year-checklist {
-    margin-left: 0; /* Remove specific margin */
+    margin-left: -39px; /* Remove specific margin */
     margin-top: 20px; /* Adjust margin */
   }
 
   .container-yearlist {
-    margin-left: -59px; /* Remove specific margin */
+    margin-left: 43px; /* Remove specific margin */
     margin-top: 2px;
   }
 

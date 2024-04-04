@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Accordion from "../Accordion/Accordion";
 import "./Contact.css";
+import Checkbox from '@mui/joy/Checkbox';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -100,16 +101,17 @@ const Contact = () => {
 
               <div className="checklistBox">
                 {checklistData.map(({ checklistQuery }) => (
-                  <label className="checklistItems" htmlFor="checklist">
-                    <input
+                  
+                    <Checkbox 
+                    label={checklistQuery}
                       type="checkbox"
                       id="checklist"
                       name="checklist"
                       value={checklistQuery}
-                      className="checklistInput"
+                      className="checklist"
                     />
-                    {checklistQuery}
-                  </label>
+                    
+                  
                 ))}
               </div>
 
