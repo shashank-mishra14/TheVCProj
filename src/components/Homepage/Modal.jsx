@@ -49,16 +49,19 @@ function Modal() {
               {submitted ? ( // Display the "Thank you" message if form is submitted
                 <div className="thank-you-message">
                   <h2>Thank you for sharing!</h2>
-                  <p>We'll reach out to you shortly.</p>
+                  <p>We'll figure out how to add value!</p>
                 </div>
               ) : (
                 <>
-                  <h1>Let's connect fast</h1>
-                  <p>Put in your contact for us to reach out to you!</p>
+                  <h1>Be a part of the community!🚀</h1>
+                  <p className="modal-para">"Hard to beat a person who keeps compounding"</p>
                   <form className="modal-form" onSubmit={handleSubmit}>
                     {/* Form fields go here */}
+                    <div className="modal-div">
+                      <div className="modaldiv-1">
+
                     <div className="modalemail">
-                      <label>Email</label>
+                      <label className="modal-email">Email</label>
                       <input
                         type="email"
                         placeholder="Enter Your Email"
@@ -66,7 +69,7 @@ function Modal() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                      />
+                        />
                     </div>
                     <div className="modalname">
                       <label>Name</label>
@@ -77,7 +80,7 @@ function Modal() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                      />
+                        />
                     </div>
                     <div className="modalprof">
                       <label>Profession</label>
@@ -86,16 +89,22 @@ function Modal() {
                         value={formData.profession}
                         onChange={handleChange}
                         required
-                      >
+                        >
                         <option value="">Select Your Profession</option>
                         <option value="founder">Founder</option>
                         <option value="investor">Investor</option>
                         <option value="analyst">Analyst</option>
                         <option value="other">Other</option>
                       </select>
+                      <p className="modal-p">Don't worry we do not spam😊</p>
                     </div>
                     
-                    <button type="submit">Click Here</button>
+              </div>
+                    <div >
+                    <img className="image-modal" src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/sam%20altam.png" alt="" />
+                    </div>
+                    </div>
+                    <button type="submit">Submit</button>
                   </form>
                 </>
               )}
