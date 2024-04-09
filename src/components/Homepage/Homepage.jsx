@@ -25,8 +25,7 @@ const Homepage = () => {
 
   useEffect(() => {
     ReactGa.initialize("G-H0QS3NZ8RX");
-    ReactGa.send("pageview");
-    ReactGa._gaCommandSendPageview = true;
+    ReactGa.send({hitType:"pageview", page:"/"} );
   }, []);
   
   return (
