@@ -12,12 +12,16 @@ import Accordion from "./components/Accordion/Accordion";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
-
+import ReactGa from "react-ga4";
 
 
 
 function App() {
   
+  useEffect(() => {
+    ReactGa.initialize("G-H0QS3NZ8RX");
+    ReactGa.send({hitType:"pageview", page:"/"} );
+  }, []);
   // // mixpanel.init("f4b4b1b3", {
   // //   debug: true,
   // // });
