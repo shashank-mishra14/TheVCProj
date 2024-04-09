@@ -91,21 +91,18 @@ const userDetailsSchema = mongoose.Schema({
 const UserDetails = mongoose.model('userdetails', userDetailsSchema);
 
 app.post('/addDetails', async (req, res) => {
-    try {
+  
         const { email, name, profession } = req.body;
         
         // Save the details to the database using UserDetails model
-        await UserDetails.create({
+         UserDetails.create({
             email,
             name,
             profession
         });
 
         res.status(200).send('Details added successfully.');
-    } catch (error) {
-        console.error('Error adding details:', error);
-        res.status(500).send('Internal Server Error');
-    }
+
 });
 
 app.get('/reportspage', async (req, res) => {

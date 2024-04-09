@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
-import Modal from "./Modal";
+// import Modal from "./Modal";
+import ReactGa4 from "react-ga4";
 
 const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
@@ -20,34 +21,16 @@ const slides = [
 ];
 
 const Homepage = () => {
-  const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
-    const hasVisitedBefore = sessionStorage.getItem("visitedBefore");
-
-    if (!hasVisitedBefore) {
-      setShowModal(true);
-      sessionStorage.setItem("visitedBefore", true);
-    }
+    ReactGa4.initialize("G-H0QS3NZ8RX");
+    ReactGa4.send("pageview");
   }, []);
-
-  const handleBeforeUnload = () => {
-    sessionStorage.removeItem("visitedBefore");
-  };
-
-  useEffect(() => {
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
-
-
-
+  
   return (
     <>
-     {showModal && <Modal />}
+     
       <div className="main">
         <div className="herosection-main">
           <div className="herosection">

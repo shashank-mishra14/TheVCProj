@@ -5,6 +5,7 @@ import Products from "../../Products/Products";
 import Sidebar from "../../Sidebar/Sidebar";
 import Card from "../Card";
 import "./ReportCard.css";
+import Modal from "../Homepage/Modal";
 
 const ReportCard = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
@@ -104,8 +105,33 @@ const ReportCard = () => {
   const handleViewMore = () => {
     setStartIndex((prevStartIndex) => prevStartIndex + itemsPerPage);
   };
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const hasVisitedBefore = sessionStorage.getItem("visitedBefore");
+
+    if (!hasVisitedBefore) {
+      setShowModal(true);
+      sessionStorage.setItem("visitedBefore", true);
+    }
+  }, []);
+
+  const handleBeforeUnload = () => {
+    sessionStorage.removeItem("visitedBefore");
+  };
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
 
   return (
+    <>
+    {showModal && <Modal />}
     <div>
       <Sidebar
         handleChange={handleChange}
@@ -155,6 +181,7 @@ const ReportCard = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
