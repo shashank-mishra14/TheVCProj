@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
 // import Modal from "./Modal";
-import ReactGa4 from "react-ga4";
+import ReactGa from "react-ga4";
 
 const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
@@ -24,8 +24,9 @@ const Homepage = () => {
 
 
   useEffect(() => {
-    ReactGa4.initialize("G-H0QS3NZ8RX");
-    ReactGa4.send("pageview");
+    ReactGa.initialize("G-H0QS3NZ8RX");
+    ReactGa.send("pageview");
+    ReactGa._gaCommandSendPageview = true;
   }, []);
   
   return (
