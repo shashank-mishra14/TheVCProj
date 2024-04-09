@@ -14,19 +14,18 @@ import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
 // import ReactGa from "react-ga4";
 // import {gtag} from "/react-ga4";
-
+import mixpanel from "mixpanel-browser";
 
 
 function App() {
   
-  useEffect(() => {
-    // 
-    
-  }, []);
+ 
   
-  // // mixpanel.init("f4b4b1b3", {
-  // //   debug: true,
-  // // });
+   mixpanel.init("523e6b4c823f12bce391464b75b5b640", {debug: true, track_pageview: true, persistence: 'localStorage'});
+   mixpanel.identify('USER_ID');
+   mixpanel.track('Sign Up', {
+    'Signup Type': 'Referral'
+  });
   return (
     <Router>
       <Layout>
