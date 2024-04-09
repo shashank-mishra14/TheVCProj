@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
     ReactGa.initialize("G-H0QS3NZ8RX");
     ReactGa.send({hitType:"pageview", page:"/"} );
+    ReactGa._gaCommandSendPageview = true;
   }, []);
   // // mixpanel.init("f4b4b1b3", {
   // //   debug: true,
