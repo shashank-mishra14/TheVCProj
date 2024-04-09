@@ -12,7 +12,11 @@ import Accordion from "./components/Accordion/Accordion";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
+<<<<<<< HEAD
 import ReactGa, {gtag} from "react-ga4";
+=======
+import {ReactGa, gtag} from "react-ga4";
+>>>>>>> 7068c2d4dbde69b9c14dc096959afdaa52141759
 
 
 
