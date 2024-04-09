@@ -8,17 +8,16 @@ import Slider from "./Carousel";
 // import Modal from "./Modal";
 
 
-
 const slides = [
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445338/H7_ygygmt.png", title: "boat" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445347/H6_hezpi9.png", title: "forest" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445345/H2_icbr9z.png", title: "city" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H3_sqixdt.png", title: "italy" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445333/H8_pm0pzr.png", title: "italy" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H5_wqdidu.png", title: "italy" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H4_xkrgig.png", title: "italy" },
-  { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445334/H9_rmxrdh.png", title: "italy" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/1.png", title: "beach" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/2.png", title: "boat" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/3.png", title: "forest" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/4.png", title: "city" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/5.png", title: "italy" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/6.png", title: "italy" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/7.png", title: "italy" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/8.png", title: "italy" },
+  { url: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/9.png", title: "italy" },
 ];
 
 const Homepage = () => {
