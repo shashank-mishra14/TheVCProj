@@ -104,7 +104,8 @@ app.get('/reportspage', async (req, res) => {
         const reports = await Reports.find({}, {});
         
         // Send the reports data as a response
-        res.json(reports);
+        res.send(reports);
+      
     } catch (error) {
         console.error('Error fetching reports:', error);
         res.status(500).json({ error: 'Internal server error' });

@@ -10,10 +10,6 @@
 .thank-you-message{
     margin-top: 10px;
 }
-.modal-email{
-
-
-}
 .modal-p{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -129,4 +125,55 @@
     border-radius: 5px;
     width: 100%;
     max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .image-modal{
+        display: none;
+    }
+    .modal-form input, .modal-form select {
+        padding: 12px 0px;
+        border: none;
+        background: #fdfafa;
+        outline: none;
+        margin: 10px 0;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 10px;
+    }
+    .modal-card button {
+        margin-left: 108px;
+    }
+    .modalemail, .modalname {
+        margin-left: -138px;
+        font-size:12px;
+    }
+    .modalprof {
+        margin-left: -101px;
+        font-size:12px;
+    }
+    .modal-para {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 11px;
+        margin: 10px 20px;
+    }
+    .modal-card h1 {
+        color: black;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .modal-p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 8px;
+        margin-left: 28px;
+    }
+    .modal-card button{
+        padding: 3px 14px;
+        font-size:10px;
+    }
 }

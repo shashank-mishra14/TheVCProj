@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route
             exact
-            path="/reportspage"
+            path="/reports"
             element={
               <>
                 <ReportCard />
@@ -39,7 +39,7 @@ function App() {
           />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/faqs" element={<Accordion />} />
-          <Route exact path="/reports" element={<UseAddReports />} />
+          <Route exact path="/addingreports" element={<UseAddReports />} />
         </Routes>
       </Layout>
     </Router>

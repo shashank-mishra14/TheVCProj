@@ -17,7 +17,7 @@ const Footer = () => {
               <h4>Company</h4>
               <ul>
                 <li>
-                  <a className="footer-links" href="/reportspage">Reports</a>
+                  <a className="footer-links" href="/reports">Reports</a>
                 </li>
                 <li></li>
               </ul>
