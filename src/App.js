@@ -12,7 +12,7 @@ import Accordion from "./components/Accordion/Accordion";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
-import ReactGa from "react-ga4";
+import {ReactGa, gtag} from "react-ga4";
 
 
 
@@ -22,7 +22,9 @@ function App() {
     ReactGa.initialize("G-H0QS3NZ8RX");
     ReactGa.send({hitType:"pageview", page:"/"} );
     ReactGa._gaCommandSendPageview = true;
+    gtag('event', 'page_view', { page_path: window.location.pathname });
   }, []);
+  
   // // mixpanel.init("f4b4b1b3", {
   // //   debug: true,
   // // });
