@@ -40,8 +40,8 @@ const authorData = [
     title:"Yourstory"
   },
   {
-    value:"matrix",
-    title:" Matrix Partners India"
+    value:"matrixpartnersindia",
+    title:"Matrix Partners India"
   },
   {
     value:"lattice",
@@ -114,7 +114,7 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
         <label className="sidebar-label-container">
           <Checkbox
             label={`All`}
-            size="sm"
+            size="sm" 
             type="checkbox"
             checked={selectedAuthors.length === 0}
             className="checkboxauthorInput"

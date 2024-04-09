@@ -18,9 +18,9 @@ const UseAddReports = () => {
       ...prevState,
       [name]: value, // Change 'category' to 'name'
     }));
-  };
+  };  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { 
     e.preventDefault();
     try {
         await axios.post("http://localhost:5000/uploadreports", reportData);

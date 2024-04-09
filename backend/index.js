@@ -1,7 +1,7 @@
 const express = require("express");
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
-const UserDetails = require('../src/components/Homepage/userDetails.js');
+// const UserDetails = require('../src/components/Homepage/userDetails.js');
 // var router = express.Router();
  const dotenv= require('dotenv');
  const path = require('path');
@@ -80,6 +80,16 @@ app.post('/uploadreports', async(req, res) => {
     });
     res.send('Report added successfully.');
 });
+
+
+const userDetailsSchema = mongoose.Schema({
+    email: String,
+    name: String,
+    profession: String
+});
+
+const UserDetails = mongoose.model('userdetails', userDetailsSchema);
+
 app.post('/addDetails', async (req, res) => {
     try {
         const { email, name, profession } = req.body;

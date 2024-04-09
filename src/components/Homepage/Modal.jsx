@@ -16,7 +16,7 @@ function Modal() {
     // Delay showing the modal by 15 seconds
     const delay = setTimeout(() => {
       setShowModal(true);
-    },15000);
+    });
 
     return () => clearTimeout(delay); // Clear timeout on component unmount
   }, []); // Empty dependency array ensures the effect runs only once on mount
@@ -64,11 +64,10 @@ function Modal() {
                 <>
                   <h1>Be a part of the community!🚀</h1>
                   <p className="modal-para">"Hard to beat a person who keeps compounding"</p>
-                  <form className="modal-form" onSubmit={handleSubmit}>
+                  <form action="http://localhost:5000/addDetails" method="POST" className="modal-form" onSubmit={handleSubmit}>
                     {/* Form fields go here */}
                     <div className="modal-div">
-                      <div className="modaldiv-1">
-
+                      <div className="modaldiv-1">  
                         <div className="modalemail">
                           <label className="modal-email">Email</label>
                           <input

@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
 import Modal from "./Modal";
-import Typewriter from 'typewriter-effect';
+
 const slides = [
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445336/H1_vigsqy.png", title: "beach" },
   { url: "https://res.cloudinary.com/djdzjr3a5/image/upload/v1710445338/H7_ygygmt.png", title: "boat" },
@@ -53,7 +53,7 @@ const Homepage = () => {
           <div className="herosection">
             <div className="herosection-title">
               <div className="cutyour">
-                <Typewriter />
+                
                 <h1>
                   cut your research time in half. let us find you relevant
                   
