@@ -6,8 +6,6 @@ import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
 // import Modal from "./Modal";
-import ReactGa from "react-ga4";
-import {gtag} from "/react-ga4";
 
 
 
@@ -25,12 +23,7 @@ const slides = [
 
 const Homepage = () => {
 
-  useEffect(() => {
-    ReactGa.initialize("G-H0QS3NZ8RX");
-    ReactGa.send({hitType:"pageview", page:"/"} );
-    ReactGa._gaCommandSendPageview = true;
-    gtag('event', 'page_view', { page_path: window.location.pathname });
-  }, []);
+
  
   
   return (

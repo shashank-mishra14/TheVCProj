@@ -12,12 +12,17 @@ import Accordion from "./components/Accordion/Accordion";
 import "./index.css";
 import ReportCard from "./components/ReportCard/ReportCard";
 import Layout from "./components/Layout/Layout";
+// import ReactGa from "react-ga4";
+// import {gtag} from "/react-ga4";
 
 
 
 function App() {
   
-  
+  useEffect(() => {
+    // 
+    
+  }, []);
   
   // // mixpanel.init("f4b4b1b3", {
   // //   debug: true,
