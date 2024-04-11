@@ -83,22 +83,18 @@ app.post('/uploadreports', async(req, res) => {
 
 
 const userDetailsSchema = mongoose.Schema({
-    email: String,
-    name: String,
-    profession: String
+    email: String
 });
 
 const UserDetails = mongoose.model('userdetails', userDetailsSchema);
 
 app.post('/addDetails', async (req, res) => {
   
-        const { email, name, profession } = req.body;
+        const { email } = req.body;
         
         // Save the details to the database using UserDetails model
          UserDetails.create({
-            email,
-            name,
-            profession
+            email
         });
 
         res.status(200).send('Details added successfully.');

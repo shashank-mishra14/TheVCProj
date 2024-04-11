@@ -43,7 +43,7 @@ const Sidebar = ({
   return (
     <section className="sidebar">
       {/* Toggle button only visible on mobile devices */}
-      <button className="toggle-button" onClick={toggleSidebar}>Filter Reports</button>
+      <button className="toggle-button" onClick={toggleSidebar}>Filter Reports ⬇️</button>
       {/* Sidebar content */}
       <div className={`sidebar-content ${sidebarVisible ? 'visible' : ''}`}>
         <div className="logo-container">

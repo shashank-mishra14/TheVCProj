@@ -6,9 +6,7 @@ import { X } from "lucide-react";
 function Modal() {
   const [showModal, setShowModal] = useState(false); // Initially set to false
   const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-    profession: ""
+    email: ""
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -36,9 +34,7 @@ function Modal() {
       await axios.post("http://localhost:5000/addDetails", formData);
       // Clear form fields after successful submission
       setFormData({
-        email: "",
-        name: "",
-        profession: ""
+        email: ""
       });
       setSubmitted(true); // Update state to show the "Thank you" message
     } catch (error) {
@@ -62,8 +58,8 @@ function Modal() {
                 </div>
               ) : (
                 <>
-                  <h1>Be a part of the community!🚀</h1>
-                  <p className="modal-para">"Hard to beat a person who keeps compounding"</p>
+                  <h1>Be an insider👀</h1>
+                  <p className="modal-para">"Know whats happening in the VC ecosystem"</p>
                   <form action="http://localhost:5000/addDetails" method="POST" className="modal-form" onSubmit={handleSubmit}>
                     {/* Form fields go here */}
                     <div className="modal-div">
@@ -79,7 +75,7 @@ function Modal() {
                             required
                           />
                         </div>
-                        <div className="modalname">
+                        {/* <div className="modalname">
                           <label>Name</label>
                           <input
                             type="text"
@@ -89,9 +85,9 @@ function Modal() {
                             onChange={handleChange}
                             required
                           />
-                        </div>
+                        </div> */}
                         <div className="modalprof">
-                          <label>Profession</label>
+                          {/* <label>Profession</label>
                           <select
                             name="profession"
                             value={formData.profession}
@@ -103,13 +99,13 @@ function Modal() {
                             <option value="investor">Investor</option>
                             <option value="analyst">Analyst</option>
                             <option value="other">Other</option>
-                          </select>
-                          <p className="modal-p">Don't worry we do not spam😊</p>
+                          </select> */}
+                          <p className="modal-p">Let me in 👇</p>
                         </div>
                       
                       </div>
                       <div >
-                        <img className="image-modal" src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/sam%20altam.png" alt="" />
+                        {/* <img className="image-modal" src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/sam%20altam.png" alt="" /> */}
                       </div>
                     </div>
                     <button type="submit">Submit</button>
@@ -125,3 +121,4 @@ function Modal() {
 }
 
 export default Modal;
+$hashankWas1ere
