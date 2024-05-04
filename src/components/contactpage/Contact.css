@@ -401,10 +401,10 @@
       touch-action: manipulation;
     }
     .container-accordion {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 0 15px;
-      padding-bottom: 298px;
+      width: 100%;
+      margin: 32px -50px 14px 3px;
+      padding: 28px -15px;
+      padding-bottom: 58px;
       padding-top: 150px;
       font-family: Nunito Sans;
     }

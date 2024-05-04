@@ -8,7 +8,7 @@ const upload = multer({ dest: 'uploads/' });
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 // const Reports= require('../src/components/addReports/reports.js');
 app.use(express.static(path.join(__dirname, '../build')));
 dotenv.config();
@@ -107,7 +107,13 @@ app.get('/reportspage', async (req, res) => {
         // Fetch reports from the database
         const reports = await Reports.find({}, {});
         
-        // Send the reports data as a response
+        // const reportCounts = await Reports.aggregate([
+        //     {"$group": {_id: "$author", count: {$sum: 1}}}
+        // ]).exec();
+    
+        // res.send(reportCounts)
+
+            
         res.send(reports);
       
     } catch (error) {

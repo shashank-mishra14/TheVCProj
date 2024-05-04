@@ -1,79 +1,67 @@
-import "./Card.css";
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ReactGa from 'react-ga';
-// import mixpanel from 'mixpanel-browser';
-const Card = ({ img, title, companyName, subcategory, year, category, month, link }) => {
-  const MAX_TITLE_LENGTH = 60;
-    
+import "./Card.css";
 
-    let displayedTitle = title;
+const Card = ({
+  img,
+  title,
+  companyName,
+  subcategory,
+  year,
+  category,
+  month,
+  link,
+  toggleModal,
+  submitted,
+}) => {
+  const MAX_TITLE_LENGTH = 40;
 
-    // Check if the length of the title is less than 20 characters
-    if (title.length > MAX_TITLE_LENGTH) {
-        displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
-    }
+  let displayedTitle = title;
 
+  if (title.length > MAX_TITLE_LENGTH) {
+    displayedTitle = title.substring(0, MAX_TITLE_LENGTH) + "...";
+  }
 
   const MAX_CATEGORY_LENGTH = 15;
   let displayedCategory = subcategory;
   if (subcategory.length > MAX_CATEGORY_LENGTH) {
-      // Find the index of the last space within the maximum length
-      let lastSpaceIndex = MAX_CATEGORY_LENGTH;
-      for (let i = MAX_CATEGORY_LENGTH - 1; i >= 0; i--) {
-          if (subcategory[i] === " ") {
-              lastSpaceIndex = i;
-              break;
-          }
+    let lastSpaceIndex = MAX_CATEGORY_LENGTH;
+    for (let i = MAX_CATEGORY_LENGTH - 1; i >= 0; i--) {
+      if (subcategory[i] === " ") {
+        lastSpaceIndex = i;
+        break;
       }
-
-      // Truncate at the last space index or simply at the maximum length
-      displayedCategory = subcategory.substring(0, lastSpaceIndex) + "...";
+    }
+    displayedCategory = subcategory.substring(0, lastSpaceIndex) + "...";
   }
 
   const handleReadMoreClick = () => {
-    // mixpanel.track('Read report button clicked', {
-        
-    //     title: title,
-    //     companyName: companyName,
-    //     subcategory: subcategory
-    // });
-       
-        ReactGa.event({
-            category: 'Read report button',
-            action: 'Clicked on the report card',
-            label: `${title} - ${companyName} - ${subcategory}`, // Optional: Include additional information in the label
-        });
-    
-        // Increment a custom metric to track the number of times the report has been clicked
-        // gtag('event', 'report_click', {
-        //     event_category: 'Report',
-        //     event_label: `${title} - ${companyName} - ${subcategory}`, // Optional: Include additional information in the event label
-        //     metric1: 1 // Custom metric to track the number of times report clicked
-        // });
-      window.open(link, '_blank'); // Redirect to the link stored in your database
+    if (submitted) {
+      // If the details are submitted, navigate to the URL
+      window.location.assign(link);
+    } else {
+      // If the modal details are not submitted, toggle the modal and pass the link
+      toggleModal(true, link);
+    }
   };
 
   return (
-      <>
-          <section className="card" onClick={handleReadMoreClick}>
-              <div className="square">
-                  <img src={img} alt={title} className="card-img" />
-                  <div className="card-details">
-                      <h3 className="card-title">{displayedTitle}</h3>
-                      <div className="card-company">by {companyName}</div>
-                      <button className="tag-button">{category}</button>
-                      <button className="tag-button">{displayedCategory}</button>
-                      <button className="tag-button">{year}</button>
-                      <button className="tag-button">{month}</button>
-                      <div className="card-adjustment">
-                      <hr className="horizontal-line" />
-                      <button className="readmore-button">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </section>
-      </>
+    <section className="card" onClick={handleReadMoreClick}>
+      <div className="square">
+        <img src={img} alt={title} className="card-img" />
+        <div className="card-details">
+          <h3 className="card-title">{displayedTitle}</h3>
+          <div className="card-company">by {companyName}</div>
+          <button className="tag-button">{category}</button>
+          <button className="tag-button">{displayedCategory}</button>
+          <button className="tag-button">{year}</button>
+          {/* <button className="tag-button">{month}</button> */}
+          <div className="card-adjustment">
+            <hr className="horizontal-line" />
+            <button className="readmore-button">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

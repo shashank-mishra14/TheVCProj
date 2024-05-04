@@ -14,16 +14,43 @@
   margin-right:30px;
   font-family: Nunito Sans;
   font-weight: 400;
+  margin-left:15px;
 }
+/* Adjust the styles as needed */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index:1;
+}
+
+.search-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.search-input-author {
+  padding-right: 30px; /* Space for close icon */
+}
+
+.close-icon {
+ 
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 .viewMoreButton{
-    width:70%;
+    width:75%;
      margin-left: 1.5rem;
     margin-bottom: 1rem;
     margin-top: 10px;
     padding: 0.7rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-radius: 14px;
+    border-radius: 16px;
     color: rgb(67, 67, 255);
   
     font-size: 0.8rem;
@@ -33,11 +60,11 @@
 }
 .categories button {
   margin-top: 10px;
-  background-color: #FAF9F6;
+  background-color: #e3e3e3;
   border: none;
   cursor: pointer;
   color: blue;
-  font-size: 9px;
+  font-size: 16px;;
 }
 
 .checkboxLabel {
@@ -45,7 +72,7 @@
   align-items: center;
   font-size: 22px; /* Adjust font size for better readability */
 
-margin-bottom:-10px;
+margin-bottom:6px;
 font-family: Nunito Sans;
   
 }
@@ -90,7 +117,8 @@ font-family: Nunito Sans;
 
 }
 .heading{
-  font-size: 14px;
+  font-size: 19px;
+  padding-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .filters {
@@ -118,4 +146,8 @@ font-family: Nunito Sans;
   .categories button {
     margin-left: 0; /* Remove negative margin */
   }
+  .heading{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
 }

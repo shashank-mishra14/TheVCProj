@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./Modal.css";
+import React, { useState } from "react";
 import axios from "axios";
 import { X } from "lucide-react";
+import "./Modal.css";
 
-function Modal() {
-  const [showModal, setShowModal] = useState(false); // Initially set to false
+const Modal = ({ showModal, setShowModal, linkToShow }) => {
   const [formData, setFormData] = useState({
-    email: ""
+    email: "",
   });
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    // Delay showing the modal by 15 seconds
-    const delay = setTimeout(() => {
-      setShowModal(true);
-    });
-
-    return () => clearTimeout(delay); // Clear timeout on component unmount
-  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -32,13 +22,12 @@ function Modal() {
     e.preventDefault();
     try {
       await axios.post("http://localhost:5000/addDetails", formData);
-      // Clear form fields after successful submission
-      setFormData({
-        email: ""
-      });
-      setSubmitted(true); // Update state to show the "Thank you" message
+      setFormData({ email: "" });
+      setSubmitted(true);
+      setShowModal(false);
+      window.open(linkToShow, "_blank"); // Open the link after form submission
     } catch (error) {
-      console.error('Error submitting details:', error.message);
+      console.error("Error submitting details:", error.message);
     }
   };
 
@@ -47,78 +36,38 @@ function Modal() {
       {showModal && (
         <div className="modal-main">
           <div className="modal-container">
-            <button className="button-x" onClick={handleCloseModal}>
+            {/* <button className="button-x" onClick={handleCloseModal}>
               <X />
-            </button>
+            </button> */}
+            <div className="bg-modal"></div>
+            <div class="circular-image">
+              <img src="https://i.imghippo.com/files/Cu5dj1713803575.jpg" alt="Ayush" />
+            </div>
+
             <div className="modal-card">
-              {submitted ? ( // Display the "Thank you" message if form is submitted
-                <div className="thank-you-message">
-                  <h2>Thank you for sharing!</h2>
-                  <p>We'll figure out how to add value!</p>
+              <h1>Ayush requests your action to continue</h1>
+              {/* <p className="modal-para">"Know whats happening in the VC ecosystem"</p> */}
+              <form onSubmit={handleSubmit}>
+                <div className="modalemail">
+                  <label className="modal-email">Email</label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <span>This information will be shared with Ayush.</span>
                 </div>
-              ) : (
-                <>
-                  <h1>Be an insider👀</h1>
-                  <p className="modal-para">"Know whats happening in the VC ecosystem"</p>
-                  <form action="http://localhost:5000/addDetails" method="POST" className="modal-form" onSubmit={handleSubmit}>
-                    {/* Form fields go here */}
-                    <div className="modal-div">
-                      <div className="modaldiv-1">  
-                        <div className="modalemail">
-                          <label className="modal-email">Email</label>
-                          <input
-                            type="email"
-                            placeholder="Enter Your Email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                        {/* <div className="modalname">
-                          <label>Name</label>
-                          <input
-                            type="text"
-                            placeholder="Enter Your Name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div> */}
-                        <div className="modalprof">
-                          {/* <label>Profession</label>
-                          <select
-                            name="profession"
-                            value={formData.profession}
-                            onChange={handleChange}
-                            required
-                          >
-                            <option value="">Select Your Profession</option>
-                            <option value="founder">Founder</option>
-                            <option value="investor">Investor</option>
-                            <option value="analyst">Analyst</option>
-                            <option value="other">Other</option>
-                          </select> */}
-                          <p className="modal-p">Let me in 👇</p>
-                        </div>
-                      
-                      </div>
-                      <div >
-                        {/* <img className="image-modal" src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/sam%20altam.png" alt="" /> */}
-                      </div>
-                    </div>
-                    <button type="submit">Submit</button>
-                  </form>
-                </>
-              )}
+                <button type="submit">Continue</button>
+              </form>
             </div>
           </div>
         </div>
       )}
     </>
   );
-}
+};
 
 export default Modal;
-$hashankWas1ere

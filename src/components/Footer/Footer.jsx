@@ -35,6 +35,20 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            <div class="footer-col">
+              <div className="footerdetails">
+
+              <h4>Follow Us</h4>
+              <ion-icon size="large"name="logo-linkedin"></ion-icon>
+              <ion-icon  size="large" name="logo-twitter"></ion-icon>
+              </div>
+             
+              <div className="send-details-footer">
+
+             <input type="email" placeholder="Email..."/>
+             <button className="send-button">Send</button>
+              </div>
+            </div>
           </div>
         </div>
 

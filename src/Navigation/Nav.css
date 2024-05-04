@@ -1,14 +1,15 @@
 nav {
-    display: flex;
+  display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
     z-index: 999;
-    margin-left: 2rem;
+    margin-left: -34rem;
+    margin-top:175px;
   }
   
   input {
-    padding: 12px 20px;
+    padding: 14px 20px;
     border: none;
     background: #f7f6f6;
     outline: none;
@@ -16,6 +17,10 @@ nav {
     border-radius: 5px;
     position: relative;
     width: 14rem;
+    border: 1px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
   }
   
   .nav-icons {
@@ -24,17 +29,21 @@ nav {
     margin-left: 2rem;
   }
 
-  .search-input {
-    border-bottom: 2px solid #ccc;
-    width: 100%;
+  .search-input
+  {
+    width: 435%;
     margin-top: 40px;
     margin-bottom: 0px;
-    margin-left:23px;
-    padding: 10px;
-    font-size: 30px;
+    padding-top: 22px;
+    padding-bottom: 17px;
+    margin-left: 248px;
+    padding-left: 10px;
+    padding-right: 33vmax;
+    font-size: 18px;
     outline: none;
     background-color: white;
-  }
+}
+
   
 
 
@@ -102,4 +111,14 @@ nav {
 
 .span{
   color:white;
+}
+
+@media screen and (max-width: 768px){
+  .search-input
+  {
+   display: none;
+}
+.nav-container{
+  display: none;
+}
 }

@@ -28,13 +28,47 @@
         padding-left: 46px;
 
 }
+.modalemail span{
+    font-size: 12px;
+    font-style: italic;
+    text-overflow: ellipsis;
+    color: #999;
+    margin-left: -149px;
+}
+.modalemail input {
+    font-size: 16px;
+    background-color: var(--color__standard__background);
+    border: 1px solid;
+    border-radius: 0;
+    height: 50px;
+    vertical-align: top !important;
+    box-shadow: none;
+    border-color: black;
+    margin-left: -151px;
+    width: 318%;
+}
 .modalemail{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    background-color: var(--color__standard__background);
+    border: 1px solid var(--color__standard__border);
+    border-radius: 0;
+    height: 36px;
+    vertical-align: top !important;
+    box-shadow: none;
     
-    margin-left: -87px;
 
 }
 .modalname{
     margin-left: -87px;
+
+}
+.bg-modal{
+    margin-bottom: 20px;
+    background-color: #0a4766 !important;
+    height: 72px;
+    padding: 15px 24px !important;
 
 }
 .modaldiv-1{
@@ -51,11 +85,12 @@
     margin-right: 42px;
 }
 .modal-container {
-    background-color: white;
-    max-width: 90%;
-    border-radius: 15px;
-    padding: 20px;
-    position: relative; /* Ensure relative positioning for absolute child */
+    background-color: #ffffff;
+    width: 29%;
+    border-radius: 0px;
+    /* padding: 104px; */
+    position: relative;
+    height: 40%;
 }
 
 .button-x {
@@ -77,31 +112,72 @@
     background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
 }
 
+.modal-email{
+    display: flex;
+    flex-direction: column;
+    margin-left: -149px;
+    width: 100%;
+
+}
+.circular-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    z-index: 1;
+    margin-top: -64px;
+}
+
+.circular-image img {
+    width: 100%; /* Ensures the image fills the circular container */
+    height: 100%; /* Ensures the image fills the circular container */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+}
+
 .button-x svg {
     width: 20px; /* Adjust icon size as needed */
     height: 20px;
 }
 
 .modal-card button {
-    background-color: rgba(251, 201, 0, 0.956);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    color: rgb(7, 7, 7);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-left: 337px;
+    display: inline-block;
+    margin-bottom: -150px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-weight: 700;
+    font-family: var(--type__body__standard--fontfamily);
+    border-radius: 0;
+    outline: 0;
+    line-height: normal;
+    padding: 15px 40px 15px 40px;
+    font-weight: 700;
+    border: 0;
+    background-color: #0a4766;
+    color: white;
 }
+
 
 .modal-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 16px;
 }
+
 
 .modal-para{
     color: black;
@@ -111,39 +187,32 @@
 
 .modal-card h1 {
     color: black;
-    font-size: 36px;
+    font-size: 25px;
     margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
 }
 
-.modal-form input,
-.modal-form select {
-    padding: 12px 0px;
-    border: none;
-    background: #fdfafa;
-    outline: none;
-    margin: 10px 0;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-}
+
 
 @media screen and (max-width: 768px) {
-    .image-modal{
-        display: none;
-    }
-    .modal-form input, .modal-form select {
-        padding: 12px 0px;
-        border: none;
-        background: #fdfafa;
-        outline: none;
-        margin: 10px 0;
-        border-radius: 5px;
-        width: 100%;
-        max-width: 300px;
+    
+    .modalemail input {
         font-size: 10px;
+        background-color: var(--color__standard__background);
+        border: 1px solid;
+        border-radius: 0;
+        height: 20px;
+        vertical-align: top !important;
+        box-shadow: none;
+        border-color: black;
+        margin-left: 241px;
+        width: 34%;
+        margin-top:-24px;
     }
     .modal-card button {
-        margin-left: 71px;
+        margin-left: 41px;
     }
     .modalemail, .modalname {
         margin-left: -202px;
@@ -153,6 +222,34 @@
         margin-left: -171px;
         font-size:12px;
     }
+    .modal-card button {
+        display: inline-block;
+        margin-bottom: -150px;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        font-size: 9px;
+        line-height: 1.42857143;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        font-weight: 700;
+        font-family: var(--type__body__standard--fontfamily);
+        border-radius: 0;
+        outline: 0;
+        line-height: normal;
+        padding: 10px 25px 10px 25px;
+        font-weight: 700;
+        border: 0;
+        background-color: #0a4766;
+        color: white;
+        margin-left: 68px;
+        margin-top: -156px;
+    }
     .modal-para {
         display: flex;
         align-items: center;
@@ -161,9 +258,26 @@
         font-size: 11px;
         margin: 10px 20px;
     }
+    .circular-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+        z-index: 1;
+        margin-top: -49px;
+    }
+    .modal-container {
+        background-color: #ffffff;
+        width: 68%;
+        border-radius: 0px;
+        /* padding: 104px; */
+        position: relative;
+        height: 30%;
+    }
     .modal-card h1 {
         color: black;
-        font-size: 18px;
+        font-size: 11px;
         margin: 10px 0;
     }
     .modal-p {

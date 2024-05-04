@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Category from "./Category/Category";
 import Author from "./Authors/Author";
-import SubCategory from "./Category/subcategory";
 import "./Sidebar.css";
 import Checkbox from '@mui/joy/Checkbox';
+import HotReports from "../components/ReportCard/HotReports";
 
 const Sidebar = ({
   handleChange,
@@ -16,18 +16,13 @@ const Sidebar = ({
   setAuthor,
   author,
   setSelectedYear,
-  selectedYear
+  selectedYear,
+  setShowCards, // Receive setShowCards as a prop
+  showCards,
 }) => {
-  const [selectedYears, setSelectedYears] = useState([]); // State to store selected years
-  // State to control sidebar visibility
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [selectedYears, setSelectedYears] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to track if sidebar is open
 
-  // Function to toggle sidebar visibility
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
-  };
-
-  // Function to handle checkbox change
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     setSelectedYears((prevSelectedYears) => {
@@ -37,36 +32,44 @@ const Sidebar = ({
         return prevSelectedYears.filter((year) => year !== value);
       }
     });
-    handleChange(event); // Call handleChange to update selected years
+    handleChange(event);
+  };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-    <section className="sidebar">
-      {/* Toggle button only visible on mobile devices */}
-      <button className="toggle-button" onClick={toggleSidebar}>Filter Reports ⬇️</button>
-      {/* Sidebar content */}
-      <div className={`sidebar-content ${sidebarVisible ? 'visible' : ''}`}>
+    <section className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+      <button className="toggle-button" onClick={toggleSidebar}>
+       <span className="filterreports"> Filter Reports </span><ion-icon size="large" name="chevron-down-outline"></ion-icon>
+      </button>
+      <div class="sidebar-content visible">
         <div className="logo-container">
-          Filter your reports
+          Filter your reports<ion-icon size="large" name="funnel-outline"></ion-icon>
           <br />
         </div>
-        {/* Checklist for selecting years */}
+        <div className="hot-reports">
+        <HotReports
+          showCards={showCards}
+          setShowCards={setShowCards}
+        />
+        </div>
         <div className="year-checklist">
           <label className="yearSelect">Select Year</label>
-          {[...Array(2024 - 2019 + 1).keys()].map((index) => (
+          {[...Array(2024 - 2017 + 1).keys()].map((index) => (
             <div role="group" className=" container-yearlist" key={index}>
               <Checkbox
-              size="sm"
-              label={2019 + index}
+                size="lg"
+                label={2017 + index}
                 type="checkbox"
-                id={`year-${2019 + index}`}
+                id={`year-${2017 + index}`}
                 name="year"
-                value={2019 + index}
-                checked={selectedYears.includes(`${2019 + index}`)}
+                value={2017 + index}
+                checked={selectedYears.includes(`${2017 + index}`)}
                 onChange={handleCheckboxChange}
                 className="checkbpox-yearinput"
               />
-
             </div>
           ))}
         </div>
@@ -80,9 +83,9 @@ const Sidebar = ({
         <Category
           handleChange={(category) => {
             handleChange(category);
-            setSelectedYears([]); // Reset selected years when category changes
+            setSelectedYears([]);
             setSelectedCategory(category);
-            setSelectedSubCategory(null); // Reset selected subcategory when category changes
+            setSelectedSubCategory(null);
           }}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}

@@ -1,26 +1,54 @@
 .sidebar {
-  width: 15%;
+  width: 19%;
+  margin-left: 10.5%;
+  margin-top: 1.2rem;
   position: fixed;
-  height: 60%;
+  height: 68%;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add scrollbar for vertical overflow */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Optional: customize scrollbar colors */
 }
+
+/* Optional: Customize scrollbar for WebKit browsers (e.g., Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .sidebar-content {
   display: block; /* Ensure the sidebar content is always visible on larger screens */
+  margin-right: 100px;
 }
-.toggle-button{
+.toggle-button {
   display: none;
 }
 .logo-container {
-  font-size: 16px;
+  font-size: 23px;
   font-weight: bold;
-  padding-top:50px;
-  margin-left:10px;
+  margin-right:20px;
+  padding-top: 15px;
+  margin-left: 10px;
   margin: auto;
- 
   font-family: Nunito Sans;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .logo-container h1 {
@@ -28,7 +56,7 @@
 }
 
 .sidebar-content {
-  overflow-y: auto; /* Hide vertical scrollbar */
+  /* Hide vertical scrollbar */
   max-height: calc(100vh - 120px); /* Adjust max height as needed */
 }
 
@@ -36,37 +64,32 @@
   display: none;
 }
 .year-checklist {
-  margin-top: 40px;
-  
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .container-yearlist {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
-  padding-bottom: 2px;
-  
+  margin-bottom: 15px;
+  padding-bottom: 8px;
 }
 
 .yearSelect {
-  font-size: 14px;
+  font-size: 20px;
   font-style: bold;
   font-weight: bold;
-  font-family: Nunito Sans
+  font-family: Nunito Sans;
 }
 .checkbpox-yearinput {
   height: 14px;
   margin-top: 2px;
-  
-  
 }
 .checklist-year {
   margin-left: -115px;
   font-size: 14px;
   font-family: Nunito Sans;
 }
-
-
 
 /* Dropdown menu styles */
 @media screen and (max-width: 768px) {
@@ -76,20 +99,18 @@
     position: static; /* Remove fixed positioning */
   }
 
- 
-
   .year-checklist {
-    margin-left: -39px; /* Remove specific margin */
+    margin-left: -27px; /* Remove specific margin */
     margin-top: 20px; /* Adjust margin */
   }
 
   .container-yearlist {
     margin-left: 43px; /* Remove specific margin */
-    margin-top: 2px;
+    margin-top: px;
   }
 
   .yearSelect {
-    font-size: 14px; /* Adjust font size */
+    font-size: 16px; /* Adjust font size */
     margin-left: 39px;
     padding-bottom: 10px;
   }
@@ -98,19 +119,15 @@
     margin-left: -110px; /* Remove specific margin */
   }
 
-
-.toggle-button {
-  display: block;
-}
-.toggle-button{
-
-  
-  margin-left: 0rem;
-    margin-bottom: 1rem;
-    margin-top: 10px;
-    padding: 0.7rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .toggle-button {
+    display: block;
+  }
+  .toggle-button {
+    display: block;
+    position: fixed;
+    top: 17.7rem;
+    left: 21.5%;
+    padding: 0.5rem 0.4rem;
     border-radius: 14px;
     background-color: rgb(67, 67, 255);
     color: white;
@@ -118,15 +135,47 @@
     border: none;
     cursor: pointer;
     font-family: Nunito Sans;
+    z-index: 3;
 }
+  .filterreports {
+    font-size: 18px;
+    margin-bottom: -10px;
+    margin-left:23px;
+}
+  .sidebar.open {
+    width: 87%;
+    margin-top: 353px;
+    margin-left: 27px;
+  }
 
-/* Hide the sidebar content by default on mobile devices */
-.sidebar-content {
-  display: none;
+  /* Show sidebar content when sidebar is open */
+  .sidebar.open .sidebar-content {
+    display: block;
+  }
+  .logo-container {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 15px;
+    margin-left: 10px;
+    margin: auto;
+    font-family: Nunito Sans;
+    display: flex;
+    flex-direction: row;
+    margin-left: 17px;
 }
-
-/* Ensure sidebar content is visible when sidebarVisible state is true */
-.sidebar-content.visible {
-  display: block;
+.sidebar-title-author-title {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  /* color: #000000; */
+  font-family: Nunito sans;
 }
+.hot-reports{
+  margin-left:17px;
+}
+  /* Hide sidebar content by default */
+  .sidebar-content {
+    display: none;
+  }
 }

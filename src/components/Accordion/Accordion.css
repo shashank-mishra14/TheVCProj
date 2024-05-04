@@ -94,6 +94,14 @@ h1 {
   h1 {
     font-size: 32px; /* Adjust font size for smaller screens */
   }
+  .container-accordion {
+    width: 249%;
+    margin: 32px -50px 14px 188px;
+    padding: 28px -15px;
+    padding-bottom: 298px;
+    padding-top: 150px;
+    font-family: Nunito Sans;
+}
   .accordion-title {
     font-size: 28px;
     color: var(--text-primary);

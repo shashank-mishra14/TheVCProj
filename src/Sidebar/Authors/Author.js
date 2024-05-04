@@ -1,104 +1,145 @@
 import Input from "../../components/Input";
 import "./Author.css";
 import React, { useState } from "react";
-import Checkbox from '@mui/joy/Checkbox';
+import Checkbox from "@mui/joy/Checkbox";
+// import { InputAdornment, TextField } from '@mui/material';
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from '@mui/icons-material/Close';
+
+
 const authorData = [
-  {
-    value: "elevationcapital",
-    title: "Elevation Capital",
+  {id:1,
+    value: "bain",
+    title: "Bain & Company",
   },
   {
-    value: "tracxn",
-    title: "Tracxn",
+    id:2,
+    value: "ey",
+    title: "EY",
   },
   {
-    value: "blumeventures",
-    title: "Blume Ventures",
-  },
-  {
+    id:3,
     value: "redseer",
     title: "RedSeer",
   },
   {
-    value: "peakxv",
-    title: "Peak XV",
-  },
-  {
+    id:4,
     value: "bcg",
     title: "BCG",
   },
   {
-    value: "kpmg",
-    title: "KPMG",
+    id:5,
+    value: "kearney",
+    title: "Kearney",
   },
   {
-    value:"bain",
-    title:"Bain & Company"
+    id:6,
+    value: "lattice",
+    title: " 1Lattice",
   },
   {
-    value:"yourstory",
-    title:"Yourstory"
+    id:7,
+    value: "ficci",
+    title: "FICCI",
   },
   {
-    value:"matrixpartnersindia",
-    title:"Matrix Partners India"
+    id:8,
+    value: "avenduscapital",
+    title: "Avendus Capital",
   },
   {
-    value:"lattice",
-    title:" 1Lattice"
+    id:9,
+    value: "inc42",
+    title: "Inc42",
   },
   {
-    value:"ey",
-    title:"EY"
+    id:10,
+    value: "yourstory",
+    title: "Yourstory",
   },
   {
-    value:"temasek",
-    title:" Temasek"
-  }
-  ,
+    id:11,
+    value: "elevationcapital",
+    title: "Elevation Capital",
+  },
+
   {
-    value:"google",
-    title:"Google "
-  }
-  ,
+    id:12,
+    value: "blumeventures",
+    title: "Blume Ventures",
+  },
+
   {
-    value:"bigbasket",
-    title:" BigBasket"
-  }
-  ,
+    id:13,
+    value: "kalaaricapital",
+    title: "Kalaari Capital",
+  },
   {
-    value:"omidyar",
-    title:" Omidyar Network"
-  }
-  ,
+    id:14,
+    value: "dsgconsumerparteners",
+    title: "DSG Consumer Parteners",
+  },
   {
-    value:"lumikaifund",
-    title:"Lumikai Fund"
-  }
-  ,
+    id:15,
+    value: "eximusventures",
+    title: "Eximus Ventures",
+  },
   {
-    value:"getvantage",
-    title:" GetVantage"
-  }
-  ,
+    id:16,
+    value: "strideventures",
+    title: "Stride Ventures",
+  },
   {
-    value:"ficci",
-    title:"FICCI"
-  }
-  ,
+    id:17,
+    value: "temasek",
+    title: " Temasek",
+  },
   {
-    value:"chirataeventures",
-    title:" Chiratae Ventures"
-  }
+    id:18,
+    value: "matrixpartnersindia",
+    title: "Matrix Partners India",
+  },
+  {
+    id:19,
+    value: "chirataeventures",
+    title: " Chiratae Ventures",
+  },
+
+  {
+    id:20,
+    value: "peakxv",
+    title: "Peak XV",
+  },
+  {
+    id:21,
+    value: "lumikaifund",
+    title: "Lumikai Fund",
+  },
+  {
+    id:22,
+    value: "google",
+    title: "Google ",
+  },
+  {
+    id:23,
+    value: "getvantage",
+    title: " GetVantage",
+  },
+  {
+    id:24,
+    value: "tracxn",
+    title: "Tracxn",
+  },
 ];
 
 const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
   const [showAllAuthors, setShowAllAuthors] = useState(false);
-
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchActive, setSearchActive] = useState(false)
   const handleAuthorChange = (authorValue) => {
     setSelectedAuthors((prevAuthors) => {
       const isSelected = prevAuthors.includes(authorValue);
-  
+
       if (isSelected) {
         return prevAuthors.filter((author) => author !== authorValue);
       } else {
@@ -107,41 +148,66 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
     });
   };
 
+ 
+
+  const filteredAuthors = authorData.filter((author) =>
+    author.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const authorsToDisplay = showAllAuthors ? filteredAuthors : filteredAuthors.slice(0, 10);
+
+  const handleSearchChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
+    setSearchActive(false);
+  };
   return (
     <>
       <div className="ml">
         <h2 className="sidebar-title-author-title">Authors</h2>
-        <label className="sidebar-label-container">
-          <Checkbox
-            label={`All`}
-            size="sm" 
-            type="checkbox"
-            checked={selectedAuthors.length === 0}
-            className="checkboxauthorInput"
-            onChange={() => setSelectedAuthors([])}
+        <div className={`search-bar ${searchActive ? 'active' : ''}`}>
+          <div className="search-icon" onClick={() => setSearchActive(true)}>
+            <SearchIcon />
+          </div>
+          <input
+            type="text"
+            placeholder="Search authors"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className={`search-input-author ${searchActive ? 'active' : ''}`}
           />
-          
-        </label>
+          {searchQuery && searchActive && (
+            <div className="close-icon" onClick={clearSearch}>
+              <CloseIcon />
+            </div>
+          )}
+        </div>
         <div className="checklistauthorbox">
-          {authorData.slice(0, showAllAuthors ? authorData.length : 10).map(({ value, title }) => (
+          {authorsToDisplay.map(({ value, title }) => (
             <label className="checklistauthor" key={value}>
               <div className="checklistinputauthor">
-                <Checkbox 
-                label={title}
+                <Checkbox
+                  label={title}
                   type="checkbox"
-                  size="sm"
+                  size="lg"
                   value={value}
                   checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"
                   onChange={() => handleAuthorChange(title)}
                 />
               </div>
-              
             </label>
           ))}
         </div>
-        {!showAllAuthors && authorData.length > 10 && (
-          <button className="viewMoreButton" onClick={() => setShowAllAuthors(true)}>
+        {!showAllAuthors && filteredAuthors.length > 10 && (
+          <button
+            className="viewMoreButton"
+            onClick={() => setShowAllAuthors(true)}
+          >
             View More
           </button>
         )}
