@@ -178,10 +178,10 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
             placeholder="Search authors"
             value={searchQuery}
             onChange={handleSearchChange}
-            className={`search-input-author ${searchActive ? 'active' : ''}`}
+            className="search-input-author"
           />
-          {searchQuery && searchActive && (
-            <div className="close-icon" onClick={clearSearch}>
+          {searchActive && (
+            <div className="close-icon" onClick={() => setSearchActive(false)}>
               <CloseIcon />
             </div>
           )}
