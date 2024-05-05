@@ -30,7 +30,9 @@
 .sidebar::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
+.funnel{
+  margin-left:10px;
+}
 .sidebar-content {
   display: block; /* Ensure the sidebar content is always visible on larger screens */
   margin-right: 100px;
@@ -41,10 +43,10 @@
 .logo-container {
   font-size: 23px;
   font-weight: bold;
-  margin-right:20px;
+  margin-right:18px;
   padding-top: 15px;
-  margin-left: 10px;
-  margin: auto;
+  margin-left: 15px;
+  
   font-family: Nunito Sans;
   display: flex;
   flex-direction: row;
@@ -151,6 +153,7 @@
   /* Show sidebar content when sidebar is open */
   .sidebar.open .sidebar-content {
     display: block;
+    margin-right:38px;
   }
   .logo-container {
     font-size: 18px;

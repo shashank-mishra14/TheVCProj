@@ -42,11 +42,17 @@ const Sidebar = ({
   return (
     <section className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
       <button className="toggle-button" onClick={toggleSidebar}>
-       <span className="filterreports"> Filter Reports </span><ion-icon size="large" name="chevron-down-outline"></ion-icon>
+       <span className="filterreports"> Filter Reports </span>
+      
+       <ion-icon size="large" name="chevron-down-outline"></ion-icon>
       </button>
       <div class="sidebar-content visible">
         <div className="logo-container">
-          Filter your reports<ion-icon size="large" name="funnel-outline"></ion-icon>
+          Filter your reports
+          <div className="funnel">
+        
+        <ion-icon size="large" name="funnel"></ion-icon>
+        </div>
           <br />
         </div>
         <div className="hot-reports">

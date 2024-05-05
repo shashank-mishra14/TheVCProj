@@ -10,21 +10,21 @@ body{
 }
 
 .main-tag{
-	background-color: #24262b;
+	background-color: #000000;
 	color: #ffffff;
 	font-size: 22px;
 	margin-left:-600px;
 
 }
 .main-para{
-	background-color: #24262b;
+	background-color: #000000;
 	color: #ffffff;
 
 	margin-left:-600px;
 
 }
 .tag{
-	background-color: #24262b;
+	background-color: #000000;
 	color: #ffffff;
 	font-size: 18px;
 	padding:auto;
@@ -74,7 +74,7 @@ body{
 	font-size: 18px;
 }
 ion-icon {
-	color: rgb(141, 140, 140);
+	color: rgb(11, 11, 11);
 	padding-right: 25px;
 	/* margin-top:15px; */
 	/* margin-bottom:15px; */
@@ -83,7 +83,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-color: #000000;
     padding: 70px 0;
     position: relative;
 	width: 100%;
@@ -110,7 +110,7 @@ ul{
 .footer-bottom{
 	
 	text-align: center;
-	background-color: #24262b;
+	background-color: #000000;
 	color: #ffffff;
 	margin-bottom: -45px;
 	bottom: 0;
@@ -144,10 +144,11 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
+	background-color: rgb(67, 67, 255);
+	height: 3px;
 	box-sizing: border-box;
-	width: 50px;
+	width: 60px;
+
 }
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
@@ -170,7 +171,7 @@ ul{
 @media(max-width: 767px){
 
 	    .footer {
-        background-color: #24262b;
+        background-color: #000000;
         padding: 70px 0;
         position: relative;
         width: 100%;
@@ -217,20 +218,24 @@ ul{
 	padding-left:25px;
 }
 .main-tag{
-	background-color: #24262b;
+	background-color: #000000;
 	color: #ffffff;
 	font-size: 26px;
 	margin-left:42px;
 
 }
 .tag {
-    background-color: #24262b;
+    background-color: #000000;
     color: #ffffff;
     font-size: 22px;
     padding: auto;
     margin: auto;
     margin-left: -26px;
 }
+}
+.footer-logos{
+	display: flex;
+	flex-direction: row;
 }
 @media(max-width: 574px){
   .footer-col{
@@ -243,9 +248,9 @@ ul{
 .send-details-footer {
     display: none;
 }
-.footerdetails{
+/* .footerdetails{
 	display: none;
-}
+} */
 }
 
 

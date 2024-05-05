@@ -9,8 +9,8 @@ const Footer = () => {
             <div className="tag">
               <div className="main-tag">The VC Project</div>
               <p className="main-para">
-                India's largest reports repository <br /> for investors, founders <br/>
-                and analysts
+                India's largest reports repository <br /> for investors, analysts <br/>
+                and founders
               </p>
             </div>
             <div class="footer-col">
@@ -39,15 +39,18 @@ const Footer = () => {
               <div className="footerdetails">
 
               <h4>Follow Us</h4>
+              <div className="footer-logos">
+
               <ion-icon size="large"name="logo-linkedin"></ion-icon>
               <ion-icon  size="large" name="logo-twitter"></ion-icon>
               </div>
+              </div>
              
-              <div className="send-details-footer">
+              {/* <div className="send-details-footer">
 
              <input type="email" placeholder="Email..."/>
              <button className="send-button">Send</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,11 +1,79 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Homepage.css";
 import Accordion from "../Accordion/Accordion";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
 import Slider from "./Carousel";
+import ReportCard from "../ReportCard/ReportCard";
 // import Modal from "./Modal";
+import Card from "../Card";
+import Modal from "./Modal";
+// const [toggleModal, settoggleModal] = useState(false);
+
+const topReportsData = [
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/3.png",
+    title: "Marketplaces Unleashed: Fuelling India’s $200B Consumer Spending Surge",
+    companyName: "Elevation Capital",
+    subcategory: "Marketplaces",
+    category: "Consumer Tech",
+    year: 2022,
+    // month: "January",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/Elevation/Marketplaces%20Unleashed%20Consolidated%20Presentation.pdf",
+  },
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/15.png",
+    title: "Indus Valley Annual Report 2023",
+    companyName: "Blume Ventures",
+    subcategory: "Indian Consumer",
+    category: "Consumer Tech",
+    // month: "January",
+    year: "2023",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/BlumeVentures/Indus%20Valley%20Annual%20Report%202023.pdf",
+  },
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/NEWTHUMBNAILS/194.jpg",
+    title: "Code to Credit - A thesis on Digital Lending in India",
+    companyName: "Eximus Ventures",
+    subcategory: "Lending",
+    category: "Financial Services",
+    // month: "January",
+    year: "2024",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/EXIMUS/Code-to-Credit_Digital-Lending-Thesis_updated.pdf",
+  },
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/NEWTHUMBNAILS/192.jpg",
+    title: " DSG Consumer Partners 2024 Sustainability Report",
+    companyName: "DSG Consumer Partners",
+    subcategory: "ESG",
+    category: "Climate & Sustainability",
+    // month: "January",
+    year: "2023",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/DSG/DSGC%202024%20SUSTAINABILITY%20REPORT%20.pdf",
+  },
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/NEWTHUMBNAILS/200.jpg",
+    title: "Stride Ventures- India Venture Debt Report 2022",
+    companyName: "Stride Ventures",
+    subcategory: "Venture Debt",
+    category: "Financial Serivces",
+    // month: "January",
+    year: "2022",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/STRIDEVENTURES/Stride+Ventures+India+Debt+Report+2022.pdf",
+  },
+  {
+    img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/17.png",
+    title: "The Omega Files: Look Into Blume's Fund I Returns",
+    companyName: "Blume Ventures",
+    subcategory:"VC Returns",
+    category: "Venture Capital & Private Equity",
+    year:"2023",
+    link:"https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/BlumeVentures/The%20Omega%20Files_%20Episode%201.pdf"
+  }
+  // Add more dummy report data as needed...
+];
+
 
 const slides = [
   {
@@ -47,6 +115,13 @@ const slides = [
 ];
 
 const Homepage = () => {
+  const [showModal, setShowModal] = useState(false);
+const [linkToShow, setLinkToShow] = useState("");
+
+const toggleModal = (show, link) => {
+  setShowModal(show);
+  setLinkToShow(link);
+};
   return (
     <>
       <div className="main">
@@ -180,7 +255,7 @@ const Homepage = () => {
           How <span className="highlighted-text">The VC Project</span> can be
           used
         </h1>
-        <h2>It's a tool to research about India and markets within it</h2>
+        <h2>Tool to research about India and markets within it</h2>
       </div>
       <div className="card-section">
         <div className="card-section1_1">
@@ -238,8 +313,8 @@ const Homepage = () => {
               Industry landscape
             </h1>
             <span>
-              market sizing, white spaces,
-              <br /> key players, sub sectors <br /> within industries
+              Market sizing, white spaces,
+              key players, <br /> sub sectors within industries.
             </span>
           </div>
         </div>
@@ -252,8 +327,8 @@ const Homepage = () => {
           <div className="card-section1_1_5_6">
             <h1>PoVs</h1>
             <h2>
-              building view on a industry, multiple lens, <br /> trends, pattern
-              matching.. tight!
+              Building view on a industry, multiple lens, <br /> trends, pattern
+              matching... tight!
             </h2>
           </div>
           <div className="card-section1_1_3">
@@ -276,7 +351,7 @@ const Homepage = () => {
           <div className="why-to-use">
 
           <h1>
-            Why <span className="highlighted-text">Use</span> this ?
+            Why <span className="highlighted-text">use</span> this ?
           </h1>
           <p className="compo-para">
             Let your users know about solutions, benefits and features that you
@@ -285,127 +360,44 @@ const Homepage = () => {
           </div>
           <div className="card-components-1">
             <div className="card-components-1-1">
-              <div className="cloud">
-                <ion-icon name="cloud" size="large"></ion-icon>
+              <div className="cloud1">
+                <ion-icon name="time" size="large"></ion-icon>
               </div>
               <h1> Time</h1>
               <p className="reasearch">Researchiblity + speed</p>
             </div>
             <div className="card-components-1-1">
               <div className="cloud">
-                <ion-icon name="terminal" size="large"></ion-icon>
+                <ion-icon name="compass" size="large"></ion-icon>
               </div>
-              <h1>Comphrensive</h1>
+              <h1>Comprehensive</h1>
               <p>Extensive coverage, ever expanding repository</p>
             </div>
             <div className="card-components-1-1">
-              <div className="cloud">
-                <ion-icon name="shuffle" size="large"></ion-icon>
+              <div className="cloud3">
+                <ion-icon name="rocket" size="large"></ion-icon>
               </div>
               <h1>Hassle-free!</h1>
-              <p>no managing of reports, no downloading of reports</p>
+              <p>No managing of reports, no downloading of reports</p>
             </div>
           </div>
         </div>
         <div className="top-reports">
-          <h1>Top Reports</h1>
+          <div className="top_reports">
+
+          <h1>Popular Reports</h1>
+          <Link to="/Reports">
+                <button className="browsereportsbutton3">
+                  View Reports &#8594;
+                </button>
+              </Link>
+          </div>
+          <Modal show={showModal} onClose={() => setShowModal(false)} link={linkToShow} />
           <div className="reports-top" id="reportsContainer">
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
-            <div className="cards-reports">
-              <img
-                className="report-thumbnail"
-                src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/1.png"
-                alt=""
-              />
-              <h2>Eaty | $299</h2>
-              <p>
-                Eaty is a no-code template for food delivery. It comes with a
-                responsive user ap...
-              </p>
-            </div>
+          {topReportsData && topReportsData.length > 0 &&  // Check if topReportsData is defined and has items
+            topReportsData.map((report, index) => (
+              <Card key={index} {...report} toggleModal={toggleModal}/>
+            ))}
           </div>
         </div>
         <div>
@@ -426,7 +418,7 @@ const Homepage = () => {
             type="email"
             placeholder="Write Message"
           /> */}
-          <button>Join Us</button>
+          <button>Join us</button>
         </div>
       </div>
     </>
