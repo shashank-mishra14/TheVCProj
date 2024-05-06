@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./slider.css";
 
 const slideStyles = {
   width: "100%",
@@ -72,11 +73,6 @@ const Slider = ({ slides }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const slideStylesWidthBackground = {
-    ...slideStyles,
-    backgroundImage: `url(${slides[currentIndex].url})`,
-  };
-
   return (
     <div style={sliderStyles}>
       <div>
@@ -87,7 +83,7 @@ const Slider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}></div>
+      <div style={{ ...slideStyles, backgroundImage: `url(${slides[currentIndex].url})` }}></div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

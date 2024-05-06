@@ -190,18 +190,18 @@
 .cloud1{
   margin-top: 20px;
   margin-right: -20px;
-  padding-left:208px;
+  padding-left:160px;
 }
 .cloud{
   margin-top: 20px;
   margin-right: -30px;
-  padding-left:135px;
+  padding-left:90px;
 
 }
 .cloud3{
   margin-top: 20px;
   margin-right: -30px;
-  padding-left:156px;
+  padding-left:110px;
 
 }
 .card-components h1 {
@@ -386,30 +386,14 @@
   opacity: 1;
   font-weight: bold;
 }
-.card-components-1-1 p {
-  z-index: 4;
-  display: flex;
-  align-self: center;
-  align-items:  center;
-  justify-content: center;
-  min-width: 0px;
-  order: 5;
-  min-height: 0px;
-  height: max-content;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 80%;
-  margin: 0px;
-  overflow: visible;
-  word-break: break-word;
-  font-family: Nunito Sans;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.6;
-  border-radius: 0px;
-  opacity: 1;
-  margin-left: 60px;
-  margin-top: 5px;
+.research{
+  padding-left:180px;
+}
+.research2{
+  padding-left:80px;
+}
+.research1{
+  padding-left:76px;
 }
 .card-components-1-1 {
   z-index: 13;
@@ -797,7 +781,7 @@
 .image-card {
   z-index: 12;
   align-self: flex-start;
-  min-width: 482px;
+  min-width: 500px;
   max-width: 70px;
   order: 1;
   min-height: 50px;
@@ -936,6 +920,22 @@
   font-family: Nunito Sans;
   font-weight: bold;
 }
+.browsereportsbutton4 {
+  margin-left: 40.5rem;
+  margin-bottom: -2rem;
+  margin-top: -30px;
+  padding: 1.2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-radius: 17px;
+  background-color: rgb(67, 67, 255);
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  font-weight: bold;
+}
 .herosection-title button {
   margin-left: -28.5rem;
   margin-bottom: -2rem;
@@ -1062,9 +1062,9 @@
   font-weight: 500;
 }
 .browsereportsbutton2 {
-  margin-left: 87.5rem;
-  margin-bottom: -10rem;
-  margin-top: 7px;
+  margin-left: 85.5rem;
+  margin-bottom: -14rem;
+  margin-top: -7px;
   padding: 1.2rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -1203,8 +1203,8 @@
 }
 .browsereportsbutton1 {
   margin-left: 7.5rem;
-  margin-bottom: 9rem;
-  margin-top: 97px;
+  margin-bottom: 3rem;
+  margin-top: 186px;
   padding: 0.9rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1241,6 +1241,22 @@
   margin-left: -809px;
   margin-top: 140px;
 }
+.browsereportsbutton4{
+margin-left: 7.5rem;
+margin-bottom: 8rem;
+margin-top: 93px;
+padding: 0.9rem;
+padding-left: 1rem;
+padding-right: 1rem;
+border-radius: 17px;
+background-color: rgb(67, 67, 255);
+color: white;
+font-size: 0.9rem;
+border: none;
+cursor: pointer;
+font-family: Nunito Sans;
+font-weight: bold;
+}
 .browsereportsbutton2 {
   margin-left: 7.5rem;
   margin-bottom: 18rem;
@@ -1268,20 +1284,39 @@
   margin-top: 29px;
 }
 .cloud1 {
-  margin-top: 11px;
-  margin-right: -81px;
+  margin-top: -23px;
+  margin-right: -128px;
   padding-left: -12px;
-  margin-left: -179px;
+  margin-left: -143px;
 }
 .cloud {
-  margin-top: 11px;
-  margin-right: -35px;
-  padding-left: 26px;
+  margin-top: -23px;
+  margin-right: -3px;
+  padding-left: 14px;
 }
 .cloud3 {
   margin-top: 20px;
   margin-right: -49px;
   padding-left: 32px;
+}
+.research1 {
+  padding-left: 0px;
+  margin-right: -35px;
+  margin-left: -31px;
+  margin-top:10px;
+}
+.research2 {
+  padding-left: 67px;
+  margin-left: -122px;
+  margin-top: 10px;
+}
+.research {
+  padding-left: 73px;
+  margin-top: 11px;
+  margin-right: -25px;
+}
+.compro{
+  padding-left:30px;
 }
 .card-section1_1_5_6 h2{
   z-index: 4;
@@ -1354,7 +1389,7 @@
 .card-section1_1_5_6 {
   display: flex;
   flex-direction: column;
-  margin-left: 34px;
+  margin-left: 43px;
   margin-bottom: 100px;
   margin-top: -134px;
 }
@@ -1497,7 +1532,7 @@
 }
 .card-section1_1_4 {
   border-left: 2px dotted black;
-  padding-left: 211px;
+  padding-left: 231px;
   padding-top: -357px;
   margin-right: 3px;
   margin-left: -252px;
@@ -1537,13 +1572,14 @@
   display: flex;
   flex-direction: column;
   padding: 60px;
+  margin-bottom:26px;
   /* padding-right: 150px; */
   /* padding-left: 150px; */
 }
 .cloud3 {
-  margin-top: 11px;
-  margin-right: -44px;
-  padding-left: 20px;
+  margin-top: -24px;
+  margin-right: -33px;
+  padding-left: 16px;
 }
 .card-components-1-1 h1 {
   z-index: 3;
@@ -1555,7 +1591,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: calc(100% + 0px);
-  margin-top: -4px;
+  margin-top: -21px;
   overflow: visible;
   word-break: break-word;
   font-family: Nunito Sans;
@@ -1565,25 +1601,27 @@
   line-height: 1.2;
   border-radius: 0px;
   opacity: 1;
-  margin-left: -26  px;
+  margin-left: -194px;
+        margin-right: -16px;
 }
 .reports-top {
   display: flex;
   flex-direction: row;
   width: 501%;
-  margin-top: 52px;
+  margin-top: -36px;
 }
 .top-reports h1 {
-  margin-left: 522px;
+  margin-left: 742px;
   margin-right: 568px;
   position: absolute;
-  margin-bottom: 53px;
+  margin-bottom: 51px;
   font-size: 24px;
+  width: 100%;
 }
 .browsereportsbutton3 {
   margin-left: -6rem;
-  margin-bottom: -1rem;
-  margin-top: 23px;
+  margin-bottom: 24rem;
+  margin-top: 26rem;
   padding: 0.9rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1598,31 +1636,7 @@
   position: absolute;
   font-weight: bold;
 }
-.card-components-1-1 p {
-  z-index: 4;
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  min-width: 0px;
-  order: 5;
-  min-height: 0px;
-  height: max-content;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 80%;
-  margin: 0px;
-  overflow: visible;
-  word-break: break-word;
-  font-family: Nunito Sans;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 1.6;
-  border-radius: 0px;
-  opacity: 1;
-  margin-left: -183px;
-  margin-top: 45px;
-}
+
 .card-components-1-1 {
   z-index: 12;
   min-width: 203px;

@@ -4,12 +4,11 @@ import Accordion from "../Accordion/Accordion";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Marquee from "react-fast-marquee";
-import Slider from "./Carousel";
+import Slider from "./Slider";
 import ReportCard from "../ReportCard/ReportCard";
 // import Modal from "./Modal";
 import Card from "../Card";
 import Modal from "./Modal";
-// const [toggleModal, settoggleModal] = useState(false);
 
 const topReportsData = [
   {
@@ -282,7 +281,7 @@ const toggleModal = (show, link) => {
           
         </div>
         <Link to="/Reports">
-                <button className="browsereportsbutton1">
+                <button className="browsereportsbutton4">
                   View Reports &#8594;
                 </button>
               </Link>
@@ -364,21 +363,21 @@ const toggleModal = (show, link) => {
                 <ion-icon name="time" size="large"></ion-icon>
               </div>
               <h1> Time</h1>
-              <p className="reasearch">Researchiblity + speed</p>
+              <p class="research">Researchiblity + speed</p>
             </div>
             <div className="card-components-1-1">
               <div className="cloud">
                 <ion-icon name="compass" size="large"></ion-icon>
               </div>
-              <h1>Comprehensive</h1>
-              <p>Extensive coverage, ever expanding repository</p>
+              <h1 className="compro">Comprehensive</h1>
+              <p className="research2">Extensive coverage, ever expanding repository</p>
             </div>
             <div className="card-components-1-1">
               <div className="cloud3">
                 <ion-icon name="rocket" size="large"></ion-icon>
               </div>
               <h1>Hassle-free!</h1>
-              <p>No managing of reports, no downloading of reports</p>
+              <p className="research1">No managing of reports, no downloading of reports</p>
             </div>
           </div>
         </div>
@@ -392,13 +391,24 @@ const toggleModal = (show, link) => {
                 </button>
               </Link>
           </div>
-          <Modal show={showModal} onClose={() => setShowModal(false)} link={linkToShow} />
+          
           <div className="reports-top" id="reportsContainer">
-          {topReportsData && topReportsData.length > 0 &&  // Check if topReportsData is defined and has items
-            topReportsData.map((report, index) => (
-              <Card key={index} {...report} toggleModal={toggleModal}/>
-            ))}
-          </div>
+        {topReportsData.map((report, index) => (
+          <Card
+            key={index}
+            {...report}
+            showModal={showModal}
+            toggleModal={toggleModal}
+          />
+        ))}
+      </div>
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          linkToShow={linkToShow}
+        />
+      )}
         </div>
         <div>
           <Accordion />

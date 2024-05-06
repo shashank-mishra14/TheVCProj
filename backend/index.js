@@ -82,6 +82,20 @@ app.post('/uploadreports', async(req, res) => {
     res.send('Report added successfully.');
 });
 
+// app.post('/updateImgSrc', async (req, res) => {
+//     try {
+//         // Update documents in the MongoDB collection
+//         const result = await Reports.updateMany(
+//             { imgsrc: { $regex: /\.png$/ } }, // Match documents with imgsrc ending with '.webp'
+//             { $set: { imgsrc: { $regexReplace: { pattern: '.png$', replacement: '.webp' } } } } // Update imgsrc field
+//         );
+
+//         res.send(`${result.modifiedCount} documents updated successfully.`);
+//     } catch (error) {
+//         console.error('Error updating imgsrc:', error);
+//         res.status(500).send('Internal Server Error');
+//     }
+// });
 
 const userDetailsSchema = mongoose.Schema({
     email: String

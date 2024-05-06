@@ -187,7 +187,7 @@ ul{
 		display: none;
 	}
 	ion-icon {
-		color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
 		padding-right: 25px;
 		/* margin-top: 15px; */
 		margin-bottom: -9px;

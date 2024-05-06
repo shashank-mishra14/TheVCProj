@@ -12,6 +12,7 @@ const Card = ({
   link,
   toggleModal,
   submitted,
+  onClick
 }) => {
   const MAX_TITLE_LENGTH = 40;
 
@@ -43,6 +44,7 @@ const Card = ({
       toggleModal(true, link);
     }
   };
+  
 
   return (
     <section className="card" onClick={handleReadMoreClick}>

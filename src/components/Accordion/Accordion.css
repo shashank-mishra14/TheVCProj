@@ -103,10 +103,10 @@ h1 {
     font-family: Nunito Sans;
 }
   .accordion-title {
-    font-size: 28px;
+    font-size: 24px;
     color: var(--text-primary);
     font-family: Nunito Sans;
-    margin-left: 20px;
+    margin-left: 17px;
     margin-bottom: 30px;
 }
   .accordion__faq > div {

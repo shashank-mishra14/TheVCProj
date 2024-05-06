@@ -21,7 +21,7 @@ const Modal = ({ showModal, setShowModal, linkToShow }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/addDetails", formData);
+      await axios.post("http://localhost:5001/addDetails", formData);
       setFormData({ email: "" });
       setSubmitted(true);
       setShowModal(false);
