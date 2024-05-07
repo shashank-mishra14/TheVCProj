@@ -64,7 +64,7 @@ const Contact = () => {
             
             </div>
           ) : (
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="form" action="http://localhost:5001/contactDetails" method="post" onSubmit={handleSubmit}>
               <div className="nameinput">
                 <div className="name">
                   <label className="namechange" htmlFor="name">

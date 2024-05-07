@@ -44,7 +44,7 @@ const Sidebar = ({
       <button className="toggle-button" onClick={toggleSidebar}>
        <span className="filterreports"> Filter Reports </span>
       
-       <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+       <ion-icon size="large" name="chevron-down-outline" color="white"></ion-icon>
       </button>
       <div class="sidebar-content visible">
         <div className="logo-container">

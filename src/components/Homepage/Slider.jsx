@@ -83,7 +83,9 @@ const Slider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={{ ...slideStyles, backgroundImage: `url(${slides[currentIndex].url})` }}></div>
+      <div style={{ ...slideStyles, backgroundImage: `url(${slides[currentIndex].url})` }}>
+        {{slides.url}}
+      </div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

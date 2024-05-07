@@ -57,7 +57,7 @@
     height: 36px;
     vertical-align: top !important;
     box-shadow: none;
-    
+    margin-top:22px;
 
 }
 .modalname{
@@ -188,7 +188,7 @@
 .modal-card h1 {
     color: black;
     font-size: 25px;
-    margin: 10px 0;
+    margin: 0px 0px 0px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 600;
@@ -245,7 +245,7 @@
         padding: 10px 25px 10px 25px;
         font-weight: 700;
         border: 0;
-        background-color: #0a4766;
+        background-color: rgb(67, 67 255);
         color: white;
         margin-left: 68px;
         margin-top: -156px;

@@ -1,0 +1,7 @@
+{
+    "web_accessible_resources": [
+      "src/component/Homepage/Homepage.css",
+      "src/component/Homepage/slider.css"
+    ]
+  }
+  

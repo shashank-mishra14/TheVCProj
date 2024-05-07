@@ -9,7 +9,7 @@ import ReportCard from "../ReportCard/ReportCard";
 // import Modal from "./Modal";
 import Card from "../Card";
 import Modal from "./Modal";
-
+import './Modal.css';
 const topReportsData = [
   {
     img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/3.png",
@@ -269,7 +269,7 @@ const toggleModal = (show, link) => {
             </h2>
           </div>
           <div className="card-section1_1_2">
-            <img className="image-card"src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/WhatsApp%20Image%202024-05-02%20at%2023.14.13_55a07659.jpg" alt="" />
+            <img className="image-card"src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/1.webp" alt="" />
             {/* <span>What we offer</span>
             <p>
               Collate reports of all sectors, reputed authors, <br /> quantity
@@ -287,7 +287,7 @@ const toggleModal = (show, link) => {
               </Link>
         <div className="card-section1_1">
           <div className="card-section1_1_2_1">
-            <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/WhatsApp%20Image%202024-05-02%20at%2023.14.13_0b397a07.jpg" alt="" className="image-card" />
+            <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/2.webp" alt="" className="image-card" />
             {/* <div className="div-card1_1">
               <h1>Card Title</h1>
               <p>

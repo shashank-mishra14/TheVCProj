@@ -57,6 +57,21 @@ app.post('/upload', upload.single('document'), async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+const contactSchema = mongoose.Schema({
+    name: String,
+    email: String,
+    message: String
+});
+const contacts = mongoose.model('contacts', contactSchema);
+app.post('/contactDetails', async (req, res) => {
+    const { name, email, message } = req.body;
+    contacts.create({
+        name,
+        email,
+        message
+    });
+    res.send('Contact details added successfully.');
+});
 const reportsSchema = mongoose.Schema({
     title: String,
     category: String,
