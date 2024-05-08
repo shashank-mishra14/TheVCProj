@@ -174,11 +174,10 @@
     }
     .homepage-logo {
         margin-top: 12px;
-        justify-content: center;
-        margin-left: -130px;
+        margin-left: -53px;
         display: flex;
         flex-direction: row;
-        width: 37%;
+      
     }
     
     .svg-container {

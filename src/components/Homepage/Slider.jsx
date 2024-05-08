@@ -10,6 +10,7 @@ const slideStyles = {
   transition: "opacity 0.5s ease-in-out 7s", // Added transition for smoothness
 };
 
+
 const rightArrowStyles = {
   position: "absolute",
   top: "50%",
@@ -74,17 +75,17 @@ const Slider = ({ slides }) => {
   };
 
   return (
-    <div style={sliderStyles}>
-      <div>
+    <div className="sliderContainer">
+      {/* <div>
         <div onClick={goToPrevious} style={leftArrowStyles}>
           ❰
         </div>
         <div onClick={goToNext} style={rightArrowStyles}>
           ❱
         </div>
-      </div>
-      <div style={{ ...slideStyles, backgroundImage: `url(${slides[currentIndex].url})` }}>
-        {{slides.url}}
+      </div> */}
+      <div  className="slideStyles" style={{ backgroundImage: `url(${slides[currentIndex].url})` }}>
+        {slides.url}
       </div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
