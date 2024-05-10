@@ -119,6 +119,13 @@ ul{
 	padding-bottom:10px;
 
 }
+.send-details-footer {
+    display: none;
+}
+.footerdetails{
+	display: none;
+}
+
 .para-footer{
 	 padding-bottom: 10px;
 }

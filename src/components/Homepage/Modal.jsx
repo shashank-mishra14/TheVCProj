@@ -35,36 +35,39 @@ const Modal = ({ showModal, setShowModal, linkToShow }) => {
     <>
       {showModal && (
         <div className="modal-main">
-          <div className="modal-container">
-            {/* <button className="button-x" onClick={handleCloseModal}>
-              <X />
-            </button> */}
-            <div className="bg-modal"></div>
-            <div class="circular-image">
-              <img src="https://i.imghippo.com/files/Cu5dj1713803575.jpg" alt="Ayush" />
+        <div className="modal-container">
+          
+          <div className="modal-card">
+            <h1>Know what's buzzing <br />in &#x1F1EE;&#x1F1F3;</h1>
+            <span className="get-some">Get access to exclusive mixers <br />and reports 🥂</span>
+            <form onSubmit={handleSubmit}>
+              <div className="modalemail">
+                <label className="modal-email">** We do not spam and rarely email</label>
+                <input
+                  type="email"
+                  placeholder="Business emails only"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+               
+              </div>
+              <button className="button-email"type="submit">Email my invite</button>
+            </form>
+            <div className="div-nothanks">
+            <button className="button-cross" onClick={handleCloseModal}>No,thanks</button>
             </div>
-
-            <div className="modal-card">
-              <h1>Ayush requests your action to continue</h1>
-              {/* <p className="modal-para">"Know whats happening in the VC ecosystem"</p> */}
-              <form onSubmit={handleSubmit}>
-                <div className="modalemail">
-                  <label className="modal-email">Email</label>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <span>This information will be shared with Ayush.</span>
-                </div>
-                <button type="submit">Continue</button>
-              </form>
-            </div>
+            <h2>Buy ad space to promote your report</h2>
+          </div>
+         
+          <div className="circular-image">
+            <span className="img-text">Dayara Bukyal Trek, 2023</span>
+            <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/image-modal.webp" alt="Ayush" />
           </div>
         </div>
+      </div>
+      
       )}
     </>
   );

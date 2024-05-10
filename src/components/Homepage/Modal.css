@@ -1,10 +1,13 @@
 .modal-main {
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* Added some transparency for better visibility */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
     z-index: 9999;
 }
 .thank-you-message{
@@ -36,16 +39,16 @@
     margin-left: -149px;
 }
 .modalemail input {
-    font-size: 16px;
+    font-size: 20px;
     background-color: var(--color__standard__background);
-    border: 1px solid;
-    border-radius: 0;
-    height: 50px;
+    border: 2.5px solid;
+    border-radius: 6px;
+    height: 70px;
     vertical-align: top !important;
     box-shadow: none;
     border-color: black;
-    margin-left: -151px;
-    width: 318%;
+    margin-left: -58px;
+    width: 154%;
 }
 .modalemail{
     display: flex;
@@ -85,100 +88,114 @@
     margin-right: 42px;
 }
 .modal-container {
-    background-color: #ffffff;
-    width: 29%;
-    border-radius: 0px;
-    /* padding: 104px; */
-    position: relative;
-    height: 40%;
-}
-
-.button-x {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;
-    padding: 5px;
+    background-color: white;
+    width: 46%;
+    max-width: 1225px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease; /* Added transition for better user experience */
-}
-
-.button-x:hover {
-    background-color:rgb(67, 67, 255); /* Light background color on hover */
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 54%;
 }
 
 .modal-email{
     display: flex;
     flex-direction: column;
-    margin-left: -149px;
-    width: 100%;
-
+    margin-left:-65px ;
+    margin-bottom:5px;
+    font-size: 14px;
 }
-.circular-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: auto;
-    z-index: 1;
-    margin-top: -64px;
+.modal-main h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin:70px 0px -10px 0px;
+    text-decoration: underline;
 }
-
-.circular-image img {
-    width: 100%; /* Ensures the image fills the circular container */
-    height: 100%; /* Ensures the image fills the circular container */
-    object-fit: cover; /* Keeps the aspect ratio of the image */
-}
-
-.button-x svg {
-    width: 20px; /* Adjust icon size as needed */
-    height: 20px;
-}
-
-.modal-card button {
+.button-email{
     display: inline-block;
-    margin-bottom: -150px;
-    font-weight: 400;
+    margin-bottom: -146px;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
+    border: 2.5px solid black;
     white-space: nowrap;
     font-size: 14px;
-    line-height: 1.42857143;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    font-weight: 700;
-    font-family: var(--type__body__standard--fontfamily);
-    border-radius: 0;
-    outline: 0;
+    font-family: Nunito Sans;
+    border-radius: 3px;
     line-height: normal;
-    padding: 15px 40px 15px 40px;
-    font-weight: 700;
-    border: 0;
-    background-color:rgb(67, 67, 255);
+    padding: 8px 23px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    margin-left: 44px;
+}
+.div-nothanks{
+    margin:0px 0px 0px 0px;
+}
+.img-text {
+    position: absolute;
+    top: 26%;
+    font-family: Nunito Sans;
+    left: 55.5%;
+    transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+    z-index: 2; /* Ensure the text appears above the image */
+  }
+  
+.button-cross {
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    font-family: Nunito Sans;
+    line-height: normal;
+    padding: 8px 23px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    margin: 95px -5px 0px 0px;
+    z-index: 9999;
+    border:0px;
+    text-decoration: underline; /* Add underline */
 }
 
 
 .modal-card {
-    display: flex;
+    display: flex;  
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 16px;
 }
 
-
+.get-some {
+    margin-top: 96px;
+    margin-bottom: 10px;
+    font-size: 19px;
+    margin-left: -118px;
+}
+.circular-image {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94.5%;
+    object-fit: cover;
+  }
+  
+  .circular-image img {
+   
+    width: 104%;
+    height: 106%;
+  }
+  
+  .modal-card {
+    width: 50%;
+    padding: 20px;
+  }
 .modal-para{
     color: black;
     font-size: 20px;
@@ -186,108 +203,74 @@
 }
 
 .modal-card h1 {
+    position:fixed;
     color: black;
-    font-size: 25px;
-    margin: 0px 0px 0px 0px;
+    margin: -388px 0px 0px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 38px;
+    
+
 }
 
 
 
 @media screen and (max-width: 768px) {
-    
-    .modalemail input {
-        font-size: 10px;
-        background-color: var(--color__standard__background);
-        border: 1px solid;
-        border-radius: 0;
-        height: 20px;
-        vertical-align: top !important;
-        box-shadow: none;
-        border-color: black;
-        margin-left: 241px;
-        width: 34%;
-        margin-top:-24px;
-    }
-    .modal-card button {
-        margin-left: 41px;
-    }
-    .modalemail, .modalname {
-        margin-left: -202px;
-        font-size:12px;
-    }
-    .modalprof {
-        margin-left: -171px;
-        font-size:12px;
-    }
-    .modal-card button {
-        display: inline-block;
-        margin-bottom: -150px;
-        font-weight: 400;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        background-image: none;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        font-size: 9px;
-        line-height: 1.42857143;
-        -webkit-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        font-weight: 700;
-        font-family: var(--type__body__standard--fontfamily);
-        border-radius: 0;
-        outline: 0;
-        line-height: normal;
-        padding: 10px 25px 10px 25px;
-        font-weight: 700;
-        border: 0;
-        background-color: rgb(67, 67 255);
-        color: white;
-        margin-left: 68px;
-        margin-top: -156px;
-    }
-    .modal-para {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        font-size: 11px;
-        margin: 10px 20px;
-    }
-    .circular-image {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: auto;
-        z-index: 1;
-        margin-top: -49px;
-    }
     .modal-container {
-        background-color: #ffffff;
-        width: 68%;
-        border-radius: 0px;
-        /* padding: 104px; */
-        position: relative;
-        height: 30%;
+        width: 90%;
+        max-width: 90%;
+    }
+    .modal-email {
+        display: flex;
+        flex-direction: column;
+        margin-left: -52px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .get-some {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        font-size: 19px;
+        margin-left: -55px;
+    }
+
+    .modal-main h2 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left:10px;
+    }
+    .modal-card {
+        width: 97%;
+        padding: 20px;
     }
     .modal-card h1 {
-        color: black;
-        font-size: 11px;
-        margin: 10px 0;
+        font-size: 31px;
+        margin-top: 0;
+        position: fixed;
+        margin: -327px 179px 5px 74px;
     }
     .modal-p {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 8px;
-        margin-left: 57px;
-    }e
-    .modal-card button{
-        padding: 3px 14px;
-        font-size:10px;
+        font-size: 12px;
     }
+
+    .modal-email input {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .button-email {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-left: 58px;
+    }
+
+    .button-cross {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 88px;
+    }
+    .circular-image {
+        display: none;
+      }
 }

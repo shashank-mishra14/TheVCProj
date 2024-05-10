@@ -1,7 +1,8 @@
 .homepage-navbar-container {
-  padding-top: 30px;
+  padding-top: 5px;
   padding-left: 70px;
   display: flex;
+  
 }
 
 .homepage-logo {
@@ -13,7 +14,7 @@
   justify-content: space-between;
   width: 36%;
   margin-left: 47%;
-  padding: 19px;
+  padding: 26px;
   padding-left: 108px;
   padding-right: 0px;
 
@@ -50,7 +51,7 @@
   background-color: white;
 }
 .para_cutyour {
-  font-size: 25px;
+  font-size: 18px;
   margin-right: 10px;
   margin-top:28px;
   padding-right: 10px;
@@ -76,7 +77,7 @@
   margin: 0px 0px 0px 0px;
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 82px;
+  font-size: 57px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   line-height: 1.1;
@@ -94,10 +95,10 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: calc(100% + 0px);
-  margin: 70px 0px 0px 172px;
+  margin: 70px 0px 0px 95px;
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 58px;
+  font-size: 32px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   line-height: 1.1;
@@ -107,17 +108,17 @@
   font-weight: bold;
 }
 .new-section p {
-  font-size: 38px;
+  font-size: 22px;
 
-  margin: 20px 0px 0px 172px;
+  margin: 20px 0px 0px 97px;
 
   display: flex;
   font-weight: 200;
 }
 .new-section h3 {
-  font-size: 38px;
+  font-size: 22px;
 
-  margin: 20px 0px 0px 172px;
+  margin: 20px 0px 0px 97px;
 
   display: flex;
   font-weight: 200;
@@ -152,10 +153,10 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: calc(100% + 0px);
-  margin-right: 70px;
+  margin:0px 70px 20px 0px;
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 47px;
+  font-size: 24px;
   font-weight: 500;
   color: rgb(0, 0, 0);
   line-height: 1.3;
@@ -289,201 +290,6 @@
   padding: 7px 20px;
   opacity: 1;
   transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
-}
-.modal-main {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Added some transparency for better visibility */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-.thank-you-message{
-  margin-top: 10px;
-}
-.modal-p{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-.modalprof{
-  margin-left: -50px;
-}
-  .image-modal {
-      width: 426px;
-      height: 299px;
-      margin-right: -12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 46px;
-
-}
-.modalemail span{
-  font-size: 12px;
-  font-style: italic;
-  text-overflow: ellipsis;
-  color: #999;
-  margin-left: -149px;
-}
-.modalemail input {
-  font-size: 16px;
-  background-color: var(--color__standard__background);
-  border: 1px solid;
-  border-radius: 0;
-  height: 50px;
-  vertical-align: top !important;
-  box-shadow: none;
-  border-color: black;
-  margin-left: -151px;
-  width: 318%;
-}
-.modalemail{
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  background-color: var(--color__standard__background);
-  border: 1px solid var(--color__standard__border);
-  border-radius: 0;
-  height: 36px;
-  vertical-align: top !important;
-  box-shadow: none;
-  margin-top:22px;
-
-}
-.modalname{
-  margin-left: -87px;
-
-}
-.bg-modal{
-  margin-bottom: 20px;
-  background-color: rgb(67, 67, 255) !important;
-  height: 72px;
-  padding: 15px 24px !important;
-
-}
-.modaldiv-1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left:110px;
-}
-.modal-div{
-  flex-direction: row;
-  display: flex;
-  margin-left: 42px;
-  margin-right: 42px;
-}
-.modal-container {
-  background-color: #ffffff;
-  width: 29%;
-  border-radius: 0px;
-  /* padding: 104px; */
-  position: relative;
-  height: 40%;
-}
-
-.button-x {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  border-radius: 50%;
-  background-color: transparent; /* Transparent background */
-  cursor: pointer;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease; /* Added transition for better user experience */
-}
-
-.button-x:hover {
-  background-color:rgb(67, 67, 255); /* Light background color on hover */
-}
-
-.modal-email{
-  display: flex;
-  flex-direction: column;
-  margin-left: -149px;
-  width: 100%;
-
-}
-.circular-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto;
-  z-index: 1;
-  margin-top: -64px;
-}
-
-.circular-image img {
-  width: 100%; /* Ensures the image fills the circular container */
-  height: 100%; /* Ensures the image fills the circular container */
-  object-fit: cover; /* Keeps the aspect ratio of the image */
-}
-
-.button-x svg {
-  width: 20px; /* Adjust icon size as needed */
-  height: 20px;
-}
-
-.modal-card button {
-  display: inline-block;
-  margin-bottom: -150px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  font-size: 14px;
-  line-height: 1.42857143;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  font-weight: 700;
-  font-family: var(--type__body__standard--fontfamily);
-  border-radius: 0;
-  outline: 0;
-  line-height: normal;
-  padding: 15px 40px 15px 40px;
-  font-weight: 700;
-  border: 0;
-  background-color:rgb(67, 67, 255);
-  color: white;
-}
-
-
-.modal-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-}
-
-
-.modal-para{
-  color: black;
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.modal-card h1 {
-  color: black;
-  font-size: 25px;
-  margin: 0px 0px 0px 0px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 600;
 }
 
 
@@ -717,10 +523,10 @@
 }
 .card-section1_1_4 {
   border-left: 2px dotted black;
-  padding-left: 211px;
+  padding-left: 110px;
   padding-top: 296px;
-  margin-right: 3px;
-  margin-left: -252px;
+  margin-right: 21px;
+  margin-left: -88px;
   margin-top: 83px;
   padding-bottom: -8px;
   height: 369px;
@@ -745,7 +551,7 @@
   margin: 0px;
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 200;
   color: rgb(34, 34, 34);
   line-height: 1.4;
@@ -778,15 +584,14 @@
 }
 .card-section1_1_2_1 {
   z-index: 23;
-
-  min-width: 320px;
-  max-width: 461px;
+  min-width: 292px;
+  max-width: 449px;
   order: 2;
   min-height: 320px;
   max-height: 400px;
-  height: 400px;
+  height: 283px;
   flex-grow: 1;
-  width: 320px;
+  width: 305px;
   /* margin: 0px; */
   justify-content: flex-start;
   overflow: visible;
@@ -798,12 +603,12 @@
   padding: 16px;
   opacity: 1;
   transition: background 1000ms ease 0s;
-  margin-left: -1750px;
+  margin-left: -1311px;
 }
 .card-section1_1_5 {
   display: flex;
   flex-direction: row;
-  margin-left: 238px;
+  margin-left: -20px;
   margin-top: 235px;
   margin-bottom: -169px;
   
@@ -811,9 +616,9 @@
 .card-section1_1_2 {
   
   align-self: flex-end;
-  min-width: 430px;
-  max-width: 461px;
-  margin-left: 185px;
+  min-width: 397px;
+  max-width: 357px;
+  margin-left: 105px;
   order: 1;
   /* min-height: 480px; */
   /* height: 400px; */
@@ -828,7 +633,7 @@
   box-shadow: rgba(233, 227, 227, 0.15) 2px 2px 16px 0px;
   padding: 27px 30px;
   opacity: 1;
-  transition: background 1000ms ease 0s
+  transition: background 1000ms ease 0s;
 }
 
 .card-section1_1_2 h2 {
@@ -910,7 +715,7 @@
 
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 200;
   color: rgb(34, 34, 34);
   line-height: 1.4;
@@ -922,8 +727,8 @@
   text-align: left;
 }
 .herosection-title h2 {
-  font-size: 17px;
-  margin-left: -601px;
+  font-size: 14px;
+  margin-left: -330px;
   padding-bottom: 20px;
   color: rgb(0 0 0);
   margin-top: 46px;
@@ -979,7 +784,7 @@
 .image-card {
   z-index: 12;
   align-self: flex-start;
-  min-width: 500px;
+  min-width: 340px;
   max-width: 70px;
   order: 1;
   min-height: 50px;
@@ -1083,7 +888,7 @@
   margin-bottom: 1rem;
   margin-top: -11px;
   padding: 0.7rem;
-
+  padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 14px;
@@ -1103,48 +908,48 @@
 }
 
 .browsereportsbutton1 {
-  margin-left: 41.5rem;
+  margin-left: 24.5rem;
   margin-bottom: -2rem;
-  margin-top: 19px;
-  padding: 1.2rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  border-radius: 17px;
-  background-color: rgb(67, 67, 255);
-  color: white;
-  font-size: 0.9rem;
-  border: none;
-  cursor: pointer;
-  font-family: Nunito Sans;
-  font-weight: bold;
+  margin-top: 138px;
+  padding: 0.9rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 15px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    font-size: 0.7rem;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito Sans;
+    font-weight: bold;
 }
 .browsereportsbutton4 {
-  margin-left: 40.5rem;
-  margin-bottom: -2rem;
-  margin-top: -30px;
-  padding: 1.2rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  border-radius: 17px;
+  margin-left: 24.5rem;
+  margin-bottom: -6rem;
+  margin-top: -38px;
+  padding: 0.9rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 15px;
   background-color: rgb(67, 67, 255);
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border: none;
   cursor: pointer;
   font-family: Nunito Sans;
   font-weight: bold;
 }
 .herosection-title button {
-  margin-left: -28.5rem;
+  margin-left: -16.5rem;
   margin-bottom: -2rem;
   margin-top: 68px;
-  padding: 1.2rem;
-  padding-left: 4.6rem;
-  padding-right: 4.6rem;
+  padding: 0.8rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   border-radius: 17px;
-  background-color: rgb(67,67,255);
+  background-color: rgb(67, 67, 255);
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: none;
   cursor: pointer;
   font-family: Nunito Sans;
@@ -1191,7 +996,7 @@
   overflow: visible;
   word-break: break-word;
   font-family: Nunito Sans;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 300;
   color: rgba(21, 21, 21, 0.8);
   text-align: center;
@@ -1236,7 +1041,7 @@
   overflow: visible;
   word-break: break-word;
   font-family: Nunito Sans;
-  font-size: 64px;
+  font-size: 44px;
   font-weight: 500;
   color: rgb(34, 34, 34);
   text-align: center;
@@ -1258,18 +1063,19 @@
   margin-top: 66px;
   font-family: Nunito Sans;
   font-weight: 500;
+  font-size: 24px;
 }
 .browsereportsbutton2 {
-  margin-left: 85.5rem;
-  margin-bottom: -14rem;
-  margin-top: -7px;
-  padding: 1.2rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  border-radius: 17px;
+  margin-left: 55.5rem;
+  margin-bottom: -7rem;
+  margin-top: -171px;
+  padding: 0.9rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 15px;
   background-color: rgb(67, 67, 255);
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border: none;
   cursor: pointer;
   font-family: Nunito Sans;
@@ -1288,7 +1094,7 @@
   margin: 0px;
   overflow: visible;
   font-family: Nunito Sans;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 200;
   color: rgb(34, 34, 34);
   line-height: 1.4;
@@ -1312,8 +1118,8 @@
   flex-direction: row;
 }
 .svg {
-  height: 160px;
-  width: 160px;
+  height: 120px;
+  width: 140px;
   margin-top: -38px;
 }
 
@@ -1436,7 +1242,7 @@
   padding: 16px;
   opacity: 1;
   transition: background 1000ms ease 0s;
-  margin-left: -809px;
+  margin-left: -153px;
   margin-top: 140px;
 }
 .browsereportsbutton4{
@@ -1571,17 +1377,18 @@ font-weight: bold;
 }
 .card1-container h2 {
   font-size: 15px;
-  margin-left: 2px;
+  margin-left: 17px;
+  width: 89%;
 }
 
 .card-section1_1 {
   display: flex;
   flex-direction: column !important;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 140px;
   align-items: center;
   justify-content: center;
-  margin-left: 585px;
+ 
 }
 
 .card-section1_1_5_6 {
@@ -1590,17 +1397,40 @@ font-weight: bold;
   margin-left: 43px;
   margin-bottom: 100px;
   margin-top: -134px;
+  border-right: 0px dotted black;
 }
   .card-components h1 {
     font-size: 31px;
     margin-top:10px;
 }
 .card-section1_1 h1 {
-  margin: 0px 908px 0px 0px;
-  word-break: normal !important;
-  font-size: 31px;
-  width: 27%;
-}
+z-index: 4;
+        align-self: flex-start;
+        min-width: 0px;
+        order: 1;
+        min-height: 0px;
+        height: max-content;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 74%;
+        margin-right: 79px;
+        overflow: visible;
+        font-family: Nunito Sans;
+        font-size: 31px;
+        margin-left: 0px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        line-height: 1.3;
+        border-radius: 0px;
+        opacity: 1;
+        word-break: break-word;
+        text-decoration: none;
+        font-style: normal;
+        text-align: left;
+        margin-top: -31px;
+        padding-left: -2px;
+    }
+
 .card-section1_1 h2 {
   font-size:16px;
 }
@@ -1611,9 +1441,12 @@ font-weight: bold;
 }
 .card-section1_1_2 {
   font-size: 45px;
-  margin: -178px 139px 0px 0px;
+  margin: -178px 260px 0px 0px;
   background-color: rgb(255, 255, 255);
   z-index: 1;
+  min-width: 72px;
+  max-width: 115px;
+  width: 127px;
 }
 .card-section1_1_4 span {
   z-index: 4;
@@ -1667,12 +1500,13 @@ font-weight: bold;
   padding-left: 24px;
 }
 .div-border {
-  border-right: 2px dotted black;
-  padding-right: 100px;
+  border-right: 0px dotted black;
+  padding-right: 0px;
   padding-top: 30px;
-  height: 344px;
+  height: 312px;
   margin-top: 10px;
-  padding-left: 152px;
+  padding-left: 0px;
+  margin: -1px 1px 16px -38px;
 }
 .card-section1_1_5 h2 {
   z-index: 4;
@@ -1710,7 +1544,7 @@ font-weight: bold;
   width: 50px;
   flex-grow: 1;
   height: max-content;
-  margin: -29px 0px 0px -7px;
+  margin: 2px 0px 0px 43px;
   justify-content: flex-start;
   overflow: visible;
   border-radius: 50%;
@@ -1730,17 +1564,15 @@ font-weight: bold;
   margin-left: 0px;
 }
 .card-section1_1_4 {
-  border-left: 2px dotted black;
+  border-left: 0px dotted black;
   padding-left: 231px;
   padding-top: -357px;
   margin-right: 3px;
-  margin-left: -252px;
+  margin-left: -266px;
   margin-top: -505px;
   padding-bottom: -8px;
   height: 135px;
   margin-bottom: -14px;
-}
-.card-components{
    display: flex;
    flex-direction: column;
 }
@@ -1810,12 +1642,11 @@ font-weight: bold;
   margin-top: -36px;
 }
 .top-reports h1 {
-  margin-left: 742px;
-  margin-right: 568px;
+  margin: 0px -51px 0px 0px;
   position: absolute;
   margin-bottom: 51px;
   font-size: 24px;
-  width: 100%;
+  width: 50%;
 }
 .browsereportsbutton3 {
   margin-left: -6rem;
@@ -1893,7 +1724,7 @@ font-weight: bold;
 .top-reports {
   z-index: 13;
   align-self: center;
-  max-width: 160%;
+
   min-height: 0px;
   height: max-content;
   overflow-x: inherit;
@@ -1929,7 +1760,7 @@ font-weight: bold;
   height: max-content;
   flex-grow: 0;
   flex-shrink: 0;
-  width: calc(100% + 0px);
+  width: 80%;
   margin: 70px 0px 0px 49px;
   overflow: visible;
   font-family: Nunito Sans;

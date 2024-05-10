@@ -1,7 +1,7 @@
 
 
     .homepage-navbar-container {
-        padding-top: 30px;
+        padding-top: 5px;
         padding-left: 70px;
         display: flex;
         background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
@@ -16,7 +16,7 @@
   
 
 .vcproject{
-    font-size:27px;
+    font-size:29px;
     font-style:bold;
     
     
@@ -54,7 +54,7 @@
 
 
 .heading-container {
-    font-size: 22px;
+    font-size: 16px;
     padding-top: 0;
     font-family: Nunito Sans;
     margin-top: 16px;
@@ -148,9 +148,9 @@
   /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
     .homepage-navbar {
-        width: 33%;
+        width: 100%;
         justify-content: space-between;
-        margin-left: -80px;
+        margin-left: -58px;
         padding-top: 0px;
         margin-bottom: -22px;
         margin-top: -18px;
@@ -163,7 +163,7 @@
         flex-direction: column;
         /* padding-bottom: 20px; */
         color: black;
-        width: 100%;
+       width: 100%;
     }
     .logo-vc {
         width: 114px;
