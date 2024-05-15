@@ -36,6 +36,7 @@ const Nav = ({ handleInputChange }) => {
     <nav>
       <div className="nav-container">
         <TextField
+          
           className="search-input"
           type="text"
           onChange={handleChange}

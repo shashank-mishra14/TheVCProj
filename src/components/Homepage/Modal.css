@@ -1,13 +1,13 @@
 .modal-main {
     position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
 }
 .thank-you-message{
@@ -36,19 +36,18 @@
     font-style: italic;
     text-overflow: ellipsis;
     color: #999;
-    margin-left: -149px;
 }
 .modalemail input {
-    font-size: 20px;
+    font-size: 12px;
     background-color: var(--color__standard__background);
-    border: 2.5px solid;
-    border-radius: 6px;
-    height: 70px;
+    border: 1.5px solid;
+    border-radius: 0px;
+    height: 40px;
     vertical-align: top !important;
     box-shadow: none;
     border-color: black;
     margin-left: -58px;
-    width: 154%;
+    width: 360%;
 }
 .modalemail{
     display: flex;
@@ -61,18 +60,21 @@
     vertical-align: top !important;
     box-shadow: none;
     margin-top:22px;
+    margin-left:161px;
 
 }
 .modalname{
     margin-left: -87px;
 
 }
-.bg-modal{
-    margin-bottom: 20px;
-    background-color: rgb(67, 67, 255) !important;
-    height: 72px;
-    padding: 15px 24px !important;
-
+.bg-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Cover 20% of the top of the modal */
+    background-color: rgba(67,67,255); /* Adjust opacity if needed */
+    z-index: 1; /* Ensure it's below other modal content */
 }
 .modaldiv-1{
     display: flex;
@@ -88,16 +90,39 @@
     margin-right: 42px;
 }
 .modal-container {
+    position: relative;
     background-color: white;
-    width: 46%;
+    width: 33%;
     max-width: 1225px;
     display: flex;
     align-items: center;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    height: 54%;
+    height: 49%;
+    z-index: 2;
 }
+.modal-card-button{
+    display: flex;
+    flex-direction: row;
+    margin-left: 190px;
+    margin-right: -43px;
+    margin-top: 54px;
+    margin-bottom: -73px;
+    background-color: rgb(67, 67, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px 10px 20px;
 
+}
+.info-line{
+    display: flex;
+    flex-direction: row;
+    margin:0px 0px 0px 0px;
+    font-size: 10px;
+    font-style: italic;
+    color: #999;
+    z-index: 9999;
+}
 .modal-email{
     display: flex;
     flex-direction: column;
@@ -178,18 +203,31 @@
     margin-left: -118px;
 }
 .circular-image {
-    width: 49%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 94.5%;
-    object-fit: cover;
+    z-index: 12;
+    align-self: flex-start;
+    min-width: 105px;
+    max-width: 50px;
+    order: 1;
+    min-height: 50px;
+    width: 50px;
+    flex-grow: 1;
+    height: max-content;
+    margin: 44px -21px -8px -35px;
+    justify-content: flex-start;
+    overflow: visible;
+    border-radius: 50%; /* Making it round */
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
   
   .circular-image img {
    
-    width: 104%;
+    width: 60%;
     height: 106%;
+    border-radius: 50%; /* Making it round */
   }
   
   .modal-card {
@@ -203,14 +241,14 @@
 }
 
 .modal-card h1 {
-    position:fixed;
+    position: fixed;
     color: black;
-    margin: -388px 0px 0px 0px;
+    margin: -98px -245px 0px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
-    font-size: 38px;
-    
+    font-size: 16px;
+    z-index: 1;
 
 }
 
@@ -218,9 +256,10 @@
 
 @media screen and (max-width: 768px) {
     .modal-container {
-        width: 90%;
+        width: 84%;
         max-width: 90%;
-    }
+        height: 45%;
+    }   
     .modal-email {
         display: flex;
         flex-direction: column;
@@ -245,11 +284,12 @@
         padding: 20px;
     }
     .modal-card h1 {
-        font-size: 31px;
+        font-size: 14px;
         margin-top: 0;
         position: fixed;
-        margin: -327px 179px 5px 74px;
+        margin: -76px 55px 5px 74px;
     }
+
     .modal-p {
         font-size: 12px;
     }
@@ -264,13 +304,51 @@
         padding: 8px 16px;
         margin-left: 58px;
     }
-
+x   
     .button-cross {
         font-size: 14px;
         padding: 8px 16px;
         margin-top: 88px;
     }
     .circular-image {
-        display: none;
-      }
+        display: flex;
+        margin: 48px 64px 14px -198px;
+    }
+    .modalemail {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        background-color: var(--color__standard__background);
+        border: 1px solid var(--color__standard__border);
+        border-radius: 0;
+        height: 36px;
+        vertical-align: top !important;
+        box-shadow: none;
+        margin-top: 22px;
+        margin-left: 59px;
+    }
+    .modal-card-button {
+        display: flex;
+        flex-direction: row;
+        margin-left: 56px;
+        margin-right: -43px;
+        margin-top: 54px;
+        margin-bottom: -73px;
+        background-color: rgb(67, 67, 255);
+        color: white;
+        border: none;
+        padding: 10px 20px 10px 20px;
+    }
+    .modalemail input {
+        font-size: 12px;
+        background-color: var(--color__standard__background);
+        border: 1.5px solid;
+        border-radius: 0px;
+        height: 40px;
+        vertical-align: top !important;
+        box-shadow: none;
+        border-color: black;
+        margin-left: -58px;
+        width: 143%;
+    }
 }

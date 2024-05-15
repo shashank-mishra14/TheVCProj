@@ -66,7 +66,7 @@ const Sidebar = ({
           {[...Array(2024 - 2017 + 1).keys()].map((index) => (
             <div role="group" className=" container-yearlist" key={index}>
               <Checkbox
-                size="lg"
+                size="sm"
                 label={2017 + index}
                 type="checkbox"
                 id={`year-${2017 + index}`}

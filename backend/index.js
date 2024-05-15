@@ -57,6 +57,31 @@ app.post('/upload', upload.single('document'), async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+const connectingDetailsSchema = mongoose.Schema({
+    email: String,
+  });
+  
+  // Model for email details
+  const ConnectingDetails = mongoose.model(
+    "connectingdetails",
+    connectingDetailsSchema
+  );
+  
+  // API endpoint to store email details
+  app.post("/connectingDetails", async (req, res) => {
+    try {
+      const { email } = req.body;
+  
+      // Save email details to the database using ConnectingDetails model
+      await ConnectingDetails.create({ email });
+  
+      res.status(200).send("Email details added successfully.");
+    } catch (error) {
+      console.error("Error adding email details:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  });
+  
 const contactSchema = mongoose.Schema({
     name: String,
     email: String,
@@ -96,21 +121,6 @@ app.post('/uploadreports', async(req, res) => {
     });
     res.send('Report added successfully.');
 });
-
-// app.post('/updateImgSrc', async (req, res) => {
-//     try {
-//         // Update documents in the MongoDB collection
-//         const result = await Reports.updateMany(
-//             { imgsrc: { $regex: /\.png$/ } }, // Match documents with imgsrc ending with '.webp'
-//             { $set: { imgsrc: { $regexReplace: { pattern: '.png$', replacement: '.webp' } } } } // Update imgsrc field
-//         );
-
-//         res.send(`${result.modifiedCount} documents updated successfully.`);
-//     } catch (error) {
-//         console.error('Error updating imgsrc:', error);
-//         res.status(500).send('Internal Server Error');
-//     }
-// });
 
 const userDetailsSchema = mongoose.Schema({
     email: String

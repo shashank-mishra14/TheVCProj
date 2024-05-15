@@ -1,9 +1,9 @@
 .sidebar {
-  width: 19%;
+  width: 20%;
   margin-left: 10.5%;
-  margin-top: 1.2rem;
+  margin-top: 0.4rem;
   position: fixed;
-  height: 68%;
+  height: 63%;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -12,11 +12,10 @@
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 0 19px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Add scrollbar for vertical overflow */
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Optional: customize scrollbar colors */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
 }
-
 /* Optional: Customize scrollbar for WebKit browsers (e.g., Chrome, Safari) */
 .sidebar::-webkit-scrollbar {
   width: 8px;
@@ -41,12 +40,11 @@
   display: none;
 }
 .logo-container {
-  font-size: 23px;
+  font-size: 16px;
   font-weight: bold;
-  margin-right:18px;
+  margin-right: -4px;
   padding-top: 15px;
   margin-left: 15px;
-  
   font-family: Nunito Sans;
   display: flex;
   flex-direction: row;
@@ -73,12 +71,11 @@
 .container-yearlist {
   display: flex;
   flex-direction: row;
-  margin-bottom: 15px;
   padding-bottom: 8px;
 }
 
 .yearSelect {
-  font-size: 20px;
+  font-size: 14px;
   font-style: bold;
   font-weight: bold;
   font-family: Nunito Sans;
@@ -126,9 +123,7 @@
   }
   .toggle-button {
     display: block;
-    position: fixed;
-    top: 17.7rem;
-    left: 21.5%;
+    margin: 183px 66px 10px 0px;
     padding: 0.5rem 0.4rem;
     border-radius: 14px;
     background-color: rgb(67, 67, 255);
@@ -144,12 +139,11 @@
     margin-bottom: -10px;
     margin-left:23px;
 }
-  .sidebar.open {
-    width: 87%;
-    margin-top: 353px;
-    margin-left: 27px;
-  }
-
+.sidebar.open {
+  width: 86%;
+  margin-top: -10px;
+  margin-left: 55px;
+}
   /* Show sidebar content when sidebar is open */
   .sidebar.open .sidebar-content {
     display: block;
@@ -181,4 +175,15 @@
   .sidebar-content {
     display: none;
   }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px;
+    z-index: 999;
+    margin-left: 6rem;
+    margin-top: 34px;
+    width: 18%;
+}
+
 }

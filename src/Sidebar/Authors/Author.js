@@ -193,7 +193,7 @@ const Author = ({ handleChange, selectedAuthors, setSelectedAuthors }) => {
                 <Checkbox
                   label={title}
                   type="checkbox"
-                  size="lg"
+                  size="sm"
                   value={value}
                   checked={selectedAuthors.includes(title)}
                   className="checklistauthorInput"

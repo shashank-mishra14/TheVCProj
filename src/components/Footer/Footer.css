@@ -13,14 +13,15 @@ body{
 	background-color: #000000;
 	color: #ffffff;
 	font-size: 22px;
-	margin-left:-600px;
+	margin-left:-374px;
 
 }
 .main-para{
 	background-color: #000000;
 	color: #ffffff;
 
-	margin-left:-600px;
+	margin-left:-374px;
+	font-size:14px;
 
 }
 .tag{
@@ -84,7 +85,7 @@ ul{
 }
 .footer{
 	background-color: #000000;
-    padding: 70px 0;
+    padding: 14px 0;
     position: relative;
 	width: 100%;
 	z-index: 3; /* Increased z-index */
@@ -95,7 +96,7 @@ ul{
 	position: relative;
 	margin-top:70px;
 	bottom: 45px; /* Adjust this value to control the distance from the bottom */
-	left:302px;
+	left:212px;
 	align-items: center;
 	justify-content: center;
 	width: 70%;
@@ -128,6 +129,7 @@ ul{
 
 .para-footer{
 	 padding-bottom: 10px;
+	 font-size: 14px;
 }
 .footer-heading{
 	font-size: 18px;
@@ -139,7 +141,7 @@ ul{
 
 }
 .footer-col h4{
-	font-size: 18px;
+	font-size: 13px;
 	color: #ffffff;
 	text-transform: capitalize;
 	margin-bottom: 35px;
@@ -152,16 +154,16 @@ ul{
 	left:0;
 	bottom: -10px;
 	background-color: rgb(67, 67, 255);
-	height: 3px;
+	height: 2px;
 	box-sizing: border-box;
-	width: 60px;
+	width: 49px;
 
 }
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
 .footer-links{
-	font-size: 16px;
+	font-size: 13px;
 	/* text-transform: capitalize; */
 	
 	text-decoration: none;

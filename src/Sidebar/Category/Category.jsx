@@ -247,7 +247,7 @@ function Category({
                 type="checkbox"
                 label={category}
                 name="category"
-                size="lg"
+                size="sm"
                 value={category}
                 checked={selectedCategory.includes(category)}
                 onChange={() => handleCategoryClick(category)}
@@ -291,7 +291,7 @@ function Category({
               <Checkbox
                 type="checkbox"
                 value={subcategory}
-                size="lg"
+                size="sm"
                 label={subcategory}
                 onChange={() => handleSubcategoryClick(subcategory)}
                 checked={selectedSubCategory.includes(subcategory)}

@@ -19,7 +19,7 @@ const ReportCard = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [itemsPerPage] = useState(15);
   const [showHotReports, setShowHotReports] = useState(false);
-  const [showCards, setShowCards] = useState(false);
+  const [showCards, setShowCards] = useState(true);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const fetchData = async () => {
@@ -215,50 +215,50 @@ const ReportCard = () => {
         />
         <Navigation handleInputChange={handleInputChange} />
         {!showHotReports && !showCards ? (
-  <div className="card-container">
-    {dummyCardData.map((card, index) => (
-      <Card key={index} {...card} toggleModal={toggleModal} />
-    ))}
-  </div>
-) : null}
-{showHotReports ? (
-  <div className="card-container">
-    {dummyCardData.map((card, index) => (
-      <Card key={index} {...card} />
-    ))}
-  </div>
-) : null}
-{!showHotReports && showCards ? (
-  <Products
-    result={displayedReports.map(
-      ({
-        imgsrc,
-        title,
-        author,
-        authors,
-        subcategory,
-        year,
-        category,
-        month,
-        link,
-      }) => (
-        <Card
-          key={Math.random()}
-          img={imgsrc}
-          title={title}
-          companyName={author}
-          author={authors}
-          subcategory={subcategory}
-          category={category}
-          year={year}
-          month={month}
-          link={link}
-          toggleModal={toggleModal} // Ensure toggleModal is passed as a prop
-        />
-      )
-    )}
-  />
-) : null}
+          <div className="card-container">
+            {dummyCardData.map((card, index) => (
+              <Card key={index} {...card} toggleModal={toggleModal} />
+            ))}
+          </div>
+        ) : null}
+        {showHotReports ? (
+          <div className="card-container">
+            {dummyCardData.map((card, index) => (
+              <Card key={index} {...card} />
+            ))}
+          </div>
+        ) : null}
+        {!showHotReports && showCards ? (
+          <Products
+            result={displayedReports.map(
+              ({
+                imgsrc,
+                title,
+                author,
+                authors,
+                subcategory,
+                year,
+                category,
+                month,
+                link,
+              }) => (
+                <Card
+                  key={Math.random()}
+                  img={imgsrc}
+                  title={title}
+                  companyName={author}
+                  author={authors}
+                  subcategory={subcategory}
+                  category={category}
+                  year={year}
+                  month={month}
+                  link={link}
+                  toggleModal={toggleModal} // Ensure toggleModal is passed as a prop
+                />
+              )
+            )}
+          />
+        ) : null}
         {showHotReports
           ? null
           : displayedReports.length > 10 && (

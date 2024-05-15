@@ -13,7 +13,7 @@ code {
 }
 
 .accordion-title{
-  font-size: 38px;
+  font-size: 26px;
   color: var(--text-primary);
   font-family: Nunito Sans;
   margin-left:20px;
@@ -76,7 +76,7 @@ h1 {
 .accordion__faq-heading h3{
   color: var(--text-secondary);
   font-weight: 600;
-  font-size:28px;
+  font-size:18px;
 }
 
 .accordion__faq p {
@@ -86,7 +86,7 @@ h1 {
   color: var(--text-secondary);
   line-height: 1.4;
   font-family: Nunito Sans;
-  font-size:28px;
+  font-size:15px;
 }
 
 /* Media Query for Mobile Devices */

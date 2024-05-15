@@ -21,10 +21,10 @@ export default function HotReports({ showCards, setShowCards }) {
         sx={{
           flexGrow: 0,
           "--List-gap": "8px",
-          "--List-padding": "8px",
+          "--List-padding": "9px",
           "--List-radius": "18px",
-          "--ListItem-paddingY": "1.0rem",
-          "--ListItem-paddingX": "0.75rem",
+          "--ListItem-paddingY": "0.5rem",
+          "--ListItem-paddingX": "0.7rem",
         }}
       >
         {["Popular Reports"].map((item) => (
@@ -38,12 +38,13 @@ export default function HotReports({ showCards, setShowCards }) {
                   <b
                     style={{
                       fontWeight: "bold",
-                      color: "white",
+                      color: "black",
                       paddingRight: "8px",
-                      padddingTop: "13px",
-                      paddingBottom: "13px",
+                      padddingTop: "4px",
+                      paddingBottom: "4px",
                       borderRadius: "15px",
-                      color: isActive ? "black" : "white",
+                      color: !isActive ? "black" : "white",
+                      fontSize: "0.7rem",
                     }}
                   >
                     {item}
@@ -55,7 +56,7 @@ export default function HotReports({ showCards, setShowCards }) {
                 sx={{
                   color: isActive ? "#4343FF" : "initial",
                   borderRadius: "15px",
-                  width: "120%",
+                  width: "130%",
                 }} // Change color to blue when active
                 slotProps={{
                   action: ({ checked }) => ({

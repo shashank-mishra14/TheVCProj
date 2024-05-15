@@ -9,11 +9,13 @@ import ReportCard from "../ReportCard/ReportCard";
 // import Modal from "./Modal";
 import Card from "../Card";
 import Modal from "./Modal";
-import './Modal.css';
+import "./Modal.css";
+import axios from "axios";
 const topReportsData = [
   {
     img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/3.png",
-    title: "Marketplaces Unleashed: Fuelling India’s $200B Consumer Spending Surge",
+    title:
+      "Marketplaces Unleashed: Fuelling India’s $200B Consumer Spending Surge",
     companyName: "Elevation Capital",
     subcategory: "Marketplaces",
     category: "Consumer Tech",
@@ -65,14 +67,13 @@ const topReportsData = [
     img: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/17.png",
     title: "The Omega Files: Look Into Blume's Fund I Returns",
     companyName: "Blume Ventures",
-    subcategory:"VC Returns",
+    subcategory: "VC Returns",
     category: "Venture Capital & Private Equity",
-    year:"2023",
-    link:"https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/BlumeVentures/The%20Omega%20Files_%20Episode%201.pdf"
-  }
+    year: "2023",
+    link: "https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/Reports/BlumeVentures/The%20Omega%20Files_%20Episode%201.pdf",
+  },
   // Add more dummy report data as needed...
 ];
-
 
 const slides = [
   {
@@ -115,12 +116,37 @@ const slides = [
 
 const Homepage = () => {
   const [showModal, setShowModal] = useState(false);
-const [linkToShow, setLinkToShow] = useState("");
+  const [linkToShow, setLinkToShow] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const toggleButton = () => {
+    setSubmitted(!submitted);
+  };
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
 
-const toggleModal = (show, link) => {
-  setShowModal(show);
-  setLinkToShow(link);
-};
+  const handleJoinUs = async () => {
+    try {
+      // Make a POST request to the backend API endpoint
+      await axios.post("http://localhost:5001/connectingDetails", {
+        email: email,
+      });
+      // Optionally, you can handle success or display a message to the user
+      console.log("Email data sent successfully!");
+      // Clear the email input field after submission
+      setEmail("");
+      // Set submitted to true to change the button text
+      setSubmitted(true);
+    } catch (error) {
+      // Handle error, such as displaying an error message to the user
+      console.error("Error submitting email data:", error.message);
+    }
+  };
+  const toggleModal = (show, link) => {
+    setShowModal(show);
+    setLinkToShow(link);
+  };
   return (
     <>
       <div className="main">
@@ -241,7 +267,7 @@ const toggleModal = (show, link) => {
         <h1>Why do this?</h1>
         <h3>
           We know the job of research is not easy. Countless hours, deadends,
-          irrelevant material, subpar resources, shady website, $$, wrong 
+          irrelevant material, subpar resources, shady website, $$, wrong
           information, pretty presentations. We want to make the job enjoyable:
           best reports, fast. That's it.
         </h3>
@@ -269,7 +295,11 @@ const toggleModal = (show, link) => {
             </h2>
           </div>
           <div className="card-section1_1_2">
-            <img className="image-card"src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/1.webp" alt="" />
+            <img
+              className="image-card"
+              src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/1.webp"
+              alt=""
+            />
             {/* <span>What we offer</span>
             <p>
               Collate reports of all sectors, reputed authors, <br /> quantity
@@ -278,16 +308,17 @@ const toggleModal = (show, link) => {
             <h2>We Offer</h2>
             <span>132 templates</span> */}
           </div>
-          
         </div>
         <Link to="/Reports">
-                <button className="browsereportsbutton4">
-                  View Reports &#8594;
-                </button>
-              </Link>
+          <button className="browsereportsbutton4">View Reports &#8594;</button>
+        </Link>
         <div className="card-section1_1">
           <div className="card-section1_1_2_1">
-            <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/2.webp" alt="" className="image-card" />
+            <img
+              src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/thumbnails/Homepage/2.webp"
+              alt=""
+              className="image-card"
+            />
             {/* <div className="div-card1_1">
               <h1>Card Title</h1>
               <p>
@@ -308,20 +339,16 @@ const toggleModal = (show, link) => {
             </div> */}
           </div>
           <div className="card-section1_1_4">
-            <h1>
-              Industry landscape
-            </h1>
+            <h1>Industry landscape</h1>
             <span>
-              Market sizing, white spaces,
-              key players, <br /> sub sectors within industries.
+              Market sizing, white spaces, key players, <br /> sub sectors
+              within industries.
             </span>
           </div>
         </div>
         <Link to="/Reports">
-                <button className="browsereportsbutton2">
-                  View Reports &#8594;
-                </button>
-              </Link>
+          <button className="browsereportsbutton2">View Reports &#8594;</button>
+        </Link>
         <div className="card-section1_1_5">
           <div className="card-section1_1_5_6">
             <h1>PoVs</h1>
@@ -331,7 +358,11 @@ const toggleModal = (show, link) => {
             </h2>
           </div>
           <div className="card-section1_1_3">
-            <img  className="image-card"src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/WhatsApp%20Image%202024-05-02%20at%2023.14.13_5c04194f.jpg" alt="" />
+            <img
+              className="image-card"
+              src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/WhatsApp%20Image%202024-05-02%20at%2023.14.13_5c04194f.jpg"
+              alt=""
+            />
             {/* <span>What we offer</span>
             <p>
               Save time and effort building apps with our fully functional and
@@ -342,11 +373,9 @@ const toggleModal = (show, link) => {
           </div>
         </div>
         <Link to="/Reports">
-                <button className="browsereportsbutton1">
-                  View Reports &#8594;
-                </button>
-              </Link>
-        <div className="card-components">
+          <button className="browsereportsbutton1">View Reports &#8594;</button>
+        </Link>
+        {/* <div className="card-components">
           <div className="why-to-use">
 
           <h1>
@@ -380,55 +409,57 @@ const toggleModal = (show, link) => {
               <p className="research1">No managing of reports, no downloading of reports</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="top-reports">
           <div className="top_reports">
-
-          <h1>Popular Reports</h1>
-          <Link to="/Reports">
-                <button className="browsereportsbutton3">
-                  View Reports &#8594;
-                </button>
-              </Link>
+            <h1>Popular Reports</h1>
+            <Link to="/Reports">
+              <button className="browsereportsbutton3">
+                View Reports &#8594;
+              </button>
+            </Link>
           </div>
-          
+
           <div className="reports-top" id="reportsContainer">
-        {topReportsData.map((report, index) => (
-          <Card
-            key={index}
-            {...report}
-            showModal={showModal}
-            toggleModal={toggleModal}
-          />
-        ))}
-      </div>
-      {showModal && (
-        <Modal
-          showModal={showModal}
-          setShowModal={setShowModal}
-          linkToShow={linkToShow}
-        />
-      )}
+            {topReportsData.map((report, index) => (
+              <Card
+                key={index}
+                {...report}
+                showModal={showModal}
+                toggleModal={toggleModal}
+              />
+            ))}
+          </div>
+          {showModal && (
+            <Modal
+              showModal={showModal}
+              setShowModal={setShowModal}
+              linkToShow={linkToShow}
+            />
+          )}
         </div>
         <div>
           <Accordion />
         </div>
         <div className="connect-component">
-          <h1>Making <span className="highlighted-text">knowledge</span> accessible</h1>
+          <h1>
+            Making <span className="highlighted-text">knowledge</span>{" "}
+            accessible
+          </h1>
           <h2>Get access to exclusive meetups and new reports</h2>
           <input
             className="input-card-email"
             type="email"
             placeholder="ayush.m@redseerconsulting.com"
+            value={email}
+            onChange={handleChange}
+            required
           />
-          <div></div>
-          {/* <h2>Your message</h2>
-          <input
-            className="input-card-message"
-            type="email"
-            placeholder="Write Message"
-          /> */}
-          <button>Join us</button>
+          {submitted ? (
+            <button onClick={toggleButton}>Thank you</button>
+          ) : (
+            <button onClick={handleJoinUs}>Join us</button>
+          )}
         </div>
       </div>
     </>

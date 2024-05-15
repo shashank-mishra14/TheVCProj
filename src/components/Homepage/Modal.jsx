@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { X } from "lucide-react";
 import "./Modal.css";
@@ -8,10 +8,29 @@ const Modal = ({ showModal, setShowModal, linkToShow }) => {
     email: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const modalRef = useRef();
 
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        handleCloseModal();
+      }
+    };
+
+    if (showModal) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showModal]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,39 +54,31 @@ const Modal = ({ showModal, setShowModal, linkToShow }) => {
     <>
       {showModal && (
         <div className="modal-main">
-        <div className="modal-container">
-          
-          <div className="modal-card">
-            <h1>Know what's buzzing <br />in &#x1F1EE;&#x1F1F3;</h1>
-            <span className="get-some">Get access to exclusive mixers <br />and reports 🥂</span>
-            <form onSubmit={handleSubmit}>
-              <div className="modalemail">
-                <label className="modal-email">** We do not spam and rarely email</label>
-                <input
-                  type="email"
-                  placeholder="Business emails only"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-               
-              </div>
-              <button className="button-email"type="submit">Email my invite</button>
-            </form>
-            <div className="div-nothanks">
-            <button className="button-cross" onClick={handleCloseModal}>No,thanks</button>
+          <div className="modal-container" ref={modalRef}>
+            <div className="bg-modal" onClick={handleCloseModal}></div>
+            <div class="circular-image">
+              <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/ayushweb.webp" alt="Ayush" />
             </div>
-            <h2>Buy ad space to promote your report</h2>
-          </div>
-         
-          <div className="circular-image">
-            <span className="img-text">Dayara Bukyal Trek, 2023</span>
-            <img src="https://vc-thumbnails.blr1.cdn.digitaloceanspaces.com/carousel/image-modal.webp" alt="Ayush" />
+
+            <div className="modal-card">
+              <h1>Ayush requests your action to continue</h1>
+              <form onSubmit={handleSubmit}>
+                <div className="modalemail">
+                  <label className="modal-email">Email</label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <button className="modal-card-button" type="submit">Continue</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      
       )}
     </>
   );

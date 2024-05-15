@@ -7,7 +7,7 @@
 .sidebar-title-author-title{
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 14px;
   /* font-weight: bold; */
   /* color: #000000; */
   font-family: Nunito sans;
@@ -28,6 +28,7 @@
 
 .search-bar.active .search-input-author {
   display: block;
+  width: 100%;
 }
 
 .search-bar {
@@ -70,6 +71,7 @@
 .search-input-container {
   position: relative;
   flex: 1;
+  margin-left:10px
 }
 
 .search-input-author {
@@ -78,9 +80,9 @@
 
 .close-icon {
   position: absolute;
-  right: 39px;
+  right: 23px;
   top: 50%;
-  transform: translateY(-59%);
+  transform: translateY(-55%);
   cursor: pointer;
 }
 
@@ -106,6 +108,7 @@
 .search-bar.active .search-input-author {
   display: block;
   margin-top: 10px;
+  width: 90px;
 }
 
 .sidebar-label-container{
