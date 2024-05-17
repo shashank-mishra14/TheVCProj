@@ -299,30 +299,29 @@
 
 
 .connect-component button {
-color: white;
-    z-index: 11;
-    font-size: 14px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-width: 0px;
-    order: 5;
-    min-height: 56px;
-    height: max-content;
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 10%;
-    margin: 29px 17px 59px 0px;
-    justify-content: center;
-    gap: 0px 10px;
-    overflow: visible;
-    background: none rgb(67, 67, 255);
-    border-radius: 18px;
-    opacity: 1;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    padding:0.9rem;
+  color: white;
+  z-index: 11;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-width: 0px;
+  order: 5;
+  min-height: 39px;
+  height: max-content;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 6%;
+  margin: 29px 17px 59px 0px;
+  justify-content: center;
+  gap: 0px 10px;
+  overflow: visible;
+  background: none rgb(67, 67, 255);
+  border-radius: 11px;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
 }
 .connect-component h2 {
   z-index: 18;
@@ -862,7 +861,7 @@ color: white;
 .reports-top {
   display: flex;
   flex-direction: row;
-  width: 268%;
+  width: 190%;
   margin-top: 52px;
 }
 
