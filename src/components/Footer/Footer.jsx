@@ -13,6 +13,8 @@ const Footer = () => {
                 and founders
               </p>
             </div>
+            <div className="div-cols">
+
             <div class="footer-col">
               <h4>Company</h4>
               <ul>
@@ -35,25 +37,26 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="footer-col">
+          {/* <div class="footer-col">
               <div className="footerdetails">
-
+              
               <h4>Follow Us</h4>
               <div className="footer-logos">
-
+              
               <ion-icon size="large"name="logo-linkedin"></ion-icon>
               <ion-icon  size="large" name="logo-twitter"></ion-icon>
               </div>
               </div>
-             
-              {/* <div className="send-details-footer">
-
-             <input type="email" placeholder="Email..."/>
-             <button className="send-button">Send</button>
-              </div> */}
-            </div>
+              
+              <div className="send-details-footer">
+              
+              <input type="email" placeholder="Email..."/>
+              <button className="send-button">Send</button>
+              </div>
+            </div> */}
           </div>
         </div>
+            </div>
 
         <div class="footer-bottom">
           <hr />
