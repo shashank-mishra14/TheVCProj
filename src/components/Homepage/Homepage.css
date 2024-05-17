@@ -924,6 +924,16 @@
     font-family: Nunito Sans;
     font-weight: bold;
 }
+.top-reports::-webkit-scrollbar {
+  width: 12px;
+}
+.top-reports::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+.top-reports::-webkit-scrollbar-track {
+  background: lightgrey;
+}
 .browsereportsbutton4 {
   margin-left: 24.5rem;
   margin-bottom: -6rem;
